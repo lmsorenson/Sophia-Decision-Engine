@@ -30,4 +30,3 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         EXPECT_EQ(1,1);
     }
 }
-

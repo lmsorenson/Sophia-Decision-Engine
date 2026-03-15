@@ -12,5 +12,12 @@ HeuristicRolloutStrategy::HeuristicRolloutStrategy(GameState current_game_state,
 
 action_ptr HeuristicRolloutStrategy::select_action(std::vector<action_ptr> actions) const
 {
+    if (actions.empty())
+    {
+        return nullptr;
+    }
+
+    // TODO: Implement heuristic selection logic
+    // For now, just select the first action
     return actions[0];
 }
