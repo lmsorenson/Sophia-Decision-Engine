@@ -24,6 +24,10 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     class HeuristicRolloutStrategyFixture : public ::testing::Test
     {
     protected:
+        const Symbol X = Symbol::X;
+        const Symbol O = Symbol::O;
+        const Symbol _ = Symbol::None;
+
         void SetUp() override
         {
             m_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
@@ -31,14 +35,17 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
             m_playerO = std::make_shared<models::Bot>(Symbol::O, 1, m_logger);
         }
 
-        // Helper to create a board with specific positions set
-        shared_ptr<Board> createBoardWithPositions(const vector<std::tuple<int, int, Symbol>>& positions)
+        // Helper to create a board from a 3x3 grid
+        shared_ptr<Board> createBoard(const vector<vector<Symbol>>& grid)
         {
             auto board = make_shared<Board>(m_logger);
-            for (const auto& [row, col, symbol] : positions)
+            for (int row = 0; row < 3; ++row)
             {
-                if (symbol != Symbol::None) {
-                    board->SetPosition(models::Position({row, col}, symbol));
+                for (int col = 0; col < 3; ++col)
+                {
+                    if (grid[row][col] != Symbol::None) {
+                        board->SetPosition(models::Position({row, col}, grid[row][col]));
+                    }
                 }
             }
             return board;
@@ -80,12 +87,19 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     TEST_F(HeuristicRolloutStrategyFixture, select_action_with_single_available_action)
     {
         // Arrange
-        auto board = createBoardWithPositions({
-            {0, 0, Symbol::X}, {0, 1, Symbol::O}, {0, 2, Symbol::X},
-            {1, 0, Symbol::O}, {1, 1, Symbol::X}, {1, 2, Symbol::O},
-            {2, 0, Symbol::X}, {2, 1, Symbol::O}, {2, 2, Symbol::None}  // Only (2,2) is open
+        // Board state:
+        //    1   2   3 
+        // A  X | O | X 
+        //   ---+---+---
+        // B  O | X | O 
+        //   ---+---+---
+        // C  X | O |   
+        auto board = createBoard({
+            {X, O, X},
+            {O, X, O},
+            {X, O, _}
         });
-        auto gameState = createGameState(board, m_playerX, Symbol::O);
+        auto gameState = createGameState(board, m_playerX, O);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
         auto actions = createActions(gameState, factory);
@@ -101,7 +115,18 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     TEST_F(HeuristicRolloutStrategyFixture, select_action_prioritizes_center_position)
     {
         // Arrange - Empty board
-        auto board = make_shared<Board>(m_logger);
+        // Board state:
+        //    1   2   3 
+        // A    |   |   
+        //   ---+---+---
+        // B    |   |   
+        //   ---+---+---
+        // C    |   |   
+        auto board = createBoard({
+            {_, _, _},
+            {_, _, _},
+            {_, _, _}
+        });
         auto gameState = createGameState(board, m_playerX);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
@@ -112,18 +137,25 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         // Assert - Should select center position (B2) when available
         ASSERT_NE(selectedAction, nullptr);
-        EXPECT_EQ(selectedAction->Name(), "B2");  // Center position (1,1) - this will fail until heuristics are implemented
+        EXPECT_EQ(selectedAction->Name(), "B2");  // Center position (1,1)
     }
 
     TEST_F(HeuristicRolloutStrategyFixture, select_action_with_empty_actions_list)
     {
         // Arrange
-        auto board = createBoardWithPositions({
-            {0, 0, Symbol::X}, {0, 1, Symbol::O}, {0, 2, Symbol::X},
-            {1, 0, Symbol::O}, {1, 1, Symbol::X}, {1, 2, Symbol::O},
-            {2, 0, Symbol::X}, {2, 1, Symbol::O}, {2, 2, Symbol::X}
+        // Board state:
+        //    1   2   3 
+        // A  X | O | X 
+        //   ---+---+---
+        // B  O | X | O 
+        //   ---+---+---
+        // C  X | O | X 
+        auto board = createBoard({
+            {X, O, X},
+            {O, X, O},
+            {X, O, X}
         });
-        auto gameState = createGameState(board, m_playerX, Symbol::X);
+        auto gameState = createGameState(board, m_playerX, X);
         auto strategy = createStrategy(gameState);
         vector<action_ptr> emptyActions;
 
@@ -137,11 +169,19 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     TEST_F(HeuristicRolloutStrategyFixture, select_action_handles_multiple_corner_positions)
     {
         // Arrange - Only corner positions available
-        auto board = createBoardWithPositions({
-            {0, 1, Symbol::X}, {1, 0, Symbol::O}, {1, 1, Symbol::X},
-            {1, 2, Symbol::O}, {2, 1, Symbol::X}
+        // Board state:
+        //    1   2   3 
+        // A    | X |   
+        //   ---+---+---
+        // B  O | X | O 
+        //   ---+---+---
+        // C    | X |   
+        const auto board = createBoard({
+            {_, X, _},
+            {O, X, O},
+            {_, X, _}
         });
-        auto gameState = createGameState(board, m_playerX, Symbol::X);
+        auto gameState = createGameState(board, m_playerX, X);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
         auto actions = createActions(gameState, factory);
@@ -159,12 +199,19 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     TEST_F(HeuristicRolloutStrategyFixture, select_action_blocks_opponent_win)
     {
         // Arrange - Opponent (O) has two in a row, X needs to block
-        auto board = createBoardWithPositions({
-            {0, 0, Symbol::O}, {0, 1, Symbol::O}, {0, 2, Symbol::None},  // O can win with (0,2)
-            {1, 0, Symbol::X}, {1, 1, Symbol::X}, {1, 2, Symbol::O},
-            {2, 0, Symbol::X}, {2, 1, Symbol::O}, {2, 2, Symbol::X}
+        // Board state:
+        //    1   2   3 
+        // A  O | O |   
+        //   ---+---+---
+        // B  X | X | O 
+        //   ---+---+---
+        // C  X | O | X 
+        auto board = createBoard({
+            {O, O, _},
+            {X, X, O},
+            {X, O, X}
         });
-        auto gameState = createGameState(board, m_playerX, Symbol::O);
+        auto gameState = createGameState(board, m_playerX, O);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
         auto actions = createActions(gameState, factory);
@@ -174,19 +221,26 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         // Assert - Should block opponent by playing A3 (0,2)
         ASSERT_NE(selectedAction, nullptr);
-        EXPECT_EQ(selectedAction->Name(), "A3");  // This passes because first action happens to be A3
+        EXPECT_EQ(selectedAction->Name(), "A3");
     }
 
     // Test for taking winning moves
     TEST_F(HeuristicRolloutStrategyFixture, select_action_takes_winning_opportunity)
     {
         // Arrange - X has two in a row and can win
-        auto board = createBoardWithPositions({
-            {0, 0, Symbol::X}, {0, 1, Symbol::X}, {0, 2, Symbol::None},  // X can win with (0,2)
-            {1, 0, Symbol::O}, {1, 1, Symbol::O}, {1, 2, Symbol::X},
-            {2, 0, Symbol::X}, {2, 1, Symbol::O}, {2, 2, Symbol::X}
+        // Board state:
+        //    1   2   3 
+        // A  O |   |
+        //   ---+---+---
+        // B  X | O | X
+        //   ---+---+---
+        // C    |   | X
+        auto board = createBoard({
+            {O, _, _},
+            {X, O, X},
+            {_, _, X}
         });
-        auto gameState = createGameState(board, m_playerX, Symbol::X);
+        auto gameState = createGameState(board, m_playerX, X);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
         auto actions = createActions(gameState, factory);
@@ -196,14 +250,25 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         // Assert - Should take winning move A3 (0,2)
         ASSERT_NE(selectedAction, nullptr);
-        EXPECT_EQ(selectedAction->Name(), "A3");  // This passes because first action happens to be A3
+        EXPECT_EQ(selectedAction->Name(), "A3");
     }
 
     // Test constructor
     TEST_F(HeuristicRolloutStrategyFixture, constructor_initializes_correctly)
     {
         // Arrange
-        auto board = make_shared<Board>(m_logger);
+        // Board state:
+        //    1   2   3 
+        // A    |   |   
+        //   ---+---+---
+        // B    |   |   
+        //   ---+---+---
+        // C    |   |   
+        auto board = createBoard({
+            {_, _, _},
+            {_, _, _},
+            {_, _, _}
+        });
         auto gameState = createGameState(board, m_playerX);
 
         // Act
