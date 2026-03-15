@@ -201,15 +201,15 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         // Arrange - Opponent (O) has two in a row, X needs to block
         // Board state:
         //    1   2   3 
-        // A  O | O |   
+        // A  X |   |
         //   ---+---+---
-        // B  X | X | O 
+        // B    | X | O
         //   ---+---+---
-        // C  X | O | X 
+        // C    |   | O
         auto board = createBoard({
-            {O, O, _},
-            {X, X, O},
-            {X, O, X}
+            {X, _, _},
+            {_, X, O},
+            {_, _, O}
         });
         auto gameState = createGameState(board, m_playerX, O);
         auto strategy = createStrategy(gameState);
@@ -232,12 +232,12 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         //    1   2   3 
         // A  O |   |
         //   ---+---+---
-        // B  X | O | X
+        // B  O |   | X
         //   ---+---+---
         // C    |   | X
         auto board = createBoard({
             {O, _, _},
-            {X, O, X},
+            {O, _, X},
             {_, _, X}
         });
         auto gameState = createGameState(board, m_playerX, X);
