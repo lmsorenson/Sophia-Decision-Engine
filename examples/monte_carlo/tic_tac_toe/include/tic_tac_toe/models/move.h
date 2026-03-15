@@ -40,6 +40,12 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         std::string Name() const override;
 
         /**
+         * @brief Gets the position change associated with this move.
+         * @return The position.
+         */
+        [[nodiscard]] Position Change() const;
+
+        /**
          * Generates the outcome of the move.
          */
         void Generate() override;

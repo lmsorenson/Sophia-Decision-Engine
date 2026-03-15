@@ -61,6 +61,18 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         [[nodiscard]] std::vector<const_position_ptr> GetOpenPositions() const;
 
         /**
+         * @brief Gets moves that would win the game for the current player.
+         * @return A vector of winning positions.
+         */
+        [[nodiscard]] std::vector<const_position_ptr> GetWinningMoves() const;
+
+        /**
+         * @brief Gets moves that would block the opponent from winning on their next turn.
+         * @return A vector of blocking positions.
+         */
+        [[nodiscard]] std::vector<const_position_ptr> GetBlockingMoves() const;
+
+        /**
          * @brief The last placed Symbol.
          * @return The Symbol that was placed last.
          */

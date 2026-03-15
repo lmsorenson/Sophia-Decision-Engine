@@ -30,4 +30,5 @@ add_subdirectory(model_tests)
 target_sources(sophia_monte_carlo_tests
         PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/simulation_tests.cpp
         PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/state_tests.cpp
-        PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/heuristic_rollout_strategy_tests.cpp)
+        PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/heuristic_rollout_strategy_tests.cpp
+        PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/board_tests.cpp)

@@ -4,8 +4,10 @@
 #include <vector>
 #include <logging/ilogger.h> // Added for logger_ptr
 #include <sstream> // For building print string
+#include <bit> // For popcount and countr_zero
 
 using sophia::monte_carlo::tic_tac_toe::models::Board;
+using sophia::monte_carlo::tic_tac_toe::models::BoardMask;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::models::Player;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
@@ -128,6 +130,79 @@ int Board::GetMarkCount() const
         }
     }
     return count;
+}
+
+BoardMask Board::ToMask() const
+{
+    BoardMask mask;
+    for (int row = 0; row < 3; ++row)
+    {
+        for (int col = 0; col < 3; ++col)
+        {
+            const auto state = m_tiles_[row][col]->State();
+            if (state == Symbol::None) continue;
+
+            // bit index: row 0 (0,1,2), row 1 (3,4,5), row 2 (6,7,8)
+            const int bit_index = row * 3 + col;
+            const uint16_t bit = 1 << bit_index;
+
+            if (state == Symbol::X)
+            {
+                mask.x_mask |= bit;
+            }
+            else if (state == Symbol::O)
+            {
+                mask.o_mask |= bit;
+            }
+        }
+    }
+    return mask;
+}
+
+std::vector<const_position_ptr> Board::GetWinningMoves(const enums::Symbol symbol) const
+{
+    if (symbol == enums::Symbol::None) return {};
+
+    const auto [x_mask, o_mask] = ToMask();
+    const uint16_t my_mask = (symbol == enums::Symbol::X) ? x_mask : o_mask;
+    const uint16_t opp_mask = (symbol == enums::Symbol::X) ? o_mask : x_mask;
+
+    // Define the 8 winning lines as bitmasks
+    static constexpr uint16_t WIN_LINES[] = {
+        0b000000111, // Row 0 (A1, A2, A3)
+        0b000111000, // Row 1 (B1, B2, B3)
+        0b111000000, // Row 2 (C1, C2, C3)
+        0b001001001, // Col 0 (A1, B1, C1)
+        0b010010010, // Col 1 (A2, B2, C2)
+        0b100100100, // Col 2 (A3, B3, C3)
+        0b100010001, // Diagonal (A1, B2, C3)
+        0b001010100  // Anti-diagonal (A3, B2, C1)
+    };
+
+    std::vector<const_position_ptr> winning_moves;
+    std::unordered_set<int> added_indices;
+
+    for (const uint16_t line : WIN_LINES)
+    {
+        // Check if I have 2 pieces in this line and opponent has 0
+        if (std::popcount(static_cast<unsigned int>(my_mask & line)) == 2 && 
+            (opp_mask & line) == 0)
+        {
+            // The winning move is the one empty bit in this line
+            const uint16_t winning_bit = line ^ (my_mask & line);
+            const int bit_index = std::countr_zero(winning_bit);
+            
+            if (added_indices.find(bit_index) == added_indices.end())
+            {
+                const int row = bit_index / 3;
+                const int col = bit_index % 3;
+                winning_moves.push_back(m_tiles_[row][col]);
+                added_indices.insert(bit_index);
+            }
+        }
+    }
+
+    return winning_moves;
 }
 
 

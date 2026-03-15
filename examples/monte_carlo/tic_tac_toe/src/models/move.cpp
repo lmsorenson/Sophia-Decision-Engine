@@ -29,6 +29,11 @@ std::string Move::Name() const
     return m_change_.Name();
 }
 
+Position Move::Change() const
+{
+    return m_change_;
+}
+
 void Move::Generate()
 {
     if (const auto source = m_source_.lock())

@@ -30,6 +30,19 @@ const_game_state_ptr GameState::ApplyMove(const Position &position) const
     return std::make_shared<GameState>(m_you_, new_board, position.State());
 }
 
+const_player_ptr GameState::CurrentPlayer() const
+{
+    // If board has even number of marks, it's X's turn. If odd, it's O's turn.
+    // This assumes X always starts.
+    const auto count = m_board_->GetMarkCount();
+    const Symbol current_symbol = (count % 2 == 0) ? Symbol::X : Symbol::O;
+    
+    // Note: We don't have easy access to the actual Player object for the opponent here
+    // without more context. But for heuristics, we often just need the symbol.
+    // For now, we return m_you_ if its symbol matches, otherwise we'd need a player registry.
+    return m_you_; 
+}
+
 const_player_ptr GameState::You() const
 {
     return m_you_;
@@ -43,6 +56,20 @@ std::shared_ptr<std::pair<Symbol, bool>> GameState::Winner() const
 std::vector<const_position_ptr> GameState::GetOpenPositions() const
 {
     return m_board_->GetOpenPositions();
+}
+
+std::vector<const_position_ptr> GameState::GetWinningMoves() const
+{
+    const auto count = m_board_->GetMarkCount();
+    const Symbol current_symbol = (count % 2 == 0) ? Symbol::X : Symbol::O;
+    return m_board_->GetWinningMoves(current_symbol);
+}
+
+std::vector<const_position_ptr> GameState::GetBlockingMoves() const
+{
+    const auto count = m_board_->GetMarkCount();
+    const Symbol opponent_symbol = (count % 2 == 0) ? Symbol::O : Symbol::X;
+    return m_board_->GetWinningMoves(opponent_symbol);
 }
 
 Symbol GameState::LastPlaced() const
