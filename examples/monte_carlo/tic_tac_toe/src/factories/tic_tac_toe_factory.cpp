@@ -1,7 +1,7 @@
 #include <tic_tac_toe/factories/tic_tac_toe_factory.h>
 #include <tic_tac_toe/models/state.h>
 #include <tic_tac_toe/models/move.h>
-#include <monte_carlo/models/random_rollout_strategy.h> // Need concrete strategy for CreateStrategy()
+#include <tic_tac_toe/models/heuristic_rollout_strategy.h>
 
 #include <utility>
 #include <monte_carlo/common_aliases.h> // Centralized aliases
@@ -12,7 +12,7 @@ using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::GameState;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::models::Move;
-using sophia::monte_carlo::models::RandomRolloutStrategy;
+using sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy;
 using std::make_shared;
 using std::shared_ptr;
 
@@ -42,5 +42,9 @@ sophia::monte_carlo::action_ptr TicTacToeFactory::CreateAction(node_base_ptr<Gam
 
 sophia::monte_carlo::rollout_strategy_ptr TicTacToeFactory::CreateStrategy() const
 {
-    return make_shared<RandomRolloutStrategy>(m_logger_);
+    // HeuristicRolloutStrategy will extract the current state from the node being rolled out.
+    // We pass a dummy initial state as it will be overridden in select_action.
+    auto board = make_shared<Board>(m_logger_);
+    GameState dummy_state(you_, board);
+    return make_shared<HeuristicRolloutStrategy>(dummy_state, m_logger_);
 }

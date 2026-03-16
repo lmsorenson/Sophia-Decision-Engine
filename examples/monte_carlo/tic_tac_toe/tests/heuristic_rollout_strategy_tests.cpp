@@ -217,7 +217,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         auto actions = createActions(gameState, factory);
 
         // Act
-        auto selectedAction = strategy->select_action(actions);
+        const auto selectedAction = strategy->select_action(actions);
 
         // Assert - Should block opponent by playing A3 (0,2)
         ASSERT_NE(selectedAction, nullptr);

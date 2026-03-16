@@ -1,13 +1,17 @@
 #include <tic_tac_toe/models/heuristic_rollout_strategy.h>
 #include <tic_tac_toe/models/move.h>
+#include <monte_carlo/models/node_base.h>
 #include <algorithm>
 #include <random>
 #include <utility>
 
 using sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy;
 using sophia::monte_carlo::tic_tac_toe::models::Move;
+using sophia::monte_carlo::tic_tac_toe::models::GameState;
+using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::action_ptr;
 using sophia::monte_carlo::models::Action;
+using sophia::monte_carlo::models::NodeBase;
 using sophia::monte_carlo::tic_tac_toe::const_position_ptr;
 
 HeuristicRolloutStrategy::HeuristicRolloutStrategy(GameState current_game_state, logger_ptr  logger)
@@ -22,15 +26,23 @@ action_ptr HeuristicRolloutStrategy::select_action(std::vector<action_ptr> actio
         return nullptr;
     }
 
+    // Attempt to get the latest state from the actions themselves.
+    // This allows the strategy to be used in multi-step rollouts where the state changes.
+    GameState state = m_current_game_state_;
+    if (auto node = std::dynamic_pointer_cast<NodeBase<GameState, Position>>(actions[0]->Source()))
+    {
+        state = node->GetState();
+    }
+
     // 1. Take winning moves
-    const auto winning_moves = m_current_game_state_.GetWinningMoves();
+    const auto winning_moves = state.GetWinningMoves();
     if (auto winning_action = find_action(actions, winning_moves))
     {
         return winning_action;
     }
 
     // 2. Block opponent winning moves
-    const auto blocking_moves = m_current_game_state_.GetBlockingMoves();
+    const auto blocking_moves = state.GetBlockingMoves();
     if (auto blocking_action = find_action(actions, blocking_moves))
     {
         return blocking_action;

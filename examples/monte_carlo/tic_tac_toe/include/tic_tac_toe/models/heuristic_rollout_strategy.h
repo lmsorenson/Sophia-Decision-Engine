@@ -26,7 +26,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param current_game_state The current game state from which the rollout will start.
          * @param logger The logger instance.
          */
-        explicit HeuristicRolloutStrategy(GameState current_game_state, logger_ptr  logger);
+        explicit HeuristicRolloutStrategy(GameState current_game_state, logger_ptr logger);
 
         /**
          * @brief Selects an action from a vector of available actions based on heuristic rules.
@@ -36,7 +36,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         [[nodiscard]] action_ptr select_action(std::vector<action_ptr> actions) const override;
 
     private:
-        static static action_ptr find_action(
+        static action_ptr find_action(
             const std::vector<action_ptr> &actions,
             const std::vector<const_position_ptr>& target_positions);
 
