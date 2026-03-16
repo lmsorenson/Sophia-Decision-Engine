@@ -9,6 +9,15 @@
 namespace sophia::monte_carlo::tic_tac_toe::factories
 {
     /**
+     * @brief The types of rollout strategies available for Tic-Tac-Toe.
+     */
+    enum class RolloutStrategyType
+    {
+        Random,
+        Heuristic
+    };
+
+    /**
      * @class TicTacToeFactory
      * @brief Creates simulation nodes and actions for a Tic Tac Toe game.
      *
@@ -29,6 +38,12 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          */
         explicit TicTacToeFactory(const_player_ptr you, const logger_ptr& logger);
         ~TicTacToeFactory() override = default;
+
+        /**
+         * @brief Sets the rollout strategy type to be created by the factory.
+         * @param type The strategy type.
+         */
+        void SetRolloutStrategyType(RolloutStrategyType type);
 
         /**
          * @brief Creates a new Node.
@@ -62,6 +77,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
     private:
         const_player_ptr you_;
         logger_ptr m_logger_; // Member to hold the logger instance
+        RolloutStrategyType m_rollout_strategy_type_ = RolloutStrategyType::Heuristic;
     };
 }
 
