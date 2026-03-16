@@ -11,15 +11,6 @@
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
     /**
-     * @brief A bitmask representation of the board for both players.
-     */
-    struct BoardMask
-    {
-        uint16_t x_mask = 0;
-        uint16_t o_mask = 0;
-    };
-
-    /**
      * @class Board
      * @brief A Tic Tac Toe board.
      */
@@ -103,12 +94,6 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         [[nodiscard]] int GetMarkCount() const;
 
         /**
-         * @brief Converts the board state to bitmasks for high-performance heuristic calculations.
-         * @return A BoardMask containing bits for X and O positions.
-         */
-        [[nodiscard]] BoardMask ToMask() const;
-
-        /**
          * @brief Finds moves that would complete a 3-in-a-row for the given symbol.
          * @param symbol The symbol (X or O) to check for winning opportunities.
          * @return A vector of positions that would complete a win.
@@ -121,6 +106,21 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         void Print() const;
 
     private:
+        /**
+         * @brief A bitmask representation of the board for both players.
+         */
+        struct BoardMask
+        {
+            uint16_t x_mask = 0;
+            uint16_t o_mask = 0;
+        };
+
+        /**
+         * @brief Converts the board state to bitmasks for high-performance heuristic calculations.
+         * @return A BoardMask containing bits for X and O positions.
+         */
+        [[nodiscard]] BoardMask ToMask() const;
+
         std::vector<std::vector<const_position_ptr>> m_tiles_;
         enums::Symbol last_placed_ = enums::Symbol::None;
         logger_ptr m_logger_; // Member to hold the logger instance

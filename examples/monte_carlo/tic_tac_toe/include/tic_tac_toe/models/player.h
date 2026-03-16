@@ -21,6 +21,11 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         virtual ~Player() = default;
 
         /**
+         * @brief Initializes the player.
+         */
+        virtual void Initialize() {};
+
+        /**
          * @brief The Symbol used by the Player.
          * @return
          */

@@ -7,7 +7,6 @@
 #include <bit> // For popcount and countr_zero
 
 using sophia::monte_carlo::tic_tac_toe::models::Board;
-using sophia::monte_carlo::tic_tac_toe::models::BoardMask;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::models::Player;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
@@ -132,7 +131,7 @@ int Board::GetMarkCount() const
     return count;
 }
 
-BoardMask Board::ToMask() const
+Board::BoardMask Board::ToMask() const
 {
     BoardMask mask;
     for (int row = 0; row < 3; ++row)

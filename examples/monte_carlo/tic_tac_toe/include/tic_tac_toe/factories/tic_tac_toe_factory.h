@@ -9,15 +9,6 @@
 namespace sophia::monte_carlo::tic_tac_toe::factories
 {
     /**
-     * @brief The types of rollout strategies available for Tic-Tac-Toe.
-     */
-    enum class RolloutStrategyType
-    {
-        Random,
-        Heuristic
-    };
-
-    /**
      * @class TicTacToeFactory
      * @brief Creates simulation nodes and actions for a Tic Tac Toe game.
      *

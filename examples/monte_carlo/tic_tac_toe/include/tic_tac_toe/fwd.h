@@ -1,5 +1,12 @@
 #pragma once
 
+namespace sophia::monte_carlo::tic_tac_toe::factories {
+    enum class RolloutStrategyType {
+        Random,
+        Heuristic
+    };
+}
+
 namespace sophia::monte_carlo::factories {
     template <typename GameStateType, typename ActionType> class TreeFactoryBase;
 }

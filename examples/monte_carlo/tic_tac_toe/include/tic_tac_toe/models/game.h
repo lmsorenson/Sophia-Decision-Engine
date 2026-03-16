@@ -81,18 +81,21 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     template<class TPlayer, typename... Args>
     void Game::Assign(enums::Symbol symbol, Args ... args)
     {
+        player_ptr* target_player = nullptr;
         switch (symbol)
         {
             case enums::Symbol::X:
-                x_ = std::make_shared<TPlayer>(symbol, args..., m_logger_);
-                add_observer(x_);
+                target_player = &x_;
                 break;
             case enums::Symbol::O:
-                o_ = std::make_shared<TPlayer>(symbol, args..., m_logger_);
-                add_observer(o_);
+                target_player = &o_;
                 break;
             default: throw std::invalid_argument("Invalid symbol");
         }
+
+        *target_player = std::make_shared<TPlayer>(symbol, args..., m_logger_);
+        (*target_player)->Initialize();
+        add_observer(*target_player);
     }
 }
 
