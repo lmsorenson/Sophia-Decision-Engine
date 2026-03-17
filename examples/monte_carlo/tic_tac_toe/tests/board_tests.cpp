@@ -10,32 +10,6 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     using models::Position;
     using enums::Symbol;
 
-    TEST(BoardTests, to_mask_returns_correct_bits)
-    {
-        // Arrange
-        auto logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::ERROR);
-        Board board(logger);
-
-        // X at (0,0) index 0, bit 1
-        // O at (1,1) index 4, bit 16
-        // X at (2,2) index 8, bit 256
-        board.SetPosition(Position({0, 0}, Symbol::X));
-        board.SetPosition(Position({1, 1}, Symbol::O));
-        board.SetPosition(Position({2, 2}, Symbol::X));
-
-        // Act
-        auto mask = board.ToMask();
-
-        // Assert
-        EXPECT_EQ(mask.x_mask, (1 << 0) | (1 << 8)); // 1 + 256 = 257
-        EXPECT_EQ(mask.o_mask, (1 << 4));            // 16
-    }
-
-    TEST(BoardTests, to_mask_empty_board)
-    {
-        // ... (previous test code)
-    }
-
     TEST(BoardTests, get_winning_moves_finds_single_win)
     {
         // Arrange

@@ -29,7 +29,7 @@ Bot::Bot(const Symbol symbol, const double difficulty,
         throw std::invalid_argument("Difficulty must be a percentage between 0 and 1.");
     }
 
-    iterations_ = std::max(1, static_cast<int>(std::round(1000 * difficulty)));
+    iterations_ = std::max(1, static_cast<int>(std::round(32 * difficulty)));
     if (m_logger_) m_logger_->info("Bot will perform {} iterations per move.", iterations_);
 }
 
