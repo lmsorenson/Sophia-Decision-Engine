@@ -218,7 +218,7 @@ void Node::Backpropagate(const double reward)
 
     if (const auto sp = m_parent_action_.lock())
     {
-        if(auto parent_node = sp->Source())
+        if(const auto parent_node = sp->Source())
         {
             parent_node->Backpropagate(reward);
         }
