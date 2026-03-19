@@ -34,5 +34,17 @@ namespace sophia::monte_carlo::model_tests
         EXPECT_EQ(actualVisitCountS2, 2);
         EXPECT_EQ(actualTotalRewardS2, 20);
     }
+
+    TEST_F(MonteCarloModelsFixture, node_backpropagate_null_reward_test)
+    {
+        auto factory = std::make_shared<mocks::MockTreeFactory>();
+        auto s1 = factory->CreateNode("S1");
+
+        // Backpropagate with null reward should increment visit count but add 0 to total reward
+        s1->Backpropagate(nullptr);
+
+        EXPECT_EQ(s1->VisitCount(), 1);
+        EXPECT_EQ(s1->TotalReward(), 0.0);
+    }
 }
 
