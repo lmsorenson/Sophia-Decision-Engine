@@ -1,0 +1,19 @@
+#ifndef ACTOR_H
+#define ACTOR_H
+
+#include <monte_carlo/common_aliases.h>
+
+namespace sophia::monte_carlo::models
+{
+    /**
+     * @brief Represents an actor in the Monte Carlo Tree Search.
+     */
+    class Actor
+    {
+    public:
+        Actor() = default;
+        virtual ~Actor() = default;
+    };
+}
+
+#endif //ACTOR_H
