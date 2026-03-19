@@ -48,6 +48,7 @@ std::vector<action_ptr> State::GetAvailableActions()
 
     const auto open_positions = m_state_.GetOpenPositions();
     const auto last_placed = m_state_.LastPlaced();
+    const auto current_player = m_state_.CurrentPlayer();
 
     const Symbol new_state = Alternate(last_placed);
 
@@ -56,7 +57,7 @@ std::vector<action_ptr> State::GetAvailableActions()
         const auto new_position = position->WithState(new_state);
 
         auto _this_ = std::static_pointer_cast<State>(shared_from_this());
-        auto action = m_factory_->CreateAction(_this_, new_position);
+        auto action = m_factory_->CreateAction(_this_, new_position, current_player);
         action->Generate();
         actions.push_back(action);
     }
@@ -80,7 +81,8 @@ bool State::IsTerminalState() const
 const_simulation_result_ptr State::Value() const
 {
     Symbol winner_symbol = Symbol::None;
-    if (auto winner = m_state_.Winner())
+
+    if (const auto winner = m_state_.Winner())
     {
         winner_symbol = winner->first;
     }

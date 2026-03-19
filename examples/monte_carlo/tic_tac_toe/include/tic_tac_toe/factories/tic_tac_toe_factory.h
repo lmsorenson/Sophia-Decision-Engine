@@ -55,6 +55,15 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          * @brief Creates a new Action.
          * @param node the source node for the action being created.
          * @param change the change being applied to the source node.
+         * @param actor the actor that performed the action.
+         * @returns a shared pointer to a Node
+         */
+        [[nodiscard]] action_ptr CreateAction(node_base_ptr<models::GameState, models::Position> node, models::Position change, const const_actor_ptr& actor) const override;
+
+        /**
+         * @brief Creates a new Action.
+         * @param node the source node for the action being created.
+         * @param change the change being applied to the source node.
          * @returns a shared pointer to a Node
          */
         [[nodiscard]] action_ptr CreateAction(node_base_ptr<models::GameState, models::Position> node, models::Position change) const override;

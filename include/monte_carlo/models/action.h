@@ -40,6 +40,9 @@ namespace sophia::monte_carlo::models
 
         /// @brief Retrieves the target node that results from this action.
         [[nodiscard]] virtual node_ptr Target() const = 0;
+
+        /// @brief Retrieves the actor that performed this action.
+        [[nodiscard]] virtual const_actor_ptr Actor() const = 0;
     };
 }
 

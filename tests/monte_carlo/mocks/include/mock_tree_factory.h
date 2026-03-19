@@ -21,6 +21,7 @@ namespace sophia::monte_carlo::mocks
         [[nodiscard]] node_ptr CreateNode(std::string name) const override;
         [[nodiscard]] node_ptr CreateNode(std::string name, bool state) const override;
         [[nodiscard]] action_ptr CreateAction(node_base_ptr<bool, int> node, int change) const override;
+        [[nodiscard]] action_ptr CreateAction(node_base_ptr<bool, int> node, int change, const const_actor_ptr& actor) const override;
         [[nodiscard]] rollout_strategy_ptr CreateStrategy() const override;
     };
 }

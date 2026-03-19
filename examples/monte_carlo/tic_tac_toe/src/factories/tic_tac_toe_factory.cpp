@@ -47,6 +47,11 @@ sophia::monte_carlo::action_ptr TicTacToeFactory::CreateAction(node_base_ptr<Gam
     return make_shared<Move>(node, change, shared_from_this(), m_logger_);
 }
 
+sophia::monte_carlo::action_ptr TicTacToeFactory::CreateAction(node_base_ptr<GameState, Position> node, Position change, const const_actor_ptr& actor) const
+{
+    return make_shared<Move>(node, change, actor, shared_from_this(), m_logger_);
+}
+
 sophia::monte_carlo::rollout_strategy_ptr TicTacToeFactory::CreateStrategy() const
 {
     if (m_rollout_strategy_type_ == RolloutStrategyType::Heuristic)

@@ -6,7 +6,7 @@ namespace sophia::monte_carlo::models
 {
 
 template<typename TState, typename TChange>
-NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, sophia::monte_carlo::const_factory_ptr<TState, TChange> factory, const sophia::monte_carlo::logger_ptr& logger)
+NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger)
     : Node(name, logger)
     , m_state_(state)
     , m_factory_(factory)
@@ -31,7 +31,7 @@ double NodeBase<TState, TChange>::interpret_result(const const_simulation_result
     if (!result) return 0.0;
     
     // If it's a SimpleSimulationResult, we can use its reward directly.
-    if (auto simple = std::dynamic_pointer_cast<const SimpleSimulationResult>(result))
+    if (const auto simple = std::dynamic_pointer_cast<const SimpleSimulationResult>(result))
     {
         return simple->Reward();
     }

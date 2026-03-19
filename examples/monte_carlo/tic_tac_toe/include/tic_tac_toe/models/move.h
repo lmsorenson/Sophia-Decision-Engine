@@ -26,6 +26,19 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Creates an instance of a Move.
          * @param source A shared pointer to the source Node.
          * @param change The change being applied to the game.
+         * @param actor The actor that performed the move.
+         * @param factory A shared pointer to the Tree Factory.
+         */
+        explicit Move(const node_base_ptr<GameState, Position> &source,
+            Position change,
+            const const_actor_ptr& actor,
+            const_factory_ptr<GameState, Position> factory,
+            const logger_ptr& logger);
+
+        /**
+         * @brief Creates an instance of a Move.
+         * @param source A shared pointer to the source Node.
+         * @param change The change being applied to the game.
          * @param factory A shared pointer to the Tree Factory.
          */
         explicit Move(const node_base_ptr<GameState, Position> &source,

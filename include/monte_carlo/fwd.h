@@ -4,6 +4,7 @@
 namespace sophia::monte_carlo::models
 {
     class Action;
+    class Actor;
     class Node;
     class RolloutStrategyInterface;
     class SimulationResult;

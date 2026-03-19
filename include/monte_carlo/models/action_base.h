@@ -5,10 +5,8 @@
 #include <ostream>
 
 #include <monte_carlo/models/action.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
-
-#include "node_base.h"
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
+#include <monte_carlo/models/node_base.h>
+#include <monte_carlo/common_aliases.h>
 
 namespace sophia::monte_carlo::models
 {
@@ -24,29 +22,29 @@ namespace sophia::monte_carlo::models
     template<typename TState, typename TChange>
     class ActionBase : public Action
     {
-    protected:
-        // Removed using node_base_ptr = std::shared_ptr<NodeBase<TState, TChange>>;
-        // Removed using node_base_ref = std::weak_ptr<NodeBase<TState, TChange>>;
-        // Removed using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
-
     public:
-        ActionBase(const sophia::monte_carlo::node_base_ptr<TState, TChange> &state, TChange change, sophia::monte_carlo::const_factory_ptr<TState, TChange> factory, const sophia::monte_carlo::logger_ptr& logger);
+        ActionBase(const node_base_ptr<TState, TChange> &state, TChange change, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger);
+        ActionBase(const node_base_ptr<TState, TChange> &state, TChange change, const const_actor_ptr& actor, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger);
 
-        [[nodiscard]] sophia::monte_carlo::node_ptr Source() const override;
-        [[nodiscard]] sophia::monte_carlo::node_ptr Target() const override;
+        [[nodiscard]] node_ptr Source() const override;
+        [[nodiscard]] node_ptr Target() const override;
+        [[nodiscard]] const_actor_ptr Actor() const override;
 
     protected:
         /// @brief A factory for creating new nodes in the tree.
-        sophia::monte_carlo::const_factory_ptr<TState, TChange> m_factory_;
+        const_factory_ptr<TState, TChange> m_factory_;
 
         /// @brief The logger instance for this action.
-        sophia::monte_carlo::logger_ptr m_logger_;
+        logger_ptr m_logger_;
 
         /// @brief A weak pointer to the source node from which this action originates.
-        sophia::monte_carlo::node_base_ref<TState, TChange> m_source_;
+        node_base_ref<TState, TChange> m_source_;
 
         /// @brief A shared pointer to the target node that results from this action.
-        sophia::monte_carlo::node_ptr m_target_;
+        node_ptr m_target_;
+
+        /// @brief The actor that performed this action.
+        const_actor_ptr m_actor_;
 
         /// @brief The change in state that this action represents.
         TChange m_change_;
