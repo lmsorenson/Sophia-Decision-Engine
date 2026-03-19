@@ -9,7 +9,7 @@ using sophia::monte_carlo::mocks::MockNode;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::factories::TreeFactoryBase;
-using sophia::monte_carlo::models::SimulationResult;
+using sophia::monte_carlo::models::SimpleSimulationResult;
 using std::vector;
 using std::shared_ptr;
 using std::make_shared;
@@ -48,7 +48,7 @@ void MockNode::Setup( const double value ) const
                 .WillOnce(Return(false));
     EXPECT_CALL(*this, Value())
         .Times(::testing::AnyNumber())
-        .WillRepeatedly(Return(make_shared<SimulationResult>(value)));
+        .WillRepeatedly(Return(make_shared<SimpleSimulationResult>(value)));
 }
 
 std::shared_ptr<const Action> MockNode::GetParent() const

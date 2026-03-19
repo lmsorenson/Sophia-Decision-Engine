@@ -1,5 +1,5 @@
 #include <tic_tac_toe/models/state.h>
-#include <monte_carlo/models/simulation_result.h>
+#include <tic_tac_toe/models/tic_tac_toe_simulation_result.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 
 #include <utility>
@@ -9,9 +9,9 @@
 #include <monte_carlo/common_aliases.h>
 
 using sophia::monte_carlo::tic_tac_toe::models::State;
+using sophia::monte_carlo::tic_tac_toe::models::TicTacToeSimulationResult;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::models::Node;
-using sophia::monte_carlo::models::SimulationResult;
 using sophia::monte_carlo::action_ptr;
 using sophia::monte_carlo::const_factory_ptr;
 using sophia::monte_carlo::const_simulation_result_ptr;
@@ -79,11 +79,37 @@ bool State::IsTerminalState() const
 
 const_simulation_result_ptr State::Value() const
 {
-    const auto board = m_state_.GetBoard();
+    Symbol winner_symbol = Symbol::None;
+    if (auto winner = m_state_.Winner())
+    {
+        winner_symbol = winner->first;
+    }
 
+    return make_shared<TicTacToeSimulationResult>(winner_symbol);
+}
+
+double State::interpret_result(const const_simulation_result_ptr result) const
+{
+    if (!result) return 0.0;
+
+    auto ttt_result = std::dynamic_pointer_cast<const TicTacToeSimulationResult>(result);
+    if (!ttt_result) return 0.0;
+
+    const Symbol winner = ttt_result->Winner();
     const auto you = m_state_.You();
+    const Symbol your_symbol = you->symbol();
 
-    return make_shared<SimulationResult>(you->Value(board));
+    if (winner == Symbol::None)
+    {
+        return 1.0; // Draw
+    }
+
+    if (winner == your_symbol)
+    {
+        return 2.0; // Win
+    }
+
+    return 0.0; // Loss
 }
 
 action_ptr State::SelectAction(const std::string action_name)

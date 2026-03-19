@@ -6,22 +6,32 @@
 namespace sophia::monte_carlo::models
 {
     /**
-     * @brief Represents the result of a simulation (rollout) in MCTS.
+     * @brief Interface for the result of a simulation (rollout) in MCTS.
      *
-     * This class encapsulates the information gathered during a simulation,
-     * such as the reward obtained and potentially other metrics or terminal state info.
+     * This is a marker interface. Specific games should implement this to carry
+     * whatever data they need from a simulation (e.g., winner, final score, etc.).
+     * The interpretation of this data into a reward value is done by the Node's
+     * interpret_result method.
      */
     class SimulationResult
     {
     public:
-        explicit SimulationResult(double reward);
         virtual ~SimulationResult() = default;
 
-        /**
-         * @brief Gets the reward obtained from the simulation.
-         * @return The simulation reward.
-         */
-        [[nodiscard]] double Reward() const;
+        [[nodiscard]] virtual double Reward() const = 0;
+    };
+
+    /**
+     * @brief A simple, concrete implementation of SimulationResult that stores a reward.
+     * Useful for generic or simpler MCTS applications.
+     */
+    class SimpleSimulationResult : public SimulationResult
+    {
+    public:
+        explicit SimpleSimulationResult(double reward);
+        ~SimpleSimulationResult() override = default;
+
+        [[nodiscard]] double Reward() const override;
 
     private:
         double m_reward_;

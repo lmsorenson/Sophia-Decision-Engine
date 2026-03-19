@@ -73,6 +73,9 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * console.
          */
         void Print() const override;
+
+    protected:
+        double interpret_result(const_simulation_result_ptr result) const override;
     };
 }
 

@@ -140,7 +140,8 @@ const_simulation_result_ptr Node::Rollout()
     if (this->IsTerminalState())
     {
         const_simulation_result_ptr terminal_value = this->Value();
-        if (m_logger_) m_logger_->trace("Rollout: Terminal state reached at node '{}'. Value: {:.4f}", Name(), terminal_value->Reward());
+        auto reward = interpret_result(terminal_value);
+        if (m_logger_) m_logger_->trace("Rollout: Terminal state reached at node '{}'. Value: {:.4f}", Name(), reward);
         return terminal_value;
     }
 
@@ -196,7 +197,7 @@ void Node::Backpropagate(const const_simulation_result_ptr &result)
     }
 
     // Check for double overflow/underflow
-    const double reward = result ? result->Reward() : 0.0;
+    const double reward = interpret_result(result);
     if ((reward > 0 && m_total_reward_ > std::numeric_limits<double>::max() - reward) ||
         (reward < 0 && m_total_reward_ < std::numeric_limits<double>::lowest() - reward))
     {
@@ -204,7 +205,7 @@ void Node::Backpropagate(const const_simulation_result_ptr &result)
         throw std::runtime_error("Node::Backpropagate - total reward overflow");
     }
 
-    m_total_reward_ += interpret_result(result);
+    m_total_reward_ += reward;
     m_visit_count_++;
 
     if (m_logger_)

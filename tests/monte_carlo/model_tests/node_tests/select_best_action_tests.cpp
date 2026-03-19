@@ -8,7 +8,7 @@
 namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockTreeFactory;
-    using models::SimulationResult;
+    using models::SimpleSimulationResult;
     using mocks::MockNode;
     using std::make_shared;
 
@@ -37,7 +37,7 @@ namespace sophia::monte_carlo::model_tests
 
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2, s3 });
         s1->Expand();
-        s2->Backpropagate(make_shared<SimulationResult>(20));
+        s2->Backpropagate(make_shared<SimpleSimulationResult>(20));
 
         const auto best_action = s1->SelectBestAction();
         const auto best_node = best_action->Target();
@@ -54,8 +54,8 @@ namespace sophia::monte_carlo::model_tests
 
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2, s3 });
         s1->Expand();
-        s2->Backpropagate(make_shared<SimulationResult>(20));
-        s3->Backpropagate(make_shared<SimulationResult>(30));
+        s2->Backpropagate(make_shared<SimpleSimulationResult>(20));
+        s3->Backpropagate(make_shared<SimpleSimulationResult>(30));
 
         const auto best_action = s1->SelectBestAction();
         const auto best_node = best_action->Target();

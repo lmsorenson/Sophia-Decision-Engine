@@ -29,7 +29,14 @@ template<typename TState, typename TChange>
 double NodeBase<TState, TChange>::interpret_result(const const_simulation_result_ptr result) const
 {
     if (!result) return 0.0;
-    return result->Reward();
+    
+    // If it's a SimpleSimulationResult, we can use its reward directly.
+    if (auto simple = std::dynamic_pointer_cast<const SimpleSimulationResult>(result))
+    {
+        return simple->Reward();
+    }
+
+    return 0.0;
 }
 
 } // namespace sophia::monte_carlo::models

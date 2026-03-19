@@ -8,7 +8,7 @@ namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockTreeFactory;
     using mocks::MockNode;
-    using models::SimulationResult;
+    using models::SimpleSimulationResult;
     using std::make_shared;
 
     TEST_F(MonteCarloModelsFixture, node_rollout_test)
@@ -20,7 +20,7 @@ namespace sophia::monte_carlo::model_tests
         EXPECT_CALL(*s1, IsTerminalState())
             .WillRepeatedly(::testing::Return(true));
         EXPECT_CALL(*s1, Value())
-            .WillRepeatedly(::testing::Return(make_shared<SimulationResult>(-1.0)));
+            .WillRepeatedly(::testing::Return(make_shared<SimpleSimulationResult>(-1.0)));
 
         const auto result = s1->Rollout();
 

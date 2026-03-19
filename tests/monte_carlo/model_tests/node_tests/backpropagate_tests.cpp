@@ -7,7 +7,7 @@
 namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockNode;
-    using models::SimulationResult;
+    using models::SimpleSimulationResult;
     using std::make_shared;
 
     TEST_F(MonteCarloModelsFixture, node_backpropagate_test)
@@ -20,9 +20,9 @@ namespace sophia::monte_carlo::model_tests
         auto a1 = factory->CreateAction(s1_, 1);
         s2->SetParent(a1);
 
-        s1->Backpropagate(make_shared<SimulationResult>(10));
-        s2->Backpropagate(make_shared<SimulationResult>(10));
-        s2->Backpropagate(make_shared<SimulationResult>(10));
+        s1->Backpropagate(make_shared<SimpleSimulationResult>(10));
+        s2->Backpropagate(make_shared<SimpleSimulationResult>(10));
+        s2->Backpropagate(make_shared<SimpleSimulationResult>(10));
 
         const auto actualVisitCountS1 = s1->VisitCount();
         const auto actualTotalRewardS1 = s1->TotalReward();
