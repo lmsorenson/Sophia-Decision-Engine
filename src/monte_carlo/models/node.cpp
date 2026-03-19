@@ -183,7 +183,7 @@ const_simulation_result_ptr Node::Rollout()
     }
 }
 
-void Node::Backpropagate(const const_simulation_result_ptr &reward)
+void Node::Backpropagate(const const_simulation_result_ptr &result)
 {
     // Capture before values for logging
     const unsigned long visit_count_before = m_visit_count_;
@@ -196,15 +196,15 @@ void Node::Backpropagate(const const_simulation_result_ptr &reward)
     }
 
     // Check for double overflow/underflow
-    const double delta_reward = reward ? reward->Reward() : 0.0;
-    if ((delta_reward > 0 && m_total_reward_ > std::numeric_limits<double>::max() - delta_reward) ||
-        (delta_reward < 0 && m_total_reward_ < std::numeric_limits<double>::lowest() - delta_reward))
+    const double reward = result ? result->Reward() : 0.0;
+    if ((reward > 0 && m_total_reward_ > std::numeric_limits<double>::max() - reward) ||
+        (reward < 0 && m_total_reward_ < std::numeric_limits<double>::lowest() - reward))
     {
         if (m_logger_) m_logger_->error("Total reward overflow/underflow detected for node '{}'", Name());
         throw std::runtime_error("Node::Backpropagate - total reward overflow");
     }
 
-    m_total_reward_ += interpret_result(reward);
+    m_total_reward_ += interpret_result(result);
     m_visit_count_++;
 
     if (m_logger_)
@@ -213,7 +213,7 @@ void Node::Backpropagate(const const_simulation_result_ptr &reward)
         const auto visits_after_str = logging::colors::highlight_visits(std::format("{}", m_visit_count_));
         const auto reward_before_str = logging::colors::highlight_reward(std::format("{:.4f}", total_reward_before));
         const auto reward_after_str = logging::colors::highlight_reward(std::format("{:.4f}", m_total_reward_));
-        const auto reward_delta_str = logging::colors::highlight_reward(std::format("{:.4f}", delta_reward));
+        const auto reward_delta_str = logging::colors::highlight_reward(std::format("{:.4f}", reward));
         m_logger_->trace("  {}: visits {}→{} | reward {}→{} (Δ{})",
             logging::colors::highlight_node(Name()),
             visits_before_str, visits_after_str,
@@ -224,7 +224,7 @@ void Node::Backpropagate(const const_simulation_result_ptr &reward)
     {
         if(const auto parent_node = sp->Source())
         {
-            parent_node->Backpropagate(reward);
+            parent_node->Backpropagate(result);
         }
     }
 }
