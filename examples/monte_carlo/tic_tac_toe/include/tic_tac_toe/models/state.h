@@ -59,7 +59,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A double value representing a score for the
          * state.
          */
-        [[nodiscard]] double Value() const override;
+        [[nodiscard]] const_simulation_result_ptr Value() const override;
 
         /**
          * @brief Selects the available action with the given name.

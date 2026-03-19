@@ -1,18 +1,22 @@
 #include <tic_tac_toe/models/state.h>
+#include <monte_carlo/models/simulation_result.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 
 #include <utility>
 #include <tic_tac_toe/models/bot.h>
 #include <tic_tac_toe/models/human.h>
-#include <monte_carlo/models/action.h> // Required for full definition of Action
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr and action_ptr aliases
+#include <monte_carlo/models/action.h>
+#include <monte_carlo/common_aliases.h>
 
 using sophia::monte_carlo::tic_tac_toe::models::State;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::models::Node;
+using sophia::monte_carlo::models::SimulationResult;
 using sophia::monte_carlo::action_ptr;
 using sophia::monte_carlo::const_factory_ptr;
+using sophia::monte_carlo::const_simulation_result_ptr;
 using std::shared_ptr;
+using std::make_shared;
 using std::vector;
 using std::string;
 
@@ -73,16 +77,16 @@ bool State::IsTerminalState() const
     return false;
 }
 
-double State::Value() const
+const_simulation_result_ptr State::Value() const
 {
     const auto board = m_state_.GetBoard();
 
     const auto you = m_state_.You();
 
-    return you->Value(board);
+    return make_shared<SimulationResult>(you->Value(board));
 }
 
-sophia::monte_carlo::action_ptr State::SelectAction(const std::string action_name)
+action_ptr State::SelectAction(const std::string action_name)
 {
     std::string desired_name = action_name;
     for (char &c : desired_name)

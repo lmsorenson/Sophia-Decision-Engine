@@ -1,13 +1,16 @@
 #include "monte_carlo_nodes_fixture.h"
 #include <gtest/gtest.h>
 #include <monte_carlo/models/action.h>
+#include <monte_carlo/models/simulation_result.h>
 #include <mock_node.h>
 #include <mock_tree_factory.h>
 
 namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockTreeFactory;
+    using models::SimulationResult;
     using mocks::MockNode;
+    using std::make_shared;
 
     TEST_F(MonteCarloModelsFixture, node_select_best_action_no_scores_test)
     {
@@ -34,7 +37,7 @@ namespace sophia::monte_carlo::model_tests
 
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2, s3 });
         s1->Expand();
-        s2->Backpropagate(20);
+        s2->Backpropagate(make_shared<SimulationResult>(20));
 
         const auto best_action = s1->SelectBestAction();
         const auto best_node = best_action->Target();
@@ -51,8 +54,8 @@ namespace sophia::monte_carlo::model_tests
 
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2, s3 });
         s1->Expand();
-        s2->Backpropagate(20);
-        s3->Backpropagate(30);
+        s2->Backpropagate(make_shared<SimulationResult>(20));
+        s3->Backpropagate(make_shared<SimulationResult>(30));
 
         const auto best_action = s1->SelectBestAction();
         const auto best_node = best_action->Target();

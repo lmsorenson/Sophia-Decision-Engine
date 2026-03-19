@@ -2,14 +2,17 @@
 #include <mock_node.h>
 
 #include <monte_carlo/factories/tree_factory_interface.h>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/models/simulation_result.h>
+#include <logging/ilogger.h>
 
 using sophia::monte_carlo::mocks::MockNode;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::factories::TreeFactoryBase;
+using sophia::monte_carlo::models::SimulationResult;
 using std::vector;
 using std::shared_ptr;
+using std::make_shared;
 using std::string;
 using testing::Return;
 
@@ -45,7 +48,7 @@ void MockNode::Setup( const double value ) const
                 .WillOnce(Return(false));
     EXPECT_CALL(*this, Value())
         .Times(::testing::AnyNumber())
-        .WillRepeatedly(Return(value));
+        .WillRepeatedly(Return(make_shared<SimulationResult>(value)));
 }
 
 std::shared_ptr<const Action> MockNode::GetParent() const
@@ -53,9 +56,9 @@ std::shared_ptr<const Action> MockNode::GetParent() const
     return m_parent_action_.lock();
 }
 
-void MockNode::SetVisitCount(const int newCount)
+void MockNode::SetVisitCount(const int newVisitCount)
 {
-    m_visit_count_ = newCount;
+    m_visit_count_ = newVisitCount;
 }
 
 void MockNode::SetTotalReward(const double newTotalReward)

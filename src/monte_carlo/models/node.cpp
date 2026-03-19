@@ -10,10 +10,13 @@
 #include <monte_carlo/models/action.h>
 #include <monte_carlo/common_aliases.h>
 
+#include "monte_carlo/models/simulation_result.h"
+
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::factories::TreeFactoryBase;
 using sophia::monte_carlo::node_ptr;
 using sophia::monte_carlo::action_ptr;
+using sophia::monte_carlo::const_simulation_result_ptr;
 using std::string;
 using std::shared_ptr;
 using std::vector;
@@ -132,12 +135,12 @@ node_ptr Node::Expand()
 }
 
 
-double Node::Rollout()
+const_simulation_result_ptr Node::Rollout()
 {
     if (this->IsTerminalState())
     {
-        const double terminal_value = this->Value();
-        if (m_logger_) m_logger_->trace("Rollout: Terminal state reached at node '{}'. Value: {:.4f}", Name(), terminal_value);
+        const_simulation_result_ptr terminal_value = this->Value();
+        if (m_logger_) m_logger_->trace("Rollout: Terminal state reached at node '{}'. Value: {:.4f}", Name(), terminal_value->Reward());
         return terminal_value;
     }
 
@@ -145,7 +148,7 @@ double Node::Rollout()
     if (!select_strategy)
     {
         if (m_logger_) m_logger_->error("No rollout strategy available for node '{}'", Name());
-        return 0.0; // Or throw, depending on error handling policy
+        return nullptr; // Or throw, depending on error handling policy
     }
 
     vector<action_ptr> actions_for_rollout;
@@ -155,7 +158,7 @@ double Node::Rollout()
     if (actions_for_rollout.empty())
     {
         if (m_logger_) m_logger_->warn("Rollout: Node '{}' has no available actions during simulation. Returning 0.0.", Name());
-        return 0.0; // If no moves, then game might be blocked or draw.
+        return nullptr; // If no moves, then game might be blocked or draw.
     }
 
     if (const auto selected_action = select_strategy->select_action(actions_for_rollout))
@@ -164,23 +167,23 @@ double Node::Rollout()
         if (auto new_node = selected_action->Target())
         {
             if (m_logger_) m_logger_->trace("Rollout: {} --({})--> {}", Name(), selected_action->Name(), new_node->Name());
-            const double reward = new_node->Rollout();
+            const_simulation_result_ptr reward = new_node->Rollout();
             return reward;
         }
         else
         {
             if (m_logger_) m_logger_->error("Rollout: Action '{}' generated a null target node.", selected_action->Name());
-            return 0.0;
+            return nullptr;
         }
     }
     else
     {
         if (m_logger_) m_logger_->warn("Rollout: Rollout strategy failed to select an action from node '{}'. Returning 0.0.", Name());
-        return 0.0;
+        return nullptr;
     }
 }
 
-void Node::Backpropagate(const double reward)
+void Node::Backpropagate(const const_simulation_result_ptr &reward)
 {
     // Capture before values for logging
     const unsigned long visit_count_before = m_visit_count_;
@@ -193,14 +196,15 @@ void Node::Backpropagate(const double reward)
     }
 
     // Check for double overflow/underflow
-    if ((reward > 0 && m_total_reward_ > std::numeric_limits<double>::max() - reward) ||
-        (reward < 0 && m_total_reward_ < std::numeric_limits<double>::lowest() - reward))
+    const double delta_reward = reward ? reward->Reward() : 0.0;
+    if ((delta_reward > 0 && m_total_reward_ > std::numeric_limits<double>::max() - delta_reward) ||
+        (delta_reward < 0 && m_total_reward_ < std::numeric_limits<double>::lowest() - delta_reward))
     {
         if (m_logger_) m_logger_->error("Total reward overflow/underflow detected for node '{}'", Name());
         throw std::runtime_error("Node::Backpropagate - total reward overflow");
     }
 
-    m_total_reward_ += reward;
+    m_total_reward_ += interpret_result(reward);
     m_visit_count_++;
 
     if (m_logger_)
@@ -209,7 +213,7 @@ void Node::Backpropagate(const double reward)
         const auto visits_after_str = logging::colors::highlight_visits(std::format("{}", m_visit_count_));
         const auto reward_before_str = logging::colors::highlight_reward(std::format("{:.4f}", total_reward_before));
         const auto reward_after_str = logging::colors::highlight_reward(std::format("{:.4f}", m_total_reward_));
-        const auto reward_delta_str = logging::colors::highlight_reward(std::format("{:.4f}", reward));
+        const auto reward_delta_str = logging::colors::highlight_reward(std::format("{:.4f}", delta_reward));
         m_logger_->trace("  {}: visits {}→{} | reward {}→{} (Δ{})",
             logging::colors::highlight_node(Name()),
             visits_before_str, visits_after_str,

@@ -13,6 +13,8 @@ namespace sophia::monte_carlo
     using const_node_ptr = std::shared_ptr<const models::Node>;
     using action_ptr = std::shared_ptr<models::Action>;
     using const_action_ptr = std::shared_ptr<const models::Action>;
+    using simulation_result_ptr = std::shared_ptr<models::SimulationResult>;
+    using const_simulation_result_ptr = std::shared_ptr<const models::SimulationResult>;
     using rollout_strategy_ptr = std::shared_ptr<models::RolloutStrategyInterface>;
 
     template<typename TState, typename TChange>

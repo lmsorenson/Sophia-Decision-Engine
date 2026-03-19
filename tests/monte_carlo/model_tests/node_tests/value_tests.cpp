@@ -12,10 +12,11 @@ namespace sophia::monte_carlo::model_tests
         auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
 
         const auto n = MockNode("name 1", nullptr, test_logger);
+        n.Setup(0);
 
-        const auto name = n.Value();
+        const auto result = n.Value();
 
-        EXPECT_EQ(name, 0);
+        EXPECT_EQ(result->Reward(), 0);
     }
 }
 

@@ -31,7 +31,7 @@ namespace sophia::monte_carlo::mocks
 
         MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (override));
         MOCK_METHOD(bool, IsTerminalState, (), (const, override));
-        MOCK_METHOD(double, Value, (), (const, override));
+        MOCK_METHOD(const_simulation_result_ptr, Value, (), (const, override));
         MOCK_METHOD(void, Print, (), (const, override));
         MOCK_METHOD(shared_ptr<Action>, SelectAction, (std::string action_name), (override));
 

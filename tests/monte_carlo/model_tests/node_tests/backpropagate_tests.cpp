@@ -1,11 +1,14 @@
 #include "monte_carlo_nodes_fixture.h"
 #include <gtest/gtest.h>
+#include <monte_carlo/models/simulation_result.h>
 #include <mock_node.h>
 #include <mock_tree_factory.h>
 
 namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockNode;
+    using models::SimulationResult;
+    using std::make_shared;
 
     TEST_F(MonteCarloModelsFixture, node_backpropagate_test)
     {
@@ -17,9 +20,9 @@ namespace sophia::monte_carlo::model_tests
         auto a1 = factory->CreateAction(s1_, 1);
         s2->SetParent(a1);
 
-        s1->Backpropagate(10);
-        s2->Backpropagate(10);
-        s2->Backpropagate(10);
+        s1->Backpropagate(make_shared<SimulationResult>(10));
+        s2->Backpropagate(make_shared<SimulationResult>(10));
+        s2->Backpropagate(make_shared<SimulationResult>(10));
 
         const auto actualVisitCountS1 = s1->VisitCount();
         const auto actualTotalRewardS1 = s1->TotalReward();
