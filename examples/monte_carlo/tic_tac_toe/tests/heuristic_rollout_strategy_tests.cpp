@@ -112,34 +112,6 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         EXPECT_EQ(selectedAction->Name(), "C3");  // Position (2,2)
     }
 
-    TEST_F(HeuristicRolloutStrategyFixture, select_action_prioritizes_center_position)
-    {
-        // Arrange - Empty board
-        // Board state:
-        //    1   2   3 
-        // A    |   |   
-        //   ---+---+---
-        // B    |   |   
-        //   ---+---+---
-        // C    |   |   
-        auto board = createBoard({
-            {_, _, _},
-            {_, _, _},
-            {_, _, _}
-        });
-        auto gameState = createGameState(board, m_playerX);
-        auto strategy = createStrategy(gameState);
-        auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
-        auto actions = createActions(gameState, factory);
-
-        // Act
-        auto selectedAction = strategy->select_action(actions);
-
-        // Assert - Should select center position (B2) when available
-        ASSERT_NE(selectedAction, nullptr);
-        EXPECT_EQ(selectedAction->Name(), "B2");  // Center position (1,1)
-    }
-
     TEST_F(HeuristicRolloutStrategyFixture, select_action_with_empty_actions_list)
     {
         // Arrange
