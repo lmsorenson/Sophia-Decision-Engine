@@ -1,3 +1,6 @@
+#ifndef SOPHIA_MONTE_CARLO_MODELS_ACTION_BASE_TPP
+#define SOPHIA_MONTE_CARLO_MODELS_ACTION_BASE_TPP
+
 #include <monte_carlo/models/action_base.h>
 #include <monte_carlo/common_aliases.h> // Centralized aliases
 
@@ -44,3 +47,5 @@ const_actor_ptr ActionBase<TState, TChange>::actor() const
 }
 
 } // namespace sophia::monte_carlo::models
+
+#endif // SOPHIA_MONTE_CARLO_MODELS_ACTION_BASE_TPP

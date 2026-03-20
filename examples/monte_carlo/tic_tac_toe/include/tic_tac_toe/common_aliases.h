@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SOPHIA_TIC_TAC_TOE_COMMON_ALIASES_H
+#define SOPHIA_TIC_TAC_TOE_COMMON_ALIASES_H
 
 #include <memory>
 
@@ -43,3 +44,5 @@ namespace sophia::monte_carlo::tic_tac_toe {
     using observer_ptr = std::shared_ptr<sophia::monte_carlo::tic_tac_toe::observer::Observer>;
     using const_observer_ptr = std::shared_ptr<const sophia::monte_carlo::tic_tac_toe::observer::Observer>;
 }
+
+#endif // SOPHIA_TIC_TAC_TOE_COMMON_ALIASES_H

@@ -5,7 +5,7 @@
 #include <logging/console_logger.h>
 #include <memory>
 #include <utility>
-#include <iostream> // Added for std::cin and std::getline
+#include <iostream>
 
 using sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory;
 using sophia::monte_carlo::tic_tac_toe::models::Game;
@@ -13,15 +13,15 @@ using sophia::monte_carlo::tic_tac_toe::models::Human;
 using sophia::monte_carlo::tic_tac_toe::models::Bot;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::tic_tac_toe::factories::RolloutStrategyType;
-using sophia::logging::ConsoleLogger; // New using
-using sophia::logging::LogLevel;       // New using
+using sophia::logging::ConsoleLogger;
+using sophia::logging::LogLevel;
 using std::make_shared;
 using std::shared_ptr;
 
 
 int main()
 {
-    const auto logger = make_shared<ConsoleLogger>(LogLevel::TRACE);
+    const auto logger = make_shared<ConsoleLogger>(LogLevel::Trace);
     logger->info("Let's Play Tic Tac Toe!");
 
     const shared_ptr<Game> game = make_shared<Game>(logger);

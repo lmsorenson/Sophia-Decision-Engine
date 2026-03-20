@@ -23,7 +23,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
     TEST_F(TicTacToeModelsFixture, simulation_test)
     {
-        auto test_logger = std::make_shared<ConsoleLogger>(LogLevel::ERROR);
+        auto test_logger = std::make_shared<ConsoleLogger>(LogLevel::Error);
         const shared_ptr<Game> game = make_shared<Game>(test_logger);
 
         game->Assign<models::Bot>(enums::Symbol::X, 1, factories::RolloutStrategyType::Heuristic);

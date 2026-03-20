@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SOPHIA_TIC_TAC_TOE_FWD_H
+#define SOPHIA_TIC_TAC_TOE_FWD_H
 
 namespace sophia::monte_carlo::tic_tac_toe::factories {
     enum class RolloutStrategyType {
@@ -27,3 +28,5 @@ namespace sophia::monte_carlo::tic_tac_toe::models {
 namespace sophia::monte_carlo::tic_tac_toe::observer {
     class Observer;
 }
+
+#endif // SOPHIA_TIC_TAC_TOE_FWD_H

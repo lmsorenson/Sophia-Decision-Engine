@@ -15,7 +15,7 @@ namespace sophia::logging
          * @brief Constructs a ConsoleLogger with a minimum log level.
          * @param min_level The minimum severity level to log. Messages below this level will be ignored.
          */
-        explicit ConsoleLogger(LogLevel min_level = LogLevel::INFO);
+        explicit ConsoleLogger(LogLevel min_level = LogLevel::Info);
 
     private:
         void log(LogLevel level, const std::string& message) override;

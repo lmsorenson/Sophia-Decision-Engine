@@ -11,11 +11,11 @@ namespace sophia::logging
      */
     enum class LogLevel
     {
-        TRACE,
-        DEBUG,
-        INFO,
-        WARN,
-        ERROR
+        Trace,
+        Debug,
+        Info,
+        Warn,
+        Error
     };
 
     /**
@@ -41,7 +41,7 @@ namespace sophia::logging
         template<typename... Args>
         void trace(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::TRACE, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Trace, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**
@@ -52,7 +52,7 @@ namespace sophia::logging
         template<typename... Args>
         void debug(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::DEBUG, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Debug, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**
@@ -63,7 +63,7 @@ namespace sophia::logging
         template<typename... Args>
         void info(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::INFO, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Info, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**
@@ -74,7 +74,7 @@ namespace sophia::logging
         template<typename... Args>
         void warn(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::WARN, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Warn, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**
@@ -85,7 +85,7 @@ namespace sophia::logging
         template<typename... Args>
         void error(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::ERROR, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Error, std::format(fmt, std::forward<Args>(args)...));
         }
 
     private:
