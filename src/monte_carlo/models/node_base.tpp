@@ -4,6 +4,7 @@
 #include <monte_carlo/models/node_base.h>
 #include <monte_carlo/models/simulation_result.h>
 #include <monte_carlo/common_aliases.h>
+#include <monte_carlo/models/node.h>
 
 namespace sophia::monte_carlo::models
 {
