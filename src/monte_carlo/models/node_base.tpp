@@ -1,14 +1,12 @@
 #include <monte_carlo/models/node_base.h>
-#include <monte_carlo/common_aliases.h> // Centralized aliases
+#include <monte_carlo/models/simulation_result.h>
+#include <monte_carlo/common_aliases.h>
 
 namespace sophia::monte_carlo::models
 {
-// Removed using sophia::monte_carlo::models::NodeBase;
-// Removed using sophia::monte_carlo::models::RolloutStrategyInterface;
-// Removed using rollout_strategy_ptr = std::shared_ptr<RolloutStrategyInterface>;
 
 template<typename TState, typename TChange>
-NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, sophia::monte_carlo::const_factory_ptr<TState, TChange> factory, const sophia::monte_carlo::logger_ptr& logger)
+NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger)
     : Node(name, logger)
     , m_state_(state)
     , m_factory_(factory)
@@ -22,8 +20,23 @@ TState NodeBase<TState, TChange>::GetState() const
 }
 
 template<typename TState, typename TChange>
-sophia::monte_carlo::rollout_strategy_ptr NodeBase<TState, TChange>::RolloutStrategy() const
+rollout_strategy_ptr NodeBase<TState, TChange>::RolloutStrategy() const
 {
     return m_factory_->CreateStrategy();
 }
+
+template<typename TState, typename TChange>
+double NodeBase<TState, TChange>::interpret_result(const const_simulation_result_ptr result) const
+{
+    if (!result) return 0.0;
+    
+    // If it's a SimpleSimulationResult, we can use its reward directly.
+    if (const auto simple = std::dynamic_pointer_cast<const SimpleSimulationResult>(result))
+    {
+        return simple->Reward();
+    }
+
+    return 0.0;
+}
+
 } // namespace sophia::monte_carlo::models

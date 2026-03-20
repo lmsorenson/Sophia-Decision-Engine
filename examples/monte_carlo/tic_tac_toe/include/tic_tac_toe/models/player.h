@@ -1,10 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <memory>
-#include <tic_tac_toe/models/position.h>
 #include <tic_tac_toe/enums/symbol.h>
 #include <tic_tac_toe/observer/observer.h>
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
+#include <monte_carlo/common_aliases.h>
+#include <monte_carlo/models/actor.h>
 
 #include "common_aliases.h"
 
@@ -14,11 +14,17 @@ namespace sophia::monte_carlo::tic_tac_toe::models
      * @class Player
      * @brief A Player in a Tic Tac Toe Game
      */
-    class Player : public std::enable_shared_from_this<Player>, public observer::Observer
+    class Player : public monte_carlo::models::Actor, public std::enable_shared_from_this<Player>, public observer::Observer
     {
     public:
         explicit Player(enums::Symbol symbol, const logger_ptr& logger);
         virtual ~Player() = default;
+
+        /**
+         * @brief Initializes the player.
+         * @param game A pointer to the game.
+         */
+        virtual void Initialize(const_game_ptr game) {};
 
         /**
          * @brief The Symbol used by the Player.
@@ -38,7 +44,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A double value that represents the score of the game from the
          * perspective of the Player.
          */
-        [[nodiscard]] double Value(const class Board &board) const;
+        [[nodiscard]] double Value(const Board &board) const;
 
     protected:
         enums::Symbol m_player_symbol_ = enums::Symbol::None;

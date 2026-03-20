@@ -15,10 +15,20 @@ target_link_libraries(sophia_monte_carlo_tests
         gtest gtest_main
         gmock gmock_main
         sophia_monte_carlo
-        sophia_monte_carlo_mocks)
-target_include_directories(sophia_monte_carlo_tests PUBLIC ../../../include)
+        sophia_monte_carlo_mocks
+        sophia_monte_carlo_examples_tic_tac_toe)
+target_include_directories(sophia_monte_carlo_tests
+        PUBLIC ../../../include
+        PUBLIC ../../../examples/monte_carlo/tic_tac_toe/include)
 gtest_discover_tests(sophia_monte_carlo_tests)
 
 add_subdirectory(mocks)
 add_subdirectory(tree_search_algorithm_tests)
 add_subdirectory(model_tests)
+
+# Add tic-tac-toe tests from examples directory
+target_sources(sophia_monte_carlo_tests
+        PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/simulation_tests.cpp
+        PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/state_tests.cpp
+        PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/heuristic_rollout_strategy_tests.cpp
+        PUBLIC ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/tests/board_tests.cpp)

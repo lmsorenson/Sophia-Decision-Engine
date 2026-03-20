@@ -5,6 +5,8 @@
 #include <monte_carlo/common_aliases.h>
 #include <monte_carlo/models/action.h>
 
+#include "monte_carlo/models/simulation_result.h"
+
 using sophia::monte_carlo::MonteCarloTreeSearch;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
@@ -86,11 +88,11 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
 
         // --- 3. Rollout (Simulation) ---
         if (logger) logger->info("{}", logging::colors::phase_rollout("Phase 3: Rollout (Simulation)"));
-        const double reward = current->Rollout();
-        iteration_reward = reward;
+        const_simulation_result_ptr reward = current->Rollout();
+        iteration_reward = reward ? reward->Reward() : 0.0;
         if (logger) 
         {
-            auto reward_str = logging::colors::highlight_reward(std::format("{:.4f}", reward));
+            auto reward_str = logging::colors::highlight_reward(std::format("{:.4f}", iteration_reward));
             logger->debug("Rollout from {} → reward: {}", 
                 logging::colors::highlight_node(current->Name()), reward_str);
         }

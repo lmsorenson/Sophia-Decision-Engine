@@ -2,11 +2,14 @@
 #include <gtest/gtest.h>
 #include <mock_node.h>
 #include <mock_tree_factory.h>
+#include <monte_carlo/models/simulation_result.h>
 
 namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockTreeFactory;
     using mocks::MockNode;
+    using models::SimpleSimulationResult;
+    using std::make_shared;
 
     TEST_F(MonteCarloModelsFixture, node_rollout_test)
     {
@@ -17,11 +20,11 @@ namespace sophia::monte_carlo::model_tests
         EXPECT_CALL(*s1, IsTerminalState())
             .WillRepeatedly(::testing::Return(true));
         EXPECT_CALL(*s1, Value())
-            .WillRepeatedly(::testing::Return(-1.0));
+            .WillRepeatedly(::testing::Return(make_shared<SimpleSimulationResult>(-1.0)));
 
-        const auto name = s1->Rollout();
+        const auto result = s1->Rollout();
 
-        EXPECT_EQ(name, -1);
+        EXPECT_EQ(result->Reward(), -1);
     }
 
     TEST_F(MonteCarloModelsFixture, node_rollout_2_test)
@@ -35,9 +38,9 @@ namespace sophia::monte_carlo::model_tests
         std::dynamic_pointer_cast<MockNode>(s2)->Setup(20);
         s1->Expand();
 
-        const auto name = s1->Rollout();
+        const auto result = s1->Rollout();
 
-        EXPECT_EQ(name, 20);
+        EXPECT_EQ(result->Reward(), 20);
     }
 }
 

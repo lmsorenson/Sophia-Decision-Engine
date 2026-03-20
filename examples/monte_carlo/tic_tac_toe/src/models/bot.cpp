@@ -14,19 +14,39 @@ using sophia::monte_carlo::MonteCarloTreeSearch;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
 
-Bot::Bot(const Symbol symbol, const double difficulty, const sophia::monte_carlo::logger_ptr& logger)
+Bot::Bot(const Symbol symbol, const double difficulty,
+         factories::RolloutStrategyType rollout_type,
+         const logger_ptr& logger)
 : Player(symbol, logger)
+, m_rollout_type_(rollout_type)
 , m_logger_(logger)
 {
-    if (m_logger_) m_logger_->info("Creating bot with difficulty: {}", difficulty);
+    if (m_logger_) m_logger_->info("Creating bot with difficulty: {} and rollout type: {}",
+                                   difficulty, (rollout_type == factories::RolloutStrategyType::Heuristic ? "Heuristic" : "Random"));
     if (difficulty > 1 || difficulty < 0)
     {
         if (m_logger_) m_logger_->error("Difficulty must be a percentage between 0 and 1. Received: {}", difficulty);
         throw std::invalid_argument("Difficulty must be a percentage between 0 and 1.");
     }
 
-    iterations_ = std::max(1, static_cast<int>(std::round(90 * difficulty)));
+    iterations_ = std::max(1, static_cast<int>(std::round(32 * difficulty)));
     if (m_logger_) m_logger_->info("Bot will perform {} iterations per move.", iterations_);
+}
+
+Bot::Bot(const Symbol symbol, const double difficulty, const sophia::monte_carlo::logger_ptr& logger)
+: Bot(symbol, difficulty, factories::RolloutStrategyType::Heuristic, logger)
+{
+}
+
+void Bot::Initialize(const_game_ptr game)
+{
+    if (game == nullptr)
+        throw std::invalid_argument("Game cannot be null.");
+
+    if (m_logger_) m_logger_->info("Bot is initializing its root node.");
+    const auto factory = std::make_shared<factories::TicTacToeFactory>(game, shared_from_this(), m_logger_);
+    factory->SetRolloutStrategyType(m_rollout_type_);
+    node_ = factory->CreateNode("root");
 }
 
 const_position_ptr Bot::NextMove() const
@@ -36,7 +56,6 @@ const_position_ptr Bot::NextMove() const
         if (m_logger_) m_logger_->error("Bot's internal node is null. Cannot determine next move.");
         return nullptr;
     }
-
     if (m_logger_) m_logger_->info("Bot is responding to move {}", node_->Name());
     const action_ptr best_action = MonteCarloTreeSearch::run(node_, iterations_, m_logger_);
 
@@ -64,14 +83,6 @@ const_position_ptr Bot::NextMove() const
 void Bot::Update(const std::string message)
 {
     if (m_logger_) m_logger_->info("Bot received message: {}", message);
-
-    // If the node is empty create a new one.
-    if (node_ == nullptr)
-    {
-        if (m_logger_) m_logger_->info("Bot is initializing its root node.");
-        const auto factory = std::make_shared<factories::TicTacToeFactory>(shared_from_this(), m_logger_);
-        node_ = factory->CreateNode("root");
-    }
 
     if (m_logger_) m_logger_->debug("Current tree node is '{}'.", node_->Name());
 

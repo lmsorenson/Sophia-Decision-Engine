@@ -1,18 +1,22 @@
 #include <tic_tac_toe/models/state.h>
+#include <tic_tac_toe/models/tic_tac_toe_simulation_result.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 
 #include <utility>
 #include <tic_tac_toe/models/bot.h>
 #include <tic_tac_toe/models/human.h>
-#include <monte_carlo/models/action.h> // Required for full definition of Action
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr and action_ptr aliases
+#include <monte_carlo/models/action.h>
+#include <monte_carlo/common_aliases.h>
 
 using sophia::monte_carlo::tic_tac_toe::models::State;
+using sophia::monte_carlo::tic_tac_toe::models::TicTacToeSimulationResult;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::action_ptr;
 using sophia::monte_carlo::const_factory_ptr;
+using sophia::monte_carlo::const_simulation_result_ptr;
 using std::shared_ptr;
+using std::make_shared;
 using std::vector;
 using std::string;
 
@@ -28,7 +32,7 @@ Symbol Alternate(const Symbol last_placed)
 }
 
 State::State(const string &name, const const_factory_ptr<GameState, Position> &tree_factory, const logger_ptr& logger)
-    : NodeBase(name, GameState(nullptr, nullptr), tree_factory, logger)
+    : NodeBase(name, GameState(nullptr, nullptr, nullptr), tree_factory, logger)
 {
 }
 
@@ -44,6 +48,7 @@ std::vector<action_ptr> State::GetAvailableActions()
 
     const auto open_positions = m_state_.GetOpenPositions();
     const auto last_placed = m_state_.LastPlaced();
+    const auto current_player = m_state_.CurrentPlayer();
 
     const Symbol new_state = Alternate(last_placed);
 
@@ -52,7 +57,7 @@ std::vector<action_ptr> State::GetAvailableActions()
         const auto new_position = position->WithState(new_state);
 
         auto _this_ = std::static_pointer_cast<State>(shared_from_this());
-        auto action = m_factory_->CreateAction(_this_, new_position);
+        auto action = m_factory_->CreateAction(_this_, new_position, current_player);
         action->Generate();
         actions.push_back(action);
     }
@@ -73,16 +78,50 @@ bool State::IsTerminalState() const
     return false;
 }
 
-double State::Value() const
+const_simulation_result_ptr State::Value() const
 {
-    const auto board = m_state_.GetBoard();
+    Symbol winner_symbol = Symbol::None;
 
-    const auto you = m_state_.You();
+    if (const auto winner = m_state_.Winner())
+    {
+        winner_symbol = winner->first;
+    }
 
-    return you->Value(board);
+    return make_shared<TicTacToeSimulationResult>(winner_symbol);
 }
 
-sophia::monte_carlo::action_ptr State::SelectAction(const std::string action_name)
+double State::interpret_result(const const_simulation_result_ptr result) const
+{
+    if (!result) return 0.0;
+
+    if (m_state_.GetTurnNumber() == 0)
+        return 0.0;
+
+    auto ttt_result = std::dynamic_pointer_cast<const TicTacToeSimulationResult>(result);
+    if (!ttt_result) return 0.0;
+
+    const Symbol winner = ttt_result->Winner();
+
+    // we want the player who caused this move.
+    if (const auto cp = m_state_.LastPlayer())
+    {
+        if (winner == Symbol::None)
+        {
+            return 1.0; // Draw
+        }
+
+        if (winner == cp->symbol())
+        {
+            return 2.0; // Win
+        }
+
+        return 0.0; // Loss
+    }
+
+    throw std::runtime_error("Last player not found!");
+}
+
+action_ptr State::SelectAction(const std::string action_name)
 {
     std::string desired_name = action_name;
     for (char &c : desired_name)

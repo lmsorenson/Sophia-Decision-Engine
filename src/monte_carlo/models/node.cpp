@@ -10,10 +10,13 @@
 #include <monte_carlo/models/action.h>
 #include <monte_carlo/common_aliases.h>
 
+#include "monte_carlo/models/simulation_result.h"
+
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::factories::TreeFactoryBase;
 using sophia::monte_carlo::node_ptr;
 using sophia::monte_carlo::action_ptr;
+using sophia::monte_carlo::const_simulation_result_ptr;
 using std::string;
 using std::shared_ptr;
 using std::vector;
@@ -37,7 +40,7 @@ action_ptr Node::SelectBestAction() const
         return nullptr;
     }
 
-    double best_score = 0;
+    double best_score = -std::numeric_limits<double>::infinity();
     action_ptr best_child = nullptr;
 
     if (m_logger_)
@@ -53,7 +56,7 @@ action_ptr Node::SelectBestAction() const
                 const std::string ucb_str = std::isinf(current_score) ? "inf" : std::format("{:.4f}", current_score);
                 const auto visits_str = logging::colors::highlight_visits(std::format("{}", target->VisitCount()));
                 const auto ucb_colored = logging::colors::highlight_ucb(ucb_str);
-                m_logger_->trace("  {} -> {} | visits={} | total={:7.4f} | avg={:6} | UCB={}", 
+                m_logger_->trace("  {} -> {} | visits={} | total={:7.4f} | avg={:6} | UCB={}",
                     child->Name(), logging::colors::highlight_node(target->Name()),
                     visits_str, target->TotalReward(), avg_str, ucb_colored);
             } else {
@@ -73,11 +76,11 @@ action_ptr Node::SelectBestAction() const
             best_child = child;
         }
     }
-    if (m_logger_ && best_child && best_child->Target()) 
+    if (m_logger_ && best_child && best_child->Target())
     {
         const std::string ucb_str = std::isinf(best_score) ? "inf" : std::format("{:.4f}", best_score);
         const auto ucb_colored = logging::colors::highlight_ucb(ucb_str);
-        m_logger_->debug("Selected: {} -> {} (UCB={})", 
+        m_logger_->debug("Selected: {} -> {} (UCB={})",
             best_child->Name(), logging::colors::highlight_node(best_child->Target()->Name()), ucb_colored);
     }
     return best_child;
@@ -93,11 +96,11 @@ node_ptr Node::Expand()
     }
 
     // Add all available actions as children
-    if (m_logger_) 
+    if (m_logger_)
     {
         m_logger_->trace("Expanding '{}' (creating {} child node(s))", Name(), child_actions.size());
     }
-    
+
     for(const auto& child : child_actions)
     {
         child->Generate();
@@ -105,9 +108,9 @@ node_ptr Node::Expand()
         if (target) {
             m_child_action_.push_back(child);
             target->SetParent(child);
-            if (m_logger_) 
+            if (m_logger_)
             {
-                m_logger_->trace("  Created: {} → {}", 
+                m_logger_->trace("  Created: {} → {}",
                     logging::colors::highlight_node(Name()),
                     logging::colors::highlight_node(target->Name()));
             }
@@ -119,24 +122,26 @@ node_ptr Node::Expand()
     // After adding all, we can return the first child's target node for simulation
     // This is typical for an immediate rollout after expansion.
     if (!m_child_action_.empty()) {
-        if (m_logger_ && m_child_action_.front()->Target()) 
+        if (m_logger_ && m_child_action_.front()->Target())
         {
-            m_logger_->debug("Expanded {} → first child: {}", 
+            m_logger_->debug("Expanded {} → first child: {}",
                 logging::colors::highlight_node(Name()),
                 logging::colors::highlight_node(m_child_action_.front()->Target()->Name()));
         }
         return m_child_action_.front()->Target();
     }
-    
+
     return nullptr; // Should not happen if child_actions was not empty and generated targets
 }
 
 
-double Node::Rollout()
+const_simulation_result_ptr Node::Rollout()
 {
     if (this->IsTerminalState())
     {
-        const double terminal_value = this->Value();
+        const_simulation_result_ptr terminal_value = this->Value();
+        auto reward = interpret_result(terminal_value);
+        if (m_logger_) m_logger_->trace("Rollout: Terminal state reached at node '{}'. Value: {:.4f}", Name(), reward);
         return terminal_value;
     }
 
@@ -144,17 +149,17 @@ double Node::Rollout()
     if (!select_strategy)
     {
         if (m_logger_) m_logger_->error("No rollout strategy available for node '{}'", Name());
-        return 0.0; // Or throw, depending on error handling policy
+        return nullptr; // Or throw, depending on error handling policy
     }
 
-    vector<sophia::monte_carlo::action_ptr> actions_for_rollout;
+    vector<action_ptr> actions_for_rollout;
     // In rollout, we should typically consider all possible actions, not just sampled children
     actions_for_rollout = this->GetAvailableActions();
 
     if (actions_for_rollout.empty())
     {
         if (m_logger_) m_logger_->warn("Rollout: Node '{}' has no available actions during simulation. Returning 0.0.", Name());
-        return 0.0; // If no moves, then game might be blocked or draw.
+        return nullptr; // If no moves, then game might be blocked or draw.
     }
 
     if (const auto selected_action = select_strategy->select_action(actions_for_rollout))
@@ -162,28 +167,29 @@ double Node::Rollout()
         selected_action->Generate(); // Ensure the target node exists
         if (auto new_node = selected_action->Target())
         {
-            const double reward = new_node->Rollout();
+            if (m_logger_) m_logger_->trace("Rollout: {} --({})--> {}", Name(), selected_action->Name(), new_node->Name());
+            const_simulation_result_ptr reward = new_node->Rollout();
             return reward;
         }
         else
         {
             if (m_logger_) m_logger_->error("Rollout: Action '{}' generated a null target node.", selected_action->Name());
-            return 0.0;
+            return nullptr;
         }
     }
     else
     {
         if (m_logger_) m_logger_->warn("Rollout: Rollout strategy failed to select an action from node '{}'. Returning 0.0.", Name());
-        return 0.0;
+        return nullptr;
     }
 }
 
-void Node::Backpropagate(const double reward)
+void Node::Backpropagate(const const_simulation_result_ptr &result)
 {
     // Capture before values for logging
     const unsigned long visit_count_before = m_visit_count_;
     const double total_reward_before = m_total_reward_;
-    
+
     if (m_visit_count_ + 1 == 0) // Check for overflow before incrementing (unsigned long max + 1 = 0)
     {
         if (m_logger_) m_logger_->error("Visit count overflow detected for node '{}'", Name());
@@ -191,6 +197,7 @@ void Node::Backpropagate(const double reward)
     }
 
     // Check for double overflow/underflow
+    const double reward = interpret_result(result);
     if ((reward > 0 && m_total_reward_ > std::numeric_limits<double>::max() - reward) ||
         (reward < 0 && m_total_reward_ < std::numeric_limits<double>::lowest() - reward))
     {
@@ -201,24 +208,24 @@ void Node::Backpropagate(const double reward)
     m_total_reward_ += reward;
     m_visit_count_++;
 
-    if (m_logger_) 
+    if (m_logger_)
     {
-        const auto visits_before_str = sophia::logging::colors::highlight_visits(std::format("{}", visit_count_before));
-        const auto visits_after_str = sophia::logging::colors::highlight_visits(std::format("{}", m_visit_count_));
-        const auto reward_before_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", total_reward_before));
-        const auto reward_after_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", m_total_reward_));
-        const auto reward_delta_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", reward));
-        m_logger_->trace("  {}: visits {}→{} | reward {}→{} (Δ{})", 
-            sophia::logging::colors::highlight_node(Name()), 
-            visits_before_str, visits_after_str, 
+        const auto visits_before_str = logging::colors::highlight_visits(std::format("{}", visit_count_before));
+        const auto visits_after_str = logging::colors::highlight_visits(std::format("{}", m_visit_count_));
+        const auto reward_before_str = logging::colors::highlight_reward(std::format("{:.4f}", total_reward_before));
+        const auto reward_after_str = logging::colors::highlight_reward(std::format("{:.4f}", m_total_reward_));
+        const auto reward_delta_str = logging::colors::highlight_reward(std::format("{:.4f}", reward));
+        m_logger_->trace("  {}: visits {}→{} | reward {}→{} (Δ{})",
+            logging::colors::highlight_node(Name()),
+            visits_before_str, visits_after_str,
             reward_before_str, reward_after_str, reward_delta_str);
     }
 
     if (const auto sp = m_parent_action_.lock())
     {
-        if(auto parent_node = sp->Source())
+        if(const auto parent_node = sp->Source())
         {
-            parent_node->Backpropagate(reward);
+            parent_node->Backpropagate(result);
         }
     }
 }
@@ -285,18 +292,19 @@ action_ptr Node::SelectAction()
         if (m_logger_) m_logger_->warn("Node '{}' has no children. Cannot select action.", Name());
         return nullptr;
     }
-    
-    // Select the child action that has been visited most often (exploitation)
+
+    // Select the child action with the highest average reward (exploitation)
     action_ptr best_child = nullptr;
-    int max_visits = -1;
+    double max_avg_reward = -std::numeric_limits<double>::infinity();
 
     if (m_logger_) {
         std::stringstream ss;
-        ss << "  Node '" << Name() << "' - Final Action Selection (highest visit count):" << std::endl;
+        ss << "  Node '" << Name() << "' - Final Action Selection (highest average reward):" << std::endl;
         for (const auto& child : m_child_action_) {
             if (auto target = child->Target()) {
+                double avg_reward = (target->VisitCount() > 0) ? (target->TotalReward() / target->VisitCount()) : 0.0;
                 ss << "    - Action leading to '" << target->Name()
-                   << std::format("(T:{:.4f} N:{})", target->TotalReward(), target->VisitCount()) << std::endl;
+                   << std::format(" (Avg Reward: {:.4f}, Visits: {})", avg_reward, target->VisitCount()) << std::endl;
             } else {
                  ss << "    - Action leading to (nullptr)" << std::endl;
             }
@@ -307,13 +315,35 @@ action_ptr Node::SelectAction()
     for (const auto& child : m_child_action_)
     {
         auto target = child->Target();
-        if (target && target->VisitCount() > max_visits)
+        if (target && target->VisitCount() > 0)
         {
-            max_visits = target->VisitCount();
-            best_child = child;
+            double avg_reward = target->TotalReward() / target->VisitCount();
+            if (avg_reward > max_avg_reward)
+            {
+                max_avg_reward = avg_reward;
+                best_child = child;
+            }
         }
     }
-    if (m_logger_ && best_child && best_child->Target()) m_logger_->debug("  Node '{}' final selection: action leading to '{}' with {} visits.", Name(), best_child->Target()->Name(), max_visits);
+
+    // Fallback for nodes that were never visited (should be rare if iterations > 0)
+    if (!best_child && !m_child_action_.empty()) {
+        if (m_logger_) m_logger_->warn("  Node '{}' has no visited children. Falling back to most visited (which is 0).", Name());
+        int max_visits = -1;
+        for (const auto& child : m_child_action_)
+        {
+            auto target = child->Target();
+            if (target && target->VisitCount() > max_visits)
+            {
+                max_visits = target->VisitCount();
+                best_child = child;
+            }
+        }
+    }
+
+    if (m_logger_ && best_child && best_child->Target()) {
+        m_logger_->debug("  Node '{}' final selection: action leading to '{}' with avg reward of {:.4f}.", Name(), best_child->Target()->Name(), max_avg_reward);
+    }
 
     return best_child;
 }

@@ -21,7 +21,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
 
         auto bot = std::make_shared<models::Bot>(enums::Symbol::X, 1, test_logger);
-        const auto factory = make_shared<factories::TicTacToeFactory>(bot, test_logger);
+        const auto factory = make_shared<factories::TicTacToeFactory>(nullptr, bot, test_logger);
 
         auto node = factory->CreateNode("S0");
 
@@ -30,4 +30,3 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         EXPECT_EQ(1,1);
     }
 }
-

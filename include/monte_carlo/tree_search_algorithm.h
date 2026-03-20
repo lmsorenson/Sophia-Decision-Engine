@@ -35,13 +35,13 @@ namespace sophia::monte_carlo
          * @param logger An optional logger instance to trace the execution of the algorithm.
          * @return A shared pointer to the `Action` determined to be the best decision from the root state.
          */
-        static sophia::monte_carlo::action_ptr run(
+        static action_ptr run(
 
             const node_ptr& root,
 
             int iterations,
 
-            const sophia::monte_carlo::logger_ptr& logger = nullptr);
+            const logger_ptr& logger = nullptr);
 
     };
 }

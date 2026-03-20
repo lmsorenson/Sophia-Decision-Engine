@@ -12,6 +12,7 @@ using sophia::monte_carlo::tic_tac_toe::models::Game;
 using sophia::monte_carlo::tic_tac_toe::models::Human;
 using sophia::monte_carlo::tic_tac_toe::models::Bot;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::factories::RolloutStrategyType;
 using sophia::logging::ConsoleLogger; // New using
 using sophia::logging::LogLevel;       // New using
 using std::make_shared;
@@ -33,8 +34,8 @@ int main()
         return move_input;
     };
 
-    game->Assign<Human>(Symbol::X, get_human_move_input); // Pass logger and callback
-    game->Assign<Bot>(Symbol::O, 1.0);
+    game->Assign<Human>(Symbol::X, get_human_move_input);
+    game->Assign<Bot>(Symbol::O, 1.0, RolloutStrategyType::Heuristic);
 
     while(!game->game_over())
     {

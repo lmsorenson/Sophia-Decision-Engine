@@ -12,7 +12,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
      * @class Game
      * @brief A Tic Tac Toe game.
      */
-    class Game : observer::Subject
+    class Game : observer::Subject, public std::enable_shared_from_this<Game>
     {
     public:
         /**
@@ -44,6 +44,12 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A shared pointer to the active player of the game.
          */
         [[nodiscard]] const_player_ptr active_player() const;
+
+        /**
+         * @brief Gets the current active player.
+         * @return A shared pointer to the active player of the game.
+         */
+        [[nodiscard]] const_player_ptr get_player(enums::Symbol symbol) const;
 
         /**
          * @brief Applies a move to the Tic Tac Toe game.
@@ -81,18 +87,21 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     template<class TPlayer, typename... Args>
     void Game::Assign(enums::Symbol symbol, Args ... args)
     {
+        player_ptr* target_player = nullptr;
         switch (symbol)
         {
             case enums::Symbol::X:
-                x_ = std::make_shared<TPlayer>(symbol, args..., m_logger_);
-                add_observer(x_);
+                target_player = &x_;
                 break;
             case enums::Symbol::O:
-                o_ = std::make_shared<TPlayer>(symbol, args..., m_logger_);
-                add_observer(o_);
+                target_player = &o_;
                 break;
             default: throw std::invalid_argument("Invalid symbol");
         }
+
+        *target_player = std::make_shared<TPlayer>(symbol, args..., m_logger_);
+        (*target_player)->Initialize(shared_from_this());
+        add_observer(*target_player);
     }
 }
 

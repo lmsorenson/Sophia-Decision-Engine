@@ -14,6 +14,8 @@ namespace sophia::monte_carlo::tic_tac_toe {
 
     using game_ptr = std::shared_ptr<sophia::monte_carlo::tic_tac_toe::models::Game>;
     using const_game_ptr = std::shared_ptr<const sophia::monte_carlo::tic_tac_toe::models::Game>;
+    using game_ref = std::weak_ptr<sophia::monte_carlo::tic_tac_toe::models::Game>;
+    using const_game_ref = std::weak_ptr<const sophia::monte_carlo::tic_tac_toe::models::Game>;
 
     using game_state_ptr = std::shared_ptr<sophia::monte_carlo::tic_tac_toe::models::GameState>;
     using const_game_state_ptr = std::shared_ptr<const sophia::monte_carlo::tic_tac_toe::models::GameState>;

@@ -30,6 +30,11 @@ shared_ptr<Action> MockTreeFactory::CreateAction(shared_ptr<NodeBase<bool, int>>
     return make_shared<MockAction>(node, shared_from_this());
 }
 
+shared_ptr<Action> MockTreeFactory::CreateAction(shared_ptr<NodeBase<bool, int>> node, int change, const const_actor_ptr& actor) const
+{
+    return make_shared<MockAction>(node, shared_from_this());
+}
+
 shared_ptr<RolloutStrategyInterface> MockTreeFactory::CreateStrategy() const
 {
     return make_shared<MockRolloutStrategy>();

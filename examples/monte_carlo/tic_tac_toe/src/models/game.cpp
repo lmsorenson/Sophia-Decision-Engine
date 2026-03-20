@@ -37,12 +37,33 @@ const_player_ptr Game::active_player() const
         return x_;
     }
 
-    const auto current_state = game_states_.back();
-
-    switch (current_state->LastPlaced())
+    if (const auto current_state = game_states_.back())
     {
-        case enums::Symbol::X: return o_;
-        default: case enums::Symbol::O: return x_;
+        switch (current_state->LastPlaced())
+        {
+            case Symbol::X: return o_;
+            default: case Symbol::O: return x_;
+        }
+    }
+
+    throw std::runtime_error("No active player.");
+}
+
+const_player_ptr Game::get_player(const Symbol symbol) const
+{
+    switch (symbol)
+    {
+        case Symbol::X:
+            if (x_ == nullptr)
+                throw std::runtime_error("No player with symbol X.");
+            return x_;
+        case Symbol::O:
+            if (o_ == nullptr)
+                throw std::runtime_error("No player with symbol O.");
+            return o_;
+        case Symbol::None:
+            return nullptr;
+        default: throw std::invalid_argument("Invalid symbol");
     }
 }
 

@@ -4,8 +4,10 @@
 namespace sophia::monte_carlo::models
 {
     class Action;
+    class Actor;
     class Node;
     class RolloutStrategyInterface;
+    class SimulationResult;
     template<typename TState, typename TChange> class NodeBase;
     // Add other core model forward declarations here if needed
 }

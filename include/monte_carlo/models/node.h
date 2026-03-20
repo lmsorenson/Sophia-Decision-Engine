@@ -45,7 +45,7 @@ namespace sophia::monte_carlo::models
          * simulating a path to a terminal state, usually with a simple and fast policy.
          * @return The reward obtained from the simulation.
          */
-        double Rollout();
+        const_simulation_result_ptr Rollout();
 
         /**
          * @brief Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase)
@@ -53,7 +53,7 @@ namespace sophia::monte_carlo::models
          * visit counts and total rewards of the nodes along the path.
          * @param reward The reward obtained from the simulation.
          */
-        void Backpropagate(double reward);
+        void Backpropagate(const const_simulation_result_ptr &reward);
 
         /// @brief Returns the name of the node for identification.
         [[nodiscard]] std::string Name() const;
@@ -82,7 +82,7 @@ namespace sophia::monte_carlo::models
         [[nodiscard]] virtual bool IsTerminalState() const = 0;
 
         /// @brief Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.).
-        [[nodiscard]] virtual double Value() const = 0;
+        [[nodiscard]] virtual const_simulation_result_ptr Value() const = 0;
 
         /// @brief Selects a specific action by its name.
         virtual action_ptr SelectAction(std::string action_name) = 0;
@@ -113,6 +113,8 @@ namespace sophia::monte_carlo::models
 
     protected:
         logger_ptr m_logger_;
+
+        virtual double interpret_result(const_simulation_result_ptr) const = 0;
 
     private:
         std::string m_name_;

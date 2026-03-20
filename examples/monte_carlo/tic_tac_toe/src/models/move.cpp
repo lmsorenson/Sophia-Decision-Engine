@@ -1,9 +1,10 @@
 #include <tic_tac_toe/models/move.h>
 
 #include <utility>
+#include <format>
 #include <monte_carlo/factories/tree_factory_interface.h>
-#include <format> // Added for std::format
-#include <tic_tac_toe/enums/symbol.h> // Added for TileStateToString
+#include <monte_carlo/models/node_base.h>
+#include <tic_tac_toe/enums/symbol.h>
 
 using sophia::monte_carlo::tic_tac_toe::models::Move;
 using sophia::monte_carlo::tic_tac_toe::enums::TileStateToString;
@@ -24,9 +25,24 @@ Move::Move(
 
 }
 
+Move::Move(
+    const node_base_ptr<GameState, Position> &source,
+    const Position change,
+    const const_actor_ptr& actor,
+    const_factory_ptr<GameState, Position> factory,
+    const logger_ptr& logger)
+: ActionBase(source, change, actor, std::move(factory), logger)
+{
+}
+
 std::string Move::Name() const
 {
     return m_change_.Name();
+}
+
+Position Move::Change() const
+{
+    return m_change_;
 }
 
 void Move::Generate()
@@ -37,9 +53,8 @@ void Move::Generate()
 
         const auto new_state = game_state.ApplyMove(m_change_);
 
-        std::string node_name = std::format("{}{}_T{}", TileStateToString(m_change_.State()), m_change_.Name(), new_state->GetTurnNumber());
+        const std::string node_name = std::format("{}{}_T{}", TileStateToString(m_change_.State()), m_change_.Name(), new_state->GetTurnNumber());
 
         m_target_ = m_factory_->CreateNode(node_name, *new_state);
     }
 }
-
