@@ -8,7 +8,7 @@ digraph "Alternate"
   rankdir="RL";
   Node1 [id="Node000001",label="Alternate",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [id="edge3_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::State::GetAvailableActions",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#afae3a52d03c6731e6c717fd2e492e15e",tooltip="Gets all available actions that can be made at this given state."];
+  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::State::get_available_actions",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a145091643f9325929573425c14d40546",tooltip="Gets all available actions that can be made at this given state."];
   Node2 -> Node3 [id="edge4_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::models::State::SelectAction",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#aaffe64212ab41858625a4a593281f443",tooltip="Selects the available action with the given name."];
+  Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::models::State::select_action",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a8f7afbabdb76167b44c61dc9e4128fc1",tooltip="Selects the available action with the given name."];
 }

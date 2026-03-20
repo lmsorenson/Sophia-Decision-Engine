@@ -8,7 +8,7 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Game::accept_move"
   rankdir="LR";
   Node1 [id="Node000001",label="sophia::monte_carlo::tic_tac\l_toe::models::Game::accept_move",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Applies a move to the Tic Tac Toe game."];
   Node1 -> Node2 [id="edge4_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::Position::Name",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a3b3d88fdd83ecc8b9e6d59a007f82266",tooltip=" "];
+  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::Position::name",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a002568ae2983356c41c7d38faed439b9",tooltip=" "];
   Node1 -> Node3 [id="edge5_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::observer::Subject::notify",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998",tooltip="Notifies the Subject's Observers with a given message."];
   Node3 -> Node4 [id="edge6_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];

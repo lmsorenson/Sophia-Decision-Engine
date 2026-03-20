@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['backpropagate_0',['Backpropagate',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a9d16a79ece5e91e88932ca22c70d4e48',1,'sophia::monte_carlo::models::Node']]],
+  ['backpropagate_0',['backpropagate',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#ac11dd611f5aedfcedcdda28cc2996c39',1,'sophia::monte_carlo::models::Node']]],
   ['board_1',['board',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#ae6406151584d4907195b14b2d499b8b1',1,'sophia::monte_carlo::tic_tac_toe::models::Board::Board(const logger_ptr &amp;logger)'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#af23f785e7c9d49271672c79c09cfa4e6',1,'sophia::monte_carlo::tic_tac_toe::models::Board::Board(const Board &amp;other)'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a19733c5733bf14c6fb69327a19f69b99',1,'sophia::monte_carlo::tic_tac_toe::models::Board::Board(Board &amp;&amp;other) noexcept']]],
   ['bot_2',['bot',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#a13aa63676e265c0c7e40d5d8c85f0176',1,'sophia::monte_carlo::tic_tac_toe::models::Bot::Bot(enums::Symbol symbol, double difficulty, factories::RolloutStrategyType rollout_type, const logger_ptr &amp;logger)'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#a9109ccb06d54c8d5846c0f77baa55231',1,'sophia::monte_carlo::tic_tac_toe::models::Bot::Bot(enums::Symbol symbol, double difficulty, const logger_ptr &amp;logger)']]]
 ];

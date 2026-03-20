@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hasbeensampled_0',['HasBeenSampled',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a99c747bf5454aa0f21874deab8c0d1a8',1,'sophia::monte_carlo::models::Node']]],
+  ['has_5fbeen_5fsampled_0',['has_been_sampled',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a888cd71c8598b661a017f3f13abdc05d',1,'sophia::monte_carlo::models::Node']]],
   ['header_20usage_1',['Header Usage',['../index.html#autotoc_md16',1,'']]],
   ['heuristic_2',['Heuristic',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories.html#a919e1aaed214a29f1b9e2ab87b2b9856a271aa2fdaeb524af30faf88584424763',1,'sophia::monte_carlo::tic_tac_toe::factories']]],
   ['heuristic_5frollout_5fstrategy_2ecpp_3',['heuristic_rollout_strategy.cpp',['../heuristic__rollout__strategy_8cpp.html',1,'']]],

@@ -30,7 +30,7 @@ MCTS is a general-\/purpose search algorithm for decision-\/making processes. It
 \begin{DoxyEnumerate}
 \item {\bfseries{Selection\+:}} Starting from the {\ttfamily root} node, recursively select child nodes with the highest Upper Confidence Bound (UCB1) until a leaf node (a node with unexpanded potential) is reached.
 \item {\bfseries{Expansion\+:}} If the selected leaf node is not a terminal state, create one or more child nodes representing subsequent states. Select one of these new nodes.
-\item {\bfseries{Simulation (Rollout)\+:}} From the newly created node, perform a simulation (e.\+g., a random walk) until a terminal state is reached. The outcome of this simulation is a reward.
+\item {\bfseries{Simulation (rollout)\+:}} From the newly created node, perform a simulation (e.\+g., a random walk) until a terminal state is reached. The outcome of this simulation is a reward.
 \item {\bfseries{Backpropagation\+:}} Propagate the reward from the simulation back up the tree, updating the visit counts and total rewards of all nodes and actions along the path to the root.
 \end{DoxyEnumerate}
 

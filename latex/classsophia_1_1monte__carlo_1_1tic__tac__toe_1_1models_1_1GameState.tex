@@ -20,7 +20,7 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \begin{DoxyCompactList}\small\item\em Creates an instance of \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State} given an owning player and a value for the board. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a239dacdfed9adf389ba91943b3177944}{Game\+State}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_aa0c0ed02ccf27849efc367aa96b00158}{const\+\_\+game\+\_\+ptr}} \&game, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\+\_\+player\+\_\+ptr}} you, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ board, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} last\+\_\+placed)
 \item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ac77fc1178175eaa1b57da5c105cfb7d4}{const\+\_\+game\+\_\+state\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a3f73573ab934436fa2060472edb2695f}{Apply\+Move}} (const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&position) const
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ac77fc1178175eaa1b57da5c105cfb7d4}{const\+\_\+game\+\_\+state\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a391a9d5ed35f2447aa7fec0cf8f678ea}{apply\+\_\+move}} (const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&position) const
 \begin{DoxyCompactList}\small\item\em Creates a copy of the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State} with the given move applied. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\+\_\+player\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a85390cef6ca6f55d6fb45f05105dac71}{Last\+Player}} () const
 \begin{DoxyCompactList}\small\item\em Gets the current player of the game. \end{DoxyCompactList}\item 
@@ -30,19 +30,19 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \begin{DoxyCompactList}\small\item\em Gets the owning \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player} of the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ std\+::pair$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}, bool $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a1a41f3b32270de2dbf66bf68ddfcac76}{Winner}} () const
 \begin{DoxyCompactList}\small\item\em Gets the winner of the game. \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aa26ab79866f2fe71e413213a3a1d0d47}{Get\+Open\+Positions}} () const
-\begin{DoxyCompactList}\small\item\em Get\+Open\+Positions. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_ab50da390a68280fb4e973c346853b886}{get\+\_\+open\+\_\+positions}} () const
+\begin{DoxyCompactList}\small\item\em get\+\_\+open\+\_\+positions \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_ab02f99dd2cc09bc7e6ced5073691a685}{Get\+Winning\+Moves}} () const
 \begin{DoxyCompactList}\small\item\em Gets moves that would win the game for the current player. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a7be62f33683425686496206b32128243}{Get\+Blocking\+Moves}} () const
 \begin{DoxyCompactList}\small\item\em Gets moves that would block the opponent from winning on their next turn. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aaafa7f0f2aee3daf9922808c096d1666}{Last\+Placed}} () const
 \begin{DoxyCompactList}\small\item\em The last placed \doxylink{classSymbol}{Symbol}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a437457f6b544794f2d3ca841a100263e}{Get\+Board}} () const
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a536fc7986f7f64bce4c4c487144f7171}{get\+\_\+board}} () const
 \begin{DoxyCompactList}\small\item\em Get the board information for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aea276cf1723e9a0b616f72e8008dcdb6}{Get\+Turn\+Number}} () const
 \begin{DoxyCompactList}\small\item\em Gets the current turn number based on the number of marks on the board. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a74f9cd4901361de082efc572c8e66d66}{Print}} () const
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_ad01b01d29758b5e3bb46a8aed2842c2c}{print}} () const
 \begin{DoxyCompactList}\small\item\em Prints the board info for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -98,11 +98,11 @@ Creates an instance of \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a3f73573ab934436fa2060472edb2695f}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a3f73573ab934436fa2060472edb2695f} 
-\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!ApplyMove@{ApplyMove}}
-\index{ApplyMove@{ApplyMove}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
-\doxysubsubsection{\texorpdfstring{ApplyMove()}{ApplyMove()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ac77fc1178175eaa1b57da5c105cfb7d4}{const\+\_\+game\+\_\+state\+\_\+ptr}} Game\+State\+::\+Apply\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&}]{position }\end{DoxyParamCaption}) const}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a391a9d5ed35f2447aa7fec0cf8f678ea}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a391a9d5ed35f2447aa7fec0cf8f678ea} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!apply\_move@{apply\_move}}
+\index{apply\_move@{apply\_move}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
+\doxysubsubsection{\texorpdfstring{apply\_move()}{apply\_move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ac77fc1178175eaa1b57da5c105cfb7d4}{const\+\_\+game\+\_\+state\+\_\+ptr}} Game\+State\+::apply\+\_\+move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&}]{position }\end{DoxyParamCaption}) const}
 
 
 
@@ -131,6 +131,32 @@ Gets the current player of the game.
 \begin{DoxyReturn}{Returns}
 A shared pointer to the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player} whose turn it is to move. 
 \end{DoxyReturn}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a536fc7986f7f64bce4c4c487144f7171}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a536fc7986f7f64bce4c4c487144f7171} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!get\_board@{get\_board}}
+\index{get\_board@{get\_board}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
+\doxysubsubsection{\texorpdfstring{get\_board()}{get\_board()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} Game\+State\+::get\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the board information for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. 
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board} data for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. 
+\end{DoxyReturn}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_ab50da390a68280fb4e973c346853b886}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_ab50da390a68280fb4e973c346853b886} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!get\_open\_positions@{get\_open\_positions}}
+\index{get\_open\_positions@{get\_open\_positions}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
+\doxysubsubsection{\texorpdfstring{get\_open\_positions()}{get\_open\_positions()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} $>$ Game\+State\+::get\+\_\+open\+\_\+positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+\_\+open\+\_\+positions 
+
+\begin{DoxyReturn}{Returns}
+A vector of shared pointers to Positions that don\textquotesingle{}t have a mark yet. 
+\end{DoxyReturn}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a7be62f33683425686496206b32128243}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a7be62f33683425686496206b32128243} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!GetBlockingMoves@{GetBlockingMoves}}
 \index{GetBlockingMoves@{GetBlockingMoves}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
@@ -146,32 +172,6 @@ A vector of blocking positions.
 \end{DoxyReturn}
 Here is the caller graph for this function\+:
 % FIG 2
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a437457f6b544794f2d3ca841a100263e}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a437457f6b544794f2d3ca841a100263e} 
-\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!GetBoard@{GetBoard}}
-\index{GetBoard@{GetBoard}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
-\doxysubsubsection{\texorpdfstring{GetBoard()}{GetBoard()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} Game\+State\+::\+Get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Get the board information for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. 
-
-\begin{DoxyReturn}{Returns}
-The \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board} data for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. 
-\end{DoxyReturn}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aa26ab79866f2fe71e413213a3a1d0d47}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aa26ab79866f2fe71e413213a3a1d0d47} 
-\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!GetOpenPositions@{GetOpenPositions}}
-\index{GetOpenPositions@{GetOpenPositions}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
-\doxysubsubsection{\texorpdfstring{GetOpenPositions()}{GetOpenPositions()}}
-{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} $>$ Game\+State\+::\+Get\+Open\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Get\+Open\+Positions. 
-
-\begin{DoxyReturn}{Returns}
-A vector of shared pointers to Positions that don\textquotesingle{}t have a mark yet. 
-\end{DoxyReturn}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aea276cf1723e9a0b616f72e8008dcdb6}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aea276cf1723e9a0b616f72e8008dcdb6} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!GetTurnNumber@{GetTurnNumber}}
 \index{GetTurnNumber@{GetTurnNumber}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
@@ -228,11 +228,11 @@ Gets the current player of the game.
 \begin{DoxyReturn}{Returns}
 A shared pointer to the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player} whose turn it is to move. 
 \end{DoxyReturn}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a74f9cd4901361de082efc572c8e66d66}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a74f9cd4901361de082efc572c8e66d66} 
-\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!Print@{Print}}
-\index{Print@{Print}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
-\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
-{\footnotesize\ttfamily void Game\+State\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_ad01b01d29758b5e3bb46a8aed2842c2c}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_ad01b01d29758b5e3bb46a8aed2842c2c} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!print@{print}}
+\index{print@{print}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Game\+State\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

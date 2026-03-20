@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hasbeensampled_0',['HasBeenSampled',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a99c747bf5454aa0f21874deab8c0d1a8',1,'sophia::monte_carlo::models::Node']]],
+  ['has_5fbeen_5fsampled_0',['has_been_sampled',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a888cd71c8598b661a017f3f13abdc05d',1,'sophia::monte_carlo::models::Node']]],
   ['heuristicrolloutstrategy_1',['HeuristicRolloutStrategy',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html#a783cd936e1929614fd8c48c6ccd11b70',1,'sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy']]],
   ['highlight_5fnode_2',['highlight_node',['../namespacesophia_1_1logging_1_1colors.html#ac44bdd7ca4e76634886c2b902bbc3fa1',1,'sophia::logging::colors']]],
   ['highlight_5freward_3',['highlight_reward',['../namespacesophia_1_1logging_1_1colors.html#a6c5a6aaab8e77512185d4ae1de4a545b',1,'sophia::logging::colors']]],

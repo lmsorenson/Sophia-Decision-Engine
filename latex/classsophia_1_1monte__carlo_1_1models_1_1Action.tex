@@ -24,17 +24,17 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Action\+:
 \item 
 virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_ac5744085b404e111f8a375ad28384700}{\texorpdfstring{$\sim$}{\string~}\+Action}} ()=default
 \item 
-virtual std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1}{Name}} () const =0
+virtual std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a718ce47860c195dc7a9213cd779f3b0e}{name}} () const =0
 \begin{DoxyCompactList}\small\item\em Get the name of the action for identification purposes. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b}{Upper\+Confidence\+Bound}} (int c) const
+double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a00e6a171b43c7a7cb56b979b086e1f3c}{upper\+\_\+confidence\+\_\+bound}} (int c) const
 \begin{DoxyCompactList}\small\item\em Calculates the Upper Confidence Bound (UCB1) for this action. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2}{Generate}} ()=0
+virtual void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a833f82e7b749e4d22679f890641550dc}{generate}} ()=0
 \begin{DoxyCompactList}\small\item\em Generates the target node that results from taking this action. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b}{Source}} () const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a93a36adb641e26a4a0c5446a9228b677}{source}} () const =0
 \begin{DoxyCompactList}\small\item\em Retrieves the source node from which this action originates. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026}{Target}} () const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_af29ad4fe39266990db1c2f1b82b428ce}{target}} () const =0
 \begin{DoxyCompactList}\small\item\em Retrieves the target node that results from this action. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a6b6d2e1d0939c3cdfeb9af6b1ae02c61}{Actor}} () const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_acb14fdef07e5bc557f5bdef0fd9fe055}{actor}} () const =0
 \begin{DoxyCompactList}\small\item\em Retrieves the actor that performed this action. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -59,11 +59,11 @@ An action is a transition from a source node to a target node. It represents a m
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a6b6d2e1d0939c3cdfeb9af6b1ae02c61}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a6b6d2e1d0939c3cdfeb9af6b1ae02c61} 
-\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Actor@{Actor}}
-\index{Actor@{Actor}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
-\doxysubsubsection{\texorpdfstring{Actor()}{Actor()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_acb14fdef07e5bc557f5bdef0fd9fe055}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_acb14fdef07e5bc557f5bdef0fd9fe055} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!actor@{actor}}
+\index{actor@{actor}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{actor()}{actor()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -71,13 +71,13 @@ Retrieves the actor that performed this action.
 
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a7ad5dc0caf197561ce0230a6e2a214a9}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a7ad5dc0caf197561ce0230a6e2a214a9}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2a6753a704a4a2ecc1a061022b5b112f}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2a6753a704a4a2ecc1a061022b5b112f}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2} 
-\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Generate@{Generate}}
-\index{Generate@{Generate}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
-\doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
-{\footnotesize\ttfamily virtual void sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a833f82e7b749e4d22679f890641550dc}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a833f82e7b749e4d22679f890641550dc} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!generate@{generate}}
+\index{generate@{generate}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily virtual void sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -85,13 +85,13 @@ Generates the target node that results from taking this action.
 
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9a5774e47a96f957f94627c6874442cf}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Move}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a14d87b0b966ff80454e6304977a16394}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Move}}.
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1} 
-\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Name@{Name}}
-\index{Name@{Name}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
-\doxysubsubsection{\texorpdfstring{Name()}{Name()}}
-{\footnotesize\ttfamily virtual std\+::string sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a718ce47860c195dc7a9213cd779f3b0e}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a718ce47860c195dc7a9213cd779f3b0e} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!name@{name}}
+\index{name@{name}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -99,15 +99,15 @@ Get the name of the action for identification purposes.
 
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9436e05427bf263e777d3ee852c6a737}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Move}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a7f30ec73051c52ce582b5cc5552503f8}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Move}}.
 
 Here is the caller graph for this function\+:
 % FIG 2
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b} 
-\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Source@{Source}}
-\index{Source@{Source}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
-\doxysubsubsection{\texorpdfstring{Source()}{Source()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a93a36adb641e26a4a0c5446a9228b677}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a93a36adb641e26a4a0c5446a9228b677} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!source@{source}}
+\index{source@{source}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{source()}{source()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -115,13 +115,13 @@ Retrieves the source node from which this action originates.
 
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a08911a6c62b46feedbcfce8565b1eebc}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a08911a6c62b46feedbcfce8565b1eebc}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026} 
-\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Target@{Target}}
-\index{Target@{Target}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
-\doxysubsubsection{\texorpdfstring{Target()}{Target()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_af29ad4fe39266990db1c2f1b82b428ce}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_af29ad4fe39266990db1c2f1b82b428ce} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!target@{target}}
+\index{target@{target}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{target()}{target()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -129,15 +129,15 @@ Retrieves the target node that results from this action.
 
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a294dee27bb5190d592d5a8b5d31627e9}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a294dee27bb5190d592d5a8b5d31627e9}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
 
 Here is the caller graph for this function\+:
 % FIG 3
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b} 
-\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!UpperConfidenceBound@{UpperConfidenceBound}}
-\index{UpperConfidenceBound@{UpperConfidenceBound}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
-\doxysubsubsection{\texorpdfstring{UpperConfidenceBound()}{UpperConfidenceBound()}}
-{\footnotesize\ttfamily double Action\+::\+Upper\+Confidence\+Bound (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption}) const}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a00e6a171b43c7a7cb56b979b086e1f3c}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a00e6a171b43c7a7cb56b979b086e1f3c} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!upper\_confidence\_bound@{upper\_confidence\_bound}}
+\index{upper\_confidence\_bound@{upper\_confidence\_bound}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{upper\_confidence\_bound()}{upper\_confidence\_bound()}}
+{\footnotesize\ttfamily double Action\+::upper\+\_\+confidence\+\_\+bound (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption}) const}
 
 
 

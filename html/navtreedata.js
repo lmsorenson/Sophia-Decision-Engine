@@ -62,7 +62,7 @@ var NAVTREEINDEX =
 [
 "action_8cpp.html",
 "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html#a388859b0fe534b3ce3641ff96f2e13f0",
-"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#aa94b937851f0055586f3bea3b3146112",
+"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#ace225eb8c17375a63bb60d929fcab8d1",
 "namespacesophia_1_1logging_1_1colors.html#aeacc685dc11c30c2c8e8a0c5fea83b9b"
 ];
 

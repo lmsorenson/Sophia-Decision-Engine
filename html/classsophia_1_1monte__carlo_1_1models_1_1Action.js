@@ -2,10 +2,10 @@ var classsophia_1_1monte__carlo_1_1models_1_1Action =
 [
     [ "Action", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a42932491acbd29bf0e2f4e2864fd3036", null ],
     [ "~Action", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#ac5744085b404e111f8a375ad28384700", null ],
-    [ "Actor", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a6b6d2e1d0939c3cdfeb9af6b1ae02c61", null ],
-    [ "Generate", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a31dbf2c262065b3eb54c841b5a3982f2", null ],
-    [ "Name", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#aa7f1c91ede054c1828dffb2efcb80ea1", null ],
-    [ "Source", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a8dceb7104676c93cbf3834df5c49462b", null ],
-    [ "Target", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a1ed1fb9b12a952cd2cac018149945026", null ],
-    [ "UpperConfidenceBound", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a227a49dcfd5971ca79b5193ecabf580b", null ]
+    [ "actor", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#acb14fdef07e5bc557f5bdef0fd9fe055", null ],
+    [ "generate", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a833f82e7b749e4d22679f890641550dc", null ],
+    [ "name", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a718ce47860c195dc7a9213cd779f3b0e", null ],
+    [ "source", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a93a36adb641e26a4a0c5446a9228b677", null ],
+    [ "target", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#af29ad4fe39266990db1c2f1b82b428ce", null ],
+    [ "upper_confidence_bound", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a00e6a171b43c7a7cb56b979b086e1f3c", null ]
 ];

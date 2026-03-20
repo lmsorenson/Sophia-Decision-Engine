@@ -8,5 +8,5 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Board::Winner"
   rankdir="RL";
   Node1 [id="Node000001",label="sophia::monte_carlo::tic_tac\l_toe::models::Board::Winner",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Gets the winner of the game if one exists."];
   Node1 -> Node2 [id="edge2_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::Player::Value",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#aa6e7a0ab7319ce50ae6e5d3e3e2aa946",tooltip="Assigns a value of the board state from the perspective of this Player."];
+  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::Player::value",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#afc49231ce7017fa7d4ff1722e379fa19",tooltip="Assigns a value of the board state from the perspective of this Player."];
 }

@@ -1,7 +1,7 @@
 var NAVTREEINDEX2 =
 {
-"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#aa94b937851f0055586f3bea3b3146112":[2,0,0,1,2,3,10,2],
-"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#aa94b937851f0055586f3bea3b3146112":[3,0,0,1,2,2,10,2],
+"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#ace225eb8c17375a63bb60d929fcab8d1":[2,0,0,1,2,3,10,2],
+"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#ace225eb8c17375a63bb60d929fcab8d1":[3,0,0,1,2,2,10,2],
 "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#add352829fc44f3b194bade2ac3a32935":[2,0,0,1,2,3,10,4],
 "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#add352829fc44f3b194bade2ac3a32935":[3,0,0,1,2,2,10,4],
 "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html":[3,0,0,1,2,3,0],

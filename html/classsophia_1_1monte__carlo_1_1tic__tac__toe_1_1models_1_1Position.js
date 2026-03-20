@@ -4,7 +4,7 @@ var classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position =
     [ "Position", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a34f72b849ba5c01bf0bd5f85b368997f", null ],
     [ "Coordinates", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a782a06b17216cd642969ef7c62fc6c88", null ],
     [ "IsValid", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#aff4ed9535dba02b7d62a36a98213cad6", null ],
-    [ "Name", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a3b3d88fdd83ecc8b9e6d59a007f82266", null ],
+    [ "name", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a002568ae2983356c41c7d38faed439b9", null ],
     [ "ParseMove", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a73f2bf0b7a04018d686d3dd392712a90", null ],
     [ "State", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a996a0a412a8dd6a0700fcffba6b1de70", null ],
     [ "WithState", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#ae6f7a5498b9757691818c38c0194336d", null ],

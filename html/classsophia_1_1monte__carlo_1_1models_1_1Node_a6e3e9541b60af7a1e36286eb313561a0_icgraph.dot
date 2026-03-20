@@ -1,0 +1,20 @@
+digraph "sophia::monte_carlo::models::Node::name"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  rankdir="RL";
+  Node1 [id="Node000001",label="sophia::monte_carlo::models\l::Node::name",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Returns the name of the node for identification."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sophia::monte_carlo::models\l::Node::backpropagate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#ac11dd611f5aedfcedcdda28cc2996c39",tooltip="Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) Aft..."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="sophia::monte_carlo::models\l::Node::expand",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a9dbb5a40957f499ed701f1d15038caf7",tooltip="Expands the tree by creating a new child node from an untried action. (Expansion Phase) If the curren..."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="sophia::monte_carlo::models\l::Node::rollout",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5bf30d3b8e7450adb457d5564a584f82",tooltip="Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollou..."];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="sophia::monte_carlo::models\l::Node::select_action",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a6730542a78d0ba3e76365bda59f75993",tooltip="Selects an action, typically used for the simulation phase."];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="sophia::monte_carlo::models\l::Node::select_best_action",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#aeee307b6ea851fec92a78f0d9208e811",tooltip="Selects the best child action based on the UCB1 formula. (Selection Phase) This method is part of the..."];
+}

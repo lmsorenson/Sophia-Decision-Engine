@@ -20,55 +20,55 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Node\+Base\tex
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a4ca5eed6eed78811ac7d8655a667f5ad}{Node\+Base}} (const std\+::string \&name, TState state, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a4ca5eed6eed78811ac7d8655a667f5ad}{Node\+Base}} (const std\+::string \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6e3e9541b60af7a1e36286eb313561a0}{name}}, TState state, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
 \item 
-TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a1457cd27400e746c075e0d1851ad00df}{Get\+State}} () const
+TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae142094890f50e1a72f2f733a1a57102}{get\+\_\+state}} () const
 \begin{DoxyCompactList}\small\item\em Retrieves the state associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ad952d18e84552c45f37d32314d3cb3f5}{Node}} (std\+::string name, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ad952d18e84552c45f37d32314d3cb3f5}{Node}} (std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6e3e9541b60af7a1e36286eb313561a0}{name}}, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
 \item 
 virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ac06be54937bd5bbd0473141d2e44de59}{\texorpdfstring{$\sim$}{\string~}\+Node}} ()=default
 \item 
-void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2175a37fedffa96b7def7c}{Set\+Parent}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \&action)
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a3237d5bd23657cb0e446a33b72929026}{set\+\_\+parent}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \&action)
 \begin{DoxyCompactList}\small\item\em Sets the parent action that leads to this node. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ad7d997f7be749039001b5fd37eacc496}{Select\+Best\+Action}} () const
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aeee307b6ea851fec92a78f0d9208e811}{select\+\_\+best\+\_\+action}} () const
 \begin{DoxyCompactList}\small\item\em Selects the best child action based on the UCB1 formula. (Selection Phase) This method is part of the selection phase of MCTS, where the tree is traversed from the root to a leaf node by selecting the most promising actions. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6be3943af70c9e7334d913393fb1b37d}{Expand}} ()
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a9dbb5a40957f499ed701f1d15038caf7}{expand}} ()
 \begin{DoxyCompactList}\small\item\em Expands the tree by creating a new child node from an untried action. (Expansion Phase) If the current node is not a terminal state and has untried actions, this method will create a new child node for one of those actions. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5e26f02256b926494ebf19f32dfe9f84}{Rollout}} ()
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5bf30d3b8e7450adb457d5564a584f82}{rollout}} ()
 \begin{DoxyCompactList}\small\item\em Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollout, this phase estimates the value of the current node by simulating a path to a terminal state, usually with a simple and fast policy. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a9d16a79ece5e91e88932ca22c70d4e48}{Backpropagate}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \&reward)
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ac11dd611f5aedfcedcdda28cc2996c39}{backpropagate}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \&reward)
 \begin{DoxyCompactList}\small\item\em Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) After a simulation, the result (reward) is propagated back up the tree, updating the visit counts and total rewards of the nodes along the path. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a839863194c78433b294b3c11dcf746c2}{Name}} () const
+std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6e3e9541b60af7a1e36286eb313561a0}{name}} () const
 \begin{DoxyCompactList}\small\item\em Returns the name of the node for identification. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351}{Upper\+Confidence\+Bound}} (int c) const
+double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a92d8fd2f4c5db1b802b04be1934ade14}{upper\+\_\+confidence\+\_\+bound}} (int c) const
 \begin{DoxyCompactList}\small\item\em Calculates the Upper Confidence Bound (UCB1) for this node.. This is used in the selection phase to balance exploration and exploitation. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a174e378c4581899275b3f1e601fad062}{Is\+Leaf\+Node}} () const
+bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a1c10ffe961a2672c3157fc7ce2c63a31}{is\+\_\+leaf\+\_\+node}} () const
 \begin{DoxyCompactList}\small\item\em Checks if this node is a leaf node (i.\+e., has no children). \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a99c747bf5454aa0f21874deab8c0d1a8}{Has\+Been\+Sampled}} () const
+bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a888cd71c8598b661a017f3f13abdc05d}{has\+\_\+been\+\_\+sampled}} () const
 \begin{DoxyCompactList}\small\item\em Checks if this node has been visited during the search. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a48dfc98b8e0e68a0682e7dae957328cf}{Visit\+Count}} () const
+int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_af1502d1d365aab13d0c900cf62b793a4}{visit\+\_\+count}} () const
 \begin{DoxyCompactList}\small\item\em Gets the number of times this node has been visited. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7b2f4bdc1e2d0b247ac2cdad13e7da9b}{Total\+Reward}} () const
+double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5d09002690ba739ea8d4aceeb2b36937}{total\+\_\+reward}} () const
 \begin{DoxyCompactList}\small\item\em Gets the total reward accumulated at this node. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a3b57c4db3bce104f80944bca5558fa4d}{Is\+Terminal\+State}} () const =0
+virtual bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a10a11aa70bdd17dbcb85d77c2293fc23}{is\+\_\+terminal\+\_\+state}} () const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual function to check if the node represents a terminal state in the problem space. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a902c24ff603751187438f373aff99dad}{Value}} () const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ad8bd8e3b527e61f94f4c1d339c46d906}{value}} () const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual function to get the value or outcome of the terminal state (e.\+g., a score, win/loss outcome, etc.). \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a21d7afbcd694dbf00efa0dc1b8698780}{Select\+Action}} (std\+::string action\+\_\+name)=0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a9a92b20ab7df2da65e489a13bcaba428}{select\+\_\+action}} (std\+::string action\+\_\+name)=0
 \begin{DoxyCompactList}\small\item\em Selects a specific action by its name. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aa6cd35e140cc104fc316d693f145eea9}{Select\+Action}} ()
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6730542a78d0ba3e76365bda59f75993}{select\+\_\+action}} ()
 \begin{DoxyCompactList}\small\item\em Selects an action, typically used for the simulation phase. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a8ade2b382a86e4c36a60caefc196ad82}{Print}} () const =0
+virtual void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a32a1bb61b49d8753d797dda438ba7ece}{print}} () const =0
 \begin{DoxyCompactList}\small\item\em Prints a representation of the node\textquotesingle{}s state. \end{DoxyCompactList}\item 
-virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ab435a2663c9ac64279b9ee684436e7f2}{Get\+Available\+Actions}} ()=0
+virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aad5764114970d8d0f114853d9e5504ca}{get\+\_\+available\+\_\+actions}} ()=0
 \begin{DoxyCompactList}\small\item\em Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a18b71c3bd5e5f4d4ff7198b02612abba}{Rollout\+Strategy}} () const override
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a0ac694ef5500e661dc47849837e9da7f}{rollout\+\_\+strategy}} () const override
 \begin{DoxyCompactList}\small\item\em Pure virtual function to get the rollout strategy to be used for the simulation phase. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a58087cad4f5fb79230bef69797c5b72e}{interpret\+\_\+result}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}}) const override
 \end{DoxyCompactItemize}
@@ -125,12 +125,12 @@ This class provides a generic implementation of a node, using templates to suppo
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a1457cd27400e746c075e0d1851ad00df}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a1457cd27400e746c075e0d1851ad00df} 
-\index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!GetState@{GetState}}
-\index{GetState@{GetState}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
-\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae142094890f50e1a72f2f733a1a57102}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae142094890f50e1a72f2f733a1a57102} 
+\index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
+\doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -151,12 +151,12 @@ Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a0c460
 
 Reimplemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_af317ebfc92e1e883e4b28b987e7e8d42}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State}}.
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a18b71c3bd5e5f4d4ff7198b02612abba}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a18b71c3bd5e5f4d4ff7198b02612abba} 
-\index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!RolloutStrategy@{RolloutStrategy}}
-\index{RolloutStrategy@{RolloutStrategy}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
-\doxysubsubsection{\texorpdfstring{RolloutStrategy()}{RolloutStrategy()}}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a0ac694ef5500e661dc47849837e9da7f}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a0ac694ef5500e661dc47849837e9da7f} 
+\index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!rollout\_strategy@{rollout\_strategy}}
+\index{rollout\_strategy@{rollout\_strategy}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
+\doxysubsubsection{\texorpdfstring{rollout\_strategy()}{rollout\_strategy()}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::\+Rollout\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::rollout\+\_\+strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
@@ -164,7 +164,7 @@ Pure virtual function to get the rollout strategy to be used for the simulation 
 
 
 
-Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}.
+Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a668a8ca95ad082850864ca523159ae7c}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}.
 
 
 

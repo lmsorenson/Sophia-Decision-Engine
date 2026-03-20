@@ -16,44 +16,44 @@
 \DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}}\ :\ \textcolor{keyword}{public}\ std::enable\_shared\_from\_this<Node>}
 \DoxyCodeLine{00020\ \ \ \ \ \{}
 \DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}}(std::string\ name,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\&\ logger);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}}(std::string\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6e3e9541b60af7a1e36286eb313561a0}{name}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\&\ logger);}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ac06be54937bd5bbd0473141d2e44de59}{\string~Node}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2175a37fedffa96b7def7c}{SetParent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\&\ action);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a3237d5bd23657cb0e446a33b72929026}{set\_parent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\&\ action);}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ad7d997f7be749039001b5fd37eacc496}{SelectBestAction}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aeee307b6ea851fec92a78f0d9208e811}{select\_best\_action}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6be3943af70c9e7334d913393fb1b37d}{Expand}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a9dbb5a40957f499ed701f1d15038caf7}{expand}}();}
 \DoxyCodeLine{00041\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5e26f02256b926494ebf19f32dfe9f84}{Rollout}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5bf30d3b8e7450adb457d5564a584f82}{rollout}}();}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a9d16a79ece5e91e88932ca22c70d4e48}{Backpropagate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \&reward);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ac11dd611f5aedfcedcdda28cc2996c39}{backpropagate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \&reward);}
 \DoxyCodeLine{00057\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a839863194c78433b294b3c11dcf746c2}{Name}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6e3e9541b60af7a1e36286eb313561a0}{name}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00060\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351}{UpperConfidenceBound}}(\textcolor{keywordtype}{int}\ c)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a92d8fd2f4c5db1b802b04be1934ade14}{upper\_confidence\_bound}}(\textcolor{keywordtype}{int}\ c)\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00068\ }
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a174e378c4581899275b3f1e601fad062}{IsLeafNode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a1c10ffe961a2672c3157fc7ce2c63a31}{is\_leaf\_node}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a99c747bf5454aa0f21874deab8c0d1a8}{HasBeenSampled}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a888cd71c8598b661a017f3f13abdc05d}{has\_been\_sampled}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00074\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a48dfc98b8e0e68a0682e7dae957328cf}{VisitCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_af1502d1d365aab13d0c900cf62b793a4}{visit\_count}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00077\ }
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7b2f4bdc1e2d0b247ac2cdad13e7da9b}{TotalReward}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5d09002690ba739ea8d4aceeb2b36937}{total\_reward}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00080\ }
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a3b57c4db3bce104f80944bca5558fa4d}{IsTerminalState}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a10a11aa70bdd17dbcb85d77c2293fc23}{is\_terminal\_state}}()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00083\ }
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a902c24ff603751187438f373aff99dad}{Value}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ad8bd8e3b527e61f94f4c1d339c46d906}{value}}()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00086\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a21d7afbcd694dbf00efa0dc1b8698780}{SelectAction}}(std::string\ action\_name)\ =\ 0;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a9a92b20ab7df2da65e489a13bcaba428}{select\_action}}(std::string\ action\_name)\ =\ 0;}
 \DoxyCodeLine{00089\ }
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aa6cd35e140cc104fc316d693f145eea9}{SelectAction}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6730542a78d0ba3e76365bda59f75993}{select\_action}}();}
 \DoxyCodeLine{00092\ }
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a8ade2b382a86e4c36a60caefc196ad82}{Print}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a32a1bb61b49d8753d797dda438ba7ece}{print}}()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00095\ }
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ std::vector<action\_ptr>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ab435a2663c9ac64279b9ee684436e7f2}{GetAvailableActions}}()\ =\ 0;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ std::vector<action\_ptr>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aad5764114970d8d0f114853d9e5504ca}{get\_available\_actions}}()\ =\ 0;}
 \DoxyCodeLine{00098\ }
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\_strategy\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55}{RolloutStrategy}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\_strategy\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a668a8ca95ad082850864ca523159ae7c}{rollout\_strategy}}()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00101\ }
 \DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ std::weak\_ptr<Action>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7b5eaa5668b4314063a8e712ff0028f1}{m\_parent\_action\_}};}
 \DoxyCodeLine{00104\ }
