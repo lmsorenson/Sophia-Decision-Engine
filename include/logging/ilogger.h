@@ -16,7 +16,8 @@ namespace sophia::logging
         Debug,
         Info,
         Warn,
-        Error
+        Error,
+        None
     };
 
     /**
@@ -44,6 +45,17 @@ namespace sophia::logging
 
     public:
         virtual ~ILogger() = default;
+
+        /**
+         * @brief Logs a message with TRACE severity (most verbose).
+         * @param fmt A std::format-compatible format string.
+         * @param args The arguments to be formatted.
+         */
+        template<typename... Args>
+        void display(std::format_string<Args...> fmt, Args&&... args)
+        {
+            log(LogLevel::None, LogChannel::UserInterface, std::format(fmt, std::forward<Args>(args)...));
+        }
 
         /**
          * @brief Logs a message with TRACE severity (most verbose).

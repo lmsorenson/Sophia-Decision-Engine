@@ -57,6 +57,9 @@ namespace sophia::logging
         
         switch (level)
         {
+            case LogLevel::None:
+                level_str = "";
+                break;
             case LogLevel::Trace:
                 level_str = "[TRACE]";
                 color = use_colors ? colors::TRACE : "";

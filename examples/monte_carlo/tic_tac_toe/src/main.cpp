@@ -22,7 +22,7 @@ using std::shared_ptr;
 int main()
 {
     const auto logger = make_shared<LogDispatcher>(LogLevel::Trace);
-    logger->info(sophia::logging::LogChannel::UserInterface, "Let's Play Tic Tac Toe!");
+    logger->display("\033[2J");
 
     const shared_ptr<Game> game = make_shared<Game>(logger);
     game->print();

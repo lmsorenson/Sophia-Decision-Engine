@@ -29,7 +29,7 @@ const_position_ptr Human::NextMove() const
 
     while (position == nullptr)
     {
-        if (m_logger_) m_logger_->info(logging::LogChannel::UserInterface, "Player {} (Human): Enter your move (e.g., A1) : ", enums::TileStateToString(m_player_symbol_));
+        if (m_logger_) m_logger_->display("Player {} (Human): Enter your move (e.g., A1) : ", enums::TileStateToString(m_player_symbol_));
         move_str = get_move_input_callback_(); // Get input from callback
 
         if (Position::IsValid(move_str))
