@@ -53,7 +53,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Set a position.
          * @param new_position
          */
-        void SetPosition(const Position &new_position);
+        void set_position(const Position &new_position);
 
         /**
          * @brief The last placed symbol.
@@ -65,7 +65,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Returns the Open Positions on the board.  These are the positions where there is no X or O.
          * @return The Open positions on the board.
          */
-        [[nodiscard]] std::vector<const_position_ptr> GetOpenPositions() const;
+        [[nodiscard]] std::vector<const_position_ptr> get_open_positions() const;
 
         /**
          * @brief Creates a copy of the board with the given move applied.
@@ -103,7 +103,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         /**
          * @brief Prints the game board to the console.
          */
-        void Print() const;
+        void print() const;
 
     private:
         /**

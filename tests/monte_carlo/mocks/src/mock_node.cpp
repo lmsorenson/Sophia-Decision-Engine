@@ -31,22 +31,22 @@ void MockNode::Setup(const vector<shared_ptr<Node>> &node_expansion )
         auto _this_ = std::static_pointer_cast<MockNode>(shared_from_this());
         auto action = m_factory_->CreateAction(_this_, 1);
         const auto ma = std::dynamic_pointer_cast<MockAction>(action);
-        ma->Setup(node->Name(), node);
+        ma->Setup(node->name(), node);
         actions.push_back(action);
     }
 
-    EXPECT_CALL(*this, GetAvailableActions())
+    EXPECT_CALL(*this, get_available_actions())
         .Times(::testing::AnyNumber())
         .WillRepeatedly(Return(actions));
 }
 
 void MockNode::Setup( const double value ) const
 {
-    EXPECT_CALL(*this, IsTerminalState())
+    EXPECT_CALL(*this, is_terminal_state())
                 .Times(::testing::AnyNumber())
                 .WillOnce(Return(true))
                 .WillOnce(Return(false));
-    EXPECT_CALL(*this, Value())
+    EXPECT_CALL(*this, value())
         .Times(::testing::AnyNumber())
         .WillRepeatedly(Return(make_shared<SimpleSimulationResult>(value)));
 }

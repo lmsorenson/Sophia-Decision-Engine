@@ -13,7 +13,7 @@ Symbol TicTacToeSimulationResult::Winner() const
     return m_winner_;
 }
 
-double TicTacToeSimulationResult::Reward() const
+double TicTacToeSimulationResult::reward() const
 {
     return 0.0;
 }

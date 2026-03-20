@@ -42,11 +42,11 @@ State::State(const std::string &name, GameState game_state,
 {
 }
 
-std::vector<action_ptr> State::GetAvailableActions()
+std::vector<action_ptr> State::get_available_actions()
 {
     std::vector<action_ptr> actions;
 
-    const auto open_positions = m_state_.GetOpenPositions();
+    const auto open_positions = m_state_.get_open_positions();
     const auto last_placed = m_state_.LastPlaced();
     const auto current_player = m_state_.CurrentPlayer();
 
@@ -58,16 +58,16 @@ std::vector<action_ptr> State::GetAvailableActions()
 
         auto _this_ = std::static_pointer_cast<State>(shared_from_this());
         auto action = m_factory_->CreateAction(_this_, new_position, current_player);
-        action->Generate();
+        action->generate();
         actions.push_back(action);
     }
 
     return actions;
 }
 
-bool State::IsTerminalState() const
+bool State::is_terminal_state() const
 {
-    if (m_state_.GetOpenPositions().empty())
+    if (m_state_.get_open_positions().empty())
         return true;
 
     if (auto winner = m_state_.Winner())
@@ -78,7 +78,7 @@ bool State::IsTerminalState() const
     return false;
 }
 
-const_simulation_result_ptr State::Value() const
+const_simulation_result_ptr State::value() const
 {
     Symbol winner_symbol = Symbol::None;
 
@@ -121,7 +121,7 @@ double State::interpret_result(const const_simulation_result_ptr result) const
     throw std::runtime_error("Last player not found!");
 }
 
-action_ptr State::SelectAction(const std::string action_name)
+action_ptr State::select_action(const std::string action_name)
 {
     std::string desired_name = action_name;
     for (char &c : desired_name)
@@ -132,36 +132,36 @@ action_ptr State::SelectAction(const std::string action_name)
     // 1. First, check if the action exists in already expanded children (m_child_action_)
     for (const auto& existing_child_action : m_child_action_)
     {
-        if (existing_child_action->Name() == desired_name)
+        if (existing_child_action->name() == desired_name)
         {
-            if (m_logger_) m_logger_->debug("SelectAction: Found existing child action '{}'. Reusing.", desired_name);
+            if (m_logger_) m_logger_->debug("select_action: Found existing child action '{}'. Reusing.", desired_name);
             return existing_child_action;
         }
     }
 
     // 2. If not found in existing children, generate all possible actions for the current state.
     //    These will be new action/node pairs.
-    const std::vector<sophia::monte_carlo::action_ptr> newly_generated_actions = GetAvailableActions();
+    const std::vector<sophia::monte_carlo::action_ptr> newly_generated_actions = get_available_actions();
 
     for (const auto& new_action : newly_generated_actions)
     {
-        if (new_action->Name() == desired_name)
+        if (new_action->name() == desired_name)
         {
-            if (m_logger_) m_logger_->debug("SelectAction: Generated new action '{}'. Adding to children and returning.", desired_name);
+            if (m_logger_) m_logger_->debug("select_action: Generated new action '{}'. Adding to children and returning.", desired_name);
             // Add this newly generated action to our m_child_action_ list for future reuse
             m_child_action_.push_back(new_action);
-            if (new_action->Target()) {
-                new_action->Target()->SetParent(new_action);
+            if (new_action->target()) {
+                new_action->target()->set_parent(new_action);
             }
             return new_action;
         }
     }
 
-    if (m_logger_) m_logger_->warn("SelectAction: No matching action found for name '{}'.", desired_name);
+    if (m_logger_) m_logger_->warn("select_action: No matching action found for name '{}'.", desired_name);
     return nullptr;
 }
 
-void State::Print() const
+void State::print() const
 {
-    m_state_.Print();
+    m_state_.print();
 }

@@ -43,10 +43,10 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
         dynamic_pointer_cast<MockNode>(s5)->Setup(14);
 
         // the tree starts with two actions?
-        s0->Expand();
+        s0->expand();
         const action_ptr best_decision = MonteCarloTreeSearch::run(s0, 4, test_logger);
 
-        auto name = best_decision->Name();
+        auto name = best_decision->name();
 
         EXPECT_EQ(name, "s2");
     }

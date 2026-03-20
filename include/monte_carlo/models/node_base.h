@@ -24,10 +24,10 @@ namespace sophia::monte_carlo::models
         NodeBase(const std::string &name, TState state, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger);
 
         /// @brief Retrieves the state associated with this node.
-        TState GetState() const;
+        TState get_state() const;
 
     protected:
-        rollout_strategy_ptr RolloutStrategy() const override;
+        rollout_strategy_ptr rollout_strategy() const override;
 
         double interpret_result(const_simulation_result_ptr) const override;
 

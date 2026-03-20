@@ -44,7 +44,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A double value that represents the score of the game from the
          * perspective of the Player.
          */
-        [[nodiscard]] double Value(const Board &board) const;
+        [[nodiscard]] double value(const Board &board) const;
 
     protected:
         enums::Symbol m_player_symbol_ = enums::Symbol::None;

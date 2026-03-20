@@ -23,7 +23,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          */
         [[nodiscard]] enums::Symbol Winner() const;
 
-        [[nodiscard]] double Reward() const override;
+        [[nodiscard]] double reward() const override;
 
     private:
         enums::Symbol m_winner_;

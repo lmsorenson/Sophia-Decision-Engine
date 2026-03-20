@@ -17,15 +17,15 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         Board board(logger);
 
         // X has A1, A2. Should win at A3 (0,2)
-        board.SetPosition(Position({0, 0}, Symbol::X));
-        board.SetPosition(Position({0, 1}, Symbol::X));
+        board.set_position(Position({0, 0}, Symbol::X));
+        board.set_position(Position({0, 1}, Symbol::X));
         
         // Act
         auto wins = board.GetWinningMoves(Symbol::X);
 
         // Assert
         ASSERT_EQ(wins.size(), 1);
-        EXPECT_EQ(wins[0]->Name(), "A3");
+        EXPECT_EQ(wins[0]->name(), "A3");
     }
 
     TEST(BoardTests, get_winning_moves_finds_multiple_wins)
@@ -36,9 +36,9 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         // X has A1, B2. Winning moves are C3 (diagonal)
         // Also X has A1, A2. Winning move A3.
-        board.SetPosition(Position({0, 0}, Symbol::X)); // A1
-        board.SetPosition(Position({1, 1}, Symbol::X)); // B2
-        board.SetPosition(Position({0, 1}, Symbol::X)); // A2
+        board.set_position(Position({0, 0}, Symbol::X)); // A1
+        board.set_position(Position({1, 1}, Symbol::X)); // B2
+        board.set_position(Position({0, 1}, Symbol::X)); // A2
         
         // Act
         auto wins = board.GetWinningMoves(Symbol::X);
@@ -56,7 +56,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         // Diag: A1, B2 -> Win at C3 (2,2)
         
         ASSERT_EQ(wins.size(), 3);
-        std::vector<std::string> names = {wins[0]->Name(), wins[1]->Name(), wins[2]->Name()};
+        std::vector<std::string> names = {wins[0]->name(), wins[1]->name(), wins[2]->name()};
         EXPECT_THAT(names, ::testing::UnorderedElementsAre("A3", "C2", "C3"));
     }
 
@@ -67,9 +67,9 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         Board board(logger);
 
         // X has A1, A2. But O has A3.
-        board.SetPosition(Position({0, 0}, Symbol::X));
-        board.SetPosition(Position({0, 1}, Symbol::X));
-        board.SetPosition(Position({0, 2}, Symbol::O));
+        board.set_position(Position({0, 0}, Symbol::X));
+        board.set_position(Position({0, 1}, Symbol::X));
+        board.set_position(Position({0, 2}, Symbol::O));
         
         // Act
         auto wins = board.GetWinningMoves(Symbol::X);

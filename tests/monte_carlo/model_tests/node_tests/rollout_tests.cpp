@@ -17,14 +17,14 @@ namespace sophia::monte_carlo::model_tests
         const auto s1_base = factory->CreateNode("S1");
         auto s1 = std::dynamic_pointer_cast<MockNode>(s1_base); // Cast to MockNode
 
-        EXPECT_CALL(*s1, IsTerminalState())
+        EXPECT_CALL(*s1, is_terminal_state())
             .WillRepeatedly(::testing::Return(true));
-        EXPECT_CALL(*s1, Value())
+        EXPECT_CALL(*s1, value())
             .WillRepeatedly(::testing::Return(make_shared<SimpleSimulationResult>(-1.0)));
 
-        const auto result = s1->Rollout();
+        const auto result = s1->rollout();
 
-        EXPECT_EQ(result->Reward(), -1);
+        EXPECT_EQ(result->reward(), -1);
     }
 
     TEST_F(MonteCarloModelsFixture, node_rollout_2_test)
@@ -36,11 +36,11 @@ namespace sophia::monte_carlo::model_tests
 
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2, s3 });
         std::dynamic_pointer_cast<MockNode>(s2)->Setup(20);
-        s1->Expand();
+        s1->expand();
 
-        const auto result = s1->Rollout();
+        const auto result = s1->rollout();
 
-        EXPECT_EQ(result->Reward(), 20);
+        EXPECT_EQ(result->reward(), 20);
     }
 }
 

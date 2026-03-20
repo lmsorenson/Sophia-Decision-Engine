@@ -35,9 +35,9 @@ Move::Move(
 {
 }
 
-std::string Move::Name() const
+std::string Move::name() const
 {
-    return m_change_.Name();
+    return m_change_.name();
 }
 
 Position Move::Change() const
@@ -45,15 +45,15 @@ Position Move::Change() const
     return m_change_;
 }
 
-void Move::Generate()
+void Move::generate()
 {
     if (const auto source = m_source_.lock())
     {
-        const auto game_state = source->GetState();
+        const auto game_state = source->get_state();
 
-        const auto new_state = game_state.ApplyMove(m_change_);
+        const auto new_state = game_state.apply_move(m_change_);
 
-        const std::string node_name = std::format("{}{}_T{}", TileStateToString(m_change_.State()), m_change_.Name(), new_state->GetTurnNumber());
+        const std::string node_name = std::format("{}{}_T{}", TileStateToString(m_change_.State()), m_change_.name(), new_state->GetTurnNumber());
 
         m_target_ = m_factory_->CreateNode(node_name, *new_state);
     }

@@ -25,7 +25,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         auto node = factory->CreateNode("S0");
 
-        auto value = node->Value();
+        auto value = node->value();
 
         EXPECT_EQ(1,1);
     }

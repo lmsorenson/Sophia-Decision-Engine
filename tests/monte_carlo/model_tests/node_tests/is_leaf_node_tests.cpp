@@ -13,7 +13,7 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
 
-        const auto is_leaf_node = s1->IsLeafNode();
+        const auto is_leaf_node = s1->is_leaf_node();
 
         EXPECT_EQ(is_leaf_node, true);
     }
@@ -26,7 +26,7 @@ namespace sophia::monte_carlo::model_tests
         const auto s3 = factory->CreateNode("S3");
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({s2, s3});
 
-        const auto is_leaf_node = s1->IsLeafNode();
+        const auto is_leaf_node = s1->is_leaf_node();
 
         EXPECT_EQ(is_leaf_node, true);
     }

@@ -44,7 +44,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
                 for (int col = 0; col < 3; ++col)
                 {
                     if (grid[row][col] != Symbol::None) {
-                        board->SetPosition(models::Position({row, col}, grid[row][col]));
+                        board->set_position(models::Position({row, col}, grid[row][col]));
                     }
                 }
             }
@@ -67,7 +67,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         vector<action_ptr> createActions(shared_ptr<GameState> gameState, shared_ptr<factories::TicTacToeFactory> factory)
         {
             vector<action_ptr> actions;
-            auto openPositions = gameState->GetOpenPositions();
+            auto openPositions = gameState->get_open_positions();
             auto node = factory->CreateNode("test");
             auto nodeBase = std::static_pointer_cast<monte_carlo::models::NodeBase<GameState, models::Position>>(node);
 
@@ -109,7 +109,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         // Assert
         ASSERT_NE(selectedAction, nullptr);
-        EXPECT_EQ(selectedAction->Name(), "C3");  // Position (2,2)
+        EXPECT_EQ(selectedAction->name(), "C3");  // Position (2,2)
     }
 
     TEST_F(HeuristicRolloutStrategyFixture, select_action_with_empty_actions_list)
@@ -163,7 +163,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         // Assert - Should select one of the available corner positions: A1, A3, C1, C3
         ASSERT_NE(selectedAction, nullptr);
-        auto name = selectedAction->Name();
+        auto name = selectedAction->name();
         EXPECT_TRUE(name == "A1" || name == "A3" || name == "C1" || name == "C3");
     }
 
@@ -193,7 +193,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         // Assert - Should block opponent by playing A3 (0,2)
         ASSERT_NE(selectedAction, nullptr);
-        EXPECT_EQ(selectedAction->Name(), "A3");
+        EXPECT_EQ(selectedAction->name(), "A3");
     }
 
     // Test for taking winning moves
@@ -222,7 +222,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         // Assert - Should take winning move A3 (0,2)
         ASSERT_NE(selectedAction, nullptr);
-        EXPECT_EQ(selectedAction->Name(), "A3");
+        EXPECT_EQ(selectedAction->name(), "A3");
     }
 
     // Test constructor

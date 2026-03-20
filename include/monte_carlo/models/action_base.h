@@ -26,9 +26,9 @@ namespace sophia::monte_carlo::models
         ActionBase(const node_base_ptr<TState, TChange> &state, TChange change, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger);
         ActionBase(const node_base_ptr<TState, TChange> &state, TChange change, const const_actor_ptr& actor, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger);
 
-        [[nodiscard]] node_ptr Source() const override;
-        [[nodiscard]] node_ptr Target() const override;
-        [[nodiscard]] const_actor_ptr Actor() const override;
+        [[nodiscard]] node_ptr source() const override;
+        [[nodiscard]] node_ptr target() const override;
+        [[nodiscard]] const_actor_ptr actor() const override;
 
     protected:
         /// @brief A factory for creating new nodes in the tree.

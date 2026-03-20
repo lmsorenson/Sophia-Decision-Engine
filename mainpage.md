@@ -26,12 +26,12 @@ bestAction->execute();
 
 ## Core Components
 
-| Component | Purpose |
-|-----------|---------|
-| [MonteCarloTreeSearch](classsophia_1_1monte__carlo_1_1_monte_carlo_tree_search.html) | Main algorithm implementation |
-| [Node](classsophia_1_1monte__carlo_1_1models_1_1_node.html) | Game state representation |
-| [Action](classsophia_1_1monte__carlo_1_1models_1_1_action.html) | State transition representation |
-| [RolloutStrategy](classsophia_1_1monte__carlo_1_1models_1_1_rollout_strategy_interface.html) | Leaf node evaluation strategy |
+| Component                                                                                     | Purpose |
+|-----------------------------------------------------------------------------------------------|---------|
+| [MonteCarloTreeSearch](classsophia_1_1monte__carlo_1_1_monte_carlo_tree_search.html)          | Main algorithm implementation |
+| [Node](classsophia_1_1monte__carlo_1_1models_1_1_node.html)                                   | Game state representation |
+| [Action](classsophia_1_1monte__carlo_1_1models_1_1_action.html)                               | State transition representation |
+| [Rollout Strategy](classsophia_1_1monte__carlo_1_1models_1_1_rollout_strategy_interface.html) | Leaf node evaluation strategy |
 
 ## Architecture Overview
 

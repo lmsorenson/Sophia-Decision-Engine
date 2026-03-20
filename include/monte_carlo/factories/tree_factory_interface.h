@@ -53,7 +53,7 @@ namespace sophia::monte_carlo::factories
 
         /**
          * Creates a new Strategy.
-         * @returns a shared pointer to a Rollout Strategy.
+         * @returns a shared pointer to a rollout strategy.
          */
         [[nodiscard]] virtual rollout_strategy_ptr CreateStrategy() const = 0;
     };

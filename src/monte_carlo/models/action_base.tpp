@@ -26,19 +26,19 @@ ActionBase<TState, TChange>::ActionBase(const node_base_ptr<TState, TChange> &st
 }
 
 template<typename TState, typename TChange>
-node_ptr ActionBase<TState, TChange>::Source() const
+node_ptr ActionBase<TState, TChange>::source() const
 {
     return m_source_.lock();
 }
 
 template<typename TState, typename TChange>
-node_ptr ActionBase<TState, TChange>::Target() const
+node_ptr ActionBase<TState, TChange>::target() const
 {
     return m_target_;
 }
 
 template<typename TState, typename TChange>
-const_actor_ptr ActionBase<TState, TChange>::Actor() const
+const_actor_ptr ActionBase<TState, TChange>::actor() const
 {
     return m_actor_;
 }

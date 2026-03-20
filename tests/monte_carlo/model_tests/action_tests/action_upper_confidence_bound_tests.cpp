@@ -15,7 +15,7 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto a1 = factory->CreateAction(nullptr, 1);
 
-        const auto ucb = a1->UpperConfidenceBound(2);
+        const auto ucb = a1->upper_confidence_bound(2);
 
         EXPECT_EQ(ucb, 0.0);
     }
@@ -32,7 +32,7 @@ namespace sophia::monte_carlo::model_tests
         std::dynamic_pointer_cast<MockNode>(s1)->SetTotalReward(0);
         std::dynamic_pointer_cast<MockNode>(s1)->SetVisitCount(0);
 
-        const auto ucb = a1->UpperConfidenceBound(2);
+        const auto ucb = a1->upper_confidence_bound(2);
 
         EXPECT_EQ(ucb, std::numeric_limits<double>::infinity());
     }
@@ -48,13 +48,13 @@ namespace sophia::monte_carlo::model_tests
         std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup("S2", s2);
 
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2 });
-        s1->Expand();
+        s1->expand();
         std::dynamic_pointer_cast<MockNode>(s1)->SetTotalReward(20);
         std::dynamic_pointer_cast<MockNode>(s1)->SetVisitCount(1);
         std::dynamic_pointer_cast<MockNode>(s2)->SetTotalReward(20);
         std::dynamic_pointer_cast<MockNode>(s2)->SetVisitCount(1);
 
-        const auto ucb = a1->UpperConfidenceBound(2);
+        const auto ucb = a1->upper_confidence_bound(2);
 
         EXPECT_EQ(ucb, 20);
     }

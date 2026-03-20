@@ -16,7 +16,7 @@ namespace sophia::monte_carlo::model_tests
         auto s1_ = std::static_pointer_cast<MockNode>(s1);
         const auto a1 = factory->CreateAction(s1_, 1);
 
-        const auto actual_source = a1->Source();
+        const auto actual_source = a1->source();
 
         EXPECT_NE(actual_source, nullptr);
     }
@@ -26,7 +26,7 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto a1 = factory->CreateAction(nullptr, 1);
 
-        const auto actual_source = a1->Source();
+        const auto actual_source = a1->source();
 
         EXPECT_EQ(actual_source, nullptr);
     }

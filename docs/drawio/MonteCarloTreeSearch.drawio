@@ -52,7 +52,7 @@
         <mxCell id="IydcawHgKFYkVL43jPj4-4" value="Visit Count &lt;i&gt;n&lt;sub&gt;s&lt;/sub&gt;&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="ubTuvXWRGH87ilY97eoY-3">
           <mxGeometry y="80" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IydcawHgKFYkVL43jPj4-3" value="Total Reward &lt;i&gt;t&lt;sub&gt;s&lt;/sub&gt;&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="ubTuvXWRGH87ilY97eoY-3">
+        <mxCell id="IydcawHgKFYkVL43jPj4-3" value="Total reward &lt;i&gt;t&lt;sub&gt;s&lt;/sub&gt;&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="ubTuvXWRGH87ilY97eoY-3">
           <mxGeometry y="110" width="160" height="30" as="geometry" />
         </mxCell>
       </root>
@@ -190,7 +190,7 @@
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WhOPVjGFQnV452_eeHkL-21" value="Rollout" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="WhOPVjGFQnV452_eeHkL-21" value="rollout" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="340" y="160" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="WhOPVjGFQnV452_eeHkL-23" value="For each available action from &#39;current&#39; add a state to the tree" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
@@ -209,7 +209,7 @@
             <mxPoint x="380" y="620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WhOPVjGFQnV452_eeHkL-27" value="Rollout" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="WhOPVjGFQnV452_eeHkL-27" value="rollout" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="340" y="580" width="120" height="40" as="geometry" />
         </mxCell>
       </root>

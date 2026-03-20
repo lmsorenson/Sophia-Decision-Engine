@@ -25,7 +25,7 @@ bool Game::game_over() const
     const auto current_state = game_states_.back();
 
     auto winner_decided = current_state->Winner() != nullptr;
-    auto open_positions = current_state->GetOpenPositions().size();
+    auto open_positions = current_state->get_open_positions().size();
 
     return winner_decided || open_positions <= 0;
 }
@@ -77,7 +77,7 @@ void Game::accept_move(const Position move)
 
     if (new_state != nullptr)
     {
-        const auto name = move.Name();
+        const auto name = move.name();
         game_states_.push_back(new_state);
         notify(name);
     }
@@ -89,5 +89,5 @@ void Game::print() const
 
     const auto current_state = game_states_.back();
 
-    current_state->Print();
+    current_state->print();
 }

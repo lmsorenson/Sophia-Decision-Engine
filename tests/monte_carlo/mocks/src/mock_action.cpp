@@ -19,11 +19,11 @@ MockAction::MockAction(node_base_ptr<bool, int> source, const const_factory_ptr<
 
 void MockAction::Setup(std::string name, const shared_ptr<Node> &node) const
 {
-    EXPECT_CALL(*this, Name())
+    EXPECT_CALL(*this, name())
         .Times(::testing::AnyNumber())
         .WillRepeatedly(Return(std::move(name)));
 
-    EXPECT_CALL(*this, Target())
+    EXPECT_CALL(*this, target())
         .Times(::testing::AnyNumber())
         .WillRepeatedly(Return(node));
 }

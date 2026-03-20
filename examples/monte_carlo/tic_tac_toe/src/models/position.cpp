@@ -22,7 +22,7 @@ Position::Position(const std::pair<int, int> &coordinates, const Symbol tile_sta
     m_state_ = tile_state;
 }
 
-std::string Position::Name() const
+std::string Position::name() const
 {
     const char row = static_cast<char>('A' + m_row_index_);
     const char letter = static_cast<char>('0' + m_column_index_ + 1);

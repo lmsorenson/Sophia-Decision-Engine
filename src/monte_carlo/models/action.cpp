@@ -5,11 +5,11 @@
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 
-double Action::UpperConfidenceBound(const int c) const
+double Action::upper_confidence_bound(const int c) const
 {
-    if (const auto sp = Target())
+    if (const auto sp = target())
     {
-        return sp->UpperConfidenceBound(c);
+        return sp->upper_confidence_bound(c);
     }
 
     return 0.0;

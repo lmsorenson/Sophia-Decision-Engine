@@ -44,14 +44,14 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A vector of shared pointers to Actions
          * that can be applied at this given state of play.
          */
-        [[nodiscard]] std::vector<action_ptr> GetAvailableActions() override;
+        [[nodiscard]] std::vector<action_ptr> get_available_actions() override;
 
         /**
          * @brief Determines if this state is the end of the Game.
          * @return True if a winner can be determined, False if a
          * winner cannot be determined.
          */
-        [[nodiscard]] bool IsTerminalState() const override;
+        [[nodiscard]] bool is_terminal_state() const override;
 
         /**
          * The value or score of this state for the given owning
@@ -59,20 +59,20 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A double value representing a score for the
          * state.
          */
-        [[nodiscard]] const_simulation_result_ptr Value() const override;
+        [[nodiscard]] const_simulation_result_ptr value() const override;
 
         /**
          * @brief Selects the available action with the given name.
          * @param action_name A 2-letter name for a move.
          * @return The action represented by the action name.
          */
-        action_ptr SelectAction(std::string action_name) override;
+        action_ptr select_action(std::string action_name) override;
 
         /**
          * Prints the board at this state of the Game to the
          * console.
          */
-        void Print() const override;
+        void print() const override;
 
     protected:
         double interpret_result(const_simulation_result_ptr result) const override;

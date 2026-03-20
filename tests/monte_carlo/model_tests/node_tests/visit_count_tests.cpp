@@ -13,7 +13,7 @@ namespace sophia::monte_carlo::model_tests
 
         const auto n = MockNode("name 1", nullptr, test_logger);
 
-        const auto total_reward = n.VisitCount();
+        const auto total_reward = n.visit_count();
 
         EXPECT_EQ(total_reward, 0);
     }
@@ -25,7 +25,7 @@ namespace sophia::monte_carlo::model_tests
 
         n.SetVisitCount(3);
 
-        const auto total_reward = n.VisitCount();
+        const auto total_reward = n.visit_count();
 
         EXPECT_EQ(total_reward, 3);
     }

@@ -56,16 +56,16 @@ const_position_ptr Bot::NextMove() const
         if (m_logger_) m_logger_->error("Bot's internal node is null. Cannot determine next move.");
         return nullptr;
     }
-    if (m_logger_) m_logger_->info("Bot is responding to move {}", node_->Name());
+    if (m_logger_) m_logger_->info("Bot is responding to move {}", node_->name());
     const action_ptr best_action = MonteCarloTreeSearch::run(node_, iterations_, m_logger_);
 
-    if (!best_action || !best_action->Target())
+    if (!best_action || !best_action->target())
     {
         if (m_logger_) m_logger_->error("MCTS returned no valid action. Bot cannot move.");
         return nullptr;
     }
 
-    const std::string move_name = best_action->Name();
+    const std::string move_name = best_action->name();
 
     if (m_logger_) m_logger_->info("Bot chose move: {}", move_name);
 
@@ -84,18 +84,18 @@ void Bot::Update(const std::string message)
 {
     if (m_logger_) m_logger_->info("Bot received message: {}", message);
 
-    if (m_logger_) m_logger_->debug("Current tree node is '{}'.", node_->Name());
+    if (m_logger_) m_logger_->debug("Current tree node is '{}'.", node_->name());
 
     // Select the action corresponding to the opponent's move.
-    const auto action = node_->SelectAction(message);
-    if (!action || !action->Target())
+    const auto action = node_->select_action(message);
+    if (!action || !action->target())
     {
-        if (m_logger_) m_logger_->error("Bot could not find a valid action for move '{}'. Current node is '{}'.", message, node_->Name());
+        if (m_logger_) m_logger_->error("Bot could not find a valid action for move '{}'. Current node is '{}'.", message, node_->name());
         // This can happen if the opponent makes a move that the bot didn't consider.
         // A more robust implementation might need to regenerate the tree or handle this gracefully.
         return;
     }
     
-    node_ = action->Target();
-    if (m_logger_) m_logger_->info("Bot tree updated. New current node is '{}'.", node_->Name());
+    node_ = action->target();
+    if (m_logger_) m_logger_->info("Bot tree updated. New current node is '{}'.", node_->name());
 }

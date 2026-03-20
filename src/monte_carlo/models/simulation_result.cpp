@@ -7,7 +7,7 @@ SimpleSimulationResult::SimpleSimulationResult(double reward)
 {
 }
 
-double SimpleSimulationResult::Reward() const
+double SimpleSimulationResult::reward() const
 {
     return m_reward_;
 }
