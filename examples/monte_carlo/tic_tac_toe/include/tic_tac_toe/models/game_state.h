@@ -16,18 +16,20 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     public:
         /**
          * @brief Creates an instance of GameState given an owning player and a value for the board.
+         * @param game The game being played.
          * @param you The owning Player of the state.
          * @param board The board info in the given state.
          */
-        explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board);
+        explicit GameState(const const_game_ptr& game, const_player_ptr you, std::shared_ptr<const Board> board);
 
         /**
          * Creates an instance of GameState
+         * @param game The game being played.
          * @param you The owning Player of the state.
          * @param board The board info in the given state.
          * @param last_placed The Symbol last placed.
          */
-        explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed);
+        explicit GameState(const const_game_ptr &game, const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed);
 
         /**
          * @brief Creates a copy of the GameState with the given move applied.
@@ -98,6 +100,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     private:
         const_board_ptr m_board_;
         const_player_ptr m_you_;
+        const_game_ref m_game_;
     };
 }
 

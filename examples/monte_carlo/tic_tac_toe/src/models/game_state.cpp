@@ -11,14 +11,16 @@ using sophia::monte_carlo::tic_tac_toe::const_board_ptr;
 using sophia::monte_carlo::tic_tac_toe::const_position_ptr;
 using sophia::monte_carlo::tic_tac_toe::const_player_ptr;
 
-GameState::GameState(const_player_ptr you, const_board_ptr board)
-    : m_you_(std::move(you))
+GameState::GameState(const const_game_ptr& game, const_player_ptr you, const_board_ptr board)
+    : m_game_(game)
+    , m_you_(std::move(you))
     , m_board_(std::move(board))
 {
 }
 
-GameState::GameState(const_player_ptr you, const_board_ptr board, Symbol last_placed)
-    : m_you_(std::move(you))
+GameState::GameState(const const_game_ptr &game, const_player_ptr you, const_board_ptr board, Symbol last_placed)
+    : m_game_(game)
+    , m_you_(std::move(you))
     , m_board_(std::move(board))
 {
 }
@@ -27,7 +29,7 @@ const_game_state_ptr GameState::ApplyMove(const Position &position) const
 {
     auto new_board = m_board_->WithMove(position);
 
-    return std::make_shared<GameState>(m_you_, new_board, position.State());
+    return std::make_shared<GameState>(m_game_.lock(), m_you_, new_board, position.State());
 }
 
 const_player_ptr GameState::CurrentPlayer() const

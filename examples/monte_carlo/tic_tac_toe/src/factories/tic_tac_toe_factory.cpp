@@ -18,9 +18,10 @@ using sophia::monte_carlo::models::RandomRolloutStrategy;
 using std::make_shared;
 using std::shared_ptr;
 
-TicTacToeFactory::TicTacToeFactory(const_player_ptr you, const logger_ptr& logger)
-: you_(std::move(you))
-, m_logger_(logger)
+TicTacToeFactory::TicTacToeFactory(const_game_ptr game, const_player_ptr you, logger_ptr logger)
+: m_game_(std::move(game))
+, m_you_(std::move(you))
+, m_logger_(std::move(logger))
 {
 }
 
@@ -32,7 +33,7 @@ void TicTacToeFactory::SetRolloutStrategyType(RolloutStrategyType type)
 sophia::monte_carlo::node_ptr TicTacToeFactory::CreateNode(std::string name) const
 {
     auto board = make_shared<Board>(m_logger_);
-    const auto game_state = make_shared<GameState>(you_, board);
+    const auto game_state = make_shared<GameState>(m_game_, m_you_, board);
 
     return std::static_pointer_cast<models::Node>(make_shared<State>(name, *game_state, shared_from_this(), m_logger_));
 }
@@ -59,7 +60,7 @@ sophia::monte_carlo::rollout_strategy_ptr TicTacToeFactory::CreateStrategy() con
         // HeuristicRolloutStrategy will extract the current state from the node being rolled out.
         // We pass a dummy initial state as it will be overridden in select_action.
         auto board = make_shared<Board>(m_logger_);
-        GameState dummy_state(you_, board);
+        GameState dummy_state(m_game_, m_you_, board);
         return make_shared<HeuristicRolloutStrategy>(dummy_state, m_logger_);
     }
 

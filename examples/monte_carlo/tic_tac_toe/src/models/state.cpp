@@ -32,7 +32,7 @@ Symbol Alternate(const Symbol last_placed)
 }
 
 State::State(const string &name, const const_factory_ptr<GameState, Position> &tree_factory, const logger_ptr& logger)
-    : NodeBase(name, GameState(nullptr, nullptr), tree_factory, logger)
+    : NodeBase(name, GameState(nullptr, nullptr, nullptr), tree_factory, logger)
 {
 }
 

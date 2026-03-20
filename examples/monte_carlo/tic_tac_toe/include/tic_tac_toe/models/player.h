@@ -22,8 +22,9 @@ namespace sophia::monte_carlo::tic_tac_toe::models
 
         /**
          * @brief Initializes the player.
+         * @param game A pointer to the game.
          */
-        virtual void Initialize() {};
+        virtual void Initialize(const_game_ptr game) {};
 
         /**
          * @brief The Symbol used by the Player.
@@ -43,7 +44,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A double value that represents the score of the game from the
          * perspective of the Player.
          */
-        [[nodiscard]] double Value(const class Board &board) const;
+        [[nodiscard]] double Value(const Board &board) const;
 
     protected:
         enums::Symbol m_player_symbol_ = enums::Symbol::None;

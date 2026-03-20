@@ -24,10 +24,11 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
     public:
         /**
          * @brief Creates an instance of TicTacToeFactory
+         * @param game The game being played.
          * @param you a shared pointer to the player that owns the simulation.
          * @param logger the logger for the factory to use.
          */
-        explicit TicTacToeFactory(const_player_ptr you, const logger_ptr& logger);
+        explicit TicTacToeFactory(const_game_ptr game, const_player_ptr you, logger_ptr logger);
         ~TicTacToeFactory() override = default;
 
         /**
@@ -75,7 +76,8 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
         [[nodiscard]] rollout_strategy_ptr CreateStrategy() const override;
 
     private:
-        const_player_ptr you_;
+        const_game_ptr m_game_;
+        const_player_ptr m_you_;
         logger_ptr m_logger_; // Member to hold the logger instance
         RolloutStrategyType m_rollout_strategy_type_ = RolloutStrategyType::Heuristic;
     };

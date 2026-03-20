@@ -42,7 +42,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         /**
          * @brief Initializes the bot by creating its root node.
          */
-        void Initialize() override;
+        void Initialize(const_game_ptr game) override;
 
         /**
          * @brief Prompts the bot to make its next move.

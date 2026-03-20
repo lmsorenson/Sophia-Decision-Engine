@@ -38,10 +38,13 @@ Bot::Bot(const Symbol symbol, const double difficulty, const sophia::monte_carlo
 {
 }
 
-void Bot::Initialize()
+void Bot::Initialize(const_game_ptr game)
 {
+    if (game == nullptr)
+        throw std::invalid_argument("Game cannot be null.");
+
     if (m_logger_) m_logger_->info("Bot is initializing its root node.");
-    const auto factory = std::make_shared<factories::TicTacToeFactory>(shared_from_this(), m_logger_);
+    const auto factory = std::make_shared<factories::TicTacToeFactory>(game, shared_from_this(), m_logger_);
     factory->SetRolloutStrategyType(m_rollout_type_);
     node_ = factory->CreateNode("root");
 }

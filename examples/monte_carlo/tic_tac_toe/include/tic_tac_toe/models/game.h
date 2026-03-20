@@ -12,7 +12,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
      * @class Game
      * @brief A Tic Tac Toe game.
      */
-    class Game : observer::Subject
+    class Game : observer::Subject, public std::enable_shared_from_this<Game>
     {
     public:
         /**
@@ -94,7 +94,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         }
 
         *target_player = std::make_shared<TPlayer>(symbol, args..., m_logger_);
-        (*target_player)->Initialize();
+        (*target_player)->Initialize(shared_from_this());
         add_observer(*target_player);
     }
 }

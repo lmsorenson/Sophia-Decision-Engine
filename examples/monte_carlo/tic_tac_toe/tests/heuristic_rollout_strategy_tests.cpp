@@ -54,7 +54,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         // Helper to create a game state
         shared_ptr<GameState> createGameState(shared_ptr<Board> board, const_player_ptr currentPlayer, Symbol lastPlaced = Symbol::None)
         {
-            return make_shared<GameState>(currentPlayer, board, lastPlaced);
+            return make_shared<GameState>(nullptr, currentPlayer, board, lastPlaced);
         }
 
         // Helper to create a heuristic rollout strategy
@@ -101,7 +101,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         });
         auto gameState = createGameState(board, m_playerX, O);
         auto strategy = createStrategy(gameState);
-        auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
+        auto factory = make_shared<factories::TicTacToeFactory>(nullptr, m_playerX, m_logger);
         auto actions = createActions(gameState, factory);
 
         // Act
@@ -155,7 +155,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         });
         auto gameState = createGameState(board, m_playerX, X);
         auto strategy = createStrategy(gameState);
-        auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
+        auto factory = make_shared<factories::TicTacToeFactory>(nullptr, m_playerX, m_logger);
         auto actions = createActions(gameState, factory);
 
         // Act
@@ -185,7 +185,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         });
         auto gameState = createGameState(board, m_playerX, O);
         auto strategy = createStrategy(gameState);
-        auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
+        auto factory = make_shared<factories::TicTacToeFactory>(nullptr, m_playerX, m_logger);
         auto actions = createActions(gameState, factory);
 
         // Act
@@ -214,7 +214,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         });
         auto gameState = createGameState(board, m_playerX, X);
         auto strategy = createStrategy(gameState);
-        auto factory = make_shared<factories::TicTacToeFactory>(m_playerX, m_logger);
+        auto factory = make_shared<factories::TicTacToeFactory>(nullptr, m_playerX, m_logger);
         auto actions = createActions(gameState, factory);
 
         // Act
