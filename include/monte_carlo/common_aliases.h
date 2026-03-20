@@ -1,7 +1,6 @@
 #ifndef SOPHIA_MONTE_CARLO_COMMON_ALIASES_H
 #define SOPHIA_MONTE_CARLO_COMMON_ALIASES_H
 
-#include <logging/ilogger.h>
 #include <memory>
 #include <monte_carlo/fwd.h>
 

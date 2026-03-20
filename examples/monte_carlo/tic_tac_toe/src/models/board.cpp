@@ -278,7 +278,7 @@ void Board::print() const
         }
         ss << std::endl;
     }
-    m_logger_->info("Board state:\n{}", ss.str());
+    m_logger_->info(logging::LogChannel::UserInterface, "Board state:\n{}", ss.str());
 }
 
 

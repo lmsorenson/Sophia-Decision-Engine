@@ -40,6 +40,8 @@ namespace sophia::logging
      */
     class ILogger
     {
+        friend class LogDispatcher;
+
     public:
         virtual ~ILogger() = default;
 
@@ -74,6 +76,12 @@ namespace sophia::logging
         void info(std::format_string<Args...> fmt, Args&&... args)
         {
             log(LogLevel::Info, LogChannel::Main, std::format(fmt, std::forward<Args>(args)...));
+        }
+
+        template<typename... Args>
+        void info(LogChannel channel, std::format_string<Args...> fmt, Args&&... args)
+        {
+            log(LogLevel::Info, channel, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**

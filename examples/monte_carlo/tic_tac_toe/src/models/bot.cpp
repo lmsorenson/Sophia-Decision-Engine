@@ -3,8 +3,9 @@
 #include <monte_carlo/tree_search_algorithm.h>
 #include <tic_tac_toe/factories/tic_tac_toe_factory.h>
 #include <cmath>
-#include <monte_carlo/models/action.h> // Required for full definition of Action
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr and action_ptr aliases
+#include <monte_carlo/models/action.h>
+#include <monte_carlo/common_aliases.h>
+#include <logging/ilogger.h>
 
 using sophia::monte_carlo::tic_tac_toe::models::Bot;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
