@@ -18,7 +18,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
     TEST_F(TicTacToeModelsFixture, test)
     {
-        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
+        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::Error);
 
         auto bot = std::make_shared<models::Bot>(enums::Symbol::X, 1, test_logger);
         const auto factory = make_shared<factories::TicTacToeFactory>(nullptr, bot, test_logger);

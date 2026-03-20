@@ -30,7 +30,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
         void SetUp() override
         {
-            m_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
+            m_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::Error);
             m_playerX = std::make_shared<models::Bot>(Symbol::X, 1, m_logger);
             m_playerO = std::make_shared<models::Bot>(Symbol::O, 1, m_logger);
         }

@@ -12,11 +12,20 @@ namespace sophia::logging
      */
     enum class LogLevel
     {
-        TRACE,
-        DEBUG,
-        INFO,
-        WARN,
-        ERROR
+        Trace,
+        Debug,
+        Info,
+        Warn,
+        Error
+    };
+
+    /**
+     * @brief Defines the output channel for log messages.
+     */
+    enum class LogChannel
+    {
+        Main,
+        UserInterface
     };
 
     /**
@@ -42,7 +51,7 @@ namespace sophia::logging
         template<typename... Args>
         void trace(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::TRACE, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Trace, LogChannel::Main, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**
@@ -53,7 +62,7 @@ namespace sophia::logging
         template<typename... Args>
         void debug(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::DEBUG, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Debug, LogChannel::Main, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**
@@ -64,7 +73,7 @@ namespace sophia::logging
         template<typename... Args>
         void info(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::INFO, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Info, LogChannel::Main, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**
@@ -75,7 +84,7 @@ namespace sophia::logging
         template<typename... Args>
         void warn(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::WARN, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Warn, LogChannel::Main, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**
@@ -86,7 +95,7 @@ namespace sophia::logging
         template<typename... Args>
         void error(std::format_string<Args...> fmt, Args&&... args)
         {
-            log(LogLevel::ERROR, std::format(fmt, std::forward<Args>(args)...));
+            log(LogLevel::Warn, LogChannel::Main, std::format(fmt, std::forward<Args>(args)...));
         }
 
     private:
@@ -94,8 +103,9 @@ namespace sophia::logging
          * @brief The core logging function that concrete loggers must implement.
          * @param level The severity level of the message.
          * @param message The fully formatted message to be logged.
+         * @param channel The output channel for the message.
          */
-        virtual void log(LogLevel level, const std::string& message) = 0;
+        virtual void log(LogLevel level, LogChannel channel, const std::string& message) = 0;
     };
 
 } // namespace sophia::logging

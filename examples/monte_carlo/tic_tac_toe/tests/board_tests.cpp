@@ -13,7 +13,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     TEST(BoardTests, get_winning_moves_finds_single_win)
     {
         // Arrange
-        auto logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::ERROR);
+        auto logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
         Board board(logger);
 
         // X has A1, A2. Should win at A3 (0,2)
@@ -31,7 +31,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     TEST(BoardTests, get_winning_moves_finds_multiple_wins)
     {
         // Arrange
-        auto logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::ERROR);
+        auto logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
         Board board(logger);
 
         // X has A1, B2. Winning moves are C3 (diagonal)
@@ -63,7 +63,7 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     TEST(BoardTests, get_winning_moves_ignores_blocked_wins)
     {
         // Arrange
-        auto logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::ERROR);
+        auto logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
         Board board(logger);
 
         // X has A1, A2. But O has A3.

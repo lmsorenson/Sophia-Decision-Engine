@@ -23,7 +23,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
 
     TEST_F(MonteCarloTreeSearchFixture, tree_search_algorithm_test)
     {
-        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
+        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::Error);
 
         const auto factory = make_shared<MockTreeFactory>();
         const auto s0 = factory->CreateNode("s0");
