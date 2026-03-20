@@ -98,20 +98,24 @@ double State::interpret_result(const const_simulation_result_ptr result) const
     if (!ttt_result) return 0.0;
 
     const Symbol winner = ttt_result->Winner();
-    const auto you = m_state_.You();
-    const Symbol your_symbol = you->symbol();
 
-    if (winner == Symbol::None)
+    // we want the player who caused this move.
+    if (const auto cp = m_state_.LastPlayer())
     {
-        return 1.0; // Draw
+        if (winner == Symbol::None)
+        {
+            return 1.0; // Draw
+        }
+
+        if (winner == cp->symbol())
+        {
+            return 2.0; // Win
+        }
+
+        return 0.0; // Loss
     }
 
-    if (winner == your_symbol)
-    {
-        return 2.0; // Win
-    }
-
-    return 0.0; // Loss
+    throw std::runtime_error("Invalid state!");
 }
 
 action_ptr State::SelectAction(const std::string action_name)

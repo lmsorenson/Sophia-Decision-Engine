@@ -42,6 +42,12 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Gets the current player of the game.
          * @return A shared pointer to the Player whose turn it is to move.
          */
+        [[nodiscard]] const_player_ptr LastPlayer() const;
+
+        /**
+         * @brief Gets the current player of the game.
+         * @return A shared pointer to the Player whose turn it is to move.
+         */
         [[nodiscard]] const_player_ptr CurrentPlayer() const;
 
         /**

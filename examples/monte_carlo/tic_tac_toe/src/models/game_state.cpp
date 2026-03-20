@@ -34,6 +34,18 @@ const_game_state_ptr GameState::ApplyMove(const Position &position) const
     return std::make_shared<GameState>(m_game_.lock(), m_you_, new_board, position.State());
 }
 
+const_player_ptr GameState::LastPlayer() const
+{
+    Symbol last_placed = m_board_->LastPlaced();
+
+    if (const auto game = m_game_.lock())
+    {
+        return game->get_player(last_placed);
+    }
+
+    throw std::runtime_error("Game not set.");
+}
+
 const_player_ptr GameState::CurrentPlayer() const
 {
     // If board has even number of marks, it's X's turn. If odd, it's O's turn.
