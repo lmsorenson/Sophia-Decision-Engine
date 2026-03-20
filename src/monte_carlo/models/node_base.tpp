@@ -14,13 +14,13 @@ NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, const
 }
 
 template<typename TState, typename TChange>
-TState NodeBase<TState, TChange>::GetState() const
+TState NodeBase<TState, TChange>::get_state() const
 {
     return m_state_;
 }
 
 template<typename TState, typename TChange>
-rollout_strategy_ptr NodeBase<TState, TChange>::RolloutStrategy() const
+rollout_strategy_ptr NodeBase<TState, TChange>::rollout_strategy() const
 {
     return m_factory_->CreateStrategy();
 }
@@ -33,7 +33,7 @@ double NodeBase<TState, TChange>::interpret_result(const const_simulation_result
     // If it's a SimpleSimulationResult, we can use its reward directly.
     if (const auto simple = std::dynamic_pointer_cast<const SimpleSimulationResult>(result))
     {
-        return simple->Reward();
+        return simple->reward();
     }
 
     return 0.0;

@@ -26,7 +26,7 @@ action_ptr RandomRolloutStrategy::select_action(std::vector<action_ptr> actions)
     std::uniform_int_distribution<size_t> dist(0, actions.size() - 1);
     const auto& random_action = actions[dist(gen)];
 
-    if (m_logger_) m_logger_->debug("Rollout selection: {}", random_action->Name());
+    if (m_logger_) m_logger_->debug("rollout selection: {}", random_action->name());
 
     return random_action;
 }

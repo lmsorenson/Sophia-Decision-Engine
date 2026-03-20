@@ -27,7 +27,7 @@ GameState::GameState(const const_game_ptr &game, const_player_ptr you, const_boa
 {
 }
 
-const_game_state_ptr GameState::ApplyMove(const Position &position) const
+const_game_state_ptr GameState::apply_move(const Position &position) const
 {
     auto new_board = m_board_->WithMove(position);
 
@@ -71,9 +71,9 @@ std::shared_ptr<std::pair<Symbol, bool>> GameState::Winner() const
     return m_board_->Winner();
 }
 
-std::vector<const_position_ptr> GameState::GetOpenPositions() const
+std::vector<const_position_ptr> GameState::get_open_positions() const
 {
-    return m_board_->GetOpenPositions();
+    return m_board_->get_open_positions();
 }
 
 std::vector<const_position_ptr> GameState::GetWinningMoves() const
@@ -95,7 +95,7 @@ Symbol GameState::LastPlaced() const
     return m_board_->LastPlaced();
 }
 
-Board GameState::GetBoard() const
+Board GameState::get_board() const
 {
     return *m_board_;
 }
@@ -105,7 +105,7 @@ int GameState::GetTurnNumber() const
     return m_board_->GetMarkCount();
 }
 
-void GameState::Print() const
+void GameState::print() const
 {
-    m_board_->Print();
+    m_board_->print();
 }

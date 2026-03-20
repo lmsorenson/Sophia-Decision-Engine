@@ -33,7 +33,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * Gets the name of the Position.
          * @return A string with the name of the Position.
          */
-        [[nodiscard]] std::string Name() const;
+        [[nodiscard]] std::string name() const;
 
         /**
          * Gets the coordinates of the position where:

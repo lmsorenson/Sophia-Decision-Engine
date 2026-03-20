@@ -36,7 +36,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param position The move that will be applied.
          * @return A shared pointer to a new GameState with the move applied.
          */
-        [[nodiscard]] const_game_state_ptr ApplyMove(const Position& position) const;
+        [[nodiscard]] const_game_state_ptr apply_move(const Position& position) const;
 
         /**
          * @brief Gets the current player of the game.
@@ -63,10 +63,10 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         [[nodiscard]] std::shared_ptr<std::pair<enums::Symbol, bool>> Winner() const;
 
         /**
-         * @brief GetOpenPositions
+         * @brief get_open_positions
          * @return A vector of shared pointers to Positions that don't have a mark yet.
          */
-        [[nodiscard]] std::vector<const_position_ptr> GetOpenPositions() const;
+        [[nodiscard]] std::vector<const_position_ptr> get_open_positions() const;
 
         /**
          * @brief Gets moves that would win the game for the current player.
@@ -90,7 +90,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Get the board information for this GameState.
          * @return The Board data for this GameState.
          */
-        [[nodiscard]] Board GetBoard() const;
+        [[nodiscard]] Board get_board() const;
 
         /**
          * @brief Gets the current turn number based on the number of marks on the board.
@@ -101,7 +101,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         /**
          * @brief Prints the board info for this GameState.
          */
-        void Print() const;
+        void print() const;
 
     private:
         const_board_ptr m_board_;

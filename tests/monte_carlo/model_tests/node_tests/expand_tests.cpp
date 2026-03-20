@@ -13,7 +13,7 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
 
-        const auto first_node = s1->Expand();
+        const auto first_node = s1->expand();
 
         EXPECT_EQ(first_node, nullptr);
     }
@@ -26,9 +26,9 @@ namespace sophia::monte_carlo::model_tests
         const auto s3 = factory->CreateNode("S3");
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2, s3 });
 
-        const auto first_node = s1->Expand();
+        const auto first_node = s1->expand();
 
-        EXPECT_EQ(first_node->Name(), "S2");
+        EXPECT_EQ(first_node->name(), "S2");
     }
 }
 

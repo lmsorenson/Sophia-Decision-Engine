@@ -21,7 +21,7 @@ namespace sophia::monte_carlo
          *     Upper Confidence Bound (UCB1) until a leaf node (a node with unexpanded potential) is reached.
          * 2.  **Expansion:** If the selected leaf node is not a terminal state, create one or more child nodes
          *     representing subsequent states. Select one of these new nodes.
-         * 3.  **Simulation (Rollout):** From the newly created node, perform a simulation (e.g., a random walk)
+         * 3.  **Simulation (rollout):** From the newly created node, perform a simulation (e.g., a random walk)
          *     until a terminal state is reached. The outcome of this simulation is a reward.
          * 4.  **Backpropagation:** Propagate the reward from the simulation back up the tree, updating the
          *     visit counts and total rewards of all nodes and actions along the path to the root.

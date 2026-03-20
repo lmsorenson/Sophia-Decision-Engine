@@ -18,16 +18,16 @@ namespace sophia::monte_carlo::model_tests
         auto s2 = factory->CreateNode("S2");
         auto s1_ = std::static_pointer_cast<MockNode>(s1);
         auto a1 = factory->CreateAction(s1_, 1);
-        s2->SetParent(a1);
+        s2->set_parent(a1);
 
-        s1->Backpropagate(make_shared<SimpleSimulationResult>(10));
-        s2->Backpropagate(make_shared<SimpleSimulationResult>(10));
-        s2->Backpropagate(make_shared<SimpleSimulationResult>(10));
+        s1->backpropagate(make_shared<SimpleSimulationResult>(10));
+        s2->backpropagate(make_shared<SimpleSimulationResult>(10));
+        s2->backpropagate(make_shared<SimpleSimulationResult>(10));
 
-        const auto actualVisitCountS1 = s1->VisitCount();
-        const auto actualTotalRewardS1 = s1->TotalReward();
-        const auto actualVisitCountS2 = s2->VisitCount();
-        const auto actualTotalRewardS2 = s2->TotalReward();
+        const auto actualVisitCountS1 = s1->visit_count();
+        const auto actualTotalRewardS1 = s1->total_reward();
+        const auto actualVisitCountS2 = s2->visit_count();
+        const auto actualTotalRewardS2 = s2->total_reward();
 
         EXPECT_EQ(actualVisitCountS1, 3);
         EXPECT_EQ(actualTotalRewardS1, 30);
@@ -40,11 +40,11 @@ namespace sophia::monte_carlo::model_tests
         auto factory = std::make_shared<mocks::MockTreeFactory>();
         auto s1 = factory->CreateNode("S1");
 
-        // Backpropagate with null reward should increment visit count but add 0 to total reward
-        s1->Backpropagate(nullptr);
+        // backpropagate with null reward should increment visit count but add 0 to total reward
+        s1->backpropagate(nullptr);
 
-        EXPECT_EQ(s1->VisitCount(), 1);
-        EXPECT_EQ(s1->TotalReward(), 0.0);
+        EXPECT_EQ(s1->visit_count(), 1);
+        EXPECT_EQ(s1->total_reward(), 0.0);
     }
 }
 

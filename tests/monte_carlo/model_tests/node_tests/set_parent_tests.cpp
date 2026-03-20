@@ -25,7 +25,7 @@ namespace sophia::monte_carlo::model_tests
         EXPECT_EQ(actualParent, nullptr);
 
         // Execute
-        s2->SetParent(a1);
+        s2->set_parent(a1);
 
         // after the parent is set,
         // the parent should not be null;

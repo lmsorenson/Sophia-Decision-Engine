@@ -18,7 +18,7 @@ namespace sophia::monte_carlo::model_tests
         const auto a1 = factory->CreateAction(nullptr, 1);
         std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup("S1", s1);
 
-        const auto actual_target = a1->Target();
+        const auto actual_target = a1->target();
 
         EXPECT_NE(actual_target, nullptr);
     }
@@ -28,7 +28,7 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto a1 = factory->CreateAction(nullptr, 1);
 
-        const auto actual_target = a1->Target();
+        const auto actual_target = a1->target();
 
         EXPECT_EQ(actual_target, nullptr);
     }

@@ -23,21 +23,21 @@ namespace sophia::monte_carlo::models
         virtual ~Node() = default;
 
         /// @brief Sets the parent action that leads to this node.
-        void SetParent(const action_ptr& action);
+        void set_parent(const action_ptr& action);
 
         /**
          * @brief Selects the best child action based on the UCB1 formula. (Selection Phase)
          * This method is part of the selection phase of MCTS, where the tree is traversed from the
          * root to a leaf node by selecting the most promising actions.
          */
-        [[nodiscard]] action_ptr SelectBestAction() const;
+        [[nodiscard]] action_ptr select_best_action() const;
 
         /**
          * @brief Expands the tree by creating a new child node from an untried action. (Expansion Phase)
          * If the current node is not a terminal state and has untried actions, this method will
          * create a new child node for one of those actions.
          */
-        node_ptr Expand();
+        node_ptr expand();
 
         /**
          * @brief Simulates a path from the current node to a terminal state. (Simulation Phase)
@@ -45,7 +45,7 @@ namespace sophia::monte_carlo::models
          * simulating a path to a terminal state, usually with a simple and fast policy.
          * @return The reward obtained from the simulation.
          */
-        const_simulation_result_ptr Rollout();
+        const_simulation_result_ptr rollout();
 
         /**
          * @brief Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase)
@@ -53,10 +53,10 @@ namespace sophia::monte_carlo::models
          * visit counts and total rewards of the nodes along the path.
          * @param reward The reward obtained from the simulation.
          */
-        void Backpropagate(const const_simulation_result_ptr &reward);
+        void backpropagate(const const_simulation_result_ptr &reward);
 
         /// @brief Returns the name of the node for identification.
-        [[nodiscard]] std::string Name() const;
+        [[nodiscard]] std::string name() const;
 
         /**
          * @brief Calculates the Upper Confidence Bound (UCB1) for this node..
@@ -64,40 +64,40 @@ namespace sophia::monte_carlo::models
          * @param c The exploration parameter.
          * @return The UCB1 value.
          */
-        [[nodiscard]] double UpperConfidenceBound(int c) const;
+        [[nodiscard]] double upper_confidence_bound(int c) const;
 
         /// @brief Checks if this node is a leaf node (i.e., has no children).
-        [[nodiscard]] bool IsLeafNode() const;
+        [[nodiscard]] bool is_leaf_node() const;
 
         /// @brief Checks if this node has been visited during the search.
-        [[nodiscard]] bool HasBeenSampled() const;
+        [[nodiscard]] bool has_been_sampled() const;
 
         /// @brief Gets the number of times this node has been visited.
-        [[nodiscard]] int VisitCount() const;
+        [[nodiscard]] int visit_count() const;
 
         /// @brief Gets the total reward accumulated at this node.
-        [[nodiscard]] double TotalReward() const;
+        [[nodiscard]] double total_reward() const;
 
         /// @brief Pure virtual function to check if the node represents a terminal state in the problem space.
-        [[nodiscard]] virtual bool IsTerminalState() const = 0;
+        [[nodiscard]] virtual bool is_terminal_state() const = 0;
 
         /// @brief Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.).
-        [[nodiscard]] virtual const_simulation_result_ptr Value() const = 0;
+        [[nodiscard]] virtual const_simulation_result_ptr value() const = 0;
 
         /// @brief Selects a specific action by its name.
-        virtual action_ptr SelectAction(std::string action_name) = 0;
+        virtual action_ptr select_action(std::string action_name) = 0;
 
         /// @brief Selects an action, typically used for the simulation phase.
-        virtual action_ptr SelectAction();
+        virtual action_ptr select_action();
 
         /// @brief Prints a representation of the node's state.
-        virtual void Print() const = 0;
+        virtual void print() const = 0;
 
         /// @brief Pure virtual function to get the list of all possible actions from this node's state.
-        [[nodiscard]] virtual std::vector<action_ptr> GetAvailableActions() = 0;
+        [[nodiscard]] virtual std::vector<action_ptr> get_available_actions() = 0;
 
         /// @brief Pure virtual function to get the rollout strategy to be used for the simulation phase.
-        virtual rollout_strategy_ptr RolloutStrategy() const = 0;
+        virtual rollout_strategy_ptr rollout_strategy() const = 0;
 
         /// @brief A weak pointer to the parent action of this node.
         std::weak_ptr<Action> m_parent_action_;

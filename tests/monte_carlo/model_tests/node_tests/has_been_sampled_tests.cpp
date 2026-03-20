@@ -13,7 +13,7 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
 
-        const auto has_been_sampled = s1->HasBeenSampled();
+        const auto has_been_sampled = s1->has_been_sampled();
 
         EXPECT_EQ(has_been_sampled, false);
     }
@@ -24,7 +24,7 @@ namespace sophia::monte_carlo::model_tests
         const auto s1 = factory->CreateNode("S1");
         std::dynamic_pointer_cast<MockNode>(s1)->SetVisitCount(1);
 
-        const auto has_been_sampled = s1->HasBeenSampled();
+        const auto has_been_sampled = s1->has_been_sampled();
 
         EXPECT_EQ(has_been_sampled, true);
     }

@@ -17,7 +17,7 @@ Symbol Player::symbol() const
     return m_player_symbol_;
 }
 
-double Player::Value(const Board &board) const
+double Player::value(const Board &board) const
 {
     if (const auto winner = board.Winner())
     {

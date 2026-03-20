@@ -19,7 +19,7 @@ namespace sophia::monte_carlo::models
         virtual ~Action() = default;
 
         /// @brief Get the name of the action for identification purposes.
-        virtual std::string Name() const = 0;
+        virtual std::string name() const = 0;
 
         /**
          * @brief Calculates the Upper Confidence Bound (UCB1) for this action.
@@ -30,19 +30,19 @@ namespace sophia::monte_carlo::models
          * @param c The exploration parameter, which controls the trade-off between exploration and exploitation.
          * @return The UCB1 value for this action.
          */
-        [[nodiscard]] double UpperConfidenceBound(int c) const;
+        [[nodiscard]] double upper_confidence_bound(int c) const;
 
         /// @brief Generates the target node that results from taking this action.
-        virtual void Generate() = 0;
+        virtual void generate() = 0;
 
         /// @brief Retrieves the source node from which this action originates.
-        [[nodiscard]] virtual node_ptr Source() const = 0;
+        [[nodiscard]] virtual node_ptr source() const = 0;
 
         /// @brief Retrieves the target node that results from this action.
-        [[nodiscard]] virtual node_ptr Target() const = 0;
+        [[nodiscard]] virtual node_ptr target() const = 0;
 
         /// @brief Retrieves the actor that performed this action.
-        [[nodiscard]] virtual const_actor_ptr Actor() const = 0;
+        [[nodiscard]] virtual const_actor_ptr actor() const = 0;
     };
 }
 

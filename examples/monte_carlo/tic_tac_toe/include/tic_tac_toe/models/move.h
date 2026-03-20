@@ -47,10 +47,10 @@ namespace sophia::monte_carlo::tic_tac_toe::models
             const logger_ptr& logger);
 
         /**
-         * @brief The Name of the move.
-         * @return The Name of the move.
+         * @brief The name of the move.
+         * @return The name of the move.
          */
-        std::string Name() const override;
+        std::string name() const override;
 
         /**
          * @brief Gets the position change associated with this move.
@@ -61,7 +61,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         /**
          * Generates the outcome of the move.
          */
-        void Generate() override;
+        void generate() override;
     };
 }
 

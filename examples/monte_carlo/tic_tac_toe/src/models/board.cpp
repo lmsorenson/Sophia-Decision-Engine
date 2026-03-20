@@ -71,7 +71,7 @@ Board & Board::operator=(Board &&other) noexcept
 }
 
 
-void Board::SetPosition(const Position &new_position)
+void Board::set_position(const Position &new_position)
 {
     if (new_position.State() == Symbol::None)
     {
@@ -97,7 +97,7 @@ Symbol Board::LastPlaced() const
     return last_placed_;
 }
 
-vector<const_position_ptr> Board::GetOpenPositions() const
+vector<const_position_ptr> Board::get_open_positions() const
 {
     std::vector<const_position_ptr> open_positions = {};
 
@@ -211,7 +211,7 @@ const_board_ptr Board::WithMove(const Position &position) const
     {
         Board newBoard = *this; // Create a copy, which also copies the logger
 
-        newBoard.SetPosition(position);
+        newBoard.set_position(position);
 
         return make_shared<Board>(newBoard);
     }
@@ -245,7 +245,7 @@ shared_ptr<std::pair<Symbol, bool>> Board::Winner() const
     return nullptr;
 }
 
-void Board::Print() const
+void Board::print() const
 {
     if (!m_logger_) return; // Don't print if no logger
 

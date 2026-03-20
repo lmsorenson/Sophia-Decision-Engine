@@ -18,7 +18,7 @@ namespace sophia::monte_carlo::models
     public:
         virtual ~SimulationResult() = default;
 
-        [[nodiscard]] virtual double Reward() const = 0;
+        [[nodiscard]] virtual double reward() const = 0;
     };
 
     /**
@@ -31,7 +31,7 @@ namespace sophia::monte_carlo::models
         explicit SimpleSimulationResult(double reward);
         ~SimpleSimulationResult() override = default;
 
-        [[nodiscard]] double Reward() const override;
+        [[nodiscard]] double reward() const override;
 
     private:
         double m_reward_;

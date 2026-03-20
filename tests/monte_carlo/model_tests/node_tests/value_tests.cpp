@@ -14,9 +14,9 @@ namespace sophia::monte_carlo::model_tests
         const auto n = MockNode("name 1", nullptr, test_logger);
         n.Setup(0);
 
-        const auto result = n.Value();
+        const auto result = n.value();
 
-        EXPECT_EQ(result->Reward(), 0);
+        EXPECT_EQ(result->reward(), 0);
     }
 }
 
