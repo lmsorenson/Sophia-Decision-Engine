@@ -1,6 +1,3 @@
-#ifndef SOPHIA_MONTE_CARLO_MODELS_NODE_BASE_TPP
-#define SOPHIA_MONTE_CARLO_MODELS_NODE_BASE_TPP
-
 #include <monte_carlo/models/node_base.h>
 #include <monte_carlo/models/simulation_result.h>
 #include <monte_carlo/common_aliases.h>
@@ -44,5 +41,3 @@ double NodeBase<TState, TChange>::interpret_result(const const_simulation_result
 }
 
 } // namespace sophia::monte_carlo::models
-
-#endif // SOPHIA_MONTE_CARLO_MODELS_NODE_BASE_TPP
