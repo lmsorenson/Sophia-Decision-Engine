@@ -36,7 +36,7 @@ const_game_state_ptr GameState::ApplyMove(const Position &position) const
 
 const_player_ptr GameState::LastPlayer() const
 {
-    Symbol last_placed = m_board_->LastPlaced();
+    const Symbol last_placed = m_board_->LastPlaced();
 
     if (const auto game = m_game_.lock())
     {

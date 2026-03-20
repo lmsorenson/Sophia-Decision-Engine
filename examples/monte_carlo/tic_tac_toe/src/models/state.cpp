@@ -94,6 +94,9 @@ double State::interpret_result(const const_simulation_result_ptr result) const
 {
     if (!result) return 0.0;
 
+    if (m_state_.GetTurnNumber() == 0)
+        return 0.0;
+
     auto ttt_result = std::dynamic_pointer_cast<const TicTacToeSimulationResult>(result);
     if (!ttt_result) return 0.0;
 
@@ -115,7 +118,7 @@ double State::interpret_result(const const_simulation_result_ptr result) const
         return 0.0; // Loss
     }
 
-    throw std::runtime_error("Invalid state!");
+    throw std::runtime_error("Last player not found!");
 }
 
 action_ptr State::SelectAction(const std::string action_name)

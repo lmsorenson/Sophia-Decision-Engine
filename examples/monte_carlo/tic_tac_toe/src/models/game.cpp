@@ -53,8 +53,16 @@ const_player_ptr Game::get_player(const Symbol symbol) const
 {
     switch (symbol)
     {
-        case Symbol::X: return x_;
-        case Symbol::O: return o_;
+        case Symbol::X:
+            if (x_ == nullptr)
+                throw std::runtime_error("No player with symbol X.");
+            return x_;
+        case Symbol::O:
+            if (o_ == nullptr)
+                throw std::runtime_error("No player with symbol O.");
+            return o_;
+        case Symbol::None:
+            return nullptr;
         default: throw std::invalid_argument("Invalid symbol");
     }
 }

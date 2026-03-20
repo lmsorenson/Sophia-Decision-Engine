@@ -24,13 +24,12 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
     TEST_F(TicTacToeModelsFixture, simulation_test)
     {
         auto test_logger = std::make_shared<ConsoleLogger>(LogLevel::ERROR);
+        const shared_ptr<Game> game = make_shared<Game>(test_logger);
 
-        const auto logger = make_shared<ConsoleLogger>(LogLevel::TRACE);
-        logger->info("Let's Play Tic Tac Toe!");
+        game->Assign<models::Bot>(enums::Symbol::X, 1, factories::RolloutStrategyType::Heuristic);
+        game->Assign<models::Bot>(enums::Symbol::O, 1, factories::RolloutStrategyType::Heuristic);
+        auto bot = game->get_player(enums::Symbol::X);
 
-        const shared_ptr<Game> game = make_shared<Game>(logger);
-
-        auto bot = std::make_shared<models::Bot>(enums::Symbol::X, 1, test_logger);
         const auto factory = make_shared<factories::TicTacToeFactory>(game, bot, test_logger);
 
         const auto node = factory->CreateNode("S0");
