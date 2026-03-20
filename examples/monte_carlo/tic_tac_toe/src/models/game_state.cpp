@@ -2,6 +2,8 @@
 
 #include <utility>
 
+#include "models/game.h"
+
 using sophia::monte_carlo::tic_tac_toe::models::GameState;
 using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::Player;
@@ -38,11 +40,13 @@ const_player_ptr GameState::CurrentPlayer() const
     // This assumes X always starts.
     const auto count = m_board_->GetMarkCount();
     const Symbol current_symbol = (count % 2 == 0) ? Symbol::X : Symbol::O;
-    
-    // Note: We don't have easy access to the actual Player object for the opponent here
-    // without more context. But for heuristics, we often just need the symbol.
-    // For now, we return m_you_ if its symbol matches, otherwise we'd need a player registry.
-    return m_you_; 
+
+    if (const auto game = m_game_.lock())
+    {
+        return game->get_player(current_symbol);
+    }
+
+    throw std::runtime_error("Game not set.");
 }
 
 const_player_ptr GameState::You() const
