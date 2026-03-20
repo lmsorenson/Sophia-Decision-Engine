@@ -86,7 +86,7 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
             }
         }
 
-        // --- 3. rollout (Simulation) ---
+        // --- 3. Rollout (Simulation) ---
         if (logger) logger->info("{}", logging::colors::phase_rollout("Phase 3: rollout (Simulation)"));
         const_simulation_result_ptr reward = current->rollout();
         iteration_reward = reward ? reward->reward() : 0.0;

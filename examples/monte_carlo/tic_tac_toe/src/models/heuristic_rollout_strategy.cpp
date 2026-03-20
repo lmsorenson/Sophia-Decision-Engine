@@ -50,27 +50,7 @@ action_ptr HeuristicRolloutStrategy::select_action(std::vector<action_ptr> actio
         return blocking_action;
     }
 
-    // 3. Prefer center
-    // static const auto center_pos = std::make_shared<models::Position>(std::make_pair(1, 1));
-    // if (auto center_action = find_action(actions, {center_pos}))
-    // {
-    //     if (m_logger_) m_logger_->trace("HeuristicRollout: Choosing center '{}'.", center_action->name());
-    //     return center_action;
-    // }
-
-    // // 4. Prefer corners
-    // static const std::vector<const_position_ptr> corners = {
-    //     std::make_shared<models::Position>(std::make_pair(0, 0)),
-    //     std::make_shared<models::Position>(std::make_pair(0, 2)),
-    //     std::make_shared<models::Position>(std::make_pair(2, 0)),
-    //     std::make_shared<models::Position>(std::make_pair(2, 2))
-    // };
-    // if (auto corner_action = find_action(actions, corners)) {
-    //     if (m_logger_) m_logger_->trace("HeuristicRollout: Choosing corner '{}'.", corner_action->name());
-    //     return corner_action;
-    // }
-
-    // 5. Fallback: Random selection from available actions
+    // 3. Fallback: Random selection from available actions
     static std::mt19937 rng(std::random_device{}());
     std::uniform_int_distribution<std::size_t> dist(0, actions.size() - 1);
     auto random_action = actions[dist(rng)];

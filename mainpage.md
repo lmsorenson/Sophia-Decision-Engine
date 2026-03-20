@@ -26,12 +26,12 @@ bestAction->execute();
 
 ## Core Components
 
-| Component | Purpose |
-|-----------|---------|
-| [MonteCarloTreeSearch](classsophia_1_1monte__carlo_1_1_monte_carlo_tree_search.html) | Main algorithm implementation |
-| [Node](classsophia_1_1monte__carlo_1_1models_1_1_node.html) | Game state representation |
-| [Action](classsophia_1_1monte__carlo_1_1models_1_1_action.html) | State transition representation |
-| [rollout_strategy](classsophia_1_1monte__carlo_1_1models_1_1_rollout_strategy_interface.html) | Leaf node evaluation strategy |
+| Component                                                                                     | Purpose |
+|-----------------------------------------------------------------------------------------------|---------|
+| [MonteCarloTreeSearch](classsophia_1_1monte__carlo_1_1_monte_carlo_tree_search.html)          | Main algorithm implementation |
+| [Node](classsophia_1_1monte__carlo_1_1models_1_1_node.html)                                   | Game state representation |
+| [Action](classsophia_1_1monte__carlo_1_1models_1_1_action.html)                               | State transition representation |
+| [Rollout Strategy](classsophia_1_1monte__carlo_1_1models_1_1_rollout_strategy_interface.html) | Leaf node evaluation strategy |
 
 ## Architecture Overview
 
@@ -39,7 +39,7 @@ bestAction->execute();
 
 1. **Selection**: Traverse tree using UCB formula to find best leaf
 2. **Expansion**: Add new child nodes to promising leaves
-3. **rollout**: Simulate random playout to terminal state
+3. **Rollout**: Simulate random playout to terminal state
 4. **Backpropagation**: Update statistics up the tree
 
 ### Template-Based Design
@@ -110,7 +110,7 @@ auto root = std::make_shared<MyGameState>(initialState, factory);
 auto bestAction = MonteCarloTreeSearch::run(root, iterations);
 ```
 
-### Custom rollout Strategy
+### Custom Rollout Strategy
 ```cpp
 class MyStrategy : public sophia::monte_carlo::models::RolloutStrategyInterface {
 public:
@@ -153,11 +153,11 @@ target_link_libraries(your_target Sophia::DecisionEngine)
 
 - **[Namespaces](namespaces.html)**: Complete namespace overview
 - **[Classes](classes.html)**: All classes with inheritance diagrams
-- **[Files](files.html)**: source file documentation
+- **[Files](files.html)**: Source file documentation
 
 ## See Also
 
-- [GitHub Repository](https://github.com/lmsorenson/Sophia-Decision-Engine) - source code and examples
+- [GitHub Repository](https://github.com/lmsorenson/Sophia-Decision-Engine) - Source code and examples
 - [Getting Started Guide](https://github.com/lmsorenson/Sophia-Decision-Engine/blob/master/README.md) - Project overview and installation
 
 ---

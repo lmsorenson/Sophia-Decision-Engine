@@ -26,7 +26,7 @@ Sophia Decision Engine is a high-performance C++ framework that provides the com
 
 ## Installation
 
-### Build from source
+### Build from Source
 
 ```bash
 # Clone the repository
@@ -114,7 +114,7 @@ int main() {
 
 - **`Node`**: Represents game states with MCTS statistics
 - **`Action`**: Represents moves/transitions between states
-- **`rollout_strategy`**: Defines how to evaluate leaf nodes
+- **`RolloutStrategy`**: Defines how to evaluate leaf nodes
 - **`MonteCarloTreeSearch`**: Main algorithm implementation
 
 ### Key Design Patterns
@@ -161,7 +161,7 @@ cmake --build . --target tests
 - **Build Instructions**: See above
 - **Architecture Guide**: Coming soon
 
-generate documentation:
+Generate documentation:
 
 ```bash
 cd build
