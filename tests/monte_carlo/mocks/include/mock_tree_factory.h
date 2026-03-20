@@ -1,5 +1,5 @@
-#ifndef MOCK_TREE_FACTORY_H
-#define MOCK_TREE_FACTORY_H
+#ifndef SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_TREE_FACTORY_H
+#define SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_TREE_FACTORY_H
 
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <logging/ilogger.h>
@@ -26,4 +26,4 @@ namespace sophia::monte_carlo::mocks
     };
 }
 
-#endif //MOCK_TREE_FACTORY_H
+#endif // SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_TREE_FACTORY_H

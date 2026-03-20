@@ -1,13 +1,8 @@
-#ifndef MOCK_ACTION_H
-#define MOCK_ACTION_H
+#ifndef SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_ACTION_H
+#define SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_ACTION_H
 
 #include <gmock/gmock.h>
 #include <monte_carlo/models/action_base.h>
-
-// namespace sophia::monte_carlo::models
-// {
-//     class Node;
-// }
 
 namespace sophia::monte_carlo::mocks
 {
@@ -33,4 +28,4 @@ namespace sophia::monte_carlo::mocks
     };
 }
 
-#endif //MOCK_ACTION_H
+#endif // SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_ACTION_H

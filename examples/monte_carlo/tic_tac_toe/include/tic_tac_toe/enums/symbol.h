@@ -1,5 +1,5 @@
-#ifndef TILE_STATE_H
-#define TILE_STATE_H
+#ifndef SOPHIA_TIC_TAC_TOE_ENUMS_SYMBOL_H
+#define SOPHIA_TIC_TAC_TOE_ENUMS_SYMBOL_H
 
 #include <string>
 
@@ -33,4 +33,4 @@ namespace sophia::monte_carlo::tic_tac_toe::enums
     }
 }
 
-#endif //TILE_STATE_H
+#endif // SOPHIA_TIC_TAC_TOE_ENUMS_SYMBOL_H

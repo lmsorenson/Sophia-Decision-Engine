@@ -1,5 +1,5 @@
-#ifndef STATE_H
-#define STATE_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_STATE_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_STATE_H
 
 #include <monte_carlo/models/node_base.h>
 #include <tic_tac_toe/models/game_state.h>
@@ -79,4 +79,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 }
 
-#endif //STATE_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_STATE_H

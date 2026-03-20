@@ -1,8 +1,7 @@
-#ifndef BOT_H
-#define BOT_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_BOT_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_BOT_H
 #include <tic_tac_toe/fwd.h>
 #include <tic_tac_toe/models/player.h>
-#include <monte_carlo/models/node.h>
 #include <tic_tac_toe/observer/observer.h>
 
 #include <memory>
@@ -68,4 +67,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 }
 
-#endif //BOT_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_BOT_H

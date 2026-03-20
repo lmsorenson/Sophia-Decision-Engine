@@ -1,5 +1,5 @@
-#ifndef TREE_FACTORY_INTERFACE_H
-#define TREE_FACTORY_INTERFACE_H
+#ifndef SOPHIA_MONTE_CARLO_FACTORIES_TREE_FACTORY_INTERFACE_H
+#define SOPHIA_MONTE_CARLO_FACTORIES_TREE_FACTORY_INTERFACE_H
 
 #include <memory>
 #include <string>
@@ -59,4 +59,4 @@ namespace sophia::monte_carlo::factories
     };
 }
 
-#endif //TREE_FACTORY_INTERFACE_H
+#endif // SOPHIA_MONTE_CARLO_FACTORIES_TREE_FACTORY_INTERFACE_H

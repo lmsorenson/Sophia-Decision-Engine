@@ -1,5 +1,5 @@
-#ifndef TIC_TAC_TOE_BOARD_H
-#define TIC_TAC_TOE_BOARD_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_BOARD_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_BOARD_H
 
 #include <vector>
 #include <tic_tac_toe/models/player.h>
@@ -127,4 +127,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 }
 
-#endif //TIC_TAC_TOE_BOARD_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_BOARD_H

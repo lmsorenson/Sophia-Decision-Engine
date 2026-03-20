@@ -1,5 +1,5 @@
-#ifndef ACTION_BASE_H
-#define ACTION_BASE_H
+#ifndef SOPHIA_MONTE_CARLO_MODELS_ACTION_BASE_H
+#define SOPHIA_MONTE_CARLO_MODELS_ACTION_BASE_H
 
 #include <memory>
 #include <ostream>
@@ -53,4 +53,4 @@ namespace sophia::monte_carlo::models
 
 #include <monte_carlo/models/action_base.tpp>
 
-#endif //ACTION_BASE_H
+#endif // SOPHIA_MONTE_CARLO_MODELS_ACTION_BASE_H

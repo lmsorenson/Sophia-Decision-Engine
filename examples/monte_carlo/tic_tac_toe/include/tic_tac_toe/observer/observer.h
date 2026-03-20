@@ -1,5 +1,5 @@
-#ifndef SUBJECT_H
-#define SUBJECT_H
+#ifndef SOPHIA_TIC_TAC_TOE_OBSERVER_OBSERVER_H
+#define SOPHIA_TIC_TAC_TOE_OBSERVER_OBSERVER_H
 #include <string>
 
 namespace sophia::monte_carlo::tic_tac_toe::observer
@@ -19,4 +19,4 @@ namespace sophia::monte_carlo::tic_tac_toe::observer
     };
 }
 
-#endif //SUBJECT_H
+#endif // SOPHIA_TIC_TAC_TOE_OBSERVER_OBSERVER_H

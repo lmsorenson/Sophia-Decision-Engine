@@ -1,5 +1,5 @@
-#ifndef SIMULATION_RESULT_H
-#define SIMULATION_RESULT_H
+#ifndef SOPHIA_MONTE_CARLO_MODELS_SIMULATION_RESULT_H
+#define SOPHIA_MONTE_CARLO_MODELS_SIMULATION_RESULT_H
 
 #include <monte_carlo/common_aliases.h>
 
@@ -38,4 +38,4 @@ namespace sophia::monte_carlo::models
     };
 }
 
-#endif //SIMULATION_RESULT_H
+#endif // SOPHIA_MONTE_CARLO_MODELS_SIMULATION_RESULT_H

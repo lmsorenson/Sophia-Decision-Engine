@@ -1,8 +1,7 @@
-#ifndef SOPHIA_ILOGGER_H
-#define SOPHIA_ILOGGER_H
+#ifndef SOPHIA_LOGGING_ILOGGER_H
+#define SOPHIA_LOGGING_ILOGGER_H
 
 #include <string>
-#include <memory>
 #include <format>
 
 namespace sophia::logging
@@ -100,4 +99,4 @@ namespace sophia::logging
 
 } // namespace sophia::logging
 
-#endif //SOPHIA_ILOGGER_H
+#endif // SOPHIA_LOGGING_ILOGGER_H

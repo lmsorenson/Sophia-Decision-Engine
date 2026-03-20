@@ -1,9 +1,8 @@
-#ifndef NODE_BASE_H
-#define NODE_BASE_H
+#ifndef SOPHIA_MONTE_CARLO_MODELS_NODE_BASE_H
+#define SOPHIA_MONTE_CARLO_MODELS_NODE_BASE_H
 
 #include <monte_carlo/models/node.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
+#include <monte_carlo/common_aliases.h>
 
 namespace sophia::monte_carlo::models
 {
@@ -41,4 +40,4 @@ namespace sophia::monte_carlo::models
 
 #include <monte_carlo/models/node_base.tpp>
 
-#endif //NODE_BASE_H
+#endif // SOPHIA_MONTE_CARLO_MODELS_NODE_BASE_H

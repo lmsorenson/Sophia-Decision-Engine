@@ -1,5 +1,5 @@
-#ifndef MOCK_ACTION_SELECT_STRATEGY_H
-#define MOCK_ACTION_SELECT_STRATEGY_H
+#ifndef SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_ROLLOUT_STRATEGY_H
+#define SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_ROLLOUT_STRATEGY_H
 
 #include <gmock/gmock.h>
 #include <monte_carlo/models/rollout_strategy_interface.h>
@@ -19,4 +19,4 @@ namespace sophia::monte_carlo::mocks
     };
 }
 
-#endif //MOCK_ACTION_SELECT_STRATEGY_H
+#endif // SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_ROLLOUT_STRATEGY_H

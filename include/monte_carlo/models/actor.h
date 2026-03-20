@@ -1,5 +1,5 @@
-#ifndef ACTOR_H
-#define ACTOR_H
+#ifndef SOPHIA_MONTE_CARLO_MODELS_ACTOR_H
+#define SOPHIA_MONTE_CARLO_MODELS_ACTOR_H
 
 #include <monte_carlo/common_aliases.h>
 
@@ -16,4 +16,4 @@ namespace sophia::monte_carlo::models
     };
 }
 
-#endif //ACTOR_H
+#endif // SOPHIA_MONTE_CARLO_MODELS_ACTOR_H

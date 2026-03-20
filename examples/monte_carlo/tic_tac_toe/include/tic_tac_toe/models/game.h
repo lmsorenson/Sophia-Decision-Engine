@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_GAME_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_GAME_H
 #include <tic_tac_toe/models/board.h>
 #include <tic_tac_toe/observer/subject.h>
 #include <memory>
@@ -106,4 +106,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
 }
 
 
-#endif //GAME_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_GAME_H

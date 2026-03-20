@@ -1,5 +1,5 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_PLAYER_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_PLAYER_H
 #include <memory>
 #include <tic_tac_toe/enums/symbol.h>
 #include <tic_tac_toe/observer/observer.h>
@@ -52,4 +52,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 }
 
-#endif //PLAYER_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_PLAYER_H

@@ -1,10 +1,9 @@
-#ifndef MOCK_NODE_H
-#define MOCK_NODE_H
+#ifndef SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_NODE_H
+#define SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_NODE_H
 
 #include <gmock/gmock.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <monte_carlo/models/node_base.h>
-#include <logging/ilogger.h> // Added include for ILogger
 
 
 namespace sophia::monte_carlo::models
@@ -44,4 +43,4 @@ namespace sophia::monte_carlo::mocks
     };
 }
 
-#endif //MOCK_NODE_H
+#endif // SOPHIA_TESTS_MONTE_CARLO_MOCKS_MOCK_NODE_H

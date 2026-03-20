@@ -1,5 +1,5 @@
-#ifndef TIC_TAC_TOE_SIMULATION_RESULT_H
-#define TIC_TAC_TOE_SIMULATION_RESULT_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_TIC_TAC_TOE_SIMULATION_RESULT_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_TIC_TAC_TOE_SIMULATION_RESULT_H
 
 #include <monte_carlo/models/simulation_result.h>
 #include <tic_tac_toe/enums/symbol.h>
@@ -30,4 +30,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 }
 
-#endif //TIC_TAC_TOE_SIMULATION_RESULT_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_TIC_TAC_TOE_SIMULATION_RESULT_H

@@ -1,5 +1,5 @@
-#ifndef SOPHIA_COLORS_H
-#define SOPHIA_COLORS_H
+#ifndef SOPHIA_LOGGING_COLORS_H
+#define SOPHIA_LOGGING_COLORS_H
 
 #include <string>
 #include <format>
@@ -51,4 +51,4 @@ namespace sophia::logging::colors
     }
 }
 
-#endif //SOPHIA_COLORS_H
+#endif // SOPHIA_LOGGING_COLORS_H

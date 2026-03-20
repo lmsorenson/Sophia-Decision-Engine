@@ -1,5 +1,5 @@
-#ifndef POSITION_H
-#define POSITION_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_POSITION_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_POSITION_H
 
 #include <utility>
 #include <tic_tac_toe/enums/symbol.h>
@@ -78,4 +78,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 }
 
-#endif //POSITION_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_POSITION_H

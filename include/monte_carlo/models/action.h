@@ -1,5 +1,5 @@
-#ifndef ACTION_H
-#define ACTION_H
+#ifndef SOPHIA_MONTE_CARLO_MODELS_ACTION_H
+#define SOPHIA_MONTE_CARLO_MODELS_ACTION_H
 
 #include <memory>
 #include <monte_carlo/common_aliases.h>
@@ -46,4 +46,4 @@ namespace sophia::monte_carlo::models
     };
 }
 
-#endif //ACTION_H
+#endif // SOPHIA_MONTE_CARLO_MODELS_ACTION_H

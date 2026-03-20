@@ -1,9 +1,8 @@
-#ifndef TIC_TAC_TOE_HEURISTIC_ROLLOUT_STRATEGY_H
-#define TIC_TAC_TOE_HEURISTIC_ROLLOUT_STRATEGY_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_HEURISTIC_ROLLOUT_STRATEGY_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_HEURISTIC_ROLLOUT_STRATEGY_H
 
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <tic_tac_toe/models/game_state.h>
-#include <tic_tac_toe/models/move.h>
 #include <monte_carlo/common_aliases.h>
 
 #include <memory>
@@ -45,4 +44,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 } // namespace sophia::monte_carlo::tic_tac_toe::models
 
-#endif //TIC_TAC_TOE_HEURISTIC_ROLLOUT_STRATEGY_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_HEURISTIC_ROLLOUT_STRATEGY_H

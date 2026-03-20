@@ -1,5 +1,5 @@
-#ifndef TIC_TAC_TOE_FACTORY_H
-#define TIC_TAC_TOE_FACTORY_H
+#ifndef SOPHIA_TIC_TAC_TOE_FACTORIES_TIC_TAC_TOE_FACTORY_H
+#define SOPHIA_TIC_TAC_TOE_FACTORIES_TIC_TAC_TOE_FACTORY_H
 
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/position.h>
@@ -83,4 +83,4 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
     };
 }
 
-#endif //TIC_TAC_TOE_FACTORY_H
+#endif // SOPHIA_TIC_TAC_TOE_FACTORIES_TIC_TAC_TOE_FACTORY_H

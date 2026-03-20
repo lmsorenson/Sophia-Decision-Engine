@@ -1,8 +1,8 @@
-#ifndef RANDOM_ACTION_STRATEGY_H
-#define RANDOM_ACTION_STRATEGY_H
+#ifndef SOPHIA_MONTE_CARLO_MODELS_RANDOM_ROLLOUT_STRATEGY_H
+#define SOPHIA_MONTE_CARLO_MODELS_RANDOM_ROLLOUT_STRATEGY_H
 
 #include "rollout_strategy_interface.h"
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
+#include <monte_carlo/common_aliases.h>
 
 namespace sophia::monte_carlo::models
 {
@@ -36,4 +36,4 @@ namespace sophia::monte_carlo::models
     };
 }
 
-#endif //RANDOM_ACTION_STRATEGY_H
+#endif // SOPHIA_MONTE_CARLO_MODELS_RANDOM_ROLLOUT_STRATEGY_H

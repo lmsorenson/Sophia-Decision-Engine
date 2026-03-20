@@ -1,5 +1,5 @@
-#ifndef SOPHIA_CONSOLE_LOGGER_H
-#define SOPHIA_CONSOLE_LOGGER_H
+#ifndef SOPHIA_LOGGING_CONSOLE_LOGGER_H
+#define SOPHIA_LOGGING_CONSOLE_LOGGER_H
 
 #include <logging/ilogger.h>
 
@@ -25,4 +25,4 @@ namespace sophia::logging
 
 } // namespace sophia::logging
 
-#endif //SOPHIA_CONSOLE_LOGGER_H
+#endif // SOPHIA_LOGGING_CONSOLE_LOGGER_H

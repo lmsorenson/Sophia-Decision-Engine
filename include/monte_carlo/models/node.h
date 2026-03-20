@@ -1,5 +1,5 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef SOPHIA_MONTE_CARLO_MODELS_NODE_H
+#define SOPHIA_MONTE_CARLO_MODELS_NODE_H
 
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <vector>
@@ -121,4 +121,4 @@ namespace sophia::monte_carlo::models
     };
 }
 
-#endif //NODE_H
+#endif // SOPHIA_MONTE_CARLO_MODELS_NODE_H

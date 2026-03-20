@@ -1,5 +1,5 @@
-#ifndef OBSERVER_H
-#define OBSERVER_H
+#ifndef SOPHIA_TIC_TAC_TOE_OBSERVER_SUBJECT_H
+#define SOPHIA_TIC_TAC_TOE_OBSERVER_SUBJECT_H
 #include <tic_tac_toe/observer/observer.h>
 #include <memory>
 #include <vector>
@@ -32,4 +32,4 @@ namespace sophia::monte_carlo::tic_tac_toe::observer
     };
 }
 
-#endif //OBSERVER_H
+#endif // SOPHIA_TIC_TAC_TOE_OBSERVER_SUBJECT_H

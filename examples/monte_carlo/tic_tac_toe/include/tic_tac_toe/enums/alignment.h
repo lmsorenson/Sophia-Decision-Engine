@@ -1,5 +1,5 @@
-#ifndef ALIGNMENT_H
-#define ALIGNMENT_H
+#ifndef SOPHIA_TIC_TAC_TOE_ENUMS_ALIGNMENT_H
+#define SOPHIA_TIC_TAC_TOE_ENUMS_ALIGNMENT_H
 
 namespace sophia::monte_carlo::tic_tac_toe::enums
 {
@@ -17,4 +17,4 @@ namespace sophia::monte_carlo::tic_tac_toe::enums
     };
 }
 
-#endif //ALIGNMENT_H
+#endif // SOPHIA_TIC_TAC_TOE_ENUMS_ALIGNMENT_H

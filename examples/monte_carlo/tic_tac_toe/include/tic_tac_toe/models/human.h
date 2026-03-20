@@ -1,9 +1,9 @@
-#ifndef HUMAN_H
-#define HUMAN_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_HUMAN_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_HUMAN_H
 #include <tic_tac_toe/models/player.h>
 #include <tic_tac_toe/models/board.h>
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
-#include <functional> // Added include for std::function
+#include <monte_carlo/common_aliases.h>
+#include <functional>
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
@@ -44,4 +44,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 }
 
-#endif //HUMAN_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_HUMAN_H

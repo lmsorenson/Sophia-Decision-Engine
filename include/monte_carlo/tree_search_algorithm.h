@@ -1,5 +1,5 @@
-#ifndef TREE_SEARCH_ALGORITHM_H
-#define TREE_SEARCH_ALGORITHM_H
+#ifndef SOPHIA_MONTE_CARLO_TREE_SEARCH_ALGORITHM_H
+#define SOPHIA_MONTE_CARLO_TREE_SEARCH_ALGORITHM_H
 
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/common_aliases.h> // Centralized action_ptr and logger_ptr aliases
@@ -46,4 +46,4 @@ namespace sophia::monte_carlo
     };
 }
 
-#endif //TREE_SEARCH_ALGORITHM_H
+#endif // SOPHIA_MONTE_CARLO_TREE_SEARCH_ALGORITHM_H

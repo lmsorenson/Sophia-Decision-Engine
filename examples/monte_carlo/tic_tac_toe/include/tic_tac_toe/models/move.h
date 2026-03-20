@@ -1,18 +1,18 @@
-#ifndef MOVE_H
-#define MOVE_H
+#ifndef SOPHIA_TIC_TAC_TOE_MODELS_MOVE_H
+#define SOPHIA_TIC_TAC_TOE_MODELS_MOVE_H
 
 #include <monte_carlo/models/action_base.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/position.h>
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
-#include <monte_carlo/fwd.h> // Centralized forward declarations
+#include <monte_carlo/common_aliases.h>
+#include <monte_carlo/fwd.h>
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
     using monte_carlo::models::Node;
-    using sophia::monte_carlo::factories::TreeFactoryBase;
+    using monte_carlo::factories::TreeFactoryBase;
     using monte_carlo::models::ActionBase;
 
     /**
@@ -65,4 +65,4 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     };
 }
 
-#endif //MOVE_H
+#endif // SOPHIA_TIC_TAC_TOE_MODELS_MOVE_H
