@@ -9,7 +9,7 @@ var searchData=
   ['considerations_6',['Performance Considerations',['../index.html#autotoc_md13',1,'']]],
   ['console_5flogger_2ecpp_7',['console_logger.cpp',['../console__logger_8cpp.html',1,'']]],
   ['console_5flogger_2eh_8',['console_logger.h',['../console__logger_8h.html',1,'']]],
-  ['consolelogger_9',['consolelogger',['../classsophia_1_1logging_1_1ConsoleLogger.html#afcf72eaca4476d856ba973b4c30654fa',1,'sophia::logging::ConsoleLogger::ConsoleLogger()'],['../classsophia_1_1logging_1_1ConsoleLogger.html',1,'sophia::logging::ConsoleLogger']]],
+  ['consolelogger_9',['consolelogger',['../classsophia_1_1logging_1_1ConsoleLogger.html#a37a5ed667a620e066bf2899d78b69c33',1,'sophia::logging::ConsoleLogger::ConsoleLogger()'],['../classsophia_1_1logging_1_1ConsoleLogger.html',1,'sophia::logging::ConsoleLogger']]],
   ['const_5faction_5fptr_10',['const_action_ptr',['../namespacesophia_1_1monte__carlo.html#acdb2025c00022d862c4d9fe0bcca578d',1,'sophia::monte_carlo']]],
   ['const_5factor_5fptr_11',['const_actor_ptr',['../namespacesophia_1_1monte__carlo.html#a6da0016dc97ef526d65c5a246a5343f0',1,'sophia::monte_carlo']]],
   ['const_5fboard_5fptr_12',['const_board_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#af39e4b666fa0319227cbfea4c738b919',1,'sophia::monte_carlo::tic_tac_toe']]],

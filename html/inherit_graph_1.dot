@@ -9,4 +9,8 @@ digraph "Graphical Class Hierarchy"
   Node0 [id="Node000000",label="sophia::logging::ILogger",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ILogger.html",tooltip="An interface for a generic, type-safe, and performant logger."];
   Node0 -> Node1 [id="edge1_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 [id="Node000001",label="sophia::logging::ConsoleLogger",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ConsoleLogger.html",tooltip="A concrete logger implementation that writes messages to the console (std::cout)."];
+  Node0 -> Node2 [id="edge2_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sophia::logging::LogDispatcher",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1LogDispatcher.html",tooltip="A concrete logger implementation that writes messages to the console (std::cout)."];
+  Node0 -> Node3 [id="edge3_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="sophia::logging::Logger2",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1Logger2.html",tooltip="A concrete logger implementation that writes messages to the console (std::cout)."];
 }

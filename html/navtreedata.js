@@ -45,7 +45,8 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ]
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -61,9 +62,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "action_8cpp.html",
-"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html#a388859b0fe534b3ce3641ff96f2e13f0",
-"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html#ace225eb8c17375a63bb60d929fcab8d1",
-"namespacesophia_1_1logging_1_1colors.html#aeacc685dc11c30c2c8e8a0c5fea83b9b"
+"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a0c28792e417fc5c3b21f93f9cc5409a5",
+"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a145091643f9325929573425c14d40546",
+"namespacesophia.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

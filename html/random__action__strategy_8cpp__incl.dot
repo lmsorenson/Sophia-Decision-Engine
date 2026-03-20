@@ -34,4 +34,5 @@ digraph "src/monte_carlo/models/random_action_strategy.cpp"
   Node12 -> Node4 [id="edge15_Node000012_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node12 -> Node6 [id="edge16_Node000012_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node6 [id="edge17_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge18_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
 }

@@ -93,6 +93,7 @@ $(document).ready(function(){initNavTree('classsophia_1_1logging_1_1ILogger.html
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classsophia_1_1logging_1_1ILogger-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">sophia::logging::ILogger Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -117,6 +118,10 @@ Collaboration diagram for sophia::logging::ILogger:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acec879bd2f823d25efe3aa46813150ca" id="r_acec879bd2f823d25efe3aa46813150ca"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#acec879bd2f823d25efe3aa46813150ca">~ILogger</a> ()=default</td></tr>
 <tr class="separator:acec879bd2f823d25efe3aa46813150ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83a71e511e0f121108f27de1c11ffbc" id="r_aa83a71e511e0f121108f27de1c11ffbc"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aa83a71e511e0f121108f27de1c11ffbc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#aa83a71e511e0f121108f27de1c11ffbc">display</a> (std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:aa83a71e511e0f121108f27de1c11ffbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with TRACE severity (most verbose).  <br /></td></tr>
+<tr class="separator:aa83a71e511e0f121108f27de1c11ffbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a704562826cbdc5af0e36f298ae600809" id="r_a704562826cbdc5af0e36f298ae600809"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a704562826cbdc5af0e36f298ae600809"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a704562826cbdc5af0e36f298ae600809">trace</a> (std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a704562826cbdc5af0e36f298ae600809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with TRACE severity (most verbose).  <br /></td></tr>
@@ -129,6 +134,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13228bc2ebd6aae123f494f29becd977"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a13228bc2ebd6aae123f494f29becd977">info</a> (std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a13228bc2ebd6aae123f494f29becd977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with INFO severity.  <br /></td></tr>
 <tr class="separator:a13228bc2ebd6aae123f494f29becd977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ada1488e43b4363116c188962df8653" id="r_a3ada1488e43b4363116c188962df8653"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a3ada1488e43b4363116c188962df8653"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a3ada1488e43b4363116c188962df8653">info</a> (<a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273">LogChannel</a> channel, std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a3ada1488e43b4363116c188962df8653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a483a95e5343c5367d639a972a0a5b37b" id="r_a483a95e5343c5367d639a972a0a5b37b"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a483a95e5343c5367d639a972a0a5b37b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a483a95e5343c5367d639a972a0a5b37b">warn</a> (std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a483a95e5343c5367d639a972a0a5b37b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with WARN severity.  <br /></td></tr>
@@ -140,9 +148,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aed4fc8b72c100d90081fe9c1458587ce" id="r_aed4fc8b72c100d90081fe9c1458587ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#aed4fc8b72c100d90081fe9c1458587ce">log</a> (<a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8">LogLevel</a> level, const std::string &amp;message)=0</td></tr>
-<tr class="memdesc:aed4fc8b72c100d90081fe9c1458587ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The core logging function that concrete loggers must implement.  <br /></td></tr>
-<tr class="separator:aed4fc8b72c100d90081fe9c1458587ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6647eb090a3a9c8a1907d812ee88725" id="r_aa6647eb090a3a9c8a1907d812ee88725"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#aa6647eb090a3a9c8a1907d812ee88725">log</a> (<a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8">LogLevel</a> level, <a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273">LogChannel</a> channel, const std::string &amp;message)=0</td></tr>
+<tr class="memdesc:aa6647eb090a3a9c8a1907d812ee88725"><td class="mdescLeft">&#160;</td><td class="mdescRight">The core logging function that concrete loggers must implement.  <br /></td></tr>
+<tr class="separator:aa6647eb090a3a9c8a1907d812ee88725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a04759d82d0f8f18be0bedb4783936c37" id="r_a04759d82d0f8f18be0bedb4783936c37"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a04759d82d0f8f18be0bedb4783936c37">LogDispatcher</a></td></tr>
+<tr class="separator:a04759d82d0f8f18be0bedb4783936c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An interface for a generic, type-safe, and performant logger. </p>
@@ -227,6 +240,58 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="aa83a71e511e0f121108f27de1c11ffbc" name="aa83a71e511e0f121108f27de1c11ffbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83a71e511e0f121108f27de1c11ffbc">&#9670;&#160;</a></span>display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sophia::logging::ILogger::display </td>
+          <td>(</td>
+          <td class="paramtype">std::format_string&lt; Args... &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with TRACE severity (most verbose). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>A std::format-compatible format string. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments to be formatted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 3 --></div>
+</div>
+
+</div>
+</div>
 <a id="a5f5fd591a5540b85c8165fa5d57d8fe1" name="a5f5fd591a5540b85c8165fa5d57d8fe1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f5fd591a5540b85c8165fa5d57d8fe1">&#9670;&#160;</a></span>error()</h2>
 
@@ -274,13 +339,62 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 3 --></div>
+<div class="center"><!-- SVG 4 --></div>
+</div>
+
+</div>
+</div>
+<a id="a3ada1488e43b4363116c188962df8653" name="a3ada1488e43b4363116c188962df8653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ada1488e43b4363116c188962df8653">&#9670;&#160;</a></span>info() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sophia::logging::ILogger::info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273">LogChannel</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::format_string&lt; Args... &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 5 --></div>
 </div>
 
 </div>
 </div>
 <a id="a13228bc2ebd6aae123f494f29becd977" name="a13228bc2ebd6aae123f494f29becd977"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13228bc2ebd6aae123f494f29becd977">&#9670;&#160;</a></span>info()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13228bc2ebd6aae123f494f29becd977">&#9670;&#160;</a></span>info() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,13 +440,13 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 4 --></div>
+<div class="center"><!-- SVG 6 --></div>
 </div>
 
 </div>
 </div>
-<a id="aed4fc8b72c100d90081fe9c1458587ce" name="aed4fc8b72c100d90081fe9c1458587ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed4fc8b72c100d90081fe9c1458587ce">&#9670;&#160;</a></span>log()</h2>
+<a id="aa6647eb090a3a9c8a1907d812ee88725" name="aa6647eb090a3a9c8a1907d812ee88725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6647eb090a3a9c8a1907d812ee88725">&#9670;&#160;</a></span>log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,6 +459,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8">LogLevel</a>&#160;</td>
           <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273">LogChannel</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -370,15 +490,16 @@ Here is the call graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">level</td><td>The severity level of the message. </td></tr>
     <tr><td class="paramname">message</td><td>The fully formatted message to be logged. </td></tr>
+    <tr><td class="paramname">channel</td><td>The output channel for the message. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classsophia_1_1logging_1_1ConsoleLogger.html#affdf8c6ac6500caf40a3b80efe8771fe">sophia::logging::ConsoleLogger</a>.</p>
+<p>Implemented in <a class="el" href="classsophia_1_1logging_1_1ConsoleLogger.html#a8fecfcc1e80daafc2a9bfbbf7cf37d66">sophia::logging::ConsoleLogger</a>, <a class="el" href="classsophia_1_1logging_1_1LogDispatcher.html#a3f0ed763c5de144aaac4c38aa195a256">sophia::logging::LogDispatcher</a>, and <a class="el" href="classsophia_1_1logging_1_1Logger2.html#a0ab1c0bc4b161a03e3f998f49464ca52">sophia::logging::Logger2</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 5 --></div>
+<div class="center"><!-- SVG 7 --></div>
 </div>
 
 </div>
@@ -430,7 +551,7 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 6 --></div>
+<div class="center"><!-- SVG 8 --></div>
 </div>
 
 </div>
@@ -482,8 +603,31 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 7 --></div>
+<div class="center"><!-- SVG 9 --></div>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a04759d82d0f8f18be0bedb4783936c37" name="a04759d82d0f8f18be0bedb4783936c37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04759d82d0f8f18be0bedb4783936c37">&#9670;&#160;</a></span>LogDispatcher</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classsophia_1_1logging_1_1LogDispatcher.html">LogDispatcher</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

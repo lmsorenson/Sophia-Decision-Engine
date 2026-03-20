@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['none_0',['None',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754',1,'sophia::monte_carlo::tic_tac_toe::enums']]]
+  ['main_0',['Main',['../namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de',1,'sophia::logging']]]
 ];

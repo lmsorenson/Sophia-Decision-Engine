@@ -8,5 +8,5 @@ digraph "sophia::logging::is_terminal"
   rankdir="RL";
   Node1 [id="Node000001",label="sophia::logging::is_terminal",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="sophia::logging::ConsoleLogger::log",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ConsoleLogger.html#affdf8c6ac6500caf40a3b80efe8771fe",tooltip="The core logging function that concrete loggers must implement."];
+  Node2 [id="Node000002",label="sophia::logging::ConsoleLogger::log",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ConsoleLogger.html#a8fecfcc1e80daafc2a9bfbbf7cf37d66",tooltip="The core logging function that concrete loggers must implement."];
 }

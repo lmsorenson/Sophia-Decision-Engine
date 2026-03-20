@@ -99,4 +99,5 @@ digraph "examples/monte_carlo/tic_tac_toe/src/models/bot.cpp"
   Node30 -> Node5 [id="edge62_Node000030_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node30 -> Node9 [id="edge63_Node000030_Node000009",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node9 [id="edge64_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge65_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
 }

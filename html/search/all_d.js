@@ -12,6 +12,6 @@ var searchData=
   ['node_5fptr_9',['node_ptr',['../namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5',1,'sophia::monte_carlo']]],
   ['nodebase_10',['nodebase',['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html',1,'sophia::monte_carlo::models::NodeBase&lt; TState, TChange &gt;'],['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a4ca5eed6eed78811ac7d8655a667f5ad',1,'sophia::monte_carlo::models::NodeBase::NodeBase()']]],
   ['nodebase_3c_20gamestate_2c_20position_20_3e_11',['NodeBase&lt; GameState, Position &gt;',['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html',1,'sophia::monte_carlo::models']]],
-  ['none_12',['None',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754',1,'sophia::monte_carlo::tic_tac_toe::enums']]],
+  ['none_12',['none',['../namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a6adf97f83acf6453d4a6a4b1070f3754',1,'sophia::logging::None'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754',1,'sophia::monte_carlo::tic_tac_toe::enums::None']]],
   ['notify_13',['notify',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998',1,'sophia::monte_carlo::tic_tac_toe::observer::Subject']]]
 ];

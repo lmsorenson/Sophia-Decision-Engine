@@ -10,12 +10,14 @@ digraph "sophia::logging::ILogger"
 <TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual ~ILogger()=default<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void display(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void trace(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void debug(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void info(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void info(LogChannel channel,<BR ALIGN="LEFT"/> std::format_string&lt; Args...<BR ALIGN="LEFT"/> &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void warn(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void error(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual void log(LogLevel level,<BR ALIGN="LEFT"/> const std::string &amp;message)=0<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual void log(LogLevel level,<BR ALIGN="LEFT"/> LogChannel channel, const std<BR ALIGN="LEFT"/>::string &amp;message)=0<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="An interface for a generic, type-safe, and performant logger."];
 }

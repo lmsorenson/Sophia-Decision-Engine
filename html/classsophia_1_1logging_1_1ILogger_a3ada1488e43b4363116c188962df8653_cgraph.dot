@@ -1,0 +1,12 @@
+digraph "sophia::logging::ILogger::info"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  rankdir="LR";
+  Node1 [id="Node000001",label="sophia::logging::ILogger::info",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sophia::logging::ILogger::log",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ILogger.html#aa6647eb090a3a9c8a1907d812ee88725",tooltip="The core logging function that concrete loggers must implement."];
+}

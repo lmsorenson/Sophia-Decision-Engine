@@ -106,4 +106,5 @@ digraph "examples/monte_carlo/tic_tac_toe/src/models/heuristic_rollout_strategy.
   Node1 -> Node33 [id="edge67_Node000001_Node000033",color="steelblue1",style="solid",tooltip=" "];
   Node33 [id="Node000033",label="random",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node19 [id="edge68_Node000001_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge69_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
 }

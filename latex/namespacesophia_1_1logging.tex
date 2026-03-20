@@ -11,19 +11,28 @@ namespace \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors}{colors}}
 class \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger}}
 \begin{DoxyCompactList}\small\item\em A concrete logger implementation that writes messages to the console (std\+::cout). \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}
-\begin{DoxyCompactList}\small\item\em An interface for a generic, type-\/safe, and performant logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em An interface for a generic, type-\/safe, and performant logger. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher}{Log\+Dispatcher}}
+\begin{DoxyCompactList}\small\item\em A concrete logger implementation that writes messages to the console (std\+::cout). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsophia_1_1logging_1_1Logger2}{Logger2}}
+\begin{DoxyCompactList}\small\item\em A concrete logger implementation that writes messages to the console (std\+::cout). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum class \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} \{ \newline
-\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a2d3e4144aa384b18849ab9a8abad74d6}{TRACE}}
-, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}}
-, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3}{INFO}}
-, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277}{WARN}}
+\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1}{Trace}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8aa603905470e2a5b8c13e96b579ef0dba}{Debug}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{Info}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a56525ae64d370c0b448ac0d60710ef17}{Warn}}
 , \newline
-\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}
+\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a902b0d55fddef6f8d651fe1035b7d4bd}{Error}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a6adf97f83acf6453d4a6a4b1070f3754}{None}}
  \}
-\begin{DoxyCompactList}\small\item\em Defines the severity levels for log messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Defines the severity levels for log messages. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{Log\+Channel}} \{ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{Main}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a}{User\+Interface}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the output channel for log messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,6 +41,26 @@ static bool \mbox{\hyperlink{namespacesophia_1_1logging_a9fcf81d93fb709276f77317
 
 
 \doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}\label{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273} 
+\index{sophia::logging@{sophia::logging}!LogChannel@{LogChannel}}
+\index{LogChannel@{LogChannel}!sophia::logging@{sophia::logging}}
+\doxysubsubsection{\texorpdfstring{LogChannel}{LogChannel}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{sophia\+::logging\+::\+Log\+Channel}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Defines the output channel for log messages. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Main@{Main}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!Main@{Main}}}\Hypertarget{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}\label{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de} 
+Main&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserInterface@{UserInterface}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!UserInterface@{UserInterface}}}\Hypertarget{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a}\label{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a} 
+User\+Interface&\\
+\hline
+
+\end{DoxyEnumFields}
 \Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8} 
 \index{sophia::logging@{sophia::logging}!LogLevel@{LogLevel}}
 \index{LogLevel@{LogLevel}!sophia::logging@{sophia::logging}}
@@ -43,24 +72,28 @@ static bool \mbox{\hyperlink{namespacesophia_1_1logging_a9fcf81d93fb709276f77317
 Defines the severity levels for log messages. 
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TRACE@{TRACE}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!TRACE@{TRACE}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a2d3e4144aa384b18849ab9a8abad74d6}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a2d3e4144aa384b18849ab9a8abad74d6} 
-TRACE&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trace@{Trace}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!Trace@{Trace}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1} 
+Trace&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!DEBUG@{DEBUG}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15} 
-DEBUG&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Debug@{Debug}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!Debug@{Debug}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8aa603905470e2a5b8c13e96b579ef0dba}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8aa603905470e2a5b8c13e96b579ef0dba} 
+Debug&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!INFO@{INFO}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3} 
-INFO&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Info@{Info}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!Info@{Info}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875} 
+Info&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WARN@{WARN}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!WARN@{WARN}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277} 
-WARN&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Warn@{Warn}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!Warn@{Warn}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a56525ae64d370c0b448ac0d60710ef17}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a56525ae64d370c0b448ac0d60710ef17} 
+Warn&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!ERROR@{ERROR}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5} 
-ERROR&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Error@{Error}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!Error@{Error}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a902b0d55fddef6f8d651fe1035b7d4bd}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a902b0d55fddef6f8d651fe1035b7d4bd} 
+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!None@{None}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a6adf97f83acf6453d4a6a4b1070f3754}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a6adf97f83acf6453d4a6a4b1070f3754} 
+None&\\
 \hline
 
 \end{DoxyEnumFields}

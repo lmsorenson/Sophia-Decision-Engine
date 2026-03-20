@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warn_0',['WARN',['../namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277',1,'sophia::logging']]]
+  ['userinterface_0',['UserInterface',['../namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a',1,'sophia::logging']]]
 ];

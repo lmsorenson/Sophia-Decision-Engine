@@ -31,12 +31,19 @@ var namespacesophia_1_1logging =
     ] ],
     [ "ConsoleLogger", "classsophia_1_1logging_1_1ConsoleLogger.html", "classsophia_1_1logging_1_1ConsoleLogger" ],
     [ "ILogger", "classsophia_1_1logging_1_1ILogger.html", "classsophia_1_1logging_1_1ILogger" ],
+    [ "LogDispatcher", "classsophia_1_1logging_1_1LogDispatcher.html", "classsophia_1_1logging_1_1LogDispatcher" ],
+    [ "Logger2", "classsophia_1_1logging_1_1Logger2.html", "classsophia_1_1logging_1_1Logger2" ],
+    [ "LogChannel", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273", [
+      [ "Main", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de", null ],
+      [ "UserInterface", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a", null ]
+    ] ],
     [ "LogLevel", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8", [
-      [ "TRACE", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a2d3e4144aa384b18849ab9a8abad74d6", null ],
-      [ "DEBUG", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15", null ],
-      [ "INFO", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3", null ],
-      [ "WARN", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277", null ],
-      [ "ERROR", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5", null ]
+      [ "Trace", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1", null ],
+      [ "Debug", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8aa603905470e2a5b8c13e96b579ef0dba", null ],
+      [ "Info", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875", null ],
+      [ "Warn", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a56525ae64d370c0b448ac0d60710ef17", null ],
+      [ "Error", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a902b0d55fddef6f8d651fe1035b7d4bd", null ],
+      [ "None", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a6adf97f83acf6453d4a6a4b1070f3754", null ]
     ] ],
     [ "is_terminal", "namespacesophia_1_1logging.html#a9fcf81d93fb709276f773178203573f3", null ]
 ];
