@@ -3,6 +3,7 @@
 #include <tic_tac_toe/fwd.h>
 #include <tic_tac_toe/models/player.h>
 #include <tic_tac_toe/observer/observer.h>
+#include <monte_carlo/models/node.h>
 
 #include <memory>
 
