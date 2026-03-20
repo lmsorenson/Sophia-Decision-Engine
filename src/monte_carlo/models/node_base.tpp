@@ -39,4 +39,10 @@ double NodeBase<TState, TChange>::interpret_result(const const_simulation_result
     return 0.0;
 }
 
+template<typename TState, typename TChange>
+std::vector<action_ptr> NodeBase<TState, TChange>::children() const
+{
+    return m_child_action_;
+}
+
 } // namespace sophia::monte_carlo::models

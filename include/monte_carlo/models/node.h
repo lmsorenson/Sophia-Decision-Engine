@@ -93,8 +93,11 @@ namespace sophia::monte_carlo::models
         /// @brief Prints a representation of the node's state.
         virtual void print() const = 0;
 
-        /// @brief Pure virtual function to get the list of all possible actions from this node's state.
+        /// @brief Pure virtual function to generate the list of all possible actions from this node's state.
         [[nodiscard]] virtual std::vector<action_ptr> get_available_actions() = 0;
+
+        /// @brief Pure virtual function to get the list of all possible actions from this node's state.
+        [[nodiscard]] virtual std::vector<action_ptr> children() const = 0;
 
         /// @brief Pure virtual function to get the rollout strategy to be used for the simulation phase.
         virtual rollout_strategy_ptr rollout_strategy() const = 0;
