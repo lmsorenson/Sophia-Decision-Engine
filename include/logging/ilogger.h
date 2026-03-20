@@ -3,6 +3,7 @@
 
 #include <string>
 #include <format>
+#include <memory>
 
 namespace sophia::logging
 {
