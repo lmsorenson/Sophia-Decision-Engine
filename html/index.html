@@ -106,11 +106,11 @@ Quick Start</h2>
 <div class="line"><span class="keyword">auto</span> root = std::make_shared&lt;YourGameState&gt;();</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Run MCTS to find optimal decision</span></div>
-<div class="line"><span class="keyword">auto</span> bestAction = <a class="code hl_function" href="classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#ae220cb411e5f28962a714e56e159745a">sophia::monte_carlo::MonteCarloTreeSearch::run</a>(root, 1000);</div>
+<div class="line"><span class="keyword">auto</span> bestAction = <a class="code hl_function" href="classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#a39aa6d5f2c7ca35f229d02b14ed12071">sophia::monte_carlo::MonteCarloTreeSearch::run</a>(root, 1000);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Execute the decision</span></div>
 <div class="line">bestAction-&gt;execute();</div>
-<div class="ttc" id="aclasssophia_1_1monte__carlo_1_1MonteCarloTreeSearch_html_ae220cb411e5f28962a714e56e159745a"><div class="ttname"><a href="classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#ae220cb411e5f28962a714e56e159745a">sophia::monte_carlo::MonteCarloTreeSearch::run</a></div><div class="ttdeci">static sophia::monte_carlo::action_ptr run(const node_ptr &amp;root, int iterations, const sophia::monte_carlo::logger_ptr &amp;logger=nullptr)</div><div class="ttdoc">Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state...</div><div class="ttdef"><b>Definition</b> tree_search_algorithm.cpp:12</div></div>
+<div class="ttc" id="aclasssophia_1_1monte__carlo_1_1MonteCarloTreeSearch_html_a39aa6d5f2c7ca35f229d02b14ed12071"><div class="ttname"><a href="classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#a39aa6d5f2c7ca35f229d02b14ed12071">sophia::monte_carlo::MonteCarloTreeSearch::run</a></div><div class="ttdeci">static action_ptr run(const node_ptr &amp;root, int iterations, const logger_ptr &amp;logger=nullptr)</div><div class="ttdoc">Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state...</div><div class="ttdef"><b>Definition</b> tree_search_algorithm.cpp:14</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md1"></a>
 Core Components</h2>
 <table class="markdownTable">
@@ -200,7 +200,7 @@ Basic MCTS Usage</h3>
 <div class="line"><span class="comment">// 3. Run MCTS</span></div>
 <div class="line"><span class="keyword">auto</span> root = std::make_shared&lt;MyGameState&gt;(initialState, factory);</div>
 <div class="line"><span class="keyword">auto</span> bestAction = MonteCarloTreeSearch::run(root, iterations);</div>
-<div class="ttc" id="aclasssophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_html"><div class="ttname"><a href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">sophia::monte_carlo::factories::TreeFactoryBase</a></div><div class="ttdef"><b>Definition</b> tree_factory_interface.h:26</div></div>
+<div class="ttc" id="aclasssophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_html"><div class="ttname"><a href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">sophia::monte_carlo::factories::TreeFactoryBase</a></div><div class="ttdef"><b>Definition</b> tree_factory_interface.h:15</div></div>
 <div class="ttc" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_html"><div class="ttname"><a href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">sophia::monte_carlo::models::Node</a></div><div class="ttdoc">Represents a node in the Monte Carlo Search Tree. Each node corresponds to a state in the problem spa...</div><div class="ttdef"><b>Definition</b> node.h:20</div></div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md12"></a>
 Custom Rollout Strategy</h3>

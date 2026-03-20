@@ -1,0 +1,12 @@
+digraph "sophia::monte_carlo::tic_tac_toe::models::Board::GetWinningMoves"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  rankdir="LR";
+  Node1 [id="Node000001",label="sophia::monte_carlo::tic_tac\l_toe::models::Board::GetWinningMoves",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Finds moves that would complete a 3-in-a-row for the given symbol."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::Board::ToMask",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aab7aaae5ed17cc1863bc783c8d7ff693",tooltip="Converts the board state to bitmasks for high-performance heuristic calculations."];
+}

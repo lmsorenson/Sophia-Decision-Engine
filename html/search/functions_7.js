@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['info_0',['info',['../classsophia_1_1logging_1_1ILogger.html#a13228bc2ebd6aae123f494f29becd977',1,'sophia::logging::ILogger']]],
-  ['is_5fterminal_1',['is_terminal',['../namespacesophia_1_1logging.html#a9fcf81d93fb709276f773178203573f3',1,'sophia::logging']]],
-  ['isleafnode_2',['IsLeafNode',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a174e378c4581899275b3f1e601fad062',1,'sophia::monte_carlo::models::Node']]],
-  ['isterminalstate_3',['isterminalstate',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a3b57c4db3bce104f80944bca5558fa4d',1,'sophia::monte_carlo::models::Node::IsTerminalState()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a92a058c4863cdd4f07af0146bff557c4',1,'sophia::monte_carlo::tic_tac_toe::models::State::IsTerminalState()']]],
-  ['isvalid_4',['IsValid',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#aff4ed9535dba02b7d62a36a98213cad6',1,'sophia::monte_carlo::tic_tac_toe::models::Position']]]
+  ['hasbeensampled_0',['HasBeenSampled',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a99c747bf5454aa0f21874deab8c0d1a8',1,'sophia::monte_carlo::models::Node']]],
+  ['heuristicrolloutstrategy_1',['HeuristicRolloutStrategy',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html#a783cd936e1929614fd8c48c6ccd11b70',1,'sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy']]],
+  ['highlight_5fnode_2',['highlight_node',['../namespacesophia_1_1logging_1_1colors.html#ac44bdd7ca4e76634886c2b902bbc3fa1',1,'sophia::logging::colors']]],
+  ['highlight_5freward_3',['highlight_reward',['../namespacesophia_1_1logging_1_1colors.html#a6c5a6aaab8e77512185d4ae1de4a545b',1,'sophia::logging::colors']]],
+  ['highlight_5freward_5ffmt_4',['highlight_reward_fmt',['../namespacesophia_1_1logging_1_1colors.html#a3e15359379b77f90a9360f8e154a50be',1,'sophia::logging::colors']]],
+  ['highlight_5fucb_5',['highlight_ucb',['../namespacesophia_1_1logging_1_1colors.html#a4ee67fead5f71260d6dccd702d06e204',1,'sophia::logging::colors']]],
+  ['highlight_5fucb_5ffmt_6',['highlight_ucb_fmt',['../namespacesophia_1_1logging_1_1colors.html#a55c1f974e6719d93ef549fd40ddc2ebc',1,'sophia::logging::colors']]],
+  ['highlight_5fvisits_7',['highlight_visits',['../namespacesophia_1_1logging_1_1colors.html#abffdbbc698d634aa8c9e971bebee34aa',1,'sophia::logging::colors']]],
+  ['highlight_5fvisits_5ffmt_8',['highlight_visits_fmt',['../namespacesophia_1_1logging_1_1colors.html#ae5e7239c41663d2cfaea3985cd8452e3',1,'sophia::logging::colors']]],
+  ['human_9',['Human',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#aa209e6652f23fe431900f2837a9ed13b',1,'sophia::monte_carlo::tic_tac_toe::models::Human']]]
 ];

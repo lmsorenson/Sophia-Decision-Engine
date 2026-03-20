@@ -33,7 +33,9 @@ virtual void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a3
 virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b}{Source}} () const =0
 \begin{DoxyCompactList}\small\item\em Retrieves the source node from which this action originates. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026}{Target}} () const =0
-\begin{DoxyCompactList}\small\item\em Retrieves the target node that results from this action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the target node that results from this action. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a6b6d2e1d0939c3cdfeb9af6b1ae02c61}{Actor}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the actor that performed this action. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -57,6 +59,20 @@ An action is a transition from a source node to a target node. It represents a m
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a6b6d2e1d0939c3cdfeb9af6b1ae02c61}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a6b6d2e1d0939c3cdfeb9af6b1ae02c61} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Actor@{Actor}}
+\index{Actor@{Actor}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{Actor()}{Actor()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the actor that performed this action. 
+
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a7ad5dc0caf197561ce0230a6e2a214a9}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a7ad5dc0caf197561ce0230a6e2a214a9}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
+
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2} 
 \index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Generate@{Generate}}
 \index{Generate@{Generate}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
@@ -99,7 +115,7 @@ Retrieves the source node from which this action originates.
 
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ae5948c64be535af2c459d96de73979ce}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ae5948c64be535af2c459d96de73979ce}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
 
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026} 
 \index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Target@{Target}}
@@ -113,7 +129,7 @@ Retrieves the target node that results from this action.
 
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a601d922eca84b369c428b087ca68c88d}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a601d922eca84b369c428b087ca68c88d}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
 
 Here is the caller graph for this function\+:
 % FIG 3

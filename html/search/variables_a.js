@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['phase_5fbackprop_0',['PHASE_BACKPROP',['../namespacesophia_1_1logging_1_1colors.html#ab124f37e12299474cb781995a21b2efe',1,'sophia::logging::colors']]],
-  ['phase_5fexpansion_1',['PHASE_EXPANSION',['../namespacesophia_1_1logging_1_1colors.html#a2ef76c248f18c9fbd98cc69ae88e3b09',1,'sophia::logging::colors']]],
-  ['phase_5frollout_2',['PHASE_ROLLOUT',['../namespacesophia_1_1logging_1_1colors.html#a1b079813f08bd9011825e76caab80c81',1,'sophia::logging::colors']]],
-  ['phase_5fselection_3',['PHASE_SELECTION',['../namespacesophia_1_1logging_1_1colors.html#ad68eb626478bec61ba43e1f8dad6e1c0',1,'sophia::logging::colors']]]
+  ['o_0',['O',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html#a7c211b0aa840a7a17f9fb2d54e8f9098',1,'sophia::monte_carlo::tic_tac_toe::model_tests::HeuristicRolloutStrategyFixture']]],
+  ['o_5f_1',['o_',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ae4e2f984281f9cb1e0f865f3a41e44a2',1,'sophia::monte_carlo::tic_tac_toe::models::Game']]],
+  ['o_5fmask_2',['o_mask',['../structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask.html#a9288c11fed5d8e49e9451ce35c4f2062',1,'sophia::monte_carlo::tic_tac_toe::models::Board::BoardMask']]],
+  ['observers_5f_3',['observers_',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#ac8ea2ea5d5ab3b18fa28604b625e3391',1,'sophia::monte_carlo::tic_tac_toe::observer::Subject']]]
 ];

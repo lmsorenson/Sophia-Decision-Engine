@@ -1,0 +1,12 @@
+digraph "sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy::find_action"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  rankdir="RL";
+  Node1 [id="Node000001",label="sophia::monte_carlo::tic_tac\l_toe::models::HeuristicRolloutStrategy\l::find_action",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::HeuristicRolloutStrategy\l::select_action",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html#a3cb6b9da614bfcb52c824b6e7b08ab22",tooltip="Selects an action from a vector of available actions based on heuristic rules."];
+}

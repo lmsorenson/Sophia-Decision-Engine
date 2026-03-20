@@ -20,9 +20,10 @@ digraph "sophia::monte_carlo::tic_tac_toe::observer::Observer"
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Player(enums::Symbol symbol,<BR ALIGN="LEFT"/> const logger_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual ~Player()=default<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual void Initialize(const<BR ALIGN="LEFT"/>_game_ptr game)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">enums::Symbol symbol() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual const_position_ptr<BR ALIGN="LEFT"/> NextMove() const =0<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">double Value(const class Board<BR ALIGN="LEFT"/> &amp;board) const<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">double Value(const Board &amp;board) const<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html",tooltip="A Player in a Tic Tac Toe Game."];
   Node2 -> Node3 [id="edge5_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
@@ -30,9 +31,12 @@ digraph "sophia::monte_carlo::tic_tac_toe::observer::Observer"
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">node_ptr node_<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">int iterations_<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">factories::RolloutStrategyType<BR ALIGN="LEFT"/> m_rollout_type_<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">logger_ptr m_logger_<BR ALIGN="LEFT"/></TD></TR>
 <HR/>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Bot(enums::Symbol symbol,<BR ALIGN="LEFT"/> double difficulty, factories<BR ALIGN="LEFT"/>::RolloutStrategyType rollout<BR ALIGN="LEFT"/>_type, const logger_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Bot(enums::Symbol symbol,<BR ALIGN="LEFT"/> double difficulty, const logger<BR ALIGN="LEFT"/>_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void Initialize(const_game<BR ALIGN="LEFT"/>_ptr game) override<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">const_position_ptr NextMove<BR ALIGN="LEFT"/>() const override<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void Update(std::string message)<BR ALIGN="LEFT"/> override<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>

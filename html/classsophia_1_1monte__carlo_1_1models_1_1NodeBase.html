@@ -116,8 +116,8 @@ Collaboration diagram for sophia::monte_carlo::models::NodeBase&lt; TState, TCha
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a67a5375c9fae74a385f9b09ed072c36f" id="r_a67a5375c9fae74a385f9b09ed072c36f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a67a5375c9fae74a385f9b09ed072c36f">NodeBase</a> (const std::string &amp;name, TState state, <a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">sophia::monte_carlo::const_factory_ptr</a>&lt; TState, TChange &gt; factory, const <a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">sophia::monte_carlo::logger_ptr</a> &amp;logger)</td></tr>
-<tr class="separator:a67a5375c9fae74a385f9b09ed072c36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca5eed6eed78811ac7d8655a667f5ad" id="r_a4ca5eed6eed78811ac7d8655a667f5ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a4ca5eed6eed78811ac7d8655a667f5ad">NodeBase</a> (const std::string &amp;name, TState state, <a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">const_factory_ptr</a>&lt; TState, TChange &gt; factory, const <a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">logger_ptr</a> &amp;logger)</td></tr>
+<tr class="separator:a4ca5eed6eed78811ac7d8655a667f5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1457cd27400e746c075e0d1851ad00df" id="r_a1457cd27400e746c075e0d1851ad00df"><td class="memItemLeft" align="right" valign="top">TState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a1457cd27400e746c075e0d1851ad00df">GetState</a> () const</td></tr>
 <tr class="memdesc:a1457cd27400e746c075e0d1851ad00df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the state associated with this node.  <br /></td></tr>
 <tr class="separator:a1457cd27400e746c075e0d1851ad00df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,12 +135,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6be3943af70c9e7334d913393fb1b37d inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a6be3943af70c9e7334d913393fb1b37d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a6be3943af70c9e7334d913393fb1b37d">Expand</a> ()</td></tr>
 <tr class="memdesc:a6be3943af70c9e7334d913393fb1b37d inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands the tree by creating a new child node from an untried action. (Expansion Phase) If the current node is not a terminal state and has untried actions, this method will create a new child node for one of those actions.  <br /></td></tr>
 <tr class="separator:a6be3943af70c9e7334d913393fb1b37d inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45fdf487eedadd6518798de3d7cb016b inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a45fdf487eedadd6518798de3d7cb016b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b">Rollout</a> ()</td></tr>
-<tr class="memdesc:a45fdf487eedadd6518798de3d7cb016b inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollout, this phase estimates the value of the current node by simulating a path to a terminal state, usually with a simple and fast policy.  <br /></td></tr>
-<tr class="separator:a45fdf487eedadd6518798de3d7cb016b inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ab17bae40a734dd206b82c78ec0fbe9 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a1ab17bae40a734dd206b82c78ec0fbe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1ab17bae40a734dd206b82c78ec0fbe9">Backpropagate</a> (double reward)</td></tr>
-<tr class="memdesc:a1ab17bae40a734dd206b82c78ec0fbe9 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) After a simulation, the result (reward) is propagated back up the tree, updating the visit counts and total rewards of the nodes along the path.  <br /></td></tr>
-<tr class="separator:a1ab17bae40a734dd206b82c78ec0fbe9 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e26f02256b926494ebf19f32dfe9f84 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a5e26f02256b926494ebf19f32dfe9f84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5e26f02256b926494ebf19f32dfe9f84">Rollout</a> ()</td></tr>
+<tr class="memdesc:a5e26f02256b926494ebf19f32dfe9f84 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollout, this phase estimates the value of the current node by simulating a path to a terminal state, usually with a simple and fast policy.  <br /></td></tr>
+<tr class="separator:a5e26f02256b926494ebf19f32dfe9f84 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d16a79ece5e91e88932ca22c70d4e48 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a9d16a79ece5e91e88932ca22c70d4e48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a9d16a79ece5e91e88932ca22c70d4e48">Backpropagate</a> (const <a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a> &amp;reward)</td></tr>
+<tr class="memdesc:a9d16a79ece5e91e88932ca22c70d4e48 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) After a simulation, the result (reward) is propagated back up the tree, updating the visit counts and total rewards of the nodes along the path.  <br /></td></tr>
+<tr class="separator:a9d16a79ece5e91e88932ca22c70d4e48 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a839863194c78433b294b3c11dcf746c2 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a839863194c78433b294b3c11dcf746c2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2">Name</a> () const</td></tr>
 <tr class="memdesc:a839863194c78433b294b3c11dcf746c2 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the node for identification.  <br /></td></tr>
 <tr class="separator:a839863194c78433b294b3c11dcf746c2 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,9 +162,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b57c4db3bce104f80944bca5558fa4d inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a3b57c4db3bce104f80944bca5558fa4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a3b57c4db3bce104f80944bca5558fa4d">IsTerminalState</a> () const =0</td></tr>
 <tr class="memdesc:a3b57c4db3bce104f80944bca5558fa4d inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to check if the node represents a terminal state in the problem space.  <br /></td></tr>
 <tr class="separator:a3b57c4db3bce104f80944bca5558fa4d inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48e865e8df5b298f3111c7d372327656 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a48e865e8df5b298f3111c7d372327656"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48e865e8df5b298f3111c7d372327656">Value</a> () const =0</td></tr>
-<tr class="memdesc:a48e865e8df5b298f3111c7d372327656 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.).  <br /></td></tr>
-<tr class="separator:a48e865e8df5b298f3111c7d372327656 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902c24ff603751187438f373aff99dad inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a902c24ff603751187438f373aff99dad"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a902c24ff603751187438f373aff99dad">Value</a> () const =0</td></tr>
+<tr class="memdesc:a902c24ff603751187438f373aff99dad inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.).  <br /></td></tr>
+<tr class="separator:a902c24ff603751187438f373aff99dad inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21d7afbcd694dbf00efa0dc1b8698780 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node" id="r_a21d7afbcd694dbf00efa0dc1b8698780"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#a3ef3290edc6cb68dbc906cf5ad80c976">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a21d7afbcd694dbf00efa0dc1b8698780">SelectAction</a> (std::string action_name)=0</td></tr>
 <tr class="memdesc:a21d7afbcd694dbf00efa0dc1b8698780 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects a specific action by its name.  <br /></td></tr>
 <tr class="separator:a21d7afbcd694dbf00efa0dc1b8698780 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,12 +183,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a18b71c3bd5e5f4d4ff7198b02612abba" id="r_a18b71c3bd5e5f4d4ff7198b02612abba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#ad1c0c7a77be02794856652a0964b4439">rollout_strategy_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a18b71c3bd5e5f4d4ff7198b02612abba">RolloutStrategy</a> () const override</td></tr>
 <tr class="memdesc:a18b71c3bd5e5f4d4ff7198b02612abba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the rollout strategy to be used for the simulation phase.  <br /></td></tr>
 <tr class="separator:a18b71c3bd5e5f4d4ff7198b02612abba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58087cad4f5fb79230bef69797c5b72e" id="r_a58087cad4f5fb79230bef69797c5b72e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a58087cad4f5fb79230bef69797c5b72e">interpret_result</a> (<a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a>) const override</td></tr>
+<tr class="separator:a58087cad4f5fb79230bef69797c5b72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a6f494a77e927036a59c225af15584ab4" id="r_a6f494a77e927036a59c225af15584ab4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">sophia::monte_carlo::const_factory_ptr</a>&lt; TState, TChange &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a6f494a77e927036a59c225af15584ab4">m_factory_</a></td></tr>
-<tr class="memdesc:a6f494a77e927036a59c225af15584ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A factory for creating nodes and actions, specific to the game or problem.  <br /></td></tr>
-<tr class="separator:a6f494a77e927036a59c225af15584ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6147f273f7dae271d2cc9033dd67d5c8" id="r_a6147f273f7dae271d2cc9033dd67d5c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">const_factory_ptr</a>&lt; TState, TChange &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a6147f273f7dae271d2cc9033dd67d5c8">m_factory_</a></td></tr>
+<tr class="memdesc:a6147f273f7dae271d2cc9033dd67d5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A factory for creating nodes and actions, specific to the game or problem.  <br /></td></tr>
+<tr class="separator:a6147f273f7dae271d2cc9033dd67d5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e6a87ffd017ce10decc5d7eb901bef7" id="r_a6e6a87ffd017ce10decc5d7eb901bef7"><td class="memItemLeft" align="right" valign="top">TState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a6e6a87ffd017ce10decc5d7eb901bef7">m_state_</a></td></tr>
 <tr class="memdesc:a6e6a87ffd017ce10decc5d7eb901bef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The state of the system that this node represents.  <br /></td></tr>
 <tr class="separator:a6e6a87ffd017ce10decc5d7eb901bef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,8 +226,8 @@ class sophia::monte_carlo::models::NodeBase&lt; TState, TChange &gt;</div><p>A t
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a67a5375c9fae74a385f9b09ed072c36f" name="a67a5375c9fae74a385f9b09ed072c36f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67a5375c9fae74a385f9b09ed072c36f">&#9670;&#160;</a></span>NodeBase()</h2>
+<a id="a4ca5eed6eed78811ac7d8655a667f5ad" name="a4ca5eed6eed78811ac7d8655a667f5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca5eed6eed78811ac7d8655a667f5ad">&#9670;&#160;</a></span>NodeBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,13 +249,13 @@ template&lt;typename TState , typename TChange &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">sophia::monte_carlo::const_factory_ptr</a>&lt; TState, TChange &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">const_factory_ptr</a>&lt; TState, TChange &gt;&#160;</td>
           <td class="paramname"><em>factory</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">sophia::monte_carlo::logger_ptr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">logger_ptr</a> &amp;&#160;</td>
           <td class="paramname"><em>logger</em>&#160;</td>
         </tr>
         <tr>
@@ -285,6 +287,38 @@ template&lt;typename TState , typename TChange &gt; </div>
 </div><div class="memdoc">
 
 <p>Retrieves the state associated with this node. </p>
+
+</div>
+</div>
+<a id="a58087cad4f5fb79230bef69797c5b72e" name="a58087cad4f5fb79230bef69797c5b72e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58087cad4f5fb79230bef69797c5b72e">&#9670;&#160;</a></span>interpret_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TState , typename TChange &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">sophia::monte_carlo::models::NodeBase</a>&lt; TState, TChange &gt;::interpret_result </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a0c460792f3187c9f489e9a0be75dc67e">sophia::monte_carlo::models::Node</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#af317ebfc92e1e883e4b28b987e7e8d42">sophia::monte_carlo::tic_tac_toe::models::State</a>.</p>
 
 </div>
 </div>
@@ -320,8 +354,8 @@ template&lt;typename TState , typename TChange &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6f494a77e927036a59c225af15584ab4" name="a6f494a77e927036a59c225af15584ab4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f494a77e927036a59c225af15584ab4">&#9670;&#160;</a></span>m_factory_</h2>
+<a id="a6147f273f7dae271d2cc9033dd67d5c8" name="a6147f273f7dae271d2cc9033dd67d5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6147f273f7dae271d2cc9033dd67d5c8">&#9670;&#160;</a></span>m_factory_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +366,7 @@ template&lt;typename TState , typename TChange &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">sophia::monte_carlo::const_factory_ptr</a>&lt;TState, TChange&gt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">sophia::monte_carlo::models::NodeBase</a>&lt; TState, TChange &gt;::m_factory_</td>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">const_factory_ptr</a>&lt;TState, TChange&gt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">sophia::monte_carlo::models::NodeBase</a>&lt; TState, TChange &gt;::m_factory_</td>
         </tr>
       </table>
   </td>

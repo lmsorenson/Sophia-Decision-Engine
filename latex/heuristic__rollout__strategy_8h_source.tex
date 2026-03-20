@@ -19,16 +19,20 @@
 \DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy}{HeuristicRolloutStrategy}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{monte\_carlo::models::RolloutStrategyInterface}}}
 \DoxyCodeLine{00022\ \ \ \ \ \{}
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy}{HeuristicRolloutStrategy}}(\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}\ current\_game\_state,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\&\ logger);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy}{HeuristicRolloutStrategy}}(\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}\ current\_game\_state,\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\ logger);}
 \DoxyCodeLine{00030\ }
 \DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a3cb6b9da614bfcb52c824b6e7b08ab22}{select\_action}}(std::vector<action\_ptr>\ actions)\ \textcolor{keyword}{const\ override};}
 \DoxyCodeLine{00037\ }
 \DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a9026905b0dfb69900fe567c857f4cabc}{m\_current\_game\_state\_}};}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_aa9ff91f10dc0b99c7756c53ddfbd5520}{m\_logger\_}};}
-\DoxyCodeLine{00041\ \ \ \ \ \};}
-\DoxyCodeLine{00042\ \}\ \textcolor{comment}{//\ namespace\ sophia::monte\_carlo::tic\_tac\_toe::models}}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TIC\_TAC\_TOE\_HEURISTIC\_ROLLOUT\_STRATEGY\_H}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_ab36829a9fe89e89d9aba08d578f807ad}{find\_action}}(}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<action\_ptr>\ \&actions,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<const\_position\_ptr>\&\ target\_positions);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a9026905b0dfb69900fe567c857f4cabc}{m\_current\_game\_state\_}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_aa9ff91f10dc0b99c7756c53ddfbd5520}{m\_logger\_}};}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ \}\ \textcolor{comment}{//\ namespace\ sophia::monte\_carlo::tic\_tac\_toe::models}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TIC\_TAC\_TOE\_HEURISTIC\_ROLLOUT\_STRATEGY\_H}}
 
 \end{DoxyCode}

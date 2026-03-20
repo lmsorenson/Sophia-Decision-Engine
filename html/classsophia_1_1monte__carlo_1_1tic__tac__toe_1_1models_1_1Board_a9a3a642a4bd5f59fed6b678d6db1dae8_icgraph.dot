@@ -10,5 +10,5 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Board::GetLines"
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::Board::Winner",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa2e980e5f14e9dedace99356a52df9cb",tooltip="Gets the winner of the game if one exists."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::models::Player::Value",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#acc99736db92f09dcd68c14366fb53ada",tooltip="Assigns a value of the board state from the perspective of this Player."];
+  Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::models::Player::Value",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#aa6e7a0ab7319ce50ae6e5d3e3e2aa946",tooltip="Assigns a value of the board state from the perspective of this Player."];
 }

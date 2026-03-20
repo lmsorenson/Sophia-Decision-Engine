@@ -15,20 +15,24 @@
 \DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a7b359f49f47abca726022b56252e6404}{const\_logger\_ptr}}\ =\ std::shared\_ptr<const\ logging::ILogger>;}
 \DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\_ptr}}\ =\ std::shared\_ptr<models::Node>;}
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a66aa4147134e234d007f758b6a7653b2}{const\_node\_ptr}}\ =\ std::shared\_ptr<const\ models::Node>;}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ =\ std::shared\_ptr<models::Action>;}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_acdb2025c00022d862c4d9fe0bcca578d}{const\_action\_ptr}}\ =\ std::shared\_ptr<const\ models::Action>;}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\_strategy\_ptr}}\ =\ std::shared\_ptr<models::RolloutStrategyInterface>;}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange>}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\_base\_ptr}}\ =\ std::shared\_ptr<models::NodeBase<TState,\ TChange>>;}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange>}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_aad61556d1f87078251b04696f8075c63}{node\_base\_ref}}\ =\ std::weak\_ptr<models::NodeBase<TState,\ TChange>>;}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange>}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\_factory\_ptr}}\ =\ std::shared\_ptr<const\ factories::TreeFactoryBase<TState,\ TChange>>;}
-\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_aa74989f074baf7bd19b88252861f955c}{actor\_ptr}}\ =\ std::shared\_ptr<models::Actor>;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\_actor\_ptr}}\ =\ std::shared\_ptr<const\ models::Actor>;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ =\ std::shared\_ptr<models::Action>;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_acdb2025c00022d862c4d9fe0bcca578d}{const\_action\_ptr}}\ =\ std::shared\_ptr<const\ models::Action>;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_aed56cf318a65aa0dd07bd4bc4331e17e}{simulation\_result\_ptr}}\ =\ std::shared\_ptr<models::SimulationResult>;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ =\ std::shared\_ptr<const\ models::SimulationResult>;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\_strategy\_ptr}}\ =\ std::shared\_ptr<models::RolloutStrategyInterface>;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange>}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\_base\_ptr}}\ =\ std::shared\_ptr<models::NodeBase<TState,\ TChange>>;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange>}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_aad61556d1f87078251b04696f8075c63}{node\_base\_ref}}\ =\ std::weak\_ptr<models::NodeBase<TState,\ TChange>>;}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SOPHIA\_MONTE\_CARLO\_COMMON\_ALIASES\_H}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange>}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\_factory\_ptr}}\ =\ std::shared\_ptr<const\ factories::TreeFactoryBase<TState,\ TChange>>;}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SOPHIA\_MONTE\_CARLO\_COMMON\_ALIASES\_H}}
 
 \end{DoxyCode}

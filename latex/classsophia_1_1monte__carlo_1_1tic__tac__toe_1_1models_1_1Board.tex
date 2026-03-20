@@ -13,6 +13,11 @@ A Tic Tac Toe board.
 
 Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::Board\+:
 % FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask}{Board\+Mask}}
+\begin{DoxyCompactList}\small\item\em A bitmask representation of the board for both players. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,8 +45,15 @@ std\+::shared\+\_\+ptr$<$ std\+::pair$<$ \mbox{\hyperlink{namespacesophia_1_1mon
 \begin{DoxyCompactList}\small\item\em Gets the winner of the game if one exists. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a4981171bf90e37ba01457c5009593dc8}{Get\+Mark\+Count}} () const
 \begin{DoxyCompactList}\small\item\em Gets the number of marked positions on the board. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae2cc7431b9be716a4eddb22f3dbff336}{Get\+Winning\+Moves}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} symbol) const
+\begin{DoxyCompactList}\small\item\em Finds moves that would complete a 3-\/in-\/a-\/row for the given symbol. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536}{Print}} () const
 \begin{DoxyCompactList}\small\item\em Prints the game board to the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask}{Board\+Mask}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aab7aaae5ed17cc1863bc783c8d7ff693}{To\+Mask}} () const
+\begin{DoxyCompactList}\small\item\em Converts the board state to bitmasks for high-\/performance heuristic calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -153,6 +165,28 @@ Returns the Open Positions on the board. These are the positions where there is 
 \begin{DoxyReturn}{Returns}
 The Open positions on the board. 
 \end{DoxyReturn}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae2cc7431b9be716a4eddb22f3dbff336}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae2cc7431b9be716a4eddb22f3dbff336} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!GetWinningMoves@{GetWinningMoves}}
+\index{GetWinningMoves@{GetWinningMoves}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{GetWinningMoves()}{GetWinningMoves()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} $>$ Board\+::\+Get\+Winning\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}}]{symbol }\end{DoxyParamCaption}) const}
+
+
+
+Finds moves that would complete a 3-\/in-\/a-\/row for the given symbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol (X or O) to check for winning opportunities. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of positions that would complete a win. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a6dde21f0a0b92a75981a5ecf7f5cc421}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a6dde21f0a0b92a75981a5ecf7f5cc421} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!LastPlaced@{LastPlaced}}
 \index{LastPlaced@{LastPlaced}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
@@ -213,7 +247,7 @@ a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Boa
 Prints the game board to the console. 
 
 Here is the call graph for this function\+:
-% FIG 3
+% FIG 5
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a96c3c35f4cb92fe134ab6fcfe302279d}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a96c3c35f4cb92fe134ab6fcfe302279d} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!SetPosition@{SetPosition}}
 \index{SetPosition@{SetPosition}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
@@ -230,9 +264,24 @@ Set a position.
 \hline
 \end{DoxyParams}
 Here is the call graph for this function\+:
-% FIG 4
+% FIG 6
 Here is the caller graph for this function\+:
-% FIG 5
+% FIG 7
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aab7aaae5ed17cc1863bc783c8d7ff693}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aab7aaae5ed17cc1863bc783c8d7ff693} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!ToMask@{ToMask}}
+\index{ToMask@{ToMask}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{ToMask()}{ToMask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask}{Board\+::\+Board\+Mask}} Board\+::\+To\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Converts the board state to bitmasks for high-\/performance heuristic calculations. 
+
+\begin{DoxyReturn}{Returns}
+A \doxylink{structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask}{Board\+Mask} containing bits for X and O positions. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 8
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!Winner@{Winner}}
 \index{Winner@{Winner}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
@@ -247,9 +296,9 @@ Gets the winner of the game if one exists.
 The winner of the game, nullptr if there is no winner. 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 6
+% FIG 9
 Here is the caller graph for this function\+:
-% FIG 7
+% FIG 10
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a1ab856d598937003f341409f227ba678}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a1ab856d598937003f341409f227ba678} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!WithMove@{WithMove}}
 \index{WithMove@{WithMove}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
@@ -269,7 +318,7 @@ Creates a copy of the board with the given move applied.
 The new board with the position applied. 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 8
+% FIG 11
 
 
 \doxysubsection{Member Data Documentation}

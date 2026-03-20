@@ -20,8 +20,12 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a46931be96445575fe0866f781674f4a1}{Bot}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a40d65c06507e91eb2c443f9df90eacb4}{symbol}}, double difficulty, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
-\begin{DoxyCompactList}\small\item\em Creates a bot. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a13aa63676e265c0c7e40d5d8c85f0176}{Bot}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a40d65c06507e91eb2c443f9df90eacb4}{symbol}}, double difficulty, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_a919e1aaed214a29f1b9e2ab87b2b9856}{factories\+::\+Rollout\+Strategy\+Type}} rollout\+\_\+type, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
+\begin{DoxyCompactList}\small\item\em Creates a bot with a specific rollout strategy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a9109ccb06d54c8d5846c0f77baa55231}{Bot}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a40d65c06507e91eb2c443f9df90eacb4}{symbol}}, double difficulty, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
+\begin{DoxyCompactList}\small\item\em Creates a bot with default heuristic rollout strategy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a46df73aff9f1192772f107bcf5ba4b13}{Initialize}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_aa0c0ed02ccf27849efc367aa96b00158}{const\+\_\+game\+\_\+ptr}} game) override
+\begin{DoxyCompactList}\small\item\em Initializes the bot by creating its root node. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\+\_\+position\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ada162a908c7ac9bbe5cda8f4be0fbea7}{Next\+Move}} () const override
 \begin{DoxyCompactList}\small\item\em Prompts the bot to make its next move. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_acb2602e5d6563f1f90d2896d507c0f7f}{Update}} (std\+::string message) override
@@ -35,14 +39,23 @@ virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a40d65c06507e91eb2c443f9df90eacb4}{symbol}} () const
 \begin{DoxyCompactList}\small\item\em The \doxylink{classSymbol}{Symbol} used by the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_acc99736db92f09dcd68c14366fb53ada}{Value}} (const class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&board) const
+double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_aa6e7a0ab7319ce50ae6e5d3e3e2aa946}{Value}} (const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&board) const
 \begin{DoxyCompactList}\small\item\em Assigns a value of the board state from the perspective of this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Actor}{sophia\+::monte\+\_\+carlo\+::models\+::\+Actor}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Actor_ac5a2188a852fa6ada43c4f5da8d898c4}{Actor}} ()=default
+\item 
+virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Actor_a3f7fffbe8ca8dcd2ad032524b6e7118b}{\texorpdfstring{$\sim$}{\string~}\+Actor}} ()=default
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ad1873c6eeff1f0048c51adf6c6f50933}{node\+\_\+}}
 \item 
 int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ae21d5d7d0075f6bb27f87ffc7166195c}{iterations\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_a919e1aaed214a29f1b9e2ab87b2b9856}{factories\+::\+Rollout\+Strategy\+Type}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a8efe40904905306682cf51f5037096fa}{m\+\_\+rollout\+\_\+type\+\_\+}}
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_adc50615f67835e5f08a8fd02a337b174}{m\+\_\+logger\+\_\+}}
 \end{DoxyCompactItemize}
@@ -60,15 +73,36 @@ int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1B
 A non-\/human Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a46931be96445575fe0866f781674f4a1}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a46931be96445575fe0866f781674f4a1} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a13aa63676e265c0c7e40d5d8c85f0176}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a13aa63676e265c0c7e40d5d8c85f0176} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}!Bot@{Bot}}
 \index{Bot@{Bot}!sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}}
-\doxysubsubsection{\texorpdfstring{Bot()}{Bot()}}
-{\footnotesize\ttfamily Bot\+::\+Bot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}}]{symbol,  }\item[{double}]{difficulty,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+\doxysubsubsection{\texorpdfstring{Bot()}{Bot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Bot\+::\+Bot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}}]{symbol,  }\item[{double}]{difficulty,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_a919e1aaed214a29f1b9e2ab87b2b9856}{factories\+::\+Rollout\+Strategy\+Type}}}]{rollout\+\_\+type,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
-Creates a bot. 
+Creates a bot with a specific rollout strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol that the bot places. \\
+\hline
+{\em difficulty} & The skill level of the bot a decimal value from 0 to 1. \\
+\hline
+{\em rollout\+\_\+type} & The strategy type for simulations (Random or Heuristic). \\
+\hline
+{\em logger} & The logger instance for the bot to use. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a9109ccb06d54c8d5846c0f77baa55231}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a9109ccb06d54c8d5846c0f77baa55231} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}!Bot@{Bot}}
+\index{Bot@{Bot}!sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}}
+\doxysubsubsection{\texorpdfstring{Bot()}{Bot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Bot\+::\+Bot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}}]{symbol,  }\item[{double}]{difficulty,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates a bot with default heuristic rollout strategy. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -82,6 +116,20 @@ Creates a bot.
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a46df73aff9f1192772f107bcf5ba4b13}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a46df73aff9f1192772f107bcf5ba4b13} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Bot\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_aa0c0ed02ccf27849efc367aa96b00158}{const\+\_\+game\+\_\+ptr}}}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the bot by creating its root node. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_acefd41ff27aa66d3e0ded10b67924561}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Player}}.
+
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ada162a908c7ac9bbe5cda8f4be0fbea7}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ada162a908c7ac9bbe5cda8f4be0fbea7} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}!NextMove@{NextMove}}
 \index{NextMove@{NextMove}!sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}}
@@ -137,11 +185,17 @@ Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1obse
 \doxysubsubsection{\texorpdfstring{m\_logger\_}{m\_logger\_}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Bot\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a8efe40904905306682cf51f5037096fa}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a8efe40904905306682cf51f5037096fa} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}!m\_rollout\_type\_@{m\_rollout\_type\_}}
+\index{m\_rollout\_type\_@{m\_rollout\_type\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}}
+\doxysubsubsection{\texorpdfstring{m\_rollout\_type\_}{m\_rollout\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_a919e1aaed214a29f1b9e2ab87b2b9856}{factories\+::\+Rollout\+Strategy\+Type}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Bot\+::m\+\_\+rollout\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ad1873c6eeff1f0048c51adf6c6f50933}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ad1873c6eeff1f0048c51adf6c6f50933} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}!node\_@{node\_}}
 \index{node\_@{node\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Bot@{sophia::monte\_carlo::tic\_tac\_toe::models::Bot}}
 \doxysubsubsection{\texorpdfstring{node\_}{node\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Bot\+::node\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Bot\+::node\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
 
 
 

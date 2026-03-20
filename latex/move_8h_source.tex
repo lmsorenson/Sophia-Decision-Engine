@@ -22,17 +22,25 @@
 \DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move}{Move}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{ActionBase}}<GameState,\ Position>}
 \DoxyCodeLine{00023\ \ \ \ \ \{}
 \DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\_base\_ptr<GameState,\ Position>}}\ \&source,}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\ change,}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\_factory\_ptr<GameState,\ Position>}}\ factory,}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\&\ logger);}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9436e05427bf263e777d3ee852c6a737}{Name}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9a5774e47a96f957f94627c6874442cf}{Generate}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00046\ \ \ \ \ \};}
-\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\_base\_ptr<GameState,\ Position>}}\ \&source,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\ change,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\_actor\_ptr}}\&\ actor,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\_factory\_ptr<GameState,\ Position>}}\ factory,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\&\ logger);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move}{Move}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\_base\_ptr<GameState,\ Position>}}\ \&source,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\ change,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\_factory\_ptr<GameState,\ Position>}}\ factory,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\&\ logger);}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MOVE\_H}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9436e05427bf263e777d3ee852c6a737}{Name}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a41bc199d08ba71202fa579a50e6eabd5}{Change}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9a5774e47a96f957f94627c6874442cf}{Generate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ \ \ \ \ \};}
+\DoxyCodeLine{00066\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MOVE\_H}}
 
 \end{DoxyCode}

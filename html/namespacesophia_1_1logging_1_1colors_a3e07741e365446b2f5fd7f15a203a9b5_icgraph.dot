@@ -8,7 +8,7 @@ digraph "sophia::logging::colors::phase_rollout"
   rankdir="RL";
   Node1 [id="Node000001",label="sophia::logging::colors::phase_rollout",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="sophia::monte_carlo::MonteCarloTree\lSearch::run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#ae220cb411e5f28962a714e56e159745a",tooltip="Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state..."];
+  Node2 [id="Node000002",label="sophia::monte_carlo::MonteCarloTree\lSearch::run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#a39aa6d5f2c7ca35f229d02b14ed12071",tooltip="Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state..."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::models::Bot::NextMove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#ada162a908c7ac9bbe5cda8f4be0fbea7",tooltip="Prompts the bot to make its next move."];
   Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];

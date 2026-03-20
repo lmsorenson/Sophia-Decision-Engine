@@ -10,10 +10,11 @@ digraph "sophia::monte_carlo::factories::TreeFactoryBase&lt; TState, TChange &gt
 <TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual ~TreeFactoryBase()=default<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual sophia::monte_carlo<BR ALIGN="LEFT"/>::node_ptr CreateNode(std::string<BR ALIGN="LEFT"/> name) const =0<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual sophia::monte_carlo<BR ALIGN="LEFT"/>::node_ptr CreateNode(std::string<BR ALIGN="LEFT"/> name, TState state) const =0<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual sophia::monte_carlo<BR ALIGN="LEFT"/>::action_ptr CreateAction(sophia<BR ALIGN="LEFT"/>::monte_carlo::node_base_ptr&lt; TState,<BR ALIGN="LEFT"/> TChange &gt; node, TChange change) const =0<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual sophia::monte_carlo<BR ALIGN="LEFT"/>::rollout_strategy_ptr CreateStrategy<BR ALIGN="LEFT"/>() const =0<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual node_ptr CreateNode<BR ALIGN="LEFT"/>(std::string name) const =0<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual node_ptr CreateNode<BR ALIGN="LEFT"/>(std::string name, TState state)<BR ALIGN="LEFT"/> const =0<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual action_ptr CreateAction<BR ALIGN="LEFT"/>(node_base_ptr&lt; TState, TChange<BR ALIGN="LEFT"/> &gt; node, TChange change, const const<BR ALIGN="LEFT"/>_actor_ptr &amp;actor) const =0<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual action_ptr CreateAction<BR ALIGN="LEFT"/>(node_base_ptr&lt; TState, TChange<BR ALIGN="LEFT"/> &gt; node, TChange change) const =0<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual rollout_strategy_ptr<BR ALIGN="LEFT"/> CreateStrategy() const =0<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [id="edge2_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];

@@ -12,16 +12,20 @@ var annotated_dup =
         [ "models", "namespacesophia_1_1monte__carlo_1_1models.html", [
           [ "Action", "classsophia_1_1monte__carlo_1_1models_1_1Action.html", "classsophia_1_1monte__carlo_1_1models_1_1Action" ],
           [ "ActionBase", "classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html", "classsophia_1_1monte__carlo_1_1models_1_1ActionBase" ],
+          [ "Actor", "classsophia_1_1monte__carlo_1_1models_1_1Actor.html", "classsophia_1_1monte__carlo_1_1models_1_1Actor" ],
           [ "Node", "classsophia_1_1monte__carlo_1_1models_1_1Node.html", "classsophia_1_1monte__carlo_1_1models_1_1Node" ],
           [ "NodeBase", "classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html", "classsophia_1_1monte__carlo_1_1models_1_1NodeBase" ],
           [ "RandomRolloutStrategy", "classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html", "classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy" ],
-          [ "RolloutStrategyInterface", "classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html", "classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface" ]
+          [ "RolloutStrategyInterface", "classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html", "classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface" ],
+          [ "SimpleSimulationResult", "classsophia_1_1monte__carlo_1_1models_1_1SimpleSimulationResult.html", "classsophia_1_1monte__carlo_1_1models_1_1SimpleSimulationResult" ],
+          [ "SimulationResult", "classsophia_1_1monte__carlo_1_1models_1_1SimulationResult.html", "classsophia_1_1monte__carlo_1_1models_1_1SimulationResult" ]
         ] ],
         [ "tic_tac_toe", "namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html", [
           [ "factories", "namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories.html", [
             [ "TicTacToeFactory", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory" ]
           ] ],
           [ "model_tests", "namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests.html", [
+            [ "HeuristicRolloutStrategyFixture", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture" ],
             [ "TicTacToeModelsFixture", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1TicTacToeModelsFixture.html", null ]
           ] ],
           [ "models", "namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models.html", [
@@ -34,7 +38,8 @@ var annotated_dup =
             [ "Move", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move" ],
             [ "Player", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player" ],
             [ "Position", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position" ],
-            [ "State", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State" ]
+            [ "State", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State" ],
+            [ "TicTacToeSimulationResult", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult" ]
           ] ],
           [ "observer", "namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer.html", [
             [ "Observer", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer" ],

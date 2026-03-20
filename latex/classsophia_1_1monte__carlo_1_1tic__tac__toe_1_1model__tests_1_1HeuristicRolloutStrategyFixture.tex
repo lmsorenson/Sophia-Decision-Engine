@@ -1,0 +1,115 @@
+\doxysection{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::Heuristic\+Rollout\+Strategy\+Fixture Class Reference}
+\hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture}{}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture}\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+
+
+Inheritance diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::Heuristic\+Rollout\+Strategy\+Fixture\+:
+% FIG 0
+
+
+Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::Heuristic\+Rollout\+Strategy\+Fixture\+:
+% FIG 1
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_ae4ddd313807701f9ab8ddcdbaec981e5}{Set\+Up}} () override
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a388859b0fe534b3ce3641ff96f2e13f0}{create\+Board}} (const vector$<$ vector$<$ \mbox{\hyperlink{classSymbol}{Symbol}} $>$ $>$ \&grid)
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a975bd3628fb251b1d70aca76778c22df}{create\+Game\+State}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ board, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\+\_\+player\+\_\+ptr}} current\+Player, \mbox{\hyperlink{classSymbol}{Symbol}} last\+Placed=Symbol\+::\+None)
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy}{Heuristic\+Rollout\+Strategy}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_aceaa91bd8a94c2498176834112bb4cd8}{create\+Strategy}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} $>$ game\+State)
+\item 
+vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_af759017f5761e63a065307dbde031fb3}{create\+Actions}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} $>$ game\+State, shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory}{factories\+::\+Tic\+Tac\+Toe\+Factory}} $>$ factory)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classSymbol}{Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a4b0bba4d95e669f3518b763d7119ebd1}{X}} = Symbol\+::X
+\item 
+const \mbox{\hyperlink{classSymbol}{Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a7c211b0aa840a7a17f9fb2d54e8f9098}{O}} = Symbol\+::O
+\item 
+const \mbox{\hyperlink{classSymbol}{Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a6d97cfc69edf65531f25613b2ae416a0}{\+\_\+}} = Symbol\+::\+None
+\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{sophia\+::logging\+::\+ILogger}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_af62b9ccdf0718bf6d1cdf8be24dcc261}{m\+\_\+logger}}
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\+\_\+player\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_afb774b8aaf244de93605ac248956bb82}{m\+\_\+playerX}}
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\+\_\+player\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a59f07e9beb333bcff4866b99edd58761}{m\+\_\+playerO}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_af759017f5761e63a065307dbde031fb3}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_af759017f5761e63a065307dbde031fb3} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!createActions@{createActions}}
+\index{createActions@{createActions}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{createActions()}{createActions()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::create\+Actions (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} $>$}]{game\+State,  }\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory}{factories\+::\+Tic\+Tac\+Toe\+Factory}} $>$}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a388859b0fe534b3ce3641ff96f2e13f0}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a388859b0fe534b3ce3641ff96f2e13f0} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!createBoard@{createBoard}}
+\index{createBoard@{createBoard}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{createBoard()}{createBoard()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::create\+Board (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ \mbox{\hyperlink{classSymbol}{Symbol}} $>$ $>$ \&}]{grid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a975bd3628fb251b1d70aca76778c22df}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a975bd3628fb251b1d70aca76778c22df} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!createGameState@{createGameState}}
+\index{createGameState@{createGameState}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{createGameState()}{createGameState()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} $>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::create\+Game\+State (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$}]{board,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\+\_\+player\+\_\+ptr}}}]{current\+Player,  }\item[{\mbox{\hyperlink{classSymbol}{Symbol}}}]{last\+Placed = {\ttfamily Symbol\+:\+:None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_aceaa91bd8a94c2498176834112bb4cd8}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_aceaa91bd8a94c2498176834112bb4cd8} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!createStrategy@{createStrategy}}
+\index{createStrategy@{createStrategy}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{createStrategy()}{createStrategy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy}{Heuristic\+Rollout\+Strategy}} $>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::create\+Strategy (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} $>$}]{game\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_ae4ddd313807701f9ab8ddcdbaec981e5}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_ae4ddd313807701f9ab8ddcdbaec981e5} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{SetUp()}{SetUp()}}
+{\footnotesize\ttfamily void sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::\+Set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a6d97cfc69edf65531f25613b2ae416a0}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a6d97cfc69edf65531f25613b2ae416a0} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!\_@{\_}}
+\index{\_@{\_}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{\_}{\_}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classSymbol}{Symbol}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::\+\_\+ = Symbol\+::\+None\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_af62b9ccdf0718bf6d1cdf8be24dcc261}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_af62b9ccdf0718bf6d1cdf8be24dcc261} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!m\_logger@{m\_logger}}
+\index{m\_logger@{m\_logger}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{m\_logger}{m\_logger}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{sophia\+::logging\+::\+ILogger}}$>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::m\+\_\+logger\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a59f07e9beb333bcff4866b99edd58761}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a59f07e9beb333bcff4866b99edd58761} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!m\_playerO@{m\_playerO}}
+\index{m\_playerO@{m\_playerO}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{m\_playerO}{m\_playerO}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\+\_\+player\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::m\+\_\+playerO\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_afb774b8aaf244de93605ac248956bb82}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_afb774b8aaf244de93605ac248956bb82} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!m\_playerX@{m\_playerX}}
+\index{m\_playerX@{m\_playerX}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{m\_playerX}{m\_playerX}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\+\_\+player\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::m\+\_\+playerX\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a7c211b0aa840a7a17f9fb2d54e8f9098}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a7c211b0aa840a7a17f9fb2d54e8f9098} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!O@{O}}
+\index{O@{O}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{O}{O}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classSymbol}{Symbol}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::O = Symbol\+::O\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a4b0bba4d95e669f3518b763d7119ebd1}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture_a4b0bba4d95e669f3518b763d7119ebd1} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}!X@{X}}
+\index{X@{X}!sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture@{sophia::monte\_carlo::tic\_tac\_toe::model\_tests::HeuristicRolloutStrategyFixture}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classSymbol}{Symbol}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::model\+\_\+tests\+::\+Heuristic\+Rollout\+Strategy\+Fixture\+::X = Symbol\+::X\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/tests/\mbox{\hyperlink{heuristic__rollout__strategy__tests_8cpp}{heuristic\+\_\+rollout\+\_\+strategy\+\_\+tests.\+cpp}}\end{DoxyCompactItemize}

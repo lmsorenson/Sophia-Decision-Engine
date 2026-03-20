@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['quick_20start_0',['Quick Start',['../index.html#autotoc_md0',1,'']]]
+  ['parsemove_0',['ParseMove',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a73f2bf0b7a04018d686d3dd392712a90',1,'sophia::monte_carlo::tic_tac_toe::models::Position']]],
+  ['patterns_1',['Usage Patterns',['../index.html#autotoc_md10',1,'']]],
+  ['performance_20considerations_2',['Performance Considerations',['../index.html#autotoc_md13',1,'']]],
+  ['phase_5fbackprop_3',['phase_backprop',['../namespacesophia_1_1logging_1_1colors.html#a2466bc3b47d3fb09719483f2c2c23b70',1,'sophia::logging::colors::phase_backprop(const std::string &amp;text)'],['../namespacesophia_1_1logging_1_1colors.html#ab124f37e12299474cb781995a21b2efe',1,'sophia::logging::colors::PHASE_BACKPROP']]],
+  ['phase_5fexpansion_4',['phase_expansion',['../namespacesophia_1_1logging_1_1colors.html#a66287a1db0a6d813158546217965c932',1,'sophia::logging::colors::phase_expansion(const std::string &amp;text)'],['../namespacesophia_1_1logging_1_1colors.html#a2ef76c248f18c9fbd98cc69ae88e3b09',1,'sophia::logging::colors::PHASE_EXPANSION']]],
+  ['phase_5frollout_5',['phase_rollout',['../namespacesophia_1_1logging_1_1colors.html#a3e07741e365446b2f5fd7f15a203a9b5',1,'sophia::logging::colors::phase_rollout(const std::string &amp;text)'],['../namespacesophia_1_1logging_1_1colors.html#a1b079813f08bd9011825e76caab80c81',1,'sophia::logging::colors::PHASE_ROLLOUT']]],
+  ['phase_5fselection_6',['phase_selection',['../namespacesophia_1_1logging_1_1colors.html#ad68eb626478bec61ba43e1f8dad6e1c0',1,'sophia::logging::colors::PHASE_SELECTION'],['../namespacesophia_1_1logging_1_1colors.html#aeacc685dc11c30c2c8e8a0c5fea83b9b',1,'sophia::logging::colors::phase_selection(const std::string &amp;text)']]],
+  ['pipeline_7',['Decision-Making Pipeline',['../index.html#autotoc_md3',1,'']]],
+  ['player_8',['player',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html',1,'sophia::monte_carlo::tic_tac_toe::models::Player'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a524382c39c92f28f9ea79d808122e268',1,'sophia::monte_carlo::tic_tac_toe::models::Player::Player()']]],
+  ['player_2ecpp_9',['player.cpp',['../player_8cpp.html',1,'']]],
+  ['player_2eh_10',['player.h',['../player_8h.html',1,'']]],
+  ['player_5fptr_11',['player_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#a36e0bf081cdf7e2586686833b8e35ec5',1,'sophia::monte_carlo::tic_tac_toe']]],
+  ['position_12',['position',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html',1,'sophia::monte_carlo::tic_tac_toe::models::Position'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a34f72b849ba5c01bf0bd5f85b368997f',1,'sophia::monte_carlo::tic_tac_toe::models::Position::Position(const std::pair&lt; int, int &gt; &amp;coordinates, enums::Symbol symbol)'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a5d0ee05a8159974d626c97e41f12a152',1,'sophia::monte_carlo::tic_tac_toe::models::Position::Position(const std::pair&lt; int, int &gt; &amp;coordinates)']]],
+  ['position_2ecpp_13',['position.cpp',['../position_8cpp.html',1,'']]],
+  ['position_2eh_14',['position.h',['../position_8h.html',1,'']]],
+  ['position_5fptr_15',['position_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#a7e6c3ce9d7e192122c893bd2dd4ba62b',1,'sophia::monte_carlo::tic_tac_toe']]],
+  ['print_16',['print',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#ad5b38320d950b27e32014092f2cdbb51',1,'sophia::monte_carlo::tic_tac_toe::models::State::Print()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a74f9cd4901361de082efc572c8e66d66',1,'sophia::monte_carlo::tic_tac_toe::models::GameState::Print()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a2c9ae9ee3c4237b44ba0afaebd837536',1,'sophia::monte_carlo::tic_tac_toe::models::Board::Print()'],['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ade2b382a86e4c36a60caefc196ad82',1,'sophia::monte_carlo::models::Node::Print()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#a78e1a17440eace186f6ae1109e09db2c',1,'sophia::monte_carlo::tic_tac_toe::models::Game::print()']]]
 ];

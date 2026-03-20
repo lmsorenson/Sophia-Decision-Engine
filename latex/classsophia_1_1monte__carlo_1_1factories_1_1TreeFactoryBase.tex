@@ -17,13 +17,15 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::factories\+::Tree\+Facto
 \item 
 virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_afe9f344ea85eb7471197bc60be940d68}{\texorpdfstring{$\sim$}{\string~}\+Tree\+Factory\+Base}} ()=default
 \item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia\+::monte\+\_\+carlo\+::node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a2e789093e4f6d7cb764fec29abcda27b}{Create\+Node}} (std\+::string name) const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aa638b07395920b100784074c3af4c3d8}{Create\+Node}} (std\+::string name) const =0
 \item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia\+::monte\+\_\+carlo\+::node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_af9d4d147db3330db73ac7b1cbb4e6b73}{Create\+Node}} (std\+::string name, TState state) const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a410fb7b25b1af2eeb3fcdc1e3744dc67}{Create\+Node}} (std\+::string name, TState state) const =0
 \item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{sophia\+::monte\+\_\+carlo\+::action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_ad738542d42515171ee65f26dc7f4dcb9}{Create\+Action}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{sophia\+::monte\+\_\+carlo\+::node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$ node, TChange change) const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a73f38461fd49d3d47e8147f3f040e06f}{Create\+Action}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$ node, TChange change, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \&actor) const =0
 \item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{sophia\+::monte\+\_\+carlo\+::rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_afcc23b7ba1fafb08586868c5077e5b26}{Create\+Strategy}} () const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aac8595b6b22a52c3a397bbc318a02bd0}{Create\+Action}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$ node, TChange change) const =0
+\item 
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a20f69a5532b9e6c8ad2271fe96e582d8}{Create\+Strategy}} () const =0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Types}
 \begin{DoxyCompactItemize}
@@ -53,12 +55,12 @@ virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactory
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_ad738542d42515171ee65f26dc7f4dcb9}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_ad738542d42515171ee65f26dc7f4dcb9} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aac8595b6b22a52c3a397bbc318a02bd0}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aac8595b6b22a52c3a397bbc318a02bd0} 
 \index{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}!CreateAction@{CreateAction}}
 \index{CreateAction@{CreateAction}!sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}}
-\doxysubsubsection{\texorpdfstring{CreateAction()}{CreateAction()}}
+\doxysubsubsection{\texorpdfstring{CreateAction()}{CreateAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{sophia\+::monte\+\_\+carlo\+::action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{sophia\+::monte\+\_\+carlo\+::node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$}]{node,  }\item[{TChange}]{change }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$}]{node,  }\item[{TChange}]{change }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Creates a new Action. 
 \begin{DoxyParams}{Parameters}
@@ -70,12 +72,31 @@ Creates a new Action.
 \begin{DoxyReturn}{Returns}
 a shared pointer to a Node. 
 \end{DoxyReturn}
-\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a2e789093e4f6d7cb764fec29abcda27b}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a2e789093e4f6d7cb764fec29abcda27b} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a73f38461fd49d3d47e8147f3f040e06f}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a73f38461fd49d3d47e8147f3f040e06f} 
+\index{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}!CreateAction@{CreateAction}}
+\index{CreateAction@{CreateAction}!sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}}
+\doxysubsubsection{\texorpdfstring{CreateAction()}{CreateAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$}]{node,  }\item[{TChange}]{change,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \&}]{actor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates a new Action. 
+\begin{DoxyParams}{Parameters}
+{\em node} & the source node for the action being created. \\
+\hline
+{\em change} & the change being applied to the source node. \\
+\hline
+{\em actor} & the actor that performed the action. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a shared pointer to a Node. 
+\end{DoxyReturn}
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aa638b07395920b100784074c3af4c3d8}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aa638b07395920b100784074c3af4c3d8} 
 \index{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}!CreateNode@{CreateNode}}
 \index{CreateNode@{CreateNode}!sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{CreateNode()}{CreateNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia\+::monte\+\_\+carlo\+::node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Creates a new Node. 
 \begin{DoxyParams}{Parameters}
@@ -89,12 +110,12 @@ a shared pointer to a Node.
 
 Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_ab8700140ed8be41549a9dcae81118129}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::factories\+::\+Tic\+Tac\+Toe\+Factory}}.
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_af9d4d147db3330db73ac7b1cbb4e6b73}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_af9d4d147db3330db73ac7b1cbb4e6b73} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a410fb7b25b1af2eeb3fcdc1e3744dc67}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a410fb7b25b1af2eeb3fcdc1e3744dc67} 
 \index{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}!CreateNode@{CreateNode}}
 \index{CreateNode@{CreateNode}!sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{CreateNode()}{CreateNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia\+::monte\+\_\+carlo\+::node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{TState}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{TState}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Creates a new Node. 
 \begin{DoxyParams}{Parameters}
@@ -106,12 +127,12 @@ Creates a new Node.
 \begin{DoxyReturn}{Returns}
 a shared pointer to a Node. 
 \end{DoxyReturn}
-\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_afcc23b7ba1fafb08586868c5077e5b26}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_afcc23b7ba1fafb08586868c5077e5b26} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a20f69a5532b9e6c8ad2271fe96e582d8}\label{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a20f69a5532b9e6c8ad2271fe96e582d8} 
 \index{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}!CreateStrategy@{CreateStrategy}}
 \index{CreateStrategy@{CreateStrategy}!sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$@{sophia::monte\_carlo::factories::TreeFactoryBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{CreateStrategy()}{CreateStrategy()}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{sophia\+::monte\+\_\+carlo\+::rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$\+::\+Create\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Creates a new Strategy. \begin{DoxyReturn}{Returns}
 a shared pointer to a Rollout Strategy. 

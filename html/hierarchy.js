@@ -1,7 +1,14 @@
 var hierarchy =
 [
+    [ "sophia::monte_carlo::models::Actor", "classsophia_1_1monte__carlo_1_1models_1_1Actor.html", [
+      [ "sophia::monte_carlo::tic_tac_toe::models::Player", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html", [
+        [ "sophia::monte_carlo::tic_tac_toe::models::Bot", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html", null ],
+        [ "sophia::monte_carlo::tic_tac_toe::models::Human", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html", null ]
+      ] ]
+    ] ],
     [ "Alignment", "classAlignment.html", null ],
     [ "sophia::monte_carlo::tic_tac_toe::models::Board", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html", null ],
+    [ "sophia::monte_carlo::tic_tac_toe::models::Board::BoardMask", "structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask.html", null ],
     [ "std::enable_shared_from_this", null, [
       [ "sophia::monte_carlo::factories::TreeFactoryBase< models::GameState, models::Position >", "classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html", [
         [ "sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html", null ]
@@ -19,10 +26,8 @@ var hierarchy =
           [ "sophia::monte_carlo::tic_tac_toe::models::State", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html", null ]
         ] ]
       ] ],
-      [ "sophia::monte_carlo::tic_tac_toe::models::Player", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html", [
-        [ "sophia::monte_carlo::tic_tac_toe::models::Bot", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html", null ],
-        [ "sophia::monte_carlo::tic_tac_toe::models::Human", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html", null ]
-      ] ]
+      [ "sophia::monte_carlo::tic_tac_toe::models::Game", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html", null ],
+      [ "sophia::monte_carlo::tic_tac_toe::models::Player", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html", null ]
     ] ],
     [ "sophia::monte_carlo::tic_tac_toe::models::GameState", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html", null ],
     [ "sophia::logging::ILogger", "classsophia_1_1logging_1_1ILogger.html", [
@@ -37,11 +42,16 @@ var hierarchy =
       [ "sophia::monte_carlo::models::RandomRolloutStrategy", "classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html", null ],
       [ "sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html", null ]
     ] ],
+    [ "sophia::monte_carlo::models::SimulationResult", "classsophia_1_1monte__carlo_1_1models_1_1SimulationResult.html", [
+      [ "sophia::monte_carlo::models::SimpleSimulationResult", "classsophia_1_1monte__carlo_1_1models_1_1SimpleSimulationResult.html", null ],
+      [ "sophia::monte_carlo::tic_tac_toe::models::TicTacToeSimulationResult", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult.html", null ]
+    ] ],
     [ "sophia::monte_carlo::tic_tac_toe::observer::Subject", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html", [
       [ "sophia::monte_carlo::tic_tac_toe::models::Game", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html", null ]
     ] ],
     [ "Symbol", "classSymbol.html", null ],
     [ "testing::Test", null, [
+      [ "sophia::monte_carlo::tic_tac_toe::model_tests::HeuristicRolloutStrategyFixture", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html", null ],
       [ "sophia::monte_carlo::tic_tac_toe::model_tests::TicTacToeModelsFixture", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1TicTacToeModelsFixture.html", null ],
       [ "sophia::monte_carlo::tic_tac_toe::model_tests::TicTacToeModelsFixture", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1TicTacToeModelsFixture.html", null ]
     ] ]

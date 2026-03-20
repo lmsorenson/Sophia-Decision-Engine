@@ -1,0 +1,20 @@
+digraph "sophia::monte_carlo::tic_tac_toe::model_tests::TEST"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  rankdir="LR";
+  Node1 [id="Node000001",label="sophia::monte_carlo::tic_tac\l_toe::model_tests::TEST",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge6_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::Board::GetWinningMoves",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#ae2cc7431b9be716a4eddb22f3dbff336",tooltip="Finds moves that would complete a 3-in-a-row for the given symbol."];
+  Node2 -> Node3 [id="edge7_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::models::Board::ToMask",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aab7aaae5ed17cc1863bc783c8d7ff693",tooltip="Converts the board state to bitmasks for high-performance heuristic calculations."];
+  Node1 -> Node4 [id="edge8_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="sophia::monte_carlo::tic_tac\l_toe::models::Board::SetPosition",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a96c3c35f4cb92fe134ab6fcfe302279d",tooltip="Set a position."];
+  Node4 -> Node5 [id="edge9_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="sophia::monte_carlo::tic_tac\l_toe::models::Position::Coordinates",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a782a06b17216cd642969ef7c62fc6c88",tooltip=" "];
+  Node4 -> Node6 [id="edge10_Node000004_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="sophia::monte_carlo::tic_tac\l_toe::models::Position::State",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a996a0a412a8dd6a0700fcffba6b1de70",tooltip=" "];
+}

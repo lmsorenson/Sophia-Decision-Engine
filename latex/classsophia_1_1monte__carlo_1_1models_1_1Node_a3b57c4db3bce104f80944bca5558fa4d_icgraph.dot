@@ -8,5 +8,5 @@ digraph "sophia::monte_carlo::models::Node::IsTerminalState"
   rankdir="RL";
   Node1 [id="Node000001",label="sophia::monte_carlo::models\l::Node::IsTerminalState",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Pure virtual function to check if the node represents a terminal state in the problem space."];
   Node1 -> Node2 [id="edge2_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="sophia::monte_carlo::models\l::Node::Rollout",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b",tooltip="Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollou..."];
+  Node2 [id="Node000002",label="sophia::monte_carlo::models\l::Node::Rollout",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5e26f02256b926494ebf19f32dfe9f84",tooltip="Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollou..."];
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_5f_0',['x_',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#a8696a52650b7e06b445dc94efa8576c7',1,'sophia::monte_carlo::tic_tac_toe::models::Game']]]
+  ['warn_0',['WARN',['../namespacesophia_1_1logging_1_1colors.html#ad7fb64e359d4fe4e72dc53215f0b974d',1,'sophia::logging::colors']]]
 ];

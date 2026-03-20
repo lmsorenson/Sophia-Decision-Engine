@@ -9,7 +9,6 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Position"
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">int m_row_index_<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">int m_column_index_<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">enums::Symbol m_state_<BR ALIGN="LEFT"/></TD></TR>
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Position(const std::pair&lt;<BR ALIGN="LEFT"/> int, int &gt; &amp;coordinates)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Position(const std::pair&lt;<BR ALIGN="LEFT"/> int, int &gt; &amp;coordinates, enums<BR ALIGN="LEFT"/>::Symbol symbol)<BR ALIGN="LEFT"/></TD></TR>
@@ -21,4 +20,12 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Position"
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">static bool IsValid(const std<BR ALIGN="LEFT"/>::string &amp;input)<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Refers to a move that a Player can make in a Tic Tac Toe Game. A position can be empty,..."];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" ",label=" -m_state_",fontcolor="grey" ,arrowhead="odiamond"];
+  Node2 [id="Node000002",shape=plain,label=<<TABLE CELLBORDER="0" BORDER="1"><TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">Symbol</TD></TR>
+<HR/>
+<TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
+<HR/>
+<TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
+</TABLE>>
+,height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
 }

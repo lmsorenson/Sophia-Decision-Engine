@@ -29,8 +29,9 @@ digraph "sophia::monte_carlo::models::RolloutStrategyInterface"
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">GameState m_current_game_state_<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">logger_ptr m_logger_<BR ALIGN="LEFT"/></TD></TR>
 <HR/>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">HeuristicRolloutStrategy(GameState<BR ALIGN="LEFT"/> current_game_state, const logger<BR ALIGN="LEFT"/>_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">HeuristicRolloutStrategy(GameState<BR ALIGN="LEFT"/> current_game_state, logger_ptr logger)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">action_ptr select_action(std<BR ALIGN="LEFT"/>::vector&lt; action_ptr &gt; actions)<BR ALIGN="LEFT"/> const override<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">static action_ptr find_action<BR ALIGN="LEFT"/>(const std::vector&lt; action_ptr<BR ALIGN="LEFT"/> &gt; &amp;actions, const std::vector<BR ALIGN="LEFT"/>&lt; const_position_ptr &gt; &amp;target_positions)<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html",tooltip="A heuristic rollout strategy for Tic-Tac-Toe."];
 }

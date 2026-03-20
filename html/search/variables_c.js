@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trace_0',['TRACE',['../namespacesophia_1_1logging_1_1colors.html#a5d05cd365cd9e3aab3d08077288de11c',1,'sophia::logging::colors']]]
+  ['reset_0',['RESET',['../namespacesophia_1_1logging_1_1colors.html#a9d55220b1d26f3996d5574e356110488',1,'sophia::logging::colors']]]
 ];

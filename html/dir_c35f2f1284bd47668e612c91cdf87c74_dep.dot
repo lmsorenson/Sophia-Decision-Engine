@@ -11,5 +11,5 @@ digraph "include/monte_carlo/models"
   dir_ca3258acda57ca6263514a57911db05b [label="factories", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_ca3258acda57ca6263514a57911db05b.html",tooltip=""];
   dir_c35f2f1284bd47668e612c91cdf87c74 [label="models", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_c35f2f1284bd47668e612c91cdf87c74.html",tooltip=""];
   }
-  dir_c35f2f1284bd47668e612c91cdf87c74->dir_ca3258acda57ca6263514a57911db05b [headlabel="2", labeldistance=1.5 headhref="dir_000012_000004.html" href="dir_000012_000004.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_c35f2f1284bd47668e612c91cdf87c74->dir_ca3258acda57ca6263514a57911db05b [headlabel="1", labeldistance=1.5 headhref="dir_000011_000004.html" href="dir_000011_000004.html" color="steelblue1" fontcolor="steelblue1"];
 }

@@ -1,0 +1,58 @@
+\doxysection{sophia\+::monte\+\_\+carlo\+::models\+::Simulation\+Result Class Reference}
+\hypertarget{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult}{}\label{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult}\index{sophia::monte\_carlo::models::SimulationResult@{sophia::monte\_carlo::models::SimulationResult}}
+
+
+Interface for the result of a simulation (rollout) in MCTS.  
+
+
+
+
+{\ttfamily \#include $<$simulation\+\_\+result.\+h$>$}
+
+
+
+Inheritance diagram for sophia\+::monte\+\_\+carlo\+::models\+::Simulation\+Result\+:
+% FIG 0
+
+
+Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Simulation\+Result\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult_a93208cb3b4a0ff7f259fa1ed180523bf}{\texorpdfstring{$\sim$}{\string~}\+Simulation\+Result}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult_afb69bded8ff3831c81a1f29e559c0956}{Reward}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for the result of a simulation (rollout) in MCTS. 
+
+This is a marker interface. Specific games should implement this to carry whatever data they need from a simulation (e.\+g., winner, final score, etc.). The interpretation of this data into a reward value is done by the \doxylink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}\textquotesingle{}s interpret\+\_\+result method. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult_a93208cb3b4a0ff7f259fa1ed180523bf}\label{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult_a93208cb3b4a0ff7f259fa1ed180523bf} 
+\index{sophia::monte\_carlo::models::SimulationResult@{sophia::monte\_carlo::models::SimulationResult}!````~SimulationResult@{\texorpdfstring{$\sim$}{\string~}SimulationResult}}
+\index{````~SimulationResult@{\texorpdfstring{$\sim$}{\string~}SimulationResult}!sophia::monte\_carlo::models::SimulationResult@{sophia::monte\_carlo::models::SimulationResult}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SimulationResult()}{\string~SimulationResult()}}
+{\footnotesize\ttfamily virtual sophia\+::monte\+\_\+carlo\+::models\+::\+Simulation\+Result\+::\texorpdfstring{$\sim$}{\string~}\+Simulation\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult_afb69bded8ff3831c81a1f29e559c0956}\label{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult_afb69bded8ff3831c81a1f29e559c0956} 
+\index{sophia::monte\_carlo::models::SimulationResult@{sophia::monte\_carlo::models::SimulationResult}!Reward@{Reward}}
+\index{Reward@{Reward}!sophia::monte\_carlo::models::SimulationResult@{sophia::monte\_carlo::models::SimulationResult}}
+\doxysubsubsection{\texorpdfstring{Reward()}{Reward()}}
+{\footnotesize\ttfamily virtual double sophia\+::monte\+\_\+carlo\+::models\+::\+Simulation\+Result\+::\+Reward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1TicTacToeSimulationResult_aa94b937851f0055586f3bea3b3146112}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Tic\+Tac\+Toe\+Simulation\+Result}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1SimpleSimulationResult_a86d8363ddb0cdd4011b427412d076b4a}{sophia\+::monte\+\_\+carlo\+::models\+::\+Simple\+Simulation\+Result}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/monte\+\_\+carlo/models/\mbox{\hyperlink{simulation__result_8h}{simulation\+\_\+result.\+h}}\end{DoxyCompactItemize}

@@ -15,33 +15,50 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Human"
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void Update(std::string message)<BR ALIGN="LEFT"/> override<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="A human Tic Tac Toe Player."];
-  Node2 -> Node1 [id="edge4_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
+  Node2 -> Node1 [id="edge6_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
   Node2 [id="Node000002",shape=plain,label=<<TABLE CELLBORDER="0" BORDER="1"><TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">sophia::monte_carlo::tic_tac<BR ALIGN="LEFT"/>_toe::models::Player</TD></TR>
 <HR/>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">#</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">enums::Symbol m_player_symbol_<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">#</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">logger_ptr m_logger_<BR ALIGN="LEFT"/></TD></TR>
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Player(enums::Symbol symbol,<BR ALIGN="LEFT"/> const logger_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual ~Player()=default<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual void Initialize(const<BR ALIGN="LEFT"/>_game_ptr game)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">enums::Symbol symbol() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual const_position_ptr<BR ALIGN="LEFT"/> NextMove() const =0<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">double Value(const class Board<BR ALIGN="LEFT"/> &amp;board) const<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">double Value(const Board &amp;board) const<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html",tooltip="A Player in a Tic Tac Toe Game."];
-  Node3 -> Node2 [id="edge5_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
-  Node3 [id="Node000003",shape=plain,label=<<TABLE CELLBORDER="0" BORDER="1"><TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">std::enable_shared_from_this<BR ALIGN="LEFT"/>&lt; Player &gt;</TD></TR>
+  Node3 -> Node2 [id="edge7_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
+  Node3 [id="Node000003",shape=plain,label=<<TABLE CELLBORDER="0" BORDER="1"><TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">sophia::monte_carlo::models::Actor</TD></TR>
+<HR/>
+<TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
+<HR/>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Actor()=default<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual ~Actor()=default<BR ALIGN="LEFT"/></TD></TR>
+</TABLE>>
+,height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Actor.html",tooltip="Represents an actor in the Monte Carlo Tree Search."];
+  Node4 -> Node2 [id="edge8_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
+  Node4 [id="Node000004",shape=plain,label=<<TABLE CELLBORDER="0" BORDER="1"><TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">std::enable_shared_from_this<BR ALIGN="LEFT"/>&lt; Player &gt;</TD></TR>
 <HR/>
 <TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
 <HR/>
 <TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
-  Node4 -> Node2 [id="edge6_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
-  Node4 [id="Node000004",shape=plain,label=<<TABLE CELLBORDER="0" BORDER="1"><TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">sophia::monte_carlo::tic_tac<BR ALIGN="LEFT"/>_toe::observer::Observer</TD></TR>
+  Node5 -> Node2 [id="edge9_Node000002_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
+  Node5 [id="Node000005",shape=plain,label=<<TABLE CELLBORDER="0" BORDER="1"><TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">sophia::monte_carlo::tic_tac<BR ALIGN="LEFT"/>_toe::observer::Observer</TD></TR>
 <HR/>
 <TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual void Update(std::string<BR ALIGN="LEFT"/> message)=0<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html",tooltip="The Observer in an Observer pattern."];
+  Node6 -> Node2 [id="edge10_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" ",label=" #m_player_symbol_",fontcolor="grey" ,arrowhead="odiamond"];
+  Node6 [id="Node000006",shape=plain,label=<<TABLE CELLBORDER="0" BORDER="1"><TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">Symbol</TD></TR>
+<HR/>
+<TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
+<HR/>
+<TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
+</TABLE>>
+,height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
 }

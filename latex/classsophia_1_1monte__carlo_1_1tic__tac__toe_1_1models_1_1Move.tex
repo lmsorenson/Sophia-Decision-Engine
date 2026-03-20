@@ -20,21 +20,29 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a3e649d1243b9ddd3a2f997ef160fd781}{Move}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ \&source, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} change, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \&actor, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
+\begin{DoxyCompactList}\small\item\em Creates an instance of a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move}{Move}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9bd543b688708e0bb43124d05118ea48}{Move}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ \&source, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} change, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
 \begin{DoxyCompactList}\small\item\em Creates an instance of a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move}{Move}. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9436e05427bf263e777d3ee852c6a737}{Name}} () const override
 \begin{DoxyCompactList}\small\item\em The Name of the move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a41bc199d08ba71202fa579a50e6eabd5}{Change}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position change associated with this move. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9a5774e47a96f957f94627c6874442cf}{Generate}} () override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a03b8207a9efb3b9d9384ea592763f1e8}{Action\+Base}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{sophia\+::monte\+\_\+carlo\+::node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$ \&state, TChange change, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia\+::monte\+\_\+carlo\+::const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{sophia\+::monte\+\_\+carlo\+::logger\+\_\+ptr}} \&logger)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a79f60dcd94b02f4dc2d98c763dd1a2ff}{Action\+Base}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$ \&state, TChange change, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
 \item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia\+::monte\+\_\+carlo\+::node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ae5948c64be535af2c459d96de73979ce}{Source}} () const override
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a040137d5fff56aca48bbb1bfc021c8cb}{Action\+Base}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$ \&state, TChange change, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \&actor, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{Source}} () const override
 \begin{DoxyCompactList}\small\item\em Retrieves the source node from which this action originates. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia\+::monte\+\_\+carlo\+::node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a601d922eca84b369c428b087ca68c88d}{Target}} () const override
-\begin{DoxyCompactList}\small\item\em Retrieves the target node that results from this action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{Target}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the target node that results from this action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a7ad5dc0caf197561ce0230a6e2a214a9}{Actor}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the actor that performed this action. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,14 +56,16 @@ double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49d
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia\+::monte\+\_\+carlo\+::const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a72e5eee90fcc6ca607924bdf33928b77}{m\+\_\+factory\+\_\+}}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a8bde8016a249590d6b99358e7b0d83fb}{m\+\_\+factory\+\_\+}}
 \begin{DoxyCompactList}\small\item\em A factory for creating new nodes in the tree. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{sophia\+::monte\+\_\+carlo\+::logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a267111fa7200f8a709268a2457847660}{m\+\_\+logger\+\_\+}}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a1c259fe7400a22d14629ba06fb4f052d}{m\+\_\+logger\+\_\+}}
 \begin{DoxyCompactList}\small\item\em The logger instance for this action. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_aad61556d1f87078251b04696f8075c63}{sophia\+::monte\+\_\+carlo\+::node\+\_\+base\+\_\+ref}}$<$ TState, TChange $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a56d1bd5a5dce105c4e5770b257f60cd5}{m\+\_\+source\+\_\+}}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_aad61556d1f87078251b04696f8075c63}{node\+\_\+base\+\_\+ref}}$<$ TState, TChange $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a025f6f8474460fbd150ffad628bfcd16}{m\+\_\+source\+\_\+}}
 \begin{DoxyCompactList}\small\item\em A weak pointer to the source node from which this action originates. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia\+::monte\+\_\+carlo\+::node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_aee5b4460a324d2e0d0761a9dd11da2d7}{m\+\_\+target\+\_\+}}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_aaea9315ff9798302c0140beefdc8e06a}{m\+\_\+target\+\_\+}}
 \begin{DoxyCompactList}\small\item\em A shared pointer to the target node that results from this action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ae116ab79bc96b6976443942f5276f3b8}{m\+\_\+actor\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The actor that performed this action. \end{DoxyCompactList}\item 
 TChange \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4da8508812df2144666eb5919f7bd3ef}{m\+\_\+change\+\_\+}}
 \begin{DoxyCompactList}\small\item\em The change in state that this action represents. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -64,10 +74,31 @@ TChange \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4d
 A move made on the Tic Tac Toe board. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a3e649d1243b9ddd3a2f997ef160fd781}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a3e649d1243b9ddd3a2f997ef160fd781} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Move@{sophia::monte\_carlo::tic\_tac\_toe::models::Move}!Move@{Move}}
+\index{Move@{Move}!sophia::monte\_carlo::tic\_tac\_toe::models::Move@{sophia::monte\_carlo::tic\_tac\_toe::models::Move}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Move\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ \&}]{source,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}}]{change,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \&}]{actor,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$}]{factory,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates an instance of a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move}{Move}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & A shared pointer to the source Node. \\
+\hline
+{\em change} & The change being applied to the game. \\
+\hline
+{\em actor} & The actor that performed the move. \\
+\hline
+{\em factory} & A shared pointer to the Tree Factory. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9bd543b688708e0bb43124d05118ea48}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9bd543b688708e0bb43124d05118ea48} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Move@{sophia::monte\_carlo::tic\_tac\_toe::models::Move}!Move@{Move}}
 \index{Move@{Move}!sophia::monte\_carlo::tic\_tac\_toe::models::Move@{sophia::monte\_carlo::tic\_tac\_toe::models::Move}}
-\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Move\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ \&}]{source,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}}]{change,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$}]{factory,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
@@ -86,6 +117,19 @@ Creates an instance of a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a41bc199d08ba71202fa579a50e6eabd5}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a41bc199d08ba71202fa579a50e6eabd5} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Move@{sophia::monte\_carlo::tic\_tac\_toe::models::Move}!Change@{Change}}
+\index{Change@{Change}!sophia::monte\_carlo::tic\_tac\_toe::models::Move@{sophia::monte\_carlo::tic\_tac\_toe::models::Move}}
+\doxysubsubsection{\texorpdfstring{Change()}{Change()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} Move\+::\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the position change associated with this move. 
+
+\begin{DoxyReturn}{Returns}
+The position. 
+\end{DoxyReturn}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9a5774e47a96f957f94627c6874442cf}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move_a9a5774e47a96f957f94627c6874442cf} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Move@{sophia::monte\_carlo::tic\_tac\_toe::models::Move}!Generate@{Generate}}
 \index{Generate@{Generate}!sophia::monte\_carlo::tic\_tac\_toe::models::Move@{sophia::monte\_carlo::tic\_tac\_toe::models::Move}}

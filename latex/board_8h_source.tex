@@ -41,15 +41,25 @@
 \DoxyCodeLine{00089\ }
 \DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a4981171bf90e37ba01457c5009593dc8}{GetMarkCount}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00095\ }
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536}{Print}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::vector<std::vector<const\_position\_ptr>>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a8cf44bbb68ec919b859cc1f56a12ded7}{m\_tiles\_}};}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums::Symbol}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ac283fb619f6b92b2be2d2556f413a440}{last\_placed\_}}\ =\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754}{enums::Symbol::None}};}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_afefc242fc71773c8b257f50d26d05640}{m\_logger\_}};\ \textcolor{comment}{//\ Member\ to\ hold\ the\ logger\ instance}}
-\DoxyCodeLine{00105\ \ \ \ \ \};}
-\DoxyCodeLine{00106\ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<const\_position\_ptr>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae2cc7431b9be716a4eddb22f3dbff336}{GetWinningMoves}}(\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums::Symbol}}\ symbol)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536}{Print}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00107\ }
-\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TIC\_TAC\_TOE\_BOARD\_H}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask}{BoardMask}}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask_ad8a730aba277c8b5f1b90a342cc4b305}{x\_mask}}\ =\ 0;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask_a9288c11fed5d8e49e9451ce35c4f2062}{o\_mask}}\ =\ 0;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask}{BoardMask}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aab7aaae5ed17cc1863bc783c8d7ff693}{ToMask}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ std::vector<std::vector<const\_position\_ptr>>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a8cf44bbb68ec919b859cc1f56a12ded7}{m\_tiles\_}};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums::Symbol}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ac283fb619f6b92b2be2d2556f413a440}{last\_placed\_}}\ =\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754}{enums::Symbol::None}};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_afefc242fc71773c8b257f50d26d05640}{m\_logger\_}};\ \textcolor{comment}{//\ Member\ to\ hold\ the\ logger\ instance}}
+\DoxyCodeLine{00127\ \ \ \ \ \};}
+\DoxyCodeLine{00128\ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TIC\_TAC\_TOE\_BOARD\_H}}
 
 \end{DoxyCode}

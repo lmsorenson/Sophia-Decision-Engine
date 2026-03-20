@@ -7,6 +7,8 @@ class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}}
 \begin{DoxyCompactList}\small\item\em Represents an action that can be taken from a specific state (\doxylink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}) in the search tree. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{Action\+Base}}
 \begin{DoxyCompactList}\small\item\em A template base class for implementing the {\ttfamily \doxylink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Actor}{Actor}}
+\begin{DoxyCompactList}\small\item\em Represents an actor in the Monte Carlo Tree Search. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}}
 \begin{DoxyCompactList}\small\item\em Represents a node in the Monte Carlo Search Tree. Each node corresponds to a state in the problem space. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{Node\+Base}}
@@ -14,4 +16,8 @@ class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{Node\+
 class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{Random\+Rollout\+Strategy}}
 \begin{DoxyCompactList}\small\item\em A concrete implementation of the \doxylink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{Rollout\+Strategy\+Interface} that selects an action randomly. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{Rollout\+Strategy\+Interface}}
-\begin{DoxyCompactList}\small\item\em Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1SimpleSimulationResult}{Simple\+Simulation\+Result}}
+\begin{DoxyCompactList}\small\item\em A simple, concrete implementation of \doxylink{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult}{Simulation\+Result} that stores a reward. Useful for generic or simpler MCTS applications. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1SimulationResult}{Simulation\+Result}}
+\begin{DoxyCompactList}\small\item\em Interface for the result of a simulation (rollout) in MCTS. \end{DoxyCompactList}\end{DoxyCompactItemize}

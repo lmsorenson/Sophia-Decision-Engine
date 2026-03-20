@@ -9,8 +9,9 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy"
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">logger_ptr m_logger_<BR ALIGN="LEFT"/></TD></TR>
 <HR/>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">HeuristicRolloutStrategy(GameState<BR ALIGN="LEFT"/> current_game_state, const logger<BR ALIGN="LEFT"/>_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">HeuristicRolloutStrategy(GameState<BR ALIGN="LEFT"/> current_game_state, logger_ptr logger)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">action_ptr select_action(std<BR ALIGN="LEFT"/>::vector&lt; action_ptr &gt; actions)<BR ALIGN="LEFT"/> const override<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">static action_ptr find_action<BR ALIGN="LEFT"/>(const std::vector&lt; action_ptr<BR ALIGN="LEFT"/> &gt; &amp;actions, const std::vector<BR ALIGN="LEFT"/>&lt; const_position_ptr &gt; &amp;target_positions)<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="A heuristic rollout strategy for Tic-Tac-Toe."];
   Node2 -> Node1 [id="edge3_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" ",arrowtail="onormal"];
@@ -28,14 +29,18 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy"
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">const_board_ptr m_board_<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">const_player_ptr m_you_<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">const_game_ref m_game_<BR ALIGN="LEFT"/></TD></TR>
 <HR/>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">GameState(const_player_ptr<BR ALIGN="LEFT"/> you, std::shared_ptr&lt; const<BR ALIGN="LEFT"/> Board &gt; board)<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">GameState(const_player_ptr<BR ALIGN="LEFT"/> you, std::shared_ptr&lt; const<BR ALIGN="LEFT"/> Board &gt; board, enums::Symbol<BR ALIGN="LEFT"/> last_placed)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">GameState(const const_game<BR ALIGN="LEFT"/>_ptr &amp;game, const_player_ptr<BR ALIGN="LEFT"/> you, std::shared_ptr&lt; const<BR ALIGN="LEFT"/> Board &gt; board)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">GameState(const const_game<BR ALIGN="LEFT"/>_ptr &amp;game, const_player_ptr<BR ALIGN="LEFT"/> you, std::shared_ptr&lt; const<BR ALIGN="LEFT"/> Board &gt; board, enums::Symbol<BR ALIGN="LEFT"/> last_placed)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">const_game_state_ptr ApplyMove<BR ALIGN="LEFT"/>(const Position &amp;position) const<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">const_player_ptr LastPlayer() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">const_player_ptr CurrentPlayer() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">const_player_ptr You() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">std::shared_ptr&lt; std::pair<BR ALIGN="LEFT"/>&lt; enums::Symbol, bool &gt; &gt; Winner() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">std::vector&lt; const_position<BR ALIGN="LEFT"/>_ptr &gt; GetOpenPositions() const<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">std::vector&lt; const_position<BR ALIGN="LEFT"/>_ptr &gt; GetWinningMoves() const<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">std::vector&lt; const_position<BR ALIGN="LEFT"/>_ptr &gt; GetBlockingMoves() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">enums::Symbol LastPlaced() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Board GetBoard() const<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">int GetTurnNumber() const<BR ALIGN="LEFT"/></TD></TR>

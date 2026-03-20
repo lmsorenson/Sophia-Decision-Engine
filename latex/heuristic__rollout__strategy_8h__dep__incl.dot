@@ -6,6 +6,10 @@ digraph "examples/monte_carlo/tic_tac_toe/include/tic_tac_toe/models/heuristic_r
   edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
   node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
   Node1 [id="Node000001",label="examples/monte_carlo/tic_tac\l_toe/include/tic_tac_toe/models\l/heuristic_rollout_strategy.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
-  Node1 -> Node2 [id="edge2_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="examples/monte_carlo/tic_tac\l_toe/src/models/heuristic_rollout\l_strategy.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$heuristic__rollout__strategy_8cpp.html",tooltip=" "];
+  Node1 -> Node2 [id="edge4_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="examples/monte_carlo/tic_tac\l_toe/src/factories/tic_tac_toe\l_factory.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tic__tac__toe__factory_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [id="edge5_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="examples/monte_carlo/tic_tac\l_toe/src/models/heuristic_rollout\l_strategy.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$heuristic__rollout__strategy_8cpp.html",tooltip=" "];
+  Node1 -> Node4 [id="edge6_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="examples/monte_carlo/tic_tac\l_toe/tests/heuristic_rollout\l_strategy_tests.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$heuristic__rollout__strategy__tests_8cpp.html",tooltip=" "];
 }

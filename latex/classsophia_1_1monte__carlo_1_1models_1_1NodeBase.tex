@@ -20,7 +20,7 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Node\+Base\tex
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a67a5375c9fae74a385f9b09ed072c36f}{Node\+Base}} (const std\+::string \&name, TState state, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia\+::monte\+\_\+carlo\+::const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{sophia\+::monte\+\_\+carlo\+::logger\+\_\+ptr}} \&logger)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a4ca5eed6eed78811ac7d8655a667f5ad}{Node\+Base}} (const std\+::string \&name, TState state, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
 \item 
 TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a1457cd27400e746c075e0d1851ad00df}{Get\+State}} () const
 \begin{DoxyCompactList}\small\item\em Retrieves the state associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -37,9 +37,9 @@ void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2
 \begin{DoxyCompactList}\small\item\em Selects the best child action based on the UCB1 formula. (Selection Phase) This method is part of the selection phase of MCTS, where the tree is traversed from the root to a leaf node by selecting the most promising actions. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6be3943af70c9e7334d913393fb1b37d}{Expand}} ()
 \begin{DoxyCompactList}\small\item\em Expands the tree by creating a new child node from an untried action. (Expansion Phase) If the current node is not a terminal state and has untried actions, this method will create a new child node for one of those actions. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b}{Rollout}} ()
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5e26f02256b926494ebf19f32dfe9f84}{Rollout}} ()
 \begin{DoxyCompactList}\small\item\em Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollout, this phase estimates the value of the current node by simulating a path to a terminal state, usually with a simple and fast policy. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9}{Backpropagate}} (double reward)
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a9d16a79ece5e91e88932ca22c70d4e48}{Backpropagate}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \&reward)
 \begin{DoxyCompactList}\small\item\em Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) After a simulation, the result (reward) is propagated back up the tree, updating the visit counts and total rewards of the nodes along the path. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a839863194c78433b294b3c11dcf746c2}{Name}} () const
 \begin{DoxyCompactList}\small\item\em Returns the name of the node for identification. \end{DoxyCompactList}\item 
@@ -55,7 +55,7 @@ double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7b2f4bdc1
 \begin{DoxyCompactList}\small\item\em Gets the total reward accumulated at this node. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a3b57c4db3bce104f80944bca5558fa4d}{Is\+Terminal\+State}} () const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual function to check if the node represents a terminal state in the problem space. \end{DoxyCompactList}\item 
-virtual double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a48e865e8df5b298f3111c7d372327656}{Value}} () const =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a902c24ff603751187438f373aff99dad}{Value}} () const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual function to get the value or outcome of the terminal state (e.\+g., a score, win/loss outcome, etc.). \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a21d7afbcd694dbf00efa0dc1b8698780}{Select\+Action}} (std\+::string action\+\_\+name)=0
 \begin{DoxyCompactList}\small\item\em Selects a specific action by its name. \end{DoxyCompactList}\item 
@@ -69,11 +69,13 @@ virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef32
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a18b71c3bd5e5f4d4ff7198b02612abba}{Rollout\+Strategy}} () const override
-\begin{DoxyCompactList}\small\item\em Pure virtual function to get the rollout strategy to be used for the simulation phase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the rollout strategy to be used for the simulation phase. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a58087cad4f5fb79230bef69797c5b72e}{interpret\+\_\+result}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}}) const override
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia\+::monte\+\_\+carlo\+::const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6f494a77e927036a59c225af15584ab4}{m\+\_\+factory\+\_\+}}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6147f273f7dae271d2cc9033dd67d5c8}{m\+\_\+factory\+\_\+}}
 \begin{DoxyCompactList}\small\item\em A factory for creating nodes and actions, specific to the game or problem. \end{DoxyCompactList}\item 
 TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6e6a87ffd017ce10decc5d7eb901bef7}{m\+\_\+state\+\_\+}}
 \begin{DoxyCompactList}\small\item\em The state of the system that this node represents. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -113,12 +115,12 @@ This class provides a generic implementation of a node, using templates to suppo
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a67a5375c9fae74a385f9b09ed072c36f}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a67a5375c9fae74a385f9b09ed072c36f} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a4ca5eed6eed78811ac7d8655a667f5ad}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a4ca5eed6eed78811ac7d8655a667f5ad} 
 \index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!NodeBase@{NodeBase}}
 \index{NodeBase@{NodeBase}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{NodeBase()}{NodeBase()}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::\+Node\+Base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{TState}]{state,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia\+::monte\+\_\+carlo\+::const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$}]{factory,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{sophia\+::monte\+\_\+carlo\+::logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::\+Node\+Base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{TState}]{state,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$}]{factory,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})}
 
 
 
@@ -133,6 +135,21 @@ TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophi
 
 
 Retrieves the state associated with this node. 
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a58087cad4f5fb79230bef69797c5b72e}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a58087cad4f5fb79230bef69797c5b72e} 
+\index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!interpret\_result@{interpret\_result}}
+\index{interpret\_result@{interpret\_result}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
+\doxysubsubsection{\texorpdfstring{interpret\_result()}{interpret\_result()}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
+double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::interpret\+\_\+result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\+\_\+simulation\+\_\+result\+\_\+ptr}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a0c460792f3187c9f489e9a0be75dc67e}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_af317ebfc92e1e883e4b28b987e7e8d42}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State}}.
 
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a18b71c3bd5e5f4d4ff7198b02612abba}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a18b71c3bd5e5f4d4ff7198b02612abba} 
 \index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!RolloutStrategy@{RolloutStrategy}}
@@ -152,12 +169,12 @@ Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5a6b9
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6f494a77e927036a59c225af15584ab4}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6f494a77e927036a59c225af15584ab4} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6147f273f7dae271d2cc9033dd67d5c8}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6147f273f7dae271d2cc9033dd67d5c8} 
 \index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!m\_factory\_@{m\_factory\_}}
 \index{m\_factory\_@{m\_factory\_}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{m\_factory\_}{m\_factory\_}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia\+::monte\+\_\+carlo\+::const\+\_\+factory\+\_\+ptr}}$<$TState, TChange$>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::m\+\_\+factory\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$TState, TChange$>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::m\+\_\+factory\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

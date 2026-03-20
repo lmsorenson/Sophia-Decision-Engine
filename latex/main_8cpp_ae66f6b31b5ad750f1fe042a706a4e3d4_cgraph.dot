@@ -14,7 +14,7 @@ digraph "main"
   Node2 -> Node4 [id="edge15_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="sophia::monte_carlo::tic_tac\l_toe::models::Position::ParseMove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a73f2bf0b7a04018d686d3dd392712a90",tooltip="Parses a move from a Move name."];
   Node2 -> Node5 [id="edge16_Node000002_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="sophia::monte_carlo::MonteCarloTree\lSearch::run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#ae220cb411e5f28962a714e56e159745a",tooltip="Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state..."];
+  Node5 [id="Node000005",label="sophia::monte_carlo::MonteCarloTree\lSearch::run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#a39aa6d5f2c7ca35f229d02b14ed12071",tooltip="Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state..."];
   Node5 -> Node6 [id="edge17_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="sophia::logging::colors::highlight_node",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesophia_1_1logging_1_1colors.html#ac44bdd7ca4e76634886c2b902bbc3fa1",tooltip=" "];
   Node5 -> Node7 [id="edge18_Node000005_Node000007",color="steelblue1",style="solid",tooltip=" "];

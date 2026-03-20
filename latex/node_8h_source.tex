@@ -25,9 +25,9 @@
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6be3943af70c9e7334d913393fb1b37d}{Expand}}();}
 \DoxyCodeLine{00041\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b}{Rollout}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5e26f02256b926494ebf19f32dfe9f84}{Rollout}}();}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9}{Backpropagate}}(\textcolor{keywordtype}{double}\ reward);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a9d16a79ece5e91e88932ca22c70d4e48}{Backpropagate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \&reward);}
 \DoxyCodeLine{00057\ }
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a839863194c78433b294b3c11dcf746c2}{Name}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00060\ }
@@ -43,7 +43,7 @@
 \DoxyCodeLine{00080\ }
 \DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a3b57c4db3bce104f80944bca5558fa4d}{IsTerminalState}}()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00083\ }
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a48e865e8df5b298f3111c7d372327656}{Value}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a902c24ff603751187438f373aff99dad}{Value}}()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00086\ }
 \DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a21d7afbcd694dbf00efa0dc1b8698780}{SelectAction}}(std::string\ action\_name)\ =\ 0;}
 \DoxyCodeLine{00089\ }
@@ -66,11 +66,13 @@
 \DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{protected}:}
 \DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7ab5b029a025caaa763b0b56dbcc8265}{m\_logger\_}};}
 \DoxyCodeLine{00116\ }
-\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_afcaa239b875c4990dee32d00e50787b9}{m\_name\_}};}
-\DoxyCodeLine{00119\ \ \ \ \ \};}
-\DoxyCodeLine{00120\ \}}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//NODE\_H}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a0c460792f3187c9f489e9a0be75dc67e}{interpret\_result}}(\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ae04f33048ee6d5e7b76c91cf73fc218e}{const\_simulation\_result\_ptr}})\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_afcaa239b875c4990dee32d00e50787b9}{m\_name\_}};}
+\DoxyCodeLine{00121\ \ \ \ \ \};}
+\DoxyCodeLine{00122\ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//NODE\_H}}
 
 \end{DoxyCode}

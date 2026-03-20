@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debug_0',['DEBUG',['../namespacesophia_1_1logging_1_1colors.html#aaba0b77299e9a215826b01503b504450',1,'sophia::logging::colors']]]
+  ['bold_0',['BOLD',['../namespacesophia_1_1logging_1_1colors.html#a7db54cc85cb167ce8367a8107750b0cc',1,'sophia::logging::colors']]]
 ];

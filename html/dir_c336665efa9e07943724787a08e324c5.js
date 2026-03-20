@@ -9,5 +9,6 @@ var dir_c336665efa9e07943724787a08e324c5 =
     [ "move.cpp", "move_8cpp.html", null ],
     [ "player.cpp", "player_8cpp.html", null ],
     [ "position.cpp", "position_8cpp.html", null ],
-    [ "state.cpp", "state_8cpp.html", "state_8cpp" ]
+    [ "state.cpp", "state_8cpp.html", "state_8cpp" ],
+    [ "tic_tac_toe_simulation_result.cpp", "tic__tac__toe__simulation__result_8cpp.html", null ]
 ];

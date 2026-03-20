@@ -93,6 +93,7 @@ $(document).ready(function(){initNavTree('classsophia_1_1monte__carlo_1_1models_
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsophia_1_1monte__carlo_1_1models_1_1Node-members.html">List of all members</a>  </div>
@@ -130,12 +131,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6be3943af70c9e7334d913393fb1b37d" id="r_a6be3943af70c9e7334d913393fb1b37d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a6be3943af70c9e7334d913393fb1b37d">Expand</a> ()</td></tr>
 <tr class="memdesc:a6be3943af70c9e7334d913393fb1b37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands the tree by creating a new child node from an untried action. (Expansion Phase) If the current node is not a terminal state and has untried actions, this method will create a new child node for one of those actions.  <br /></td></tr>
 <tr class="separator:a6be3943af70c9e7334d913393fb1b37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45fdf487eedadd6518798de3d7cb016b" id="r_a45fdf487eedadd6518798de3d7cb016b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b">Rollout</a> ()</td></tr>
-<tr class="memdesc:a45fdf487eedadd6518798de3d7cb016b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollout, this phase estimates the value of the current node by simulating a path to a terminal state, usually with a simple and fast policy.  <br /></td></tr>
-<tr class="separator:a45fdf487eedadd6518798de3d7cb016b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ab17bae40a734dd206b82c78ec0fbe9" id="r_a1ab17bae40a734dd206b82c78ec0fbe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1ab17bae40a734dd206b82c78ec0fbe9">Backpropagate</a> (double reward)</td></tr>
-<tr class="memdesc:a1ab17bae40a734dd206b82c78ec0fbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) After a simulation, the result (reward) is propagated back up the tree, updating the visit counts and total rewards of the nodes along the path.  <br /></td></tr>
-<tr class="separator:a1ab17bae40a734dd206b82c78ec0fbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e26f02256b926494ebf19f32dfe9f84" id="r_a5e26f02256b926494ebf19f32dfe9f84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5e26f02256b926494ebf19f32dfe9f84">Rollout</a> ()</td></tr>
+<tr class="memdesc:a5e26f02256b926494ebf19f32dfe9f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollout, this phase estimates the value of the current node by simulating a path to a terminal state, usually with a simple and fast policy.  <br /></td></tr>
+<tr class="separator:a5e26f02256b926494ebf19f32dfe9f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d16a79ece5e91e88932ca22c70d4e48" id="r_a9d16a79ece5e91e88932ca22c70d4e48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a9d16a79ece5e91e88932ca22c70d4e48">Backpropagate</a> (const <a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a> &amp;reward)</td></tr>
+<tr class="memdesc:a9d16a79ece5e91e88932ca22c70d4e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) After a simulation, the result (reward) is propagated back up the tree, updating the visit counts and total rewards of the nodes along the path.  <br /></td></tr>
+<tr class="separator:a9d16a79ece5e91e88932ca22c70d4e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a839863194c78433b294b3c11dcf746c2" id="r_a839863194c78433b294b3c11dcf746c2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2">Name</a> () const</td></tr>
 <tr class="memdesc:a839863194c78433b294b3c11dcf746c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the node for identification.  <br /></td></tr>
 <tr class="separator:a839863194c78433b294b3c11dcf746c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,9 +158,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b57c4db3bce104f80944bca5558fa4d" id="r_a3b57c4db3bce104f80944bca5558fa4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a3b57c4db3bce104f80944bca5558fa4d">IsTerminalState</a> () const =0</td></tr>
 <tr class="memdesc:a3b57c4db3bce104f80944bca5558fa4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to check if the node represents a terminal state in the problem space.  <br /></td></tr>
 <tr class="separator:a3b57c4db3bce104f80944bca5558fa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48e865e8df5b298f3111c7d372327656" id="r_a48e865e8df5b298f3111c7d372327656"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48e865e8df5b298f3111c7d372327656">Value</a> () const =0</td></tr>
-<tr class="memdesc:a48e865e8df5b298f3111c7d372327656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.).  <br /></td></tr>
-<tr class="separator:a48e865e8df5b298f3111c7d372327656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902c24ff603751187438f373aff99dad" id="r_a902c24ff603751187438f373aff99dad"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a902c24ff603751187438f373aff99dad">Value</a> () const =0</td></tr>
+<tr class="memdesc:a902c24ff603751187438f373aff99dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.).  <br /></td></tr>
+<tr class="separator:a902c24ff603751187438f373aff99dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21d7afbcd694dbf00efa0dc1b8698780" id="r_a21d7afbcd694dbf00efa0dc1b8698780"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#a3ef3290edc6cb68dbc906cf5ad80c976">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a21d7afbcd694dbf00efa0dc1b8698780">SelectAction</a> (std::string action_name)=0</td></tr>
 <tr class="memdesc:a21d7afbcd694dbf00efa0dc1b8698780"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects a specific action by its name.  <br /></td></tr>
 <tr class="separator:a21d7afbcd694dbf00efa0dc1b8698780"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,6 +191,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1e77bb521e186a4b82c2ef4efec0ebb9" id="r_a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1e77bb521e186a4b82c2ef4efec0ebb9">m_total_reward_</a> = 0</td></tr>
 <tr class="memdesc:a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total reward accumulated from simulations passing through this node.  <br /></td></tr>
 <tr class="separator:a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0c460792f3187c9f489e9a0be75dc67e" id="r_a0c460792f3187c9f489e9a0be75dc67e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a0c460792f3187c9f489e9a0be75dc67e">interpret_result</a> (<a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a>) const =0</td></tr>
+<tr class="separator:a0c460792f3187c9f489e9a0be75dc67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -267,8 +273,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1ab17bae40a734dd206b82c78ec0fbe9" name="a1ab17bae40a734dd206b82c78ec0fbe9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ab17bae40a734dd206b82c78ec0fbe9">&#9670;&#160;</a></span>Backpropagate()</h2>
+<a id="a9d16a79ece5e91e88932ca22c70d4e48" name="a9d16a79ece5e91e88932ca22c70d4e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d16a79ece5e91e88932ca22c70d4e48">&#9670;&#160;</a></span>Backpropagate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +282,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Node::Backpropagate </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a> &amp;&#160;</td>
           <td class="paramname"><em>reward</em></td><td>)</td>
           <td></td>
         </tr>
@@ -375,6 +381,39 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a0c460792f3187c9f489e9a0be75dc67e" name="a0c460792f3187c9f489e9a0be75dc67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c460792f3187c9f489e9a0be75dc67e">&#9670;&#160;</a></span>interpret_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double sophia::monte_carlo::models::Node::interpret_result </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#af317ebfc92e1e883e4b28b987e7e8d42">sophia::monte_carlo::tic_tac_toe::models::State</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a58087cad4f5fb79230bef69797c5b72e">sophia::monte_carlo::models::NodeBase&lt; TState, TChange &gt;</a>, and <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a58087cad4f5fb79230bef69797c5b72e">sophia::monte_carlo::models::NodeBase&lt; GameState, Position &gt;</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 5 --></div>
+</div>
+
+</div>
+</div>
 <a id="a174e378c4581899275b3f1e601fad062" name="a174e378c4581899275b3f1e601fad062"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a174e378c4581899275b3f1e601fad062">&#9670;&#160;</a></span>IsLeafNode()</h2>
 
@@ -423,7 +462,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 5 --></div>
+<div class="center"><!-- SVG 6 --></div>
 </div>
 
 </div>
@@ -447,7 +486,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 6 --></div>
+<div class="center"><!-- SVG 7 --></div>
 </div>
 
 </div>
@@ -481,14 +520,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a45fdf487eedadd6518798de3d7cb016b" name="a45fdf487eedadd6518798de3d7cb016b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45fdf487eedadd6518798de3d7cb016b">&#9670;&#160;</a></span>Rollout()</h2>
+<a id="a5e26f02256b926494ebf19f32dfe9f84" name="a5e26f02256b926494ebf19f32dfe9f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e26f02256b926494ebf19f32dfe9f84">&#9670;&#160;</a></span>Rollout()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double Node::Rollout </td>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a> Node::Rollout </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -501,7 +540,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 7 --></div>
+<div class="center"><!-- SVG 8 --></div>
 </div>
 
 </div>
@@ -535,7 +574,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 8 --></div>
+<div class="center"><!-- SVG 9 --></div>
 </div>
 
 </div>
@@ -567,7 +606,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 9 --></div>
+<div class="center"><!-- SVG 10 --></div>
 </div>
 
 </div>
@@ -598,7 +637,7 @@ Here is the call graph for this function:</div>
 
 <p>Selects a specific action by its name. </p>
 
-<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a59ca069de96879d965700b9e72c42d77">sophia::monte_carlo::tic_tac_toe::models::State</a>.</p>
+<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#aaffe64212ab41858625a4a593281f443">sophia::monte_carlo::tic_tac_toe::models::State</a>.</p>
 
 </div>
 </div>
@@ -621,7 +660,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 10 --></div>
+<div class="center"><!-- SVG 11 --></div>
 </div>
 
 </div>
@@ -692,8 +731,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a48e865e8df5b298f3111c7d372327656" name="a48e865e8df5b298f3111c7d372327656"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48e865e8df5b298f3111c7d372327656">&#9670;&#160;</a></span>Value()</h2>
+<a id="a902c24ff603751187438f373aff99dad" name="a902c24ff603751187438f373aff99dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902c24ff603751187438f373aff99dad">&#9670;&#160;</a></span>Value()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -702,7 +741,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double sophia::monte_carlo::models::Node::Value </td>
+          <td class="memname">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e">const_simulation_result_ptr</a> sophia::monte_carlo::models::Node::Value </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -717,11 +756,11 @@ Here is the call graph for this function:</div>
 
 <p>Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.). </p>
 
-<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a0505d2a290fcb28751510b3ee581b4c8">sophia::monte_carlo::tic_tac_toe::models::State</a>.</p>
+<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a86ef2e76c0cce2ae4f3284ff23b9d14d">sophia::monte_carlo::tic_tac_toe::models::State</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 11 --></div>
+<div class="center"><!-- SVG 12 --></div>
 </div>
 
 </div>
