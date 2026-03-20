@@ -1,6 +1,11 @@
 #ifndef SOPHIA_MONTE_CARLO_FWD_H
 #define SOPHIA_MONTE_CARLO_FWD_H
 
+namespace sophia::logging
+{
+    class ILogger;
+}
+
 namespace sophia::monte_carlo::models
 {
     class Action;

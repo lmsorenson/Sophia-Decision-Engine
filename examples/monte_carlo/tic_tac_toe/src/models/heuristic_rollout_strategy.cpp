@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <random>
 #include <utility>
+#include <logging/ilogger.h>
 
 using sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy;
 using sophia::monte_carlo::tic_tac_toe::models::Move;

@@ -1,5 +1,7 @@
 add_library(sophia_logging
-        console_logger.cpp)
+        console_logger.cpp
+        log_dispatcher.cpp
+        logger2.cpp)
 
 target_include_directories(sophia_logging
         PUBLIC

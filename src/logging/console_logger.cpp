@@ -43,7 +43,7 @@ namespace sophia::logging
 
     ConsoleLogger::ConsoleLogger(LogLevel min_level) : min_level_(min_level) {}
 
-    void ConsoleLogger::log(LogLevel level, const std::string& message)
+    void ConsoleLogger::log(const LogLevel level, LogChannel channel, const std::string& message)
     {
         if (level < min_level_)
         {
@@ -57,23 +57,26 @@ namespace sophia::logging
         
         switch (level)
         {
-            case LogLevel::TRACE:
+            case LogLevel::None:
+                level_str = "";
+                break;
+            case LogLevel::Trace:
                 level_str = "[TRACE]";
                 color = use_colors ? colors::TRACE : "";
                 break;
-            case LogLevel::DEBUG:
+            case LogLevel::Debug:
                 level_str = "[DEBUG]";
                 color = use_colors ? colors::DEBUG : "";
                 break;
-            case LogLevel::INFO:
+            case LogLevel::Info:
                 level_str = "[INFO] ";
                 color = use_colors ? colors::INFO : "";
                 break;
-            case LogLevel::WARN:
+            case LogLevel::Warn:
                 level_str = "[WARN] ";
                 color = use_colors ? colors::WARN : "";
                 break;
-            case LogLevel::ERROR:
+            case LogLevel::Error:
                 level_str = "[ERROR]";
                 color = use_colors ? colors::ERROR : "";
                 break;
@@ -84,7 +87,7 @@ namespace sophia::logging
         }
 
         // For errors, log to std::cerr. For all others, log to std::cout.
-        if (level == LogLevel::ERROR)
+        if (level == LogLevel::Error)
         {
             std::cerr << color << level_str << reset << " " << message << std::endl;
         }

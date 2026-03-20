@@ -278,7 +278,8 @@ void Board::print() const
         }
         ss << std::endl;
     }
-    m_logger_->info("Board state:\n{}", ss.str());
+    m_logger_->display("\033[HLet's Play Tic Tac Toe!");
+    m_logger_->display("\n{}", ss.str());
 }
 
 

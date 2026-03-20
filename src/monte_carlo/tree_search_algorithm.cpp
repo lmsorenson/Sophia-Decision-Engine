@@ -4,6 +4,7 @@
 #include <cmath>
 #include <monte_carlo/common_aliases.h>
 #include <monte_carlo/models/action.h>
+#include <logging/ilogger.h>
 
 #include "monte_carlo/models/simulation_result.h"
 

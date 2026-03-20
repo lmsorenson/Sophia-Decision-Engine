@@ -2,6 +2,7 @@
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <logging/colors.h>
+#include <logging/ilogger.h>
 #include <cmath>
 #include <utility>
 #include <sstream>

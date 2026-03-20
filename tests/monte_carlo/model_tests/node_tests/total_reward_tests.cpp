@@ -9,7 +9,7 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_total_reward_default_value_test)
     {
-        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
+        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::Error);
 
         const auto n = MockNode("name 1", nullptr, test_logger);
 
@@ -20,7 +20,7 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_total_reward_with_non_default_value_test)
     {
-        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
+        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::Error);
         auto n = MockNode("name 1", nullptr, test_logger);
 
         n.SetTotalReward(30);

@@ -7,6 +7,7 @@
 #include <tic_tac_toe/models/human.h>
 #include <monte_carlo/models/action.h>
 #include <monte_carlo/common_aliases.h>
+#include <logging/ilogger.h>
 
 using sophia::monte_carlo::tic_tac_toe::models::State;
 using sophia::monte_carlo::tic_tac_toe::models::TicTacToeSimulationResult;
