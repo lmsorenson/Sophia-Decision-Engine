@@ -35,12 +35,12 @@ sophia::monte_carlo::node_ptr TicTacToeFactory::CreateNode(std::string name) con
     auto board = make_shared<Board>(m_logger_);
     const auto game_state = make_shared<GameState>(m_game_, m_you_, board);
 
-    return std::static_pointer_cast<models::Node>(make_shared<State>(name, *game_state, shared_from_this(), m_logger_));
+    return make_shared<State>(name, *game_state, shared_from_this(), m_logger_);
 }
 
 sophia::monte_carlo::node_ptr TicTacToeFactory::CreateNode(std::string name, GameState game_state) const
 {
-    return std::static_pointer_cast<models::Node>(make_shared<State>(name, game_state, shared_from_this(), m_logger_));
+    return make_shared<State>(name, game_state, shared_from_this(), m_logger_);
 }
 
 sophia::monte_carlo::action_ptr TicTacToeFactory::CreateAction(node_base_ptr<GameState, Position> node, Position change) const
