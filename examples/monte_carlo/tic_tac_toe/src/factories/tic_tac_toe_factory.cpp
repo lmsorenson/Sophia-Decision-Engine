@@ -21,7 +21,7 @@ using sophia::monte_carlo::rollout_strategy_ptr;
 using std::make_shared;
 using std::shared_ptr;
 
-TicTacToeFactory::TicTacToeFactory(const const_game_ptr& game, const_player_ptr you, logger_ptr logger)
+TicTacToeFactory::TicTacToeFactory(const const_game_ptr& game, const const_player_ptr& you, logger_ptr logger)
 : GenericTreeFactory(std::move(logger))
 {
     // Pre-register default strategies

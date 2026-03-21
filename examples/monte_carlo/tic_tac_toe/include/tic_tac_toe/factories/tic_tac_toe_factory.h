@@ -35,7 +35,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          * @param you a shared pointer to the player that owns the simulation.
          * @param logger the logger for the factory to use.
          */
-        explicit TicTacToeFactory(const const_game_ptr& game, const_player_ptr you, logger_ptr logger);
+        explicit TicTacToeFactory(const const_game_ptr& game, const const_player_ptr& you, logger_ptr logger);
         ~TicTacToeFactory() override = default;
     };
 }
