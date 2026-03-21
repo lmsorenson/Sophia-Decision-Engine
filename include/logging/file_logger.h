@@ -2,7 +2,7 @@
 #define SOPHIA_FILE_LOGGER_H
 
 #include <logging/ilogger.h>
-#include <string>
+#include <filesystem>
 
 namespace sophia::logging
 {
@@ -14,15 +14,16 @@ namespace sophia::logging
     public:
         /**
          * @brief Constructs a ConsoleLogger with a minimum log level.
+         * @param filename
          * @param min_level The minimum severity level to log. Messages below this level will be ignored.
          */
-        explicit FileLogger(const std::string &filename, LogLevel min_level = LogLevel::Info);
+        explicit FileLogger(const std::filesystem::path &filename, LogLevel min_level = LogLevel::Info);
 
     private:
         void log(LogLevel level, LogChannel channel, const std::string& message) override;
 
         LogLevel min_level_;
-        std::string filename_;
+        std::filesystem::path filename_;
     };
 
 } // namespace sophia::logging

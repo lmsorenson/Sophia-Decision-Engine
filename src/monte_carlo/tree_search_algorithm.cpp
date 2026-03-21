@@ -116,7 +116,6 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
     if (logger)
     {
         logger->display(logging::LogChannel::Stats, "\033[2J\033[3J\033[H");
-
         logger->display(logging::LogChannel::Stats, "\n--- MCTS Complete: Final Action Summary ---");
         logger->display(logging::LogChannel::Stats, "{:<25} | {:<12} | {:<15} | {:<12} | {:<12} | {:<10}",
             "Action (-> Node)", "Visits", "Total reward", "Avg reward", "UCB (c=2)", "Selected");

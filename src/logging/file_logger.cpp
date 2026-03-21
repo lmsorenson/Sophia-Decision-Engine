@@ -6,11 +6,11 @@ namespace fs = std::filesystem;
 
 namespace sophia::logging
 {
-    FileLogger::FileLogger(const std::string &filename, LogLevel min_level)
+    FileLogger::FileLogger(const std::filesystem::path &filename, LogLevel min_level)
         : filename_(filename)
         , min_level_(min_level)
     {
-        if (std::ofstream file(filename); file.is_open())
+        if (std::ofstream file(filename.c_str()); file.is_open())
         {
             file.close();
         }
@@ -18,7 +18,7 @@ namespace sophia::logging
 
     void FileLogger::log(const LogLevel level, LogChannel channel, const std::string& message)
     {
-        if (std::ofstream file(filename_, std::ios::app); file.is_open())
+        if (std::ofstream file(filename_.c_str(), std::ios::app); file.is_open())
         {
             file << message << std::endl;
             file.close();
