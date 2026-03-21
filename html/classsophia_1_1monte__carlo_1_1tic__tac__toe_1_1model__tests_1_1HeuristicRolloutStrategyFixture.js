@@ -1,6 +1,6 @@
 var classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture =
 [
-    [ "createActions", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html#af759017f5761e63a065307dbde031fb3", null ],
+    [ "createActions", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html#a0fce9a0d92d4be7de39984ebe7b59433", null ],
     [ "createBoard", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html#a388859b0fe534b3ce3641ff96f2e13f0", null ],
     [ "createGameState", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html#a975bd3628fb251b1d70aca76778c22df", null ],
     [ "createStrategy", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1HeuristicRolloutStrategyFixture.html#aceaa91bd8a94c2498176834112bb4cd8", null ],

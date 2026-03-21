@@ -4,7 +4,7 @@ var searchData=
   ['const_5factor_5fptr_1',['const_actor_ptr',['../namespacesophia_1_1monte__carlo.html#a6da0016dc97ef526d65c5a246a5343f0',1,'sophia::monte_carlo']]],
   ['const_5fboard_5fptr_2',['const_board_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#af39e4b666fa0319227cbfea4c738b919',1,'sophia::monte_carlo::tic_tac_toe']]],
   ['const_5fbot_5fptr_3',['const_bot_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#ad2b9836ba54e987047c2d454a5051d75',1,'sophia::monte_carlo::tic_tac_toe']]],
-  ['const_5ffactory_5fptr_4',['const_factory_ptr',['../namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c',1,'sophia::monte_carlo']]],
+  ['const_5ffactory_5fptr_4',['const_factory_ptr',['../classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html#a36299936335c508c9ddf5b42844c428b',1,'sophia::monte_carlo::factories::GenericTreeFactory::const_factory_ptr'],['../namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c',1,'sophia::monte_carlo::const_factory_ptr']]],
   ['const_5fgame_5fptr_5',['const_game_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#aa0c0ed02ccf27849efc367aa96b00158',1,'sophia::monte_carlo::tic_tac_toe']]],
   ['const_5fgame_5fref_6',['const_game_ref',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#a024299c1a8beb0e914ba94575fb126f0',1,'sophia::monte_carlo::tic_tac_toe']]],
   ['const_5fgame_5fstate_5fptr_7',['const_game_state_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#ac77fc1178175eaa1b57da5c105cfb7d4',1,'sophia::monte_carlo::tic_tac_toe']]],
@@ -17,5 +17,5 @@ var searchData=
   ['const_5fplayer_5fptr_14',['const_player_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#ad14733836aa0aac6482dc75a56f3b5ba',1,'sophia::monte_carlo::tic_tac_toe']]],
   ['const_5fposition_5fptr_15',['const_position_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#a2daf69afec382bd3d1c852a95035fbcc',1,'sophia::monte_carlo::tic_tac_toe']]],
   ['const_5fsimulation_5fresult_5fptr_16',['const_simulation_result_ptr',['../namespacesophia_1_1monte__carlo.html#ae04f33048ee6d5e7b76c91cf73fc218e',1,'sophia::monte_carlo']]],
-  ['const_5fstate_5fptr_17',['const_state_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#af44bd7c2e0929e0e656ef4f7ac04447d',1,'sophia::monte_carlo::tic_tac_toe']]]
+  ['const_5fstate_5fptr_17',['const_state_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#af44bd7c2e0929e0e656ef4f7ac04447d',1,'sophia::monte_carlo::tic_tac_toe::const_state_ptr'],['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#abcdcc29186e1409dfce4872c5a5321eb',1,'sophia::monte_carlo::models::NodeBase::const_state_ptr'],['../classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#aaf8a6c0126c564eac90e0b6b5e57c840',1,'sophia::monte_carlo::factories::TreeFactoryBase::const_state_ptr'],['../classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html#a6f43567c8eca49cb5324145ef98eb4b4',1,'sophia::monte_carlo::factories::GenericTreeFactory::const_state_ptr']]]
 ];

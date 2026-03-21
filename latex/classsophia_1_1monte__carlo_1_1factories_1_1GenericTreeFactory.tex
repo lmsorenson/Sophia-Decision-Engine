@@ -1,0 +1,285 @@
+\doxysection{sophia\+::monte\+\_\+carlo\+::factories\+::Generic\+Tree\+Factory\texorpdfstring{$<$}{<} TState, TChange, TNode, TAction, TKey \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+
+
+A generic implementation of \doxylink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{Tree\+Factory\+Base} that creates nodes and actions of specified types.  
+
+
+
+
+{\ttfamily \#include $<$generic\+\_\+tree\+\_\+factory.\+h$>$}
+
+
+
+Inheritance diagram for sophia\+::monte\+\_\+carlo\+::factories\+::Generic\+Tree\+Factory\texorpdfstring{$<$}{<} TState, TChange, TNode, TAction, TKey \texorpdfstring{$>$}{>}\+:
+% FIG 0
+
+
+Collaboration diagram for sophia\+::monte\+\_\+carlo\+::factories\+::Generic\+Tree\+Factory\texorpdfstring{$<$}{<} TState, TChange, TNode, TAction, TKey \texorpdfstring{$>$}{>}\+:
+% FIG 1
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}{node\+\_\+base\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{models\+::\+Node\+Base}}$<$ TState, TChange $>$ $>$
+\item 
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6f43567c8eca49cb5324145ef98eb4b4}{const\+\_\+state\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ const TState $>$
+\item 
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a36299936335c508c9ddf5b42844c428b}{const\+\_\+factory\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{Tree\+Factory\+Base}}$<$ TState, TChange $>$ $>$
+\item 
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}{node\+\_\+generator}} = std\+::function$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}}(std\+::string, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a36299936335c508c9ddf5b42844c428b}{const\+\_\+factory\+\_\+ptr}}, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a2abc4165aa0ee21743c716253b9f21ea}{Register\+Strategy}} (TKey key, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} strategy)
+\begin{DoxyCompactList}\small\item\em Registers a rollout strategy with the factory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a9cd270aca9f49d575ee0ee022d54781c}{Set\+Active\+Strategy}} (TKey key)
+\begin{DoxyCompactList}\small\item\em Sets the active rollout strategy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_abee5f041262e54830eb886d807914e45}{Set\+Node\+Generator}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}{node\+\_\+generator}} generator)
+\begin{DoxyCompactList}\small\item\em Sets the generator function for creating nodes from just a name (e.\+g., root nodes). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a9ccd86168e1eda942488b3d58ab23b9e}{Create\+Node}} (std\+::string name) const override
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6008e6cca4763dfb39f0638266c98045}{Create\+Node}} (std\+::string name, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6f43567c8eca49cb5324145ef98eb4b4}{const\+\_\+state\+\_\+ptr}} state) const override
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ae4ffc04eed2b77b5aa6385a0d9facb60}{Create\+Action}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}{node\+\_\+base\+\_\+ptr}} node, TChange change) const override
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a15407b93610556bf9ba29f6c5110d201}{Create\+Action}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}{node\+\_\+base\+\_\+ptr}} node, TChange change, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \&actor) const override
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ab2eadf664bbeb5e0875da42ce3b7568e}{Create\+Strategy}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base$<$ TState, TChange $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_ab4c92254f0d288270960e98b9f351905}{Tree\+Factory\+Base}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} logger)
+\item 
+virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_afe9f344ea85eb7471197bc60be940d68}{\texorpdfstring{$\sim$}{\string~}\+Tree\+Factory\+Base}} ()=default
+\item 
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a73f38461fd49d3d47e8147f3f040e06f}{Create\+Action}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$ node, TChange change, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \&actor) const =0
+\item 
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aac8595b6b22a52c3a397bbc318a02bd0}{Create\+Action}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{node\+\_\+base\+\_\+ptr}}$<$ TState, TChange $>$ node, TChange change) const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ TKey, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a4f966f9fdd75062cd8b41428a4093729}{m\+\_\+strategies\+\_\+}}
+\item 
+TKey \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_afdc2daa5b3dc01826bdb9a2e422c46c3}{m\+\_\+active\+\_\+strategy\+\_\+key\+\_\+}} \{\}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}{node\+\_\+generator}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ad1fddd13088b2a1437a238f224a84b28}{m\+\_\+node\+\_\+generator\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base$<$ TState, TChange $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_ae8524f3cf98b794e95962f11c8a08b9b}{m\+\_\+logger\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base$<$ TState, TChange $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a8310e68e3b30cdd09c8bf4a065450deb}{state\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ TState $>$
+\item 
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aaf8a6c0126c564eac90e0b6b5e57c840}{const\+\_\+state\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ const TState $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TState, typename TChange, typename TNode, typename TAction, typename TKey = std\+::string$>$\newline
+class sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory$<$ TState, TChange, TNode, TAction, TKey $>$}
+A generic implementation of \doxylink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{Tree\+Factory\+Base} that creates nodes and actions of specified types. 
+
+This factory assumes that TNode and TAction have constructors that match the standard signatures used in the Monte Carlo framework.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TState} & The state type. \\
+\hline
+{\em TChange} & The change type. \\
+\hline
+{\em TNode} & The concrete Node type to create. \\
+\hline
+{\em TAction} & The concrete Action type to create. \\
+\hline
+{\em TKey} & The type used to identify and select rollout strategies. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a36299936335c508c9ddf5b42844c428b}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a36299936335c508c9ddf5b42844c428b} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!const\_factory\_ptr@{const\_factory\_ptr}}
+\index{const\_factory\_ptr@{const\_factory\_ptr}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{const\_factory\_ptr}{const\_factory\_ptr}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::const\+\_\+factory\+\_\+ptr =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{Tree\+Factory\+Base}}$<$TState, TChange$>$ $>$}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6f43567c8eca49cb5324145ef98eb4b4}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6f43567c8eca49cb5324145ef98eb4b4} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!const\_state\_ptr@{const\_state\_ptr}}
+\index{const\_state\_ptr@{const\_state\_ptr}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{const\_state\_ptr}{const\_state\_ptr}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::const\+\_\+state\+\_\+ptr =  std\+::shared\+\_\+ptr$<$const TState$>$}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!node\_base\_ptr@{node\_base\_ptr}}
+\index{node\_base\_ptr@{node\_base\_ptr}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{node\_base\_ptr}{node\_base\_ptr}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::node\+\_\+base\+\_\+ptr =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{models\+::\+Node\+Base}}$<$TState, TChange$>$ $>$}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!node\_generator@{node\_generator}}
+\index{node\_generator@{node\_generator}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{node\_generator}{node\_generator}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::node\+\_\+generator =  std\+::function$<$\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}}(std\+::string, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a36299936335c508c9ddf5b42844c428b}{const\+\_\+factory\+\_\+ptr}}, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}}\&)$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ae4ffc04eed2b77b5aa6385a0d9facb60}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ae4ffc04eed2b77b5aa6385a0d9facb60} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!CreateAction@{CreateAction}}
+\index{CreateAction@{CreateAction}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{CreateAction()}{CreateAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::\+Create\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}{node\+\_\+base\+\_\+ptr}}}]{node,  }\item[{TChange}]{change }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a15407b93610556bf9ba29f6c5110d201}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a15407b93610556bf9ba29f6c5110d201} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!CreateAction@{CreateAction}}
+\index{CreateAction@{CreateAction}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{CreateAction()}{CreateAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::\+Create\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}{node\+\_\+base\+\_\+ptr}}}]{node,  }\item[{TChange}]{change,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\+\_\+actor\+\_\+ptr}} \&}]{actor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a9ccd86168e1eda942488b3d58ab23b9e}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a9ccd86168e1eda942488b3d58ab23b9e} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!CreateNode@{CreateNode}}
+\index{CreateNode@{CreateNode}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{CreateNode()}{CreateNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::\+Create\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a new Node. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the new Node being created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a shared pointer to a Node. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_aa638b07395920b100784074c3af4c3d8}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base$<$ TState, TChange $>$}}.
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6008e6cca4763dfb39f0638266c98045}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6008e6cca4763dfb39f0638266c98045} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!CreateNode@{CreateNode}}
+\index{CreateNode@{CreateNode}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{CreateNode()}{CreateNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::\+Create\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6f43567c8eca49cb5324145ef98eb4b4}{const\+\_\+state\+\_\+ptr}}}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a new Node. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the new Node being created. \\
+\hline
+{\em state} & the state represented by the Node being created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a shared pointer to a Node. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a5ff5652bfa89815efa01830f1debe3cb}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base$<$ TState, TChange $>$}}.
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ab2eadf664bbeb5e0875da42ce3b7568e}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ab2eadf664bbeb5e0875da42ce3b7568e} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!CreateStrategy@{CreateStrategy}}
+\index{CreateStrategy@{CreateStrategy}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{CreateStrategy()}{CreateStrategy()}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::\+Create\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a new Strategy. \begin{DoxyReturn}{Returns}
+a shared pointer to a rollout strategy. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a20f69a5532b9e6c8ad2271fe96e582d8}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base$<$ TState, TChange $>$}}.
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a2abc4165aa0ee21743c716253b9f21ea}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a2abc4165aa0ee21743c716253b9f21ea} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!RegisterStrategy@{RegisterStrategy}}
+\index{RegisterStrategy@{RegisterStrategy}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterStrategy()}{RegisterStrategy()}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::\+Register\+Strategy (\begin{DoxyParamCaption}\item[{TKey}]{key,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}}}]{strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a rollout strategy with the factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to identify the strategy. \\
+\hline
+{\em strategy} & The strategy instance. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a9cd270aca9f49d575ee0ee022d54781c}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a9cd270aca9f49d575ee0ee022d54781c} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!SetActiveStrategy@{SetActiveStrategy}}
+\index{SetActiveStrategy@{SetActiveStrategy}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{SetActiveStrategy()}{SetActiveStrategy()}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::\+Set\+Active\+Strategy (\begin{DoxyParamCaption}\item[{TKey}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the active rollout strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key of the strategy to use. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_abee5f041262e54830eb886d807914e45}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_abee5f041262e54830eb886d807914e45} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!SetNodeGenerator@{SetNodeGenerator}}
+\index{SetNodeGenerator@{SetNodeGenerator}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{SetNodeGenerator()}{SetNodeGenerator()}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::\+Set\+Node\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}{node\+\_\+generator}}}]{generator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the generator function for creating nodes from just a name (e.\+g., root nodes). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em generator} & A function that returns a new node given a name. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_afdc2daa5b3dc01826bdb9a2e422c46c3}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_afdc2daa5b3dc01826bdb9a2e422c46c3} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!m\_active\_strategy\_key\_@{m\_active\_strategy\_key\_}}
+\index{m\_active\_strategy\_key\_@{m\_active\_strategy\_key\_}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{m\_active\_strategy\_key\_}{m\_active\_strategy\_key\_}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+TKey \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::m\+\_\+active\+\_\+strategy\+\_\+key\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ad1fddd13088b2a1437a238f224a84b28}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ad1fddd13088b2a1437a238f224a84b28} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!m\_node\_generator\_@{m\_node\_generator\_}}
+\index{m\_node\_generator\_@{m\_node\_generator\_}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{m\_node\_generator\_}{m\_node\_generator\_}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}{node\+\_\+generator}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::m\+\_\+node\+\_\+generator\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a4f966f9fdd75062cd8b41428a4093729}\label{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a4f966f9fdd75062cd8b41428a4093729} 
+\index{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}!m\_strategies\_@{m\_strategies\_}}
+\index{m\_strategies\_@{m\_strategies\_}!sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$@{sophia::monte\_carlo::factories::GenericTreeFactory$<$ TState, TChange, TNode, TAction, TKey $>$}}
+\doxysubsubsection{\texorpdfstring{m\_strategies\_}{m\_strategies\_}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange , typename TNode , typename TAction , typename TKey  = std\+::string$>$ \\
+std\+::map$<$TKey, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}}$>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Generic\+Tree\+Factory}}$<$ TState, TChange, TNode, TAction, TKey $>$\+::m\+\_\+strategies\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/monte\+\_\+carlo/factories/\mbox{\hyperlink{generic__tree__factory_8h}{generic\+\_\+tree\+\_\+factory.\+h}}\end{DoxyCompactItemize}

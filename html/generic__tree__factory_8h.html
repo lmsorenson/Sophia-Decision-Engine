@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sophia: include/monte_carlo/factories/tree_factory_interface.h File Reference</title>
+<title>Sophia: include/monte_carlo/factories/generic_tree_factory.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('tree__factory__interface_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('generic__tree__factory_8h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,15 +93,18 @@ $(document).ready(function(){initNavTree('tree__factory__interface_8h.html','');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">tree_factory_interface.h File Reference</div></div>
+  <div class="headertitle"><div class="title">generic_tree_factory.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="tree__factory__base_8h_source.html">monte_carlo/factories/tree_factory_base.h</a>&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;<a class="el" href="include_2monte__carlo_2fwd_8h_source.html">monte_carlo/fwd.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="include_2monte__carlo_2common__aliases_8h_source.html">monte_carlo/common_aliases.h</a>&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;monte_carlo/factories/generic_tree_factory.tpp&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for tree_factory_interface.h:</div>
+Include dependency graph for generic_tree_factory.h:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 --></div>
 </div>
@@ -111,11 +114,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><!-- SVG 1 --></div>
 </div>
 </div>
-<p><a href="tree__factory__interface_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="generic__tree__factory_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">sophia::monte_carlo::factories::TreeFactoryBase&lt; TState, TChange &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html">sophia::monte_carlo::factories::GenericTreeFactory&lt; TState, TChange, TNode, TAction, TKey &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic implementation of <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">TreeFactoryBase</a> that creates nodes and actions of specified types.  <a href="classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -132,7 +136,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9b76fddbf433e1d10a556504853c7551.html">monte_carlo</a></li><li class="navelem"><a class="el" href="dir_ca3258acda57ca6263514a57911db05b.html">factories</a></li><li class="navelem"><a class="el" href="tree__factory__interface_8h.html">tree_factory_interface.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_9b76fddbf433e1d10a556504853c7551.html">monte_carlo</a></li><li class="navelem"><a class="el" href="dir_ca3258acda57ca6263514a57911db05b.html">factories</a></li><li class="navelem"><a class="el" href="generic__tree__factory_8h.html">generic_tree_factory.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

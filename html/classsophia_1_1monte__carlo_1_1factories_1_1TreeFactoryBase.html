@@ -93,12 +93,13 @@ $(document).ready(function(){initNavTree('classsophia_1_1monte__carlo_1_1factori
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">sophia::monte_carlo::factories::TreeFactoryBase&lt; TState, TChange &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="tree__factory__interface_8h_source.html">tree_factory_interface.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="tree__factory__base_8h_source.html">tree_factory_base.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sophia::monte_carlo::factories::TreeFactoryBase&lt; TState, TChange &gt;:</div>
 <div class="dyncontent">
@@ -112,12 +113,14 @@ Collaboration diagram for sophia::monte_carlo::factories::TreeFactoryBase&lt; TS
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab4c92254f0d288270960e98b9f351905" id="r_ab4c92254f0d288270960e98b9f351905"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#ab4c92254f0d288270960e98b9f351905">TreeFactoryBase</a> (<a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">logger_ptr</a> logger)</td></tr>
+<tr class="separator:ab4c92254f0d288270960e98b9f351905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe9f344ea85eb7471197bc60be940d68" id="r_afe9f344ea85eb7471197bc60be940d68"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#afe9f344ea85eb7471197bc60be940d68">~TreeFactoryBase</a> ()=default</td></tr>
 <tr class="separator:afe9f344ea85eb7471197bc60be940d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa638b07395920b100784074c3af4c3d8" id="r_aa638b07395920b100784074c3af4c3d8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#aa638b07395920b100784074c3af4c3d8">CreateNode</a> (std::string name) const =0</td></tr>
 <tr class="separator:aa638b07395920b100784074c3af4c3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a410fb7b25b1af2eeb3fcdc1e3744dc67" id="r_a410fb7b25b1af2eeb3fcdc1e3744dc67"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a410fb7b25b1af2eeb3fcdc1e3744dc67">CreateNode</a> (std::string name, TState state) const =0</td></tr>
-<tr class="separator:a410fb7b25b1af2eeb3fcdc1e3744dc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff5652bfa89815efa01830f1debe3cb" id="r_a5ff5652bfa89815efa01830f1debe3cb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a5ff5652bfa89815efa01830f1debe3cb">CreateNode</a> (std::string name, <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#aaf8a6c0126c564eac90e0b6b5e57c840">const_state_ptr</a> state) const =0</td></tr>
+<tr class="separator:a5ff5652bfa89815efa01830f1debe3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f38461fd49d3d47e8147f3f040e06f" id="r_a73f38461fd49d3d47e8147f3f040e06f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#a3ef3290edc6cb68dbc906cf5ad80c976">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a73f38461fd49d3d47e8147f3f040e06f">CreateAction</a> (<a class="el" href="namespacesophia_1_1monte__carlo.html#a35bc3fd4811a61909c8823d8cfb31cdb">node_base_ptr</a>&lt; TState, TChange &gt; node, TChange change, const <a class="el" href="namespacesophia_1_1monte__carlo.html#a6da0016dc97ef526d65c5a246a5343f0">const_actor_ptr</a> &amp;actor) const =0</td></tr>
 <tr class="separator:a73f38461fd49d3d47e8147f3f040e06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac8595b6b22a52c3a397bbc318a02bd0" id="r_aac8595b6b22a52c3a397bbc318a02bd0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#a3ef3290edc6cb68dbc906cf5ad80c976">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#aac8595b6b22a52c3a397bbc318a02bd0">CreateAction</a> (<a class="el" href="namespacesophia_1_1monte__carlo.html#a35bc3fd4811a61909c8823d8cfb31cdb">node_base_ptr</a>&lt; TState, TChange &gt; node, TChange change) const =0</td></tr>
@@ -129,8 +132,39 @@ Public Member Functions</h2></td></tr>
 Protected Types</h2></td></tr>
 <tr class="memitem:a8310e68e3b30cdd09c8bf4a065450deb" id="r_a8310e68e3b30cdd09c8bf4a065450deb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a8310e68e3b30cdd09c8bf4a065450deb">state_ptr</a> = std::shared_ptr&lt; TState &gt;</td></tr>
 <tr class="separator:a8310e68e3b30cdd09c8bf4a065450deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf8a6c0126c564eac90e0b6b5e57c840" id="r_aaf8a6c0126c564eac90e0b6b5e57c840"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#aaf8a6c0126c564eac90e0b6b5e57c840">const_state_ptr</a> = std::shared_ptr&lt; const TState &gt;</td></tr>
+<tr class="separator:aaf8a6c0126c564eac90e0b6b5e57c840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ae8524f3cf98b794e95962f11c8a08b9b" id="r_ae8524f3cf98b794e95962f11c8a08b9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">logger_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#ae8524f3cf98b794e95962f11c8a08b9b">m_logger_</a></td></tr>
+<tr class="separator:ae8524f3cf98b794e95962f11c8a08b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aaf8a6c0126c564eac90e0b6b5e57c840" name="aaf8a6c0126c564eac90e0b6b5e57c840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf8a6c0126c564eac90e0b6b5e57c840">&#9670;&#160;</a></span>const_state_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TState , typename TChange &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">sophia::monte_carlo::factories::TreeFactoryBase</a>&lt; TState, TChange &gt;::const_state_ptr =  std::shared_ptr&lt;const TState&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8310e68e3b30cdd09c8bf4a065450deb" name="a8310e68e3b30cdd09c8bf4a065450deb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8310e68e3b30cdd09c8bf4a065450deb">&#9670;&#160;</a></span>state_ptr</h2>
 
@@ -156,6 +190,34 @@ template&lt;typename TState , typename TChange &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab4c92254f0d288270960e98b9f351905" name="ab4c92254f0d288270960e98b9f351905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c92254f0d288270960e98b9f351905">&#9670;&#160;</a></span>TreeFactoryBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TState , typename TChange &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">sophia::monte_carlo::factories::TreeFactoryBase</a>&lt; TState, TChange &gt;::TreeFactoryBase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">logger_ptr</a>&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afe9f344ea85eb7471197bc60be940d68" name="afe9f344ea85eb7471197bc60be940d68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe9f344ea85eb7471197bc60be940d68">&#9670;&#160;</a></span>~TreeFactoryBase()</h2>
 
@@ -316,12 +378,12 @@ template&lt;typename TState , typename TChange &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a shared pointer to a Node. </dd></dl>
 
-<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#ab8700140ed8be41549a9dcae81118129">sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory</a>.</p>
+<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html#a9ccd86168e1eda942488b3d58ab23b9e">sophia::monte_carlo::factories::GenericTreeFactory&lt; TState, TChange, TNode, TAction, TKey &gt;</a>, and <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html#a9ccd86168e1eda942488b3d58ab23b9e">sophia::monte_carlo::factories::GenericTreeFactory&lt; models::GameState, models::Position, models::State, models::Move, RolloutStrategyType &gt;</a>.</p>
 
 </div>
 </div>
-<a id="a410fb7b25b1af2eeb3fcdc1e3744dc67" name="a410fb7b25b1af2eeb3fcdc1e3744dc67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a410fb7b25b1af2eeb3fcdc1e3744dc67">&#9670;&#160;</a></span>CreateNode() <span class="overload">[2/2]</span></h2>
+<a id="a5ff5652bfa89815efa01830f1debe3cb" name="a5ff5652bfa89815efa01830f1debe3cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff5652bfa89815efa01830f1debe3cb">&#9670;&#160;</a></span>CreateNode() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +402,7 @@ template&lt;typename TState , typename TChange &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">TState&#160;</td>
+          <td class="paramtype"><a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#aaf8a6c0126c564eac90e0b6b5e57c840">const_state_ptr</a>&#160;</td>
           <td class="paramname"><em>state</em>&#160;</td>
         </tr>
         <tr>
@@ -363,6 +425,8 @@ template&lt;typename TState , typename TChange &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a shared pointer to a Node. </dd></dl>
+
+<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html#a6008e6cca4763dfb39f0638266c98045">sophia::monte_carlo::factories::GenericTreeFactory&lt; TState, TChange, TNode, TAction, TKey &gt;</a>.</p>
 
 </div>
 </div>
@@ -392,12 +456,37 @@ template&lt;typename TState , typename TChange &gt; </div>
 </div><div class="memdoc">
 <p>Creates a new Strategy. </p><dl class="section return"><dt>Returns</dt><dd>a shared pointer to a rollout strategy. </dd></dl>
 
-<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a350e7a19cca37948728ac1a5ed8d0ada">sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory</a>.</p>
+<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html#ab2eadf664bbeb5e0875da42ce3b7568e">sophia::monte_carlo::factories::GenericTreeFactory&lt; TState, TChange, TNode, TAction, TKey &gt;</a>, and <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory.html#ab2eadf664bbeb5e0875da42ce3b7568e">sophia::monte_carlo::factories::GenericTreeFactory&lt; models::GameState, models::Position, models::State, models::Move, RolloutStrategyType &gt;</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae8524f3cf98b794e95962f11c8a08b9b" name="ae8524f3cf98b794e95962f11c8a08b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8524f3cf98b794e95962f11c8a08b9b">&#9670;&#160;</a></span>m_logger_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TState , typename TChange &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">logger_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">sophia::monte_carlo::factories::TreeFactoryBase</a>&lt; TState, TChange &gt;::m_logger_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/monte_carlo/factories/<a class="el" href="tree__factory__interface_8h_source.html">tree_factory_interface.h</a></li>
+<li>include/monte_carlo/factories/<a class="el" href="tree__factory__base_8h_source.html">tree_factory_base.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

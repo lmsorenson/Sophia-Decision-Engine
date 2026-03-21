@@ -1,7 +1,7 @@
 var classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State =
 [
     [ "State", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#ac38e230e86eb77244309d33c0a87f922", null ],
-    [ "State", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#ac1dc97209e41ff17b9ac04912a430aa5", null ],
+    [ "State", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a99dea58abc2bfb1dad3453726e3ac350", null ],
     [ "get_available_actions", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a145091643f9325929573425c14d40546", null ],
     [ "interpret_result", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#af317ebfc92e1e883e4b28b987e7e8d42", null ],
     [ "is_terminal_state", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a3f654412d9661695dcba21300c21add2", null ],

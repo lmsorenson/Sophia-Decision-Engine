@@ -20,9 +20,9 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Node\+Base\tex
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a4ca5eed6eed78811ac7d8655a667f5ad}{Node\+Base}} (const std\+::string \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6e3e9541b60af7a1e36286eb313561a0}{name}}, TState state, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_aeec6f3e9f968bcc2b06cd679c9f90545}{Node\+Base}} (const std\+::string \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a6e3e9541b60af7a1e36286eb313561a0}{name}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb}{const\+\_\+state\+\_\+ptr}} state, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ factory, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
 \item 
-TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae142094890f50e1a72f2f733a1a57102}{get\+\_\+state}} () const
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb}{const\+\_\+state\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a82ef1bfbccaf6f172c168b7e9fcbac08}{get\+\_\+state}} () const
 \begin{DoxyCompactList}\small\item\em Retrieves the state associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}}
 \begin{DoxyCompactItemize}
@@ -77,12 +77,17 @@ double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a58087
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6147f273f7dae271d2cc9033dd67d5c8}{m\+\_\+factory\+\_\+}}
 \begin{DoxyCompactList}\small\item\em A factory for creating nodes and actions, specific to the game or problem. \end{DoxyCompactList}\item 
-TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6e6a87ffd017ce10decc5d7eb901bef7}{m\+\_\+state\+\_\+}}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb}{const\+\_\+state\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae44b59d35c244e56b544fd7ac56880f7}{m\+\_\+state\+\_\+}}
 \begin{DoxyCompactList}\small\item\em The state of the system that this node represents. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7ab5b029a025caaa763b0b56dbcc8265}{m\+\_\+logger\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb}{const\+\_\+state\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ const TState $>$
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -119,13 +124,23 @@ This class provides a generic implementation of a node, using templates to suppo
 \end{DoxyTemplParams}
 
 
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb} 
+\index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!const\_state\_ptr@{const\_state\_ptr}}
+\index{const\_state\_ptr@{const\_state\_ptr}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
+\doxysubsubsection{\texorpdfstring{const\_state\_ptr}{const\_state\_ptr}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
+using \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::const\+\_\+state\+\_\+ptr =  std\+::shared\+\_\+ptr$<$const TState$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a4ca5eed6eed78811ac7d8655a667f5ad}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a4ca5eed6eed78811ac7d8655a667f5ad} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_aeec6f3e9f968bcc2b06cd679c9f90545}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_aeec6f3e9f968bcc2b06cd679c9f90545} 
 \index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!NodeBase@{NodeBase}}
 \index{NodeBase@{NodeBase}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{NodeBase()}{NodeBase()}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::\+Node\+Base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{TState}]{state,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$}]{factory,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::\+Node\+Base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb}{const\+\_\+state\+\_\+ptr}}}]{state,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{const\+\_\+factory\+\_\+ptr}}$<$ TState, TChange $>$}]{factory,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})}
 
 
 
@@ -145,12 +160,12 @@ Pure virtual function to get the list of all possible actions from this node\tex
 
 Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a64590e46d31630eb9ec5f4b01037dc17}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}.
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae142094890f50e1a72f2f733a1a57102}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae142094890f50e1a72f2f733a1a57102} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a82ef1bfbccaf6f172c168b7e9fcbac08}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a82ef1bfbccaf6f172c168b7e9fcbac08} 
 \index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!get\_state@{get\_state}}
 \index{get\_state@{get\_state}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb}{const\+\_\+state\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -200,12 +215,12 @@ Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a668a8
 
 A factory for creating nodes and actions, specific to the game or problem. 
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6e6a87ffd017ce10decc5d7eb901bef7}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6e6a87ffd017ce10decc5d7eb901bef7} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae44b59d35c244e56b544fd7ac56880f7}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae44b59d35c244e56b544fd7ac56880f7} 
 \index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!m\_state\_@{m\_state\_}}
 \index{m\_state\_@{m\_state\_}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{m\_state\_}{m\_state\_}}
 {\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
-TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::m\+\_\+state\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_abcdcc29186e1409dfce4872c5a5321eb}{const\+\_\+state\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::m\+\_\+state\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

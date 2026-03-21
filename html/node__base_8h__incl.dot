@@ -31,12 +31,14 @@ digraph "include/monte_carlo/models/node_base.h"
   Node2 -> Node6 [id="edge14_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node2 -> Node10 [id="edge15_Node000002_Node000010",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node11 [id="edge16_Node000001_Node000011",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="monte_carlo/factories/tree\l_factory_interface.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree__factory__interface_8h.html",tooltip=" "];
+  Node11 [id="Node000011",label="monte_carlo/factories/tree\l_factory_base.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree__factory__base_8h.html",tooltip=" "];
   Node11 -> Node4 [id="edge17_Node000011_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node11 -> Node8 [id="edge18_Node000011_Node000008",color="steelblue1",style="solid",tooltip=" "];
   Node11 -> Node10 [id="edge19_Node000011_Node000010",color="steelblue1",style="solid",tooltip=" "];
   Node11 -> Node6 [id="edge20_Node000011_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node6 [id="edge21_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node12 [id="edge22_Node000001_Node000012",color="steelblue1",style="solid",tooltip=" "];
-  Node12 [id="Node000012",label="monte_carlo/models/node_base.tpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node11 -> Node12 [id="edge21_Node000011_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="monte_carlo/factories/tree\l_factory_base.tpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node6 [id="edge22_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node13 [id="edge23_Node000001_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="monte_carlo/models/node_base.tpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

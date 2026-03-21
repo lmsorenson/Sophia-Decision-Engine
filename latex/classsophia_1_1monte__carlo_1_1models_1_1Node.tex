@@ -59,9 +59,7 @@ virtual void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a32a
 virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aad5764114970d8d0f114853d9e5504ca}{get\+\_\+available\+\_\+actions}} ()=0
 \begin{DoxyCompactList}\small\item\em Pure virtual function to generate the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\item 
 virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a64590e46d31630eb9ec5f4b01037dc17}{children}} () const =0
-\begin{DoxyCompactList}\small\item\em Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a668a8ca95ad082850864ca523159ae7c}{rollout\+\_\+strategy}} () const =0
-\begin{DoxyCompactList}\small\item\em Pure virtual function to get the rollout strategy to be used for the simulation phase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,6 +81,11 @@ virtual double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a0
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7ab5b029a025caaa763b0b56dbcc8265}{m\+\_\+logger\+\_\+}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a668a8ca95ad082850864ca523159ae7c}{rollout\+\_\+strategy}} () const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the rollout strategy to be used for the simulation phase. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -263,7 +266,7 @@ Here is the call graph for this function\+:
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!rollout\_strategy@{rollout\_strategy}}
 \index{rollout\_strategy@{rollout\_strategy}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
 \doxysubsubsection{\texorpdfstring{rollout\_strategy()}{rollout\_strategy()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::rollout\+\_\+strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::rollout\+\_\+strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
 
 
 

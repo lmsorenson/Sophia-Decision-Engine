@@ -7,8 +7,8 @@ digraph "Graphical Class Hierarchy"
   node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
   rankdir="LR";
   Node0 [id="Node000000",label="sophia::monte_carlo::models\l::RolloutStrategyInterface",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html",tooltip="Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm."];
-  Node0 -> Node1 [id="edge23_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node0 -> Node1 [id="edge25_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 [id="Node000001",label="sophia::monte_carlo::models\l::RandomRolloutStrategy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html",tooltip="A concrete implementation of the RolloutStrategyInterface that selects an action randomly."];
-  Node0 -> Node2 [id="edge24_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node0 -> Node2 [id="edge26_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::HeuristicRolloutStrategy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html",tooltip="A heuristic rollout strategy for Tic-Tac-Toe."];
 }

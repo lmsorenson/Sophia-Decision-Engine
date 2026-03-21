@@ -1,0 +1,64 @@
+\doxysection{generic\+\_\+tree\+\_\+factory.\+h}
+\hypertarget{generic__tree__factory_8h_source}{}\label{generic__tree__factory_8h_source}\index{include/monte\_carlo/factories/generic\_tree\_factory.h@{include/monte\_carlo/factories/generic\_tree\_factory.h}}
+\mbox{\hyperlink{generic__tree__factory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GENERIC\_TREE\_FACTORY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GENERIC\_TREE\_FACTORY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tree__factory__base_8h}{monte\_carlo/factories/tree\_factory\_base.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1factories}{sophia::monte\_carlo::factories}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange,\ \textcolor{keyword}{typename}\ TNode,\ \textcolor{keyword}{typename}\ TAction,\ \textcolor{keyword}{typename}\ TKey\ =\ std::\textcolor{keywordtype}{string}>}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory}{GenericTreeFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{TreeFactoryBase}}<TState,\ TChange>}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{TreeFactoryBase}}<TState,\ TChange>::TreeFactoryBase;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}{node\_base\_ptr}}\ =\ std::shared\_ptr<models::NodeBase<TState,\ TChange>>;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6f43567c8eca49cb5324145ef98eb4b4}{const\_state\_ptr}}\ =\ std::shared\_ptr<const\ TState>;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a36299936335c508c9ddf5b42844c428b}{const\_factory\_ptr}}\ =\ std::shared\_ptr<const\ TreeFactoryBase<TState,\ TChange>>;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}{node\_generator}}\ =\ std::function<\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\_ptr}}(std::string,\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a36299936335c508c9ddf5b42844c428b}{const\_factory\_ptr}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\&)>;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a2abc4165aa0ee21743c716253b9f21ea}{RegisterStrategy}}(TKey\ key,\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\_strategy\_ptr}}\ strategy)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a4f966f9fdd75062cd8b41428a4093729}{m\_strategies\_}}[key]\ =\ std::move(strategy);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a9cd270aca9f49d575ee0ee022d54781c}{SetActiveStrategy}}(TKey\ key)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_afdc2daa5b3dc01826bdb9a2e422c46c3}{m\_active\_strategy\_key\_}}\ =\ key;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_abee5f041262e54830eb886d807914e45}{SetNodeGenerator}}(\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}{node\_generator}}\ generator)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ad1fddd13088b2a1437a238f224a84b28}{m\_node\_generator\_}}\ =\ std::move(generator);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a9ccd86168e1eda942488b3d58ab23b9e}{CreateNode}}(std::string\ name)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6008e6cca4763dfb39f0638266c98045}{CreateNode}}(std::string\ name,\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a6f43567c8eca49cb5324145ef98eb4b4}{const\_state\_ptr}}\ state)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ae4ffc04eed2b77b5aa6385a0d9facb60}{CreateAction}}(\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}{node\_base\_ptr}}\ node,\ TChange\ change)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a15407b93610556bf9ba29f6c5110d201}{CreateAction}}(\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a18fe675efc38f0c097fb847dad340ac9}{node\_base\_ptr}}\ node,\ TChange\ change,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a6da0016dc97ef526d65c5a246a5343f0}{const\_actor\_ptr}}\&\ actor)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\_strategy\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ab2eadf664bbeb5e0875da42ce3b7568e}{CreateStrategy}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::map<TKey,\ rollout\_strategy\_ptr>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a4f966f9fdd75062cd8b41428a4093729}{m\_strategies\_}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ TKey\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_afdc2daa5b3dc01826bdb9a2e422c46c3}{m\_active\_strategy\_key\_}}\{\};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_a5f94499b443679dc740f04569050a9fe}{node\_generator}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1GenericTreeFactory_ad1fddd13088b2a1437a238f224a84b28}{m\_node\_generator\_}};}
+\DoxyCodeLine{00079\ \ \ \ \ \};}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#include\ <monte\_carlo/factories/generic\_tree\_factory.tpp>}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GENERIC\_TREE\_FACTORY\_H}}
+
+\end{DoxyCode}

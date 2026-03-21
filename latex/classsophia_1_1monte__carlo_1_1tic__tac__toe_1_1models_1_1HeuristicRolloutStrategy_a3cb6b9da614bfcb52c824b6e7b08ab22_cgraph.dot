@@ -7,10 +7,6 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy::sel
   node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
   rankdir="LR";
   Node1 [id="Node000001",label="sophia::monte_carlo::tic_tac\l_toe::models::HeuristicRolloutStrategy\l::select_action",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Selects an action from a vector of available actions based on heuristic rules."];
-  Node1 -> Node2 [id="edge4_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node2 [id="edge2_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::HeuristicRolloutStrategy\l::find_action",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html#ab36829a9fe89e89d9aba08d578f807ad",tooltip=" "];
-  Node1 -> Node3 [id="edge5_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::models::GameState::GetBlockingMoves",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a7be62f33683425686496206b32128243",tooltip="Gets moves that would block the opponent from winning on their next turn."];
-  Node1 -> Node4 [id="edge6_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="sophia::monte_carlo::tic_tac\l_toe::models::GameState::GetWinningMoves",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#ab02f99dd2cc09bc7e6ced5073691a685",tooltip="Gets moves that would win the game for the current player."];
 }
