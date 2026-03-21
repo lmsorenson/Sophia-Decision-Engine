@@ -21,34 +21,22 @@ using sophia::monte_carlo::rollout_strategy_ptr;
 using std::make_shared;
 using std::shared_ptr;
 
-TicTacToeFactory::TicTacToeFactory(const_game_ptr game, const_player_ptr you, logger_ptr logger)
+TicTacToeFactory::TicTacToeFactory(const const_game_ptr& game, const_player_ptr you, logger_ptr logger)
 : GenericTreeFactory(std::move(logger))
-, m_game_(std::move(game))
-, m_you_(std::move(you))
 {
-}
+    // Pre-register default strategies
+    const auto board = make_shared<Board>(m_logger_);
+    GameState dummy_state(game, you, board);
+    RegisterStrategy(RolloutStrategyType::Heuristic, make_shared<HeuristicRolloutStrategy>(dummy_state, m_logger_));
+    RegisterStrategy(RolloutStrategyType::Random, make_shared<RandomRolloutStrategy>(m_logger_));
+    
+    // Default active strategy
+    SetActiveStrategy(RolloutStrategyType::Heuristic);
 
-void TicTacToeFactory::SetRolloutStrategyType(RolloutStrategyType type)
-{
-    m_rollout_strategy_type_ = type;
-}
-
-node_ptr TicTacToeFactory::CreateNode(std::string name) const
-{
-    auto board = make_shared<Board>(m_logger_);
-    const auto game_state = make_shared<GameState>(m_game_, m_you_, board);
-
-    return this->CreateNode(name, game_state);
-}
-
-rollout_strategy_ptr TicTacToeFactory::CreateStrategy() const
-{
-    if (m_rollout_strategy_type_ == RolloutStrategyType::Heuristic)
-    {
-        const auto board = make_shared<Board>(m_logger_);
-        GameState dummy_state(m_game_, m_you_, board);
-        return make_shared<HeuristicRolloutStrategy>(dummy_state, m_logger_);
-    }
-
-    return make_shared<RandomRolloutStrategy>(m_logger_);
+    // Set up node generator for root nodes
+    SetNodeGenerator([game, you](const std::string& name, const const_factory_ptr& factory, const logger_ptr& logger) {
+        auto board = make_shared<Board>(logger);
+        const auto game_state = make_shared<GameState>(game, you, board);
+        return make_shared<State>(name, game_state, factory, logger);
+    });
 }

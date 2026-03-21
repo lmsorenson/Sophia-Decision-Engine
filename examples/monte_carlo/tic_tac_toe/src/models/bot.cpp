@@ -46,7 +46,7 @@ void Bot::Initialize(const_game_ptr game)
 
     if (m_logger_) m_logger_->info("Bot is initializing its root node.");
     const auto factory = std::make_shared<factories::TicTacToeFactory>(game, shared_from_this(), m_logger_);
-    factory->SetRolloutStrategyType(m_rollout_type_);
+    factory->SetActiveStrategy(m_rollout_type_);
     node_ = factory->CreateNode("root");
 }
 
