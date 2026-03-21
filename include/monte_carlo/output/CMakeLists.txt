@@ -1,0 +1,1 @@
+install(DIRECTORY monte_carlo/output/ DESTINATION include/monte_carlo/output)
