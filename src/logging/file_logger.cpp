@@ -1,5 +1,8 @@
 #include <logging/file_logger.h>
 #include <fstream>
+#include <filesystem>
+
+namespace fs = std::filesystem;
 
 namespace sophia::logging
 {
@@ -7,16 +10,18 @@ namespace sophia::logging
         : filename_(filename)
         , min_level_(min_level)
     {
+        if (std::ofstream file(filename); file.is_open())
+        {
+            file.close();
+        }
     }
 
     void FileLogger::log(const LogLevel level, LogChannel channel, const std::string& message)
     {
-        std::ofstream outFile(filename_, std::ios::app);
-
-        if (outFile.is_open()) {
-            outFile << message << std::endl;
-
-            outFile.close();
+        if (std::ofstream file(filename_, std::ios::app); file.is_open())
+        {
+            file << message << std::endl;
+            file.close();
         }
     }
 

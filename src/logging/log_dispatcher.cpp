@@ -1,21 +1,21 @@
 #include <logging/log_dispatcher.h>
 
+#include <logging/ilogger.h>
+#include <logging/file_logger.h>
 #include <logging/console_logger.h>
 #include <logging/dummy_logger.h>
-#include <logging/ilogger.h>
+#include <filesystem>
 
-#include "logging/file_logger.h"
-#include "logging/file_logger.h"
-
-
+namespace fs = std::filesystem;
 using sophia::logging::ConsoleLogger;
 using sophia::logging::FileLogger;
 
 namespace sophia::logging
 {
-    LogDispatcher::LogDispatcher(LogLevel min_level) : min_level_(min_level)
+    LogDispatcher::LogDispatcher(const std::string &log_directory, LogLevel min_level) : min_level_(min_level)
     {
-        std::string directory = "/Users/lucsorenson/Repositories/Sophia-Core-Libraries/logs/";
+        const std::string directory = log_directory + "/logs/";
+        fs::create_directories(directory);
         m_loggers_[LogChannel::UserInterface] = std::make_shared<ConsoleLogger>(min_level);
         m_loggers_[LogChannel::Decision] = std::make_shared<FileLogger>(directory + "decision.log", min_level);
         m_loggers_[LogChannel::Stats] = std::make_shared<FileLogger>(directory + "stats.log", min_level);
