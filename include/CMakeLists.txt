@@ -1,1 +1,3 @@
 add_subdirectory(monte_carlo)
+add_subdirectory(board_games)
+add_subdirectory(simulation)
