@@ -2,7 +2,6 @@
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/output/print_dashboard.h>
 #include <logging/colors.h>
-#include <cmath>
 #include <monte_carlo/common_aliases.h>
 #include <monte_carlo/models/action.h>
 #include <logging/ilogger.h>

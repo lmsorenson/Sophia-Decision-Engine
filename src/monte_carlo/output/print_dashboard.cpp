@@ -3,6 +3,7 @@
 #include <monte_carlo/models/action.h>
 #include <logging/ilogger.h>
 #include <logging/colors.h>
+#include <cmath>
 
 using sophia::monte_carlo::output::Dashboard;
 using sophia::monte_carlo::models::Node;
