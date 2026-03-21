@@ -12,14 +12,14 @@ using sophia::logging::FileLogger;
 
 namespace sophia::logging
 {
-    LogDispatcher::LogDispatcher(const std::string &log_directory, LogLevel min_level) : min_level_(min_level)
+    LogDispatcher::LogDispatcher(const fs::path &log_directory, LogLevel min_level) : min_level_(min_level)
     {
-        const std::string directory = log_directory + "/logs/";
+        fs::path directory = log_directory / "logs";
         fs::create_directories(directory);
         m_loggers_[LogChannel::UserInterface] = std::make_shared<ConsoleLogger>(min_level);
-        m_loggers_[LogChannel::Decision] = std::make_shared<FileLogger>(directory + "decision.log", min_level);
-        m_loggers_[LogChannel::Stats] = std::make_shared<FileLogger>(directory + "stats.log", min_level);
-        m_loggers_[LogChannel::Trace] = std::make_shared<FileLogger>(directory + "trace.log", min_level);
+        m_loggers_[LogChannel::Decision] = std::make_shared<FileLogger>(directory / "decision.log", min_level);
+        m_loggers_[LogChannel::Stats] = std::make_shared<FileLogger>(directory / "stats.log", min_level);
+        m_loggers_[LogChannel::Trace] = std::make_shared<FileLogger>(directory / "trace.log", min_level);
         m_loggers_[LogChannel::Main] = std::make_shared<DummyLogger>(min_level);
     }
 

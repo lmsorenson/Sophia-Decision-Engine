@@ -3,6 +3,7 @@
 
 #include <logging/ilogger.h>
 #include <map>
+#include <__filesystem/filesystem_error.h>
 
 #include "monte_carlo/common_aliases.h"
 
@@ -19,7 +20,7 @@ namespace sophia::logging
          * @param log_directory The directory to store log files.
          * @param min_level The minimum severity level to log. Messages below this level will be ignored.
          */
-        explicit LogDispatcher(const std::string &log_directory, LogLevel min_level = LogLevel::Info);
+        explicit LogDispatcher(const std::filesystem::path& log_directory, LogLevel min_level = LogLevel::Info);
 
     private:
         void log(LogLevel level, LogChannel channel, const std::string& message) override;
