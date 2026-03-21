@@ -26,6 +26,9 @@ namespace sophia::logging
     enum class LogChannel
     {
         Main,
+        Decision,
+        Stats,
+        Trace,
         UserInterface
     };
 
@@ -55,6 +58,18 @@ namespace sophia::logging
         void display(std::format_string<Args...> fmt, Args&&... args)
         {
             log(LogLevel::None, LogChannel::UserInterface, std::format(fmt, std::forward<Args>(args)...));
+        }
+
+        /**
+         * @brief Logs a message with TRACE severity (most verbose).
+         * @param channel the channel to display in.
+         * @param fmt A std::format-compatible format string.
+         * @param args The arguments to be formatted.
+         */
+        template<typename... Args>
+        void display(const LogChannel channel, std::format_string<Args...> fmt, Args&&... args)
+        {
+            log(LogLevel::None, channel, std::format(fmt, std::forward<Args>(args)...));
         }
 
         /**

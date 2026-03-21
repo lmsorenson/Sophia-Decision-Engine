@@ -6,7 +6,9 @@
 #include <memory>
 #include <utility>
 #include <iostream>
+#include <filesystem>
 
+namespace fs = std::filesystem;
 using sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory;
 using sophia::monte_carlo::tic_tac_toe::models::Game;
 using sophia::monte_carlo::tic_tac_toe::models::Human;
@@ -19,9 +21,10 @@ using std::make_shared;
 using std::shared_ptr;
 
 
-int main()
+int main(int argc, char* argv[])
 {
-    const auto logger = make_shared<LogDispatcher>(LogLevel::Trace);
+    auto cwd = std::filesystem::canonical(argv[0]).parent_path();
+    const auto logger = make_shared<LogDispatcher>(cwd, LogLevel::Trace);
     logger->display("\033[2J");
 
     const shared_ptr<Game> game = make_shared<Game>(logger);

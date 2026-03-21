@@ -31,7 +31,7 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
 
     for(int i = 0; i < iterations; i++)
     {
-        if (logger) logger->info("\n--- Iteration {} ---", i + 1);
+        if (logger) logger->info(logging::LogChannel::Trace, "\n--- Iteration {} ---", i + 1);
 
         // From the root node, we are deciding which action to take.
         // If there are no child actions, we can't do anything.
@@ -46,7 +46,7 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
         double iteration_reward = 0.0;
 
         // --- 1. Selection ---
-        if (logger) logger->info("{}", logging::colors::phase_selection("Phase 1: Selection"));
+        if (logger) logger->info(logging::LogChannel::Trace, "{}", logging::colors::phase_selection("Phase 1: Selection"));
         while (!current->is_leaf_node())
         {
             const auto action = current->select_best_action();
@@ -61,7 +61,7 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
         if (logger) logger->debug("Selection finished at node: {}", logging::colors::highlight_node(current->name()));
 
         // --- 2. Expansion ---
-        if (logger) logger->info("{}", logging::colors::phase_expansion("Phase 2: Expansion"));
+        if (logger) logger->info(logging::LogChannel::Trace, "{}", logging::colors::phase_expansion("Phase 2: Expansion"));
         if (current->has_been_sampled() && !current->is_terminal_state())
         {
             if (logger) logger->debug("Node '{}' has been sampled. Expanding...", current->name());
@@ -88,7 +88,7 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
         }
 
         // --- 3. Rollout (Simulation) ---
-        if (logger) logger->info("{}", logging::colors::phase_rollout("Phase 3: rollout (Simulation)"));
+        if (logger) logger->info(logging::LogChannel::Trace, "{}", logging::colors::phase_rollout("Phase 3: rollout (Simulation)"));
         const_simulation_result_ptr reward = current->rollout();
         iteration_reward = reward ? reward->reward() : 0.0;
         if (logger) 
@@ -99,7 +99,7 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
         }
 
         // --- 4. Backpropagation ---
-        if (logger) logger->info("{}", logging::colors::phase_backprop("Phase 4: Backpropagation"));
+        if (logger) logger->info(logging::LogChannel::Trace, "{}", logging::colors::phase_backprop("Phase 4: Backpropagation"));
         current->backpropagate(reward);
         
         // Iteration summary
@@ -115,12 +115,13 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
     
     if (logger)
     {
-        logger->info("\n--- MCTS Complete: Final Action Summary ---");
-        logger->info("{:<25} | {:<12} | {:<15} | {:<12} | {:<12} | {:<10}", 
+        logger->display(logging::LogChannel::Stats, "\033[2J\033[3J\033[H");
+        logger->display(logging::LogChannel::Stats, "\n--- MCTS Complete: Final Action Summary ---");
+        logger->display(logging::LogChannel::Stats, "{:<25} | {:<12} | {:<15} | {:<12} | {:<12} | {:<10}",
             "Action (-> Node)", "Visits", "Total reward", "Avg reward", "UCB (c=2)", "Selected");
-        logger->info("--------------------------------------------------------------------------------------------------------");
+        logger->display(logging::LogChannel::Stats, "--------------------------------------------------------------------------------------------------------");
 
-        auto final_actions = root->get_available_actions();
+        auto final_actions = root->children();
         
         for (const auto& action : final_actions)
         {
@@ -133,20 +134,20 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
                 bool is_selected = (best_action && best_action == action);
                 std::string selected_str = is_selected ? "✓" : "";
                 
-                const auto visits_str = logging::colors::highlight_visits(std::format("{}", target->visit_count()));
-                const auto reward_str = logging::colors::highlight_reward(std::format("{:.4f}", target->total_reward()));
-                const auto avg_str = logging::colors::highlight_reward(std::format("{:.4f}", avg_reward));
+                const auto visits_str = logging::colors::highlight_visits(std::format("{:<12}", target->visit_count()));
+                const auto reward_str = logging::colors::highlight_reward(std::format("{:<15.4f}", target->total_reward()));
+                const auto avg_str = logging::colors::highlight_reward(std::format("{:<12.4f}", avg_reward));
                 
                 if (std::isinf(ucb_value))
                 {
-                    const auto ucb_str = logging::colors::highlight_ucb("inf");
-                    logger->info("{:<25} | {:<12} | {:<15} | {:<15} | {:<12} | {:<10}", 
+                    const auto ucb_str = logging::colors::highlight_ucb(std::format("{:<12}", "inf"));
+                    logger->display(logging::LogChannel::Stats, "{:<25} | {:<12} | {:<15} | {:<15} | {:<12} | {:<10}",
                         action_name, visits_str, reward_str, avg_str, ucb_str, selected_str);
                 }
                 else
                 {
-                    const auto ucb_str = logging::colors::highlight_ucb(std::format("{:.4f}", ucb_value));
-                    logger->info("{:<25} | {:<12} | {:<15} | {:<15} | {:<12} | {:<10}", 
+                    const auto ucb_str = logging::colors::highlight_ucb(std::format("{:<12.4f}", ucb_value));
+                    logger->display(logging::LogChannel::Stats, "{:<25} | {:<12} | {:<15} | {:<15} | {:<12} | {:<10}",
                         action_name, visits_str, reward_str, avg_str, ucb_str, selected_str);
                 }
             }
@@ -155,11 +156,11 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
                 std::string action_name = action->name();
                 bool is_selected = (best_action && best_action == action);
                 std::string selected_str = is_selected ? "✓" : "";
-                logger->info("{:<25} | {:<12} | {:<15} | {:<15} | {:<12} | {:<10}", 
+                logger->display(logging::LogChannel::Stats, "{:<25} | {:<12} | {:<15} | {:<15} | {:<12} | {:<10}",
                     action_name, "0", "N/A", "N/A", "N/A", selected_str);
             }
         }
-        logger->info("--------------------------------------------------------------------------------------------------------");
+        logger->display(logging::LogChannel::Stats, "--------------------------------------------------------------------------------------------------------");
     }
     if (logger && best_action && best_action->target())
     {
@@ -168,7 +169,7 @@ sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
         const auto visits_str = logging::colors::highlight_visits(std::format("{}", target->visit_count()));
         const auto total_reward_str = logging::colors::highlight_reward(std::format("{:.4f}", target->total_reward()));
         const auto avg_reward_str = logging::colors::highlight_reward(std::format("{:.4f}", avg_reward));
-        logger->info("=> Best Action Selected: '{}' -> {} (visits={}, total_reward={}, avg_reward={})", 
+        logger->display(logging::LogChannel::Stats, "=> Best Action Selected: '{}' -> {} (visits={}, total_reward={}, avg_reward={})",
             best_action->name(), logging::colors::highlight_node(target->name()),
             visits_str, total_reward_str, avg_reward_str);
     } else if (logger)

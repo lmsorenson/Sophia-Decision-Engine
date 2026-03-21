@@ -36,6 +36,9 @@ namespace sophia::monte_carlo::models
 
         /// @brief The state of the system that this node represents.
         TState m_state_;
+
+    private:
+        [[nodiscard]] virtual std::vector<action_ptr> children() const override;
     };
 }
 
