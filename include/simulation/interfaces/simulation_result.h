@@ -13,7 +13,7 @@ namespace sophia::simulation::interfaces
     class SimulationResult
     {
     public:
-        virtual ~SimulationResult() = default;
+        virtual ~SimulationResult();
 
         /**
          * @brief Returns the reward/score for a given player or team.

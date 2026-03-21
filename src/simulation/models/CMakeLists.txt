@@ -1,1 +1,3 @@
-# Source files for simulation models
+target_sources(sophia_simulation PRIVATE
+        simulation_runner.cpp
+)

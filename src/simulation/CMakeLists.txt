@@ -1,7 +1,7 @@
+add_library(sophia_simulation STATIC)
+
 add_subdirectory(interfaces)
 add_subdirectory(models)
-
-add_library(sophia_simulation STATIC)
 
 target_include_directories(sophia_simulation PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../include>
