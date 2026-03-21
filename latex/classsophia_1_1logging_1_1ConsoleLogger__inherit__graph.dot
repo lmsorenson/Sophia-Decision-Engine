@@ -20,6 +20,7 @@ digraph "sophia::logging::ConsoleLogger"
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual ~ILogger()=default<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void display(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void display(const LogChannel<BR ALIGN="LEFT"/> channel, std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void trace(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void debug(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void info(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>

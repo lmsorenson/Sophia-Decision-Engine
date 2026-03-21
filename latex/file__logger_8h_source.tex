@@ -1,0 +1,29 @@
+\doxysection{file\+\_\+logger.\+h}
+\hypertarget{file__logger_8h_source}{}\label{file__logger_8h_source}\index{include/logging/file\_logger.h@{include/logging/file\_logger.h}}
+\mbox{\hyperlink{file__logger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SOPHIA\_FILE\_LOGGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SOPHIA\_FILE\_LOGGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ilogger_8h}{logging/ilogger.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1logging}{sophia::logging}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1logging_1_1FileLogger}{FileLogger}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1logging_1_1FileLogger}{FileLogger}}(\textcolor{keyword}{const}\ std::filesystem::path\ \&filename,\ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ min\_level\ =\ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{LogLevel::Info}});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1FileLogger_a2e92db0d2b8c18d01ebb70d422925e4d}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ level,\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}\ channel,\ \textcolor{keyword}{const}\ std::string\&\ message)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ \mbox{\hyperlink{classsophia_1_1logging_1_1FileLogger_af4b0049d424b2a7c9c0de5772390777d}{min\_level\_}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::filesystem::path\ \mbox{\hyperlink{classsophia_1_1logging_1_1FileLogger_a4cad757170f608e002cfad577b644acb}{filename\_}};}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \}\ \textcolor{comment}{//\ namespace\ sophia::logging}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SOPHIA\_FILE\_LOGGER\_H}}
+
+\end{DoxyCode}

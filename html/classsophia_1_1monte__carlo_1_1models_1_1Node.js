@@ -3,6 +3,7 @@ var classsophia_1_1monte__carlo_1_1models_1_1Node =
     [ "Node", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ad952d18e84552c45f37d32314d3cb3f5", null ],
     [ "~Node", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ac06be54937bd5bbd0473141d2e44de59", null ],
     [ "backpropagate", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ac11dd611f5aedfcedcdda28cc2996c39", null ],
+    [ "children", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a64590e46d31630eb9ec5f4b01037dc17", null ],
     [ "expand", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a9dbb5a40957f499ed701f1d15038caf7", null ],
     [ "get_available_actions", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#aad5764114970d8d0f114853d9e5504ca", null ],
     [ "has_been_sampled", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a888cd71c8598b661a017f3f13abdc05d", null ],

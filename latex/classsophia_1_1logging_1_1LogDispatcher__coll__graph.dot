@@ -10,7 +10,7 @@ digraph "sophia::logging::LogDispatcher"
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">LogLevel min_level_<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">std::map&lt; LogChannel, monte<BR ALIGN="LEFT"/>_carlo::logger_ptr &gt; m_loggers_<BR ALIGN="LEFT"/></TD></TR>
 <HR/>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">LogDispatcher(LogLevel min<BR ALIGN="LEFT"/>_level=LogLevel::Info)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">LogDispatcher(const std::filesystem<BR ALIGN="LEFT"/>::path &amp;log_directory, LogLevel min<BR ALIGN="LEFT"/>_level=LogLevel::Info)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">-</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void log(LogLevel level, LogChannel<BR ALIGN="LEFT"/> channel, const std::string &amp;message) override<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="A concrete logger implementation that writes messages to the console (std::cout)."];
@@ -21,6 +21,7 @@ digraph "sophia::logging::LogDispatcher"
 <HR/>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual ~ILogger()=default<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void display(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void display(const LogChannel<BR ALIGN="LEFT"/> channel, std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void trace(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void debug(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void info(std::format_string<BR ALIGN="LEFT"/>&lt; Args... &gt; fmt, Args &amp;&amp;... args)<BR ALIGN="LEFT"/></TD></TR>

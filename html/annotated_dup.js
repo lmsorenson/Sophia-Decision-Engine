@@ -3,9 +3,10 @@ var annotated_dup =
     [ "sophia", "namespacesophia.html", [
       [ "logging", "namespacesophia_1_1logging.html", [
         [ "ConsoleLogger", "classsophia_1_1logging_1_1ConsoleLogger.html", "classsophia_1_1logging_1_1ConsoleLogger" ],
+        [ "DummyLogger", "classsophia_1_1logging_1_1DummyLogger.html", "classsophia_1_1logging_1_1DummyLogger" ],
+        [ "FileLogger", "classsophia_1_1logging_1_1FileLogger.html", "classsophia_1_1logging_1_1FileLogger" ],
         [ "ILogger", "classsophia_1_1logging_1_1ILogger.html", "classsophia_1_1logging_1_1ILogger" ],
-        [ "LogDispatcher", "classsophia_1_1logging_1_1LogDispatcher.html", "classsophia_1_1logging_1_1LogDispatcher" ],
-        [ "Logger2", "classsophia_1_1logging_1_1Logger2.html", "classsophia_1_1logging_1_1Logger2" ]
+        [ "LogDispatcher", "classsophia_1_1logging_1_1LogDispatcher.html", "classsophia_1_1logging_1_1LogDispatcher" ]
       ] ],
       [ "monte_carlo", "namespacesophia_1_1monte__carlo.html", [
         [ "factories", "namespacesophia_1_1monte__carlo_1_1factories.html", [

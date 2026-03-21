@@ -24,6 +24,8 @@ virtual \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3
 \item 
 {\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa83a71e511e0f121108f27de1c11ffbc}{display}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
 \begin{DoxyCompactList}\small\item\em Logs a message with TRACE severity (most verbose). \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a012e1d54f4e228458ebfe2da47dec627}{display}} (const \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{Log\+Channel}} channel, std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with TRACE severity (most verbose). \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809}{trace}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
 \begin{DoxyCompactList}\small\item\em Logs a message with TRACE severity (most verbose). \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a6776658107b8446b71d1304d260235b7}{debug}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
@@ -53,7 +55,7 @@ An interface for a generic, type-\/safe, and performant logger.
 
 This interface uses std\+::format for type-\/safe message formatting and defers the formatting until after the log level has been checked, providing performance benefits.
 
-Concrete implementations (e.\+g., \doxylink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger}, File\+Logger) must implement the private virtual {\ttfamily log} method. 
+Concrete implementations (e.\+g., \doxylink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger}, \doxylink{classsophia_1_1logging_1_1FileLogger}{File\+Logger}) must implement the private virtual {\ttfamily log} method. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca}\label{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca} 
@@ -85,10 +87,32 @@ Logs a message with DEBUG severity.
 \end{DoxyParams}
 Here is the call graph for this function\+:
 % FIG 2
+\Hypertarget{classsophia_1_1logging_1_1ILogger_a012e1d54f4e228458ebfe2da47dec627}\label{classsophia_1_1logging_1_1ILogger_a012e1d54f4e228458ebfe2da47dec627} 
+\index{sophia::logging::ILogger@{sophia::logging::ILogger}!display@{display}}
+\index{display@{display}!sophia::logging::ILogger@{sophia::logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void sophia\+::logging\+::\+ILogger\+::display (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{Log\+Channel}}}]{channel,  }\item[{std\+::format\+\_\+string$<$ Args... $>$}]{fmt,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs a message with TRACE severity (most verbose). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & the channel to display in. \\
+\hline
+{\em fmt} & A std\+::format-\/compatible format string. \\
+\hline
+{\em args} & The arguments to be formatted. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 3
 \Hypertarget{classsophia_1_1logging_1_1ILogger_aa83a71e511e0f121108f27de1c11ffbc}\label{classsophia_1_1logging_1_1ILogger_aa83a71e511e0f121108f27de1c11ffbc} 
 \index{sophia::logging::ILogger@{sophia::logging::ILogger}!display@{display}}
 \index{display@{display}!sophia::logging::ILogger@{sophia::logging::ILogger}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename... Args$>$ \\
 void sophia\+::logging\+::\+ILogger\+::display (\begin{DoxyParamCaption}\item[{std\+::format\+\_\+string$<$ Args... $>$}]{fmt,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -104,7 +128,7 @@ Logs a message with TRACE severity (most verbose).
 \hline
 \end{DoxyParams}
 Here is the call graph for this function\+:
-% FIG 3
+% FIG 4
 \Hypertarget{classsophia_1_1logging_1_1ILogger_a5f5fd591a5540b85c8165fa5d57d8fe1}\label{classsophia_1_1logging_1_1ILogger_a5f5fd591a5540b85c8165fa5d57d8fe1} 
 \index{sophia::logging::ILogger@{sophia::logging::ILogger}!error@{error}}
 \index{error@{error}!sophia::logging::ILogger@{sophia::logging::ILogger}}
@@ -124,7 +148,7 @@ Logs a message with ERROR severity.
 \hline
 \end{DoxyParams}
 Here is the call graph for this function\+:
-% FIG 4
+% FIG 5
 \Hypertarget{classsophia_1_1logging_1_1ILogger_a3ada1488e43b4363116c188962df8653}\label{classsophia_1_1logging_1_1ILogger_a3ada1488e43b4363116c188962df8653} 
 \index{sophia::logging::ILogger@{sophia::logging::ILogger}!info@{info}}
 \index{info@{info}!sophia::logging::ILogger@{sophia::logging::ILogger}}
@@ -133,7 +157,7 @@ Here is the call graph for this function\+:
 void sophia\+::logging\+::\+ILogger\+::info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{Log\+Channel}}}]{channel,  }\item[{std\+::format\+\_\+string$<$ Args... $>$}]{fmt,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the call graph for this function\+:
-% FIG 5
+% FIG 6
 \Hypertarget{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977}\label{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977} 
 \index{sophia::logging::ILogger@{sophia::logging::ILogger}!info@{info}}
 \index{info@{info}!sophia::logging::ILogger@{sophia::logging::ILogger}}
@@ -153,7 +177,7 @@ Logs a message with INFO severity.
 \hline
 \end{DoxyParams}
 Here is the call graph for this function\+:
-% FIG 6
+% FIG 7
 \Hypertarget{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}\label{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725} 
 \index{sophia::logging::ILogger@{sophia::logging::ILogger}!log@{log}}
 \index{log@{log}!sophia::logging::ILogger@{sophia::logging::ILogger}}
@@ -175,10 +199,10 @@ The core logging function that concrete loggers must implement.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_a8fecfcc1e80daafc2a9bfbbf7cf37d66}{sophia\+::logging\+::\+Console\+Logger}}, \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_a3f0ed763c5de144aaac4c38aa195a256}{sophia\+::logging\+::\+Log\+Dispatcher}}, and \mbox{\hyperlink{classsophia_1_1logging_1_1Logger2_a0ab1c0bc4b161a03e3f998f49464ca52}{sophia\+::logging\+::\+Logger2}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_a8fecfcc1e80daafc2a9bfbbf7cf37d66}{sophia\+::logging\+::\+Console\+Logger}}, \mbox{\hyperlink{classsophia_1_1logging_1_1DummyLogger_a2957004ce7c2524b83dda44ee26a54bb}{sophia\+::logging\+::\+Dummy\+Logger}}, \mbox{\hyperlink{classsophia_1_1logging_1_1FileLogger_a2e92db0d2b8c18d01ebb70d422925e4d}{sophia\+::logging\+::\+File\+Logger}}, and \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_a3f0ed763c5de144aaac4c38aa195a256}{sophia\+::logging\+::\+Log\+Dispatcher}}.
 
 Here is the caller graph for this function\+:
-% FIG 7
+% FIG 8
 \Hypertarget{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809}\label{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809} 
 \index{sophia::logging::ILogger@{sophia::logging::ILogger}!trace@{trace}}
 \index{trace@{trace}!sophia::logging::ILogger@{sophia::logging::ILogger}}
@@ -198,7 +222,7 @@ Logs a message with TRACE severity (most verbose).
 \hline
 \end{DoxyParams}
 Here is the call graph for this function\+:
-% FIG 8
+% FIG 9
 \Hypertarget{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b}\label{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b} 
 \index{sophia::logging::ILogger@{sophia::logging::ILogger}!warn@{warn}}
 \index{warn@{warn}!sophia::logging::ILogger@{sophia::logging::ILogger}}
@@ -218,7 +242,7 @@ Logs a message with WARN severity.
 \hline
 \end{DoxyParams}
 Here is the call graph for this function\+:
-% FIG 9
+% FIG 10
 
 
 \doxysubsection{Friends And Related Symbol Documentation}

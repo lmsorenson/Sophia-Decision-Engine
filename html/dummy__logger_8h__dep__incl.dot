@@ -1,0 +1,13 @@
+digraph "include/logging/dummy_logger.h"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  Node1 [id="Node000001",label="include/logging/dummy_logger.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="src/logging/dummy_logger.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dummy__logger_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="src/logging/log_dispatcher.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$log__dispatcher_8cpp.html",tooltip=" "];
+}

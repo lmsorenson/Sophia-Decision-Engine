@@ -33,10 +33,11 @@ var searchData=
   ['state_2eh_30',['state.h',['../state_8h.html',1,'']]],
   ['state_5fptr_31',['state_ptr',['../classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a8310e68e3b30cdd09c8bf4a065450deb',1,'sophia::monte_carlo::factories::TreeFactoryBase::state_ptr'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#ace0fa5ffb5d5c4ce202f76f8ae9c5389',1,'sophia::monte_carlo::tic_tac_toe::state_ptr']]],
   ['state_5ftests_2ecpp_32',['state_tests.cpp',['../state__tests_8cpp.html',1,'']]],
-  ['strategy_33',['Custom Rollout Strategy',['../index.html#autotoc_md12',1,'']]],
-  ['subject_34',['Subject',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html',1,'sophia::monte_carlo::tic_tac_toe::observer']]],
-  ['subject_2ecpp_35',['subject.cpp',['../subject_8cpp.html',1,'']]],
-  ['subject_2eh_36',['subject.h',['../subject_8h.html',1,'']]],
-  ['symbol_37',['symbol',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a40d65c06507e91eb2c443f9df90eacb4',1,'sophia::monte_carlo::tic_tac_toe::models::Player::symbol()'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893',1,'sophia::monte_carlo::tic_tac_toe::enums::Symbol'],['../classSymbol.html',1,'Symbol']]],
-  ['symbol_2eh_38',['symbol.h',['../symbol_8h.html',1,'']]]
+  ['stats_33',['Stats',['../namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273a452a7601dbc6f2c38aa89e68bda8b603',1,'sophia::logging']]],
+  ['strategy_34',['Custom Rollout Strategy',['../index.html#autotoc_md12',1,'']]],
+  ['subject_35',['Subject',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html',1,'sophia::monte_carlo::tic_tac_toe::observer']]],
+  ['subject_2ecpp_36',['subject.cpp',['../subject_8cpp.html',1,'']]],
+  ['subject_2eh_37',['subject.h',['../subject_8h.html',1,'']]],
+  ['symbol_38',['symbol',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a40d65c06507e91eb2c443f9df90eacb4',1,'sophia::monte_carlo::tic_tac_toe::models::Player::symbol()'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893',1,'sophia::monte_carlo::tic_tac_toe::enums::Symbol'],['../classSymbol.html',1,'Symbol']]],
+  ['symbol_2eh_39',['symbol.h',['../symbol_8h.html',1,'']]]
 ];

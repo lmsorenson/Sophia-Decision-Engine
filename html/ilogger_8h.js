@@ -3,6 +3,9 @@ var ilogger_8h =
     [ "sophia::logging::ILogger", "classsophia_1_1logging_1_1ILogger.html", "classsophia_1_1logging_1_1ILogger" ],
     [ "LogChannel", "ilogger_8h.html#a2b342c28185f5d889f9960b435d98273", [
       [ "Main", "ilogger_8h.html#a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de", null ],
+      [ "Decision", "ilogger_8h.html#a2b342c28185f5d889f9960b435d98273a5d30f54fc5f12894fd1afbf4d41c5969", null ],
+      [ "Stats", "ilogger_8h.html#a2b342c28185f5d889f9960b435d98273a452a7601dbc6f2c38aa89e68bda8b603", null ],
+      [ "Trace", "ilogger_8h.html#a2b342c28185f5d889f9960b435d98273add4ec0ac4e58f7c32a01244ae91150b1", null ],
       [ "UserInterface", "ilogger_8h.html#a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a", null ]
     ] ],
     [ "LogLevel", "ilogger_8h.html#a183f242c85daa28ed2018d65b73112d8", [

@@ -24,64 +24,73 @@
 \DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}}
 \DoxyCodeLine{00027\ \ \ \ \ \{}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{Main}},}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a}{UserInterface}}}
-\DoxyCodeLine{00030\ \ \ \ \ \};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}}
-\DoxyCodeLine{00043\ \ \ \ \ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher}{LogDispatcher}};}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca}{\string~ILogger}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273a5d30f54fc5f12894fd1afbf4d41c5969}{Decision}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273a452a7601dbc6f2c38aa89e68bda8b603}{Stats}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1}{Trace}},}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a}{UserInterface}}}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher}{LogDispatcher}};}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa83a71e511e0f121108f27de1c11ffbc}{display}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a6adf97f83acf6453d4a6a4b1070f3754}{LogLevel::None}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a}{LogChannel::UserInterface}},\ std::format(fmt,\ std::forward<Args>(args)...));}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809}{trace}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1}{LogLevel::Trace}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a6776658107b8446b71d1304d260235b7}{debug}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8aa603905470e2a5b8c13e96b579ef0dba}{LogLevel::Debug}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977}{info}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{LogLevel::Info}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a3ada1488e43b4363116c188962df8653}{info}}(\mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}\ channel,\ std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{LogLevel::Info}},\ channel,\ std::format(fmt,\ std::forward<Args>(args)...));}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00098\ }
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b}{warn}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a56525ae64d370c0b448ac0d60710ef17}{LogLevel::Warn}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a5f5fd591a5540b85c8165fa5d57d8fe1}{error}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a56525ae64d370c0b448ac0d60710ef17}{LogLevel::Warn}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00120\ }
-\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ level,\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}\ channel,\ \textcolor{keyword}{const}\ std::string\&\ message)\ =\ 0;}
-\DoxyCodeLine{00129\ \ \ \ \ \};}
-\DoxyCodeLine{00130\ }
-\DoxyCodeLine{00131\ \}\ \textcolor{comment}{//\ namespace\ sophia::logging}}
-\DoxyCodeLine{00132\ }
-\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SOPHIA\_ILOGGER\_H}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca}{\string~ILogger}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa83a71e511e0f121108f27de1c11ffbc}{display}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a6adf97f83acf6453d4a6a4b1070f3754}{LogLevel::None}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a}{LogChannel::UserInterface}},\ std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a012e1d54f4e228458ebfe2da47dec627}{display}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}\ channel,\ std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a6adf97f83acf6453d4a6a4b1070f3754}{LogLevel::None}},\ channel,\ std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809}{trace}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1}{LogLevel::Trace}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a6776658107b8446b71d1304d260235b7}{debug}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8aa603905470e2a5b8c13e96b579ef0dba}{LogLevel::Debug}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977}{info}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{LogLevel::Info}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a3ada1488e43b4363116c188962df8653}{info}}(\mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}\ channel,\ std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{LogLevel::Info}},\ channel,\ std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b}{warn}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a56525ae64d370c0b448ac0d60710ef17}{LogLevel::Warn}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a5f5fd591a5540b85c8165fa5d57d8fe1}{error}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a56525ae64d370c0b448ac0d60710ef17}{LogLevel::Warn}},\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de}{LogChannel::Main}},\ std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa6647eb090a3a9c8a1907d812ee88725}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ level,\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}\ channel,\ \textcolor{keyword}{const}\ std::string\&\ message)\ =\ 0;}
+\DoxyCodeLine{00144\ \ \ \ \ \};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \}\ \textcolor{comment}{//\ namespace\ sophia::logging}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SOPHIA\_ILOGGER\_H}}
 
 \end{DoxyCode}

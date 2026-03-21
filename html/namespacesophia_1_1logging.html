@@ -109,14 +109,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ConsoleLogger.html">ConsoleLogger</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete logger implementation that writes messages to the console (std::cout).  <a href="classsophia_1_1logging_1_1ConsoleLogger.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1DummyLogger.html">DummyLogger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete logger implementation that writes messages to the console (std::cout).  <a href="classsophia_1_1logging_1_1DummyLogger.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1FileLogger.html">FileLogger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete logger implementation that writes messages to the console (std::cout).  <a href="classsophia_1_1logging_1_1FileLogger.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html">ILogger</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface for a generic, type-safe, and performant logger.  <a href="classsophia_1_1logging_1_1ILogger.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1LogDispatcher.html">LogDispatcher</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete logger implementation that writes messages to the console (std::cout).  <a href="classsophia_1_1logging_1_1LogDispatcher.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1Logger2.html">Logger2</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete logger implementation that writes messages to the console (std::cout).  <a href="classsophia_1_1logging_1_1Logger2.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -133,8 +136,14 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a183f242c85daa28ed2018d65b73112d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the severity levels for log messages.  <a href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8">More...</a><br /></td></tr>
 <tr class="separator:a183f242c85daa28ed2018d65b73112d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b342c28185f5d889f9960b435d98273" id="r_a2b342c28185f5d889f9960b435d98273"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273">LogChannel</a> { <a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de">Main</a>
-, <a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a">UserInterface</a>
+<tr class="memitem:a2b342c28185f5d889f9960b435d98273" id="r_a2b342c28185f5d889f9960b435d98273"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273">LogChannel</a> { <br />
+&#160;&#160;<a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de">Main</a>
+, <a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273a5d30f54fc5f12894fd1afbf4d41c5969">Decision</a>
+, <a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273a452a7601dbc6f2c38aa89e68bda8b603">Stats</a>
+, <a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273add4ec0ac4e58f7c32a01244ae91150b1">Trace</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a">UserInterface</a>
+<br />
  }</td></tr>
 <tr class="memdesc:a2b342c28185f5d889f9960b435d98273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the output channel for log messages.  <a href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273">More...</a><br /></td></tr>
 <tr class="separator:a2b342c28185f5d889f9960b435d98273"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +177,9 @@ Functions</h2></td></tr>
 <p>Defines the output channel for log messages. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de" name="a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de"></a>Main&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2b342c28185f5d889f9960b435d98273a5d30f54fc5f12894fd1afbf4d41c5969" name="a2b342c28185f5d889f9960b435d98273a5d30f54fc5f12894fd1afbf4d41c5969"></a>Decision&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2b342c28185f5d889f9960b435d98273a452a7601dbc6f2c38aa89e68bda8b603" name="a2b342c28185f5d889f9960b435d98273a452a7601dbc6f2c38aa89e68bda8b603"></a>Stats&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2b342c28185f5d889f9960b435d98273add4ec0ac4e58f7c32a01244ae91150b1" name="a2b342c28185f5d889f9960b435d98273add4ec0ac4e58f7c32a01244ae91150b1"></a>Trace&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a" name="a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a"></a>UserInterface&#160;</td><td class="fielddoc"></td></tr>
 </table>
 

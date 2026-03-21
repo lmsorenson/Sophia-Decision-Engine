@@ -7,25 +7,26 @@
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ilogger_8h}{logging/ilogger.h}}>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{include_2monte__carlo_2common__aliases_8h}{monte\_carlo/common\_aliases.h}}"{}}}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1logging}{sophia::logging}}}
-\DoxyCodeLine{00010\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher}{LogDispatcher}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}}
-\DoxyCodeLine{00015\ \ \ \ \ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a04759d82d0f8f18be0bedb4783936c37}{LogDispatcher}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ min\_level\ =\ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{LogLevel::Info}});}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_a3f0ed763c5de144aaac4c38aa195a256}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ level,\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}\ channel,\ \textcolor{keyword}{const}\ std::string\&\ message)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_ae8d071795e66053dfcdd7c7a9f8301ef}{min\_level\_}};}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::map<LogChannel,\ monte\_carlo::logger\_ptr>\ \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_aa94386d3bc206a3fe4f4b937028b4b58}{m\_loggers\_}};}
-\DoxyCodeLine{00028\ \ \ \ \ \};}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \}\ \textcolor{comment}{//\ namespace\ sophia::logging}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{include_2monte__carlo_2common__aliases_8h}{monte\_carlo/common\_aliases.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1logging}{sophia::logging}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher}{LogDispatcher}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a04759d82d0f8f18be0bedb4783936c37}{LogDispatcher}}(\textcolor{keyword}{const}\ std::filesystem::path\&\ log\_directory,\ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ min\_level\ =\ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{LogLevel::Info}});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_a3f0ed763c5de144aaac4c38aa195a256}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ level,\ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{LogChannel}}\ channel,\ \textcolor{keyword}{const}\ std::string\&\ message)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_ae8d071795e66053dfcdd7c7a9f8301ef}{min\_level\_}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::map<LogChannel,\ monte\_carlo::logger\_ptr>\ \mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_aa94386d3bc206a3fe4f4b937028b4b58}{m\_loggers\_}};}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
 \DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SOPHIA\_LOG\_DISPATCHER\_H}}
+\DoxyCodeLine{00032\ \}\ \textcolor{comment}{//\ namespace\ sophia::logging}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SOPHIA\_LOG\_DISPATCHER\_H}}
 
 \end{DoxyCode}

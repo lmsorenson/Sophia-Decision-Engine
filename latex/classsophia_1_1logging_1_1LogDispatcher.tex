@@ -20,7 +20,7 @@ Collaboration diagram for sophia\+::logging\+::Log\+Dispatcher\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_a806e10ad60b850d58213ec6119f52f86}{Log\+Dispatcher}} (\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} min\+\_\+level=\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{Log\+Level\+::\+Info}})
+\mbox{\hyperlink{classsophia_1_1logging_1_1LogDispatcher_a16867679dfe2ac66fcd750346d00e9fa}{Log\+Dispatcher}} (const std\+::filesystem\+::path \&log\+\_\+directory, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} min\+\_\+level=\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{Log\+Level\+::\+Info}})
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger} with a minimum log level. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{sophia\+::logging\+::\+ILogger}}}
 \begin{DoxyCompactItemize}
@@ -28,6 +28,8 @@ Collaboration diagram for sophia\+::logging\+::Log\+Dispatcher\+:
 virtual \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca}{\texorpdfstring{$\sim$}{\string~}\+ILogger}} ()=default
 \item 
 {\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aa83a71e511e0f121108f27de1c11ffbc}{display}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with TRACE severity (most verbose). \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a012e1d54f4e228458ebfe2da47dec627}{display}} (const \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f9960b435d98273}{Log\+Channel}} channel, std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
 \begin{DoxyCompactList}\small\item\em Logs a message with TRACE severity (most verbose). \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809}{trace}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
 \begin{DoxyCompactList}\small\item\em Logs a message with TRACE severity (most verbose). \end{DoxyCompactList}\item 
@@ -59,11 +61,11 @@ std\+::map$<$ \mbox{\hyperlink{namespacesophia_1_1logging_a2b342c28185f5d889f996
 A concrete logger implementation that writes messages to the console (std\+::cout). 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1logging_1_1LogDispatcher_a806e10ad60b850d58213ec6119f52f86}\label{classsophia_1_1logging_1_1LogDispatcher_a806e10ad60b850d58213ec6119f52f86} 
+\Hypertarget{classsophia_1_1logging_1_1LogDispatcher_a16867679dfe2ac66fcd750346d00e9fa}\label{classsophia_1_1logging_1_1LogDispatcher_a16867679dfe2ac66fcd750346d00e9fa} 
 \index{sophia::logging::LogDispatcher@{sophia::logging::LogDispatcher}!LogDispatcher@{LogDispatcher}}
 \index{LogDispatcher@{LogDispatcher}!sophia::logging::LogDispatcher@{sophia::logging::LogDispatcher}}
 \doxysubsubsection{\texorpdfstring{LogDispatcher()}{LogDispatcher()}}
-{\footnotesize\ttfamily sophia\+::logging\+::\+Log\+Dispatcher\+::\+Log\+Dispatcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}}}]{min\+\_\+level = {\ttfamily \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{Log\+Level\+::\+Info}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily sophia\+::logging\+::\+Log\+Dispatcher\+::\+Log\+Dispatcher (\begin{DoxyParamCaption}\item[{const std\+::filesystem\+::path \&}]{log\+\_\+directory,  }\item[{\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}}}]{min\+\_\+level = {\ttfamily \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875}{Log\+Level\+::\+Info}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
@@ -71,6 +73,8 @@ Constructs a \doxylink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger}
 
 
 \begin{DoxyParams}{Parameters}
+{\em log\+\_\+directory} & The directory to store log files. \\
+\hline
 {\em min\+\_\+level} & The minimum severity level to log. Messages below this level will be ignored. \\
 \hline
 \end{DoxyParams}

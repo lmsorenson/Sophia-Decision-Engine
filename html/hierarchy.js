@@ -32,8 +32,9 @@ var hierarchy =
     [ "sophia::monte_carlo::tic_tac_toe::models::GameState", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html", null ],
     [ "sophia::logging::ILogger", "classsophia_1_1logging_1_1ILogger.html", [
       [ "sophia::logging::ConsoleLogger", "classsophia_1_1logging_1_1ConsoleLogger.html", null ],
-      [ "sophia::logging::LogDispatcher", "classsophia_1_1logging_1_1LogDispatcher.html", null ],
-      [ "sophia::logging::Logger2", "classsophia_1_1logging_1_1Logger2.html", null ]
+      [ "sophia::logging::DummyLogger", "classsophia_1_1logging_1_1DummyLogger.html", null ],
+      [ "sophia::logging::FileLogger", "classsophia_1_1logging_1_1FileLogger.html", null ],
+      [ "sophia::logging::LogDispatcher", "classsophia_1_1logging_1_1LogDispatcher.html", null ]
     ] ],
     [ "sophia::monte_carlo::MonteCarloTreeSearch", "classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html", null ],
     [ "sophia::monte_carlo::tic_tac_toe::observer::Observer", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html", [

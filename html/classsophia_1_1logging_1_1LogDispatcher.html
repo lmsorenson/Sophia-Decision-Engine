@@ -116,9 +116,9 @@ Collaboration diagram for sophia::logging::LogDispatcher:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a806e10ad60b850d58213ec6119f52f86" id="r_a806e10ad60b850d58213ec6119f52f86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1LogDispatcher.html#a806e10ad60b850d58213ec6119f52f86">LogDispatcher</a> (<a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8">LogLevel</a> min_level=<a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875">LogLevel::Info</a>)</td></tr>
-<tr class="memdesc:a806e10ad60b850d58213ec6119f52f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classsophia_1_1logging_1_1ConsoleLogger.html" title="A concrete logger implementation that writes messages to the console (std::cout).">ConsoleLogger</a> with a minimum log level.  <br /></td></tr>
-<tr class="separator:a806e10ad60b850d58213ec6119f52f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16867679dfe2ac66fcd750346d00e9fa" id="r_a16867679dfe2ac66fcd750346d00e9fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1LogDispatcher.html#a16867679dfe2ac66fcd750346d00e9fa">LogDispatcher</a> (const std::filesystem::path &amp;log_directory, <a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8">LogLevel</a> min_level=<a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875">LogLevel::Info</a>)</td></tr>
+<tr class="memdesc:a16867679dfe2ac66fcd750346d00e9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classsophia_1_1logging_1_1ConsoleLogger.html" title="A concrete logger implementation that writes messages to the console (std::cout).">ConsoleLogger</a> with a minimum log level.  <br /></td></tr>
+<tr class="separator:a16867679dfe2ac66fcd750346d00e9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classsophia_1_1logging_1_1ILogger"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsophia_1_1logging_1_1ILogger')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsophia_1_1logging_1_1ILogger.html">sophia::logging::ILogger</a></td></tr>
 <tr class="memitem:acec879bd2f823d25efe3aa46813150ca inherit pub_methods_classsophia_1_1logging_1_1ILogger" id="r_acec879bd2f823d25efe3aa46813150ca"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#acec879bd2f823d25efe3aa46813150ca">~ILogger</a> ()=default</td></tr>
 <tr class="separator:acec879bd2f823d25efe3aa46813150ca inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa83a71e511e0f121108f27de1c11ffbc inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#aa83a71e511e0f121108f27de1c11ffbc">display</a> (std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:aa83a71e511e0f121108f27de1c11ffbc inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with TRACE severity (most verbose).  <br /></td></tr>
 <tr class="separator:aa83a71e511e0f121108f27de1c11ffbc inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012e1d54f4e228458ebfe2da47dec627 inherit pub_methods_classsophia_1_1logging_1_1ILogger" id="r_a012e1d54f4e228458ebfe2da47dec627"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a012e1d54f4e228458ebfe2da47dec627 inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a012e1d54f4e228458ebfe2da47dec627">display</a> (const <a class="el" href="namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273">LogChannel</a> channel, std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a012e1d54f4e228458ebfe2da47dec627 inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with TRACE severity (most verbose).  <br /></td></tr>
+<tr class="separator:a012e1d54f4e228458ebfe2da47dec627 inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a704562826cbdc5af0e36f298ae600809 inherit pub_methods_classsophia_1_1logging_1_1ILogger" id="r_a704562826cbdc5af0e36f298ae600809"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a704562826cbdc5af0e36f298ae600809 inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a704562826cbdc5af0e36f298ae600809">trace</a> (std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a704562826cbdc5af0e36f298ae600809 inherit pub_methods_classsophia_1_1logging_1_1ILogger"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with TRACE severity (most verbose).  <br /></td></tr>
@@ -166,8 +170,8 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A concrete logger implementation that writes messages to the console (std::cout). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a806e10ad60b850d58213ec6119f52f86" name="a806e10ad60b850d58213ec6119f52f86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a806e10ad60b850d58213ec6119f52f86">&#9670;&#160;</a></span>LogDispatcher()</h2>
+<a id="a16867679dfe2ac66fcd750346d00e9fa" name="a16867679dfe2ac66fcd750346d00e9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16867679dfe2ac66fcd750346d00e9fa">&#9670;&#160;</a></span>LogDispatcher()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,9 +182,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">sophia::logging::LogDispatcher::LogDispatcher </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8">LogLevel</a>&#160;</td>
-          <td class="paramname"><em>min_level</em> = <code><a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875">LogLevel::Info</a></code></td><td>)</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>log_directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8">LogLevel</a>&#160;</td>
+          <td class="paramname"><em>min_level</em> = <code><a class="el" href="namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a4059b0251f66a18cb56f544728796875">LogLevel::Info</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -193,6 +207,7 @@ Private Attributes</h2></td></tr>
 <p>Constructs a <a class="el" href="classsophia_1_1logging_1_1ConsoleLogger.html" title="A concrete logger implementation that writes messages to the console (std::cout).">ConsoleLogger</a> with a minimum log level. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">log_directory</td><td>The directory to store log files. </td></tr>
     <tr><td class="paramname">min_level</td><td>The minimum severity level to log. Messages below this level will be ignored. </td></tr>
   </table>
   </dd>

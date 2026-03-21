@@ -30,11 +30,15 @@ var namespacesophia_1_1logging =
       [ "WARN", "namespacesophia_1_1logging_1_1colors.html#ad7fb64e359d4fe4e72dc53215f0b974d", null ]
     ] ],
     [ "ConsoleLogger", "classsophia_1_1logging_1_1ConsoleLogger.html", "classsophia_1_1logging_1_1ConsoleLogger" ],
+    [ "DummyLogger", "classsophia_1_1logging_1_1DummyLogger.html", "classsophia_1_1logging_1_1DummyLogger" ],
+    [ "FileLogger", "classsophia_1_1logging_1_1FileLogger.html", "classsophia_1_1logging_1_1FileLogger" ],
     [ "ILogger", "classsophia_1_1logging_1_1ILogger.html", "classsophia_1_1logging_1_1ILogger" ],
     [ "LogDispatcher", "classsophia_1_1logging_1_1LogDispatcher.html", "classsophia_1_1logging_1_1LogDispatcher" ],
-    [ "Logger2", "classsophia_1_1logging_1_1Logger2.html", "classsophia_1_1logging_1_1Logger2" ],
     [ "LogChannel", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273", [
       [ "Main", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273aa02c83a7dbd96295beaefb72c2bee2de", null ],
+      [ "Decision", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273a5d30f54fc5f12894fd1afbf4d41c5969", null ],
+      [ "Stats", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273a452a7601dbc6f2c38aa89e68bda8b603", null ],
+      [ "Trace", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273add4ec0ac4e58f7c32a01244ae91150b1", null ],
       [ "UserInterface", "namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273ada57625b9f374c1b06313cdd6279de7a", null ]
     ] ],
     [ "LogLevel", "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8", [

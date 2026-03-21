@@ -171,8 +171,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a32a1bb61b49d8753d797dda438ba7ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a representation of the node's state.  <br /></td></tr>
 <tr class="separator:a32a1bb61b49d8753d797dda438ba7ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad5764114970d8d0f114853d9e5504ca" id="r_aad5764114970d8d0f114853d9e5504ca"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="namespacesophia_1_1monte__carlo.html#a3ef3290edc6cb68dbc906cf5ad80c976">action_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#aad5764114970d8d0f114853d9e5504ca">get_available_actions</a> ()=0</td></tr>
-<tr class="memdesc:aad5764114970d8d0f114853d9e5504ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the list of all possible actions from this node's state.  <br /></td></tr>
+<tr class="memdesc:aad5764114970d8d0f114853d9e5504ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to generate the list of all possible actions from this node's state.  <br /></td></tr>
 <tr class="separator:aad5764114970d8d0f114853d9e5504ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64590e46d31630eb9ec5f4b01037dc17" id="r_a64590e46d31630eb9ec5f4b01037dc17"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="namespacesophia_1_1monte__carlo.html#a3ef3290edc6cb68dbc906cf5ad80c976">action_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a64590e46d31630eb9ec5f4b01037dc17">children</a> () const =0</td></tr>
+<tr class="memdesc:a64590e46d31630eb9ec5f4b01037dc17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the list of all possible actions from this node's state.  <br /></td></tr>
+<tr class="separator:a64590e46d31630eb9ec5f4b01037dc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a668a8ca95ad082850864ca523159ae7c" id="r_a668a8ca95ad082850864ca523159ae7c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacesophia_1_1monte__carlo.html#ad1c0c7a77be02794856652a0964b4439">rollout_strategy_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a668a8ca95ad082850864ca523159ae7c">rollout_strategy</a> () const =0</td></tr>
 <tr class="memdesc:a668a8ca95ad082850864ca523159ae7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the rollout strategy to be used for the simulation phase.  <br /></td></tr>
 <tr class="separator:a668a8ca95ad082850864ca523159ae7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,6 +307,35 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a64590e46d31630eb9ec5f4b01037dc17" name="a64590e46d31630eb9ec5f4b01037dc17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64590e46d31630eb9ec5f4b01037dc17">&#9670;&#160;</a></span>children()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; <a class="el" href="namespacesophia_1_1monte__carlo.html#a3ef3290edc6cb68dbc906cf5ad80c976">action_ptr</a> &gt; sophia::monte_carlo::models::Node::children </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pure virtual function to get the list of all possible actions from this node's state. </p>
+
+<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a61643b5b8d0e99082dd4d2682bb53a24">sophia::monte_carlo::models::NodeBase&lt; TState, TChange &gt;</a>, and <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a61643b5b8d0e99082dd4d2682bb53a24">sophia::monte_carlo::models::NodeBase&lt; GameState, Position &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a9dbb5a40957f499ed701f1d15038caf7" name="a9dbb5a40957f499ed701f1d15038caf7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9dbb5a40957f499ed701f1d15038caf7">&#9670;&#160;</a></span>expand()</h2>
 
@@ -351,7 +383,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Pure virtual function to get the list of all possible actions from this node's state. </p>
+<p>Pure virtual function to generate the list of all possible actions from this node's state. </p>
 
 <p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a145091643f9325929573425c14d40546">sophia::monte_carlo::tic_tac_toe::models::State</a>.</p>
 <div class="dynheader">

@@ -8,7 +8,7 @@ digraph "sophia::monte_carlo::models::Node::rollout"
   rankdir="LR";
   Node1 [id="Node000001",label="sophia::monte_carlo::models\l::Node::rollout",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollou..."];
   Node1 -> Node2 [id="edge7_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="sophia::monte_carlo::models\l::Node::get_available_actions",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#aad5764114970d8d0f114853d9e5504ca",tooltip="Pure virtual function to get the list of all possible actions from this node's state."];
+  Node2 [id="Node000002",label="sophia::monte_carlo::models\l::Node::get_available_actions",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#aad5764114970d8d0f114853d9e5504ca",tooltip="Pure virtual function to generate the list of all possible actions from this node's state."];
   Node1 -> Node3 [id="edge8_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="sophia::monte_carlo::models\l::Node::interpret_result",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a0c460792f3187c9f489e9a0be75dc67e",tooltip=" "];
   Node1 -> Node4 [id="edge9_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];

@@ -64,7 +64,7 @@ virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906c
 virtual void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a32a1bb61b49d8753d797dda438ba7ece}{print}} () const =0
 \begin{DoxyCompactList}\small\item\em Prints a representation of the node\textquotesingle{}s state. \end{DoxyCompactList}\item 
 virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aad5764114970d8d0f114853d9e5504ca}{get\+\_\+available\+\_\+actions}} ()=0
-\begin{DoxyCompactList}\small\item\em Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pure virtual function to generate the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -84,6 +84,11 @@ TState \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a6e6a8
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7ab5b029a025caaa763b0b56dbcc8265}{m\+\_\+logger\+\_\+}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a61643b5b8d0e99082dd4d2682bb53a24}{children}} () const override
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}}
 \begin{DoxyCompactItemize}
@@ -125,6 +130,21 @@ This class provides a generic implementation of a node, using templates to suppo
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a61643b5b8d0e99082dd4d2682bb53a24}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a61643b5b8d0e99082dd4d2682bb53a24} 
+\index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!children@{children}}
+\index{children@{children}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}
+\doxysubsubsection{\texorpdfstring{children()}{children()}}
+{\footnotesize\ttfamily template$<$typename TState , typename TChange $>$ \\
+virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base}}$<$ TState, TChange $>$\+::children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. 
+
+
+
+Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a64590e46d31630eb9ec5f4b01037dc17}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node}}.
+
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae142094890f50e1a72f2f733a1a57102}\label{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_ae142094890f50e1a72f2f733a1a57102} 
 \index{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}!get\_state@{get\_state}}
 \index{get\_state@{get\_state}!sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::NodeBase$<$ TState, TChange $>$}}

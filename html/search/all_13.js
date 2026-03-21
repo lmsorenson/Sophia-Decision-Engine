@@ -21,7 +21,7 @@ var searchData=
   ['toe_20integration_18',['Example: Tic-Tac-Toe Integration',['../index.html#autotoc_md5',1,'']]],
   ['tomask_19',['ToMask',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aab7aaae5ed17cc1863bc783c8d7ff693',1,'sophia::monte_carlo::tic_tac_toe::models::Board']]],
   ['total_5freward_20',['total_reward',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5d09002690ba739ea8d4aceeb2b36937',1,'sophia::monte_carlo::models::Node']]],
-  ['trace_21',['trace',['../classsophia_1_1logging_1_1ILogger.html#a704562826cbdc5af0e36f298ae600809',1,'sophia::logging::ILogger::trace()'],['../namespacesophia_1_1logging_1_1colors.html#a5d05cd365cd9e3aab3d08077288de11c',1,'sophia::logging::colors::TRACE'],['../namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1',1,'sophia::logging::Trace']]],
+  ['trace_21',['trace',['../classsophia_1_1logging_1_1ILogger.html#a704562826cbdc5af0e36f298ae600809',1,'sophia::logging::ILogger::trace()'],['../namespacesophia_1_1logging_1_1colors.html#a5d05cd365cd9e3aab3d08077288de11c',1,'sophia::logging::colors::TRACE'],['../namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8add4ec0ac4e58f7c32a01244ae91150b1',1,'sophia::logging::Trace'],['../namespacesophia_1_1logging.html#a2b342c28185f5d889f9960b435d98273add4ec0ac4e58f7c32a01244ae91150b1',1,'sophia::logging::Trace']]],
   ['tree_5ffactory_5finterface_2eh_22',['tree_factory_interface.h',['../tree__factory__interface_8h.html',1,'']]],
   ['tree_5fsearch_5falgorithm_2ecpp_23',['tree_search_algorithm.cpp',['../tree__search__algorithm_8cpp.html',1,'']]],
   ['tree_5fsearch_5falgorithm_2eh_24',['tree_search_algorithm.h',['../tree__search__algorithm_8h.html',1,'']]],

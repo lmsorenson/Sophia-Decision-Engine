@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['fwd_2eh_0',['fwd.h',['../examples_2monte__carlo_2tic__tac__toe_2include_2tic__tac__toe_2fwd_8h.html',1,'(Global Namespace)'],['../include_2monte__carlo_2fwd_8h.html',1,'(Global Namespace)']]]
+  ['dummy_5flogger_2ecpp_0',['dummy_logger.cpp',['../dummy__logger_8cpp.html',1,'']]],
+  ['dummy_5flogger_2eh_1',['dummy_logger.h',['../dummy__logger_8h.html',1,'']]]
 ];

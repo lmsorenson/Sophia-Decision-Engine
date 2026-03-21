@@ -57,6 +57,8 @@ virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906c
 virtual void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a32a1bb61b49d8753d797dda438ba7ece}{print}} () const =0
 \begin{DoxyCompactList}\small\item\em Prints a representation of the node\textquotesingle{}s state. \end{DoxyCompactList}\item 
 virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_aad5764114970d8d0f114853d9e5504ca}{get\+\_\+available\+\_\+actions}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to generate the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a64590e46d31630eb9ec5f4b01037dc17}{children}} () const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a668a8ca95ad082850864ca523159ae7c}{rollout\+\_\+strategy}} () const =0
 \begin{DoxyCompactList}\small\item\em Pure virtual function to get the rollout strategy to be used for the simulation phase. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -126,6 +128,20 @@ Updates the statistics of the nodes from the current node up to the root. (Backp
 \end{DoxyParams}
 Here is the call graph for this function\+:
 % FIG 2
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a64590e46d31630eb9ec5f4b01037dc17}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a64590e46d31630eb9ec5f4b01037dc17} 
+\index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!children@{children}}
+\index{children@{children}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
+\doxysubsubsection{\texorpdfstring{children()}{children()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. 
+
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a61643b5b8d0e99082dd4d2682bb53a24}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a61643b5b8d0e99082dd4d2682bb53a24}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base$<$ Game\+State, Position $>$}}.
+
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a9dbb5a40957f499ed701f1d15038caf7}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a9dbb5a40957f499ed701f1d15038caf7} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!expand@{expand}}
 \index{expand@{expand}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
@@ -146,7 +162,7 @@ Here is the call graph for this function\+:
 
 
 
-Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. 
+Pure virtual function to generate the list of all possible actions from this node\textquotesingle{}s state. 
 
 
 
