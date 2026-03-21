@@ -2,7 +2,7 @@
 #define MOVE_H
 
 #include <monte_carlo/models/action_base.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/position.h>

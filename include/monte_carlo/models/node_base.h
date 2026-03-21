@@ -2,7 +2,7 @@
 #define NODE_BASE_H
 
 #include <monte_carlo/models/node.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::models

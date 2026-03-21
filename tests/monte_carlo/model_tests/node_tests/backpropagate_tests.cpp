@@ -3,6 +3,7 @@
 #include <monte_carlo/models/simulation_result.h>
 #include <mock_node.h>
 #include <mock_tree_factory.h>
+#include <logging/console_logger.h>
 
 namespace sophia::monte_carlo::model_tests
 {
@@ -12,7 +13,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_backpropagate_test)
     {
-        auto factory = std::make_shared<mocks::MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        auto factory = std::make_shared<mocks::MockTreeFactory>(test_logger);
 
         auto s1 = factory->CreateNode("S1");
         auto s2 = factory->CreateNode("S2");
@@ -37,7 +40,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_backpropagate_null_reward_test)
     {
-        auto factory = std::make_shared<mocks::MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        auto factory = std::make_shared<mocks::MockTreeFactory>(test_logger);
         auto s1 = factory->CreateNode("S1");
 
         // backpropagate with null reward should increment visit count but add 0 to total reward

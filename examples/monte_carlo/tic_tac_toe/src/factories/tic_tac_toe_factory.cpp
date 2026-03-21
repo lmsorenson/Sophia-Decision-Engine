@@ -19,9 +19,9 @@ using std::make_shared;
 using std::shared_ptr;
 
 TicTacToeFactory::TicTacToeFactory(const_game_ptr game, const_player_ptr you, logger_ptr logger)
-: m_game_(std::move(game))
+: TreeFactoryBase(std::move(logger))
+, m_game_(std::move(game))
 , m_you_(std::move(you))
-, m_logger_(std::move(logger))
 {
 }
 

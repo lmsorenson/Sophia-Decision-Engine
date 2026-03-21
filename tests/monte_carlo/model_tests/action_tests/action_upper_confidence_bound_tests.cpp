@@ -4,6 +4,7 @@
 #include <mock_node.h>
 #include <mock_action.h>
 #include <mock_tree_factory.h>
+#include <logging/console_logger.h>
 
 namespace sophia::monte_carlo::model_tests
 {
@@ -12,7 +13,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloActionFixture, action_upper_confidence_bound_null_nodes_test)
     {
-        const auto factory = std::make_shared<MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        const auto factory = std::make_shared<MockTreeFactory>(test_logger);
         const auto a1 = factory->CreateAction(nullptr, 1);
 
         const auto ucb = a1->upper_confidence_bound(2);
@@ -22,7 +25,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloActionFixture, action_upper_confidence_bound_infinity_test)
     {
-        const auto factory = std::make_shared<MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        const auto factory = std::make_shared<MockTreeFactory>(test_logger);
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
         auto s1_ = std::static_pointer_cast<MockNode>(s1);
@@ -39,7 +44,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloActionFixture, action_upper_confidence_bound_value_test)
     {
-        const auto factory = std::make_shared<MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        const auto factory = std::make_shared<MockTreeFactory>(test_logger);
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
         auto s1_ = std::static_pointer_cast<MockNode>(s1);

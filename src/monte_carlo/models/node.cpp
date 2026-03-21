@@ -1,6 +1,6 @@
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/rollout_strategy_interface.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <logging/colors.h>
 #include <logging/ilogger.h>
 #include <cmath>

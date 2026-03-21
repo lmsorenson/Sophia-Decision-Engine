@@ -2,7 +2,7 @@
 
 #include <utility>
 #include <format>
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <monte_carlo/models/node_base.h>
 #include <tic_tac_toe/enums/symbol.h>
 

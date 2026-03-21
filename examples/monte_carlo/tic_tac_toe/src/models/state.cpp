@@ -1,6 +1,6 @@
 #include <tic_tac_toe/models/state.h>
 #include <tic_tac_toe/models/tic_tac_toe_simulation_result.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 
 #include <utility>
 #include <tic_tac_toe/models/bot.h>

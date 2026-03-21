@@ -15,6 +15,11 @@ using std::make_shared;
 using std::string;
 
 
+MockTreeFactory::MockTreeFactory(const logger_ptr &logger)
+: TreeFactoryBase(logger)
+{
+}
+
 shared_ptr<Node> MockTreeFactory::CreateNode(string name) const
 {
     return make_shared<MockNode>(name, shared_from_this(), nullptr);

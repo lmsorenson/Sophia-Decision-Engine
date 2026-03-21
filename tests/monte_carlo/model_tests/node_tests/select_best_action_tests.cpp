@@ -4,6 +4,7 @@
 #include <monte_carlo/models/simulation_result.h>
 #include <mock_node.h>
 #include <mock_tree_factory.h>
+#include <logging/console_logger.h>
 
 namespace sophia::monte_carlo::model_tests
 {
@@ -14,7 +15,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_select_best_action_no_scores_test)
     {
-        const auto factory = std::make_shared<MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        const auto factory = std::make_shared<MockTreeFactory>(test_logger);
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
         const auto s3 = factory->CreateNode("S3");
@@ -30,7 +33,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_select_best_action_choose_node_with_no_scores_test)
     {
-        const auto factory = std::make_shared<MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        const auto factory = std::make_shared<MockTreeFactory>(test_logger);
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
         const auto s3 = factory->CreateNode("S3");
@@ -47,7 +52,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_select_best_action_choose_node_with_best_scores_test)
     {
-        const auto factory = std::make_shared<MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        const auto factory = std::make_shared<MockTreeFactory>(test_logger);
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
         const auto s3 = factory->CreateNode("S3");

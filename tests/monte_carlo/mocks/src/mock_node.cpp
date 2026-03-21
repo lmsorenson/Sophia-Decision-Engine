@@ -1,7 +1,7 @@
 #include <mock_action.h>
 #include <mock_node.h>
 
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <monte_carlo/models/simulation_result.h>
 #include <logging/ilogger.h>
 

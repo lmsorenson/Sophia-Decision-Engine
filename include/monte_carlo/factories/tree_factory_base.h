@@ -17,6 +17,7 @@ namespace sophia::monte_carlo::factories
         using state_ptr = std::shared_ptr<TState>;
 
     public:
+        explicit TreeFactoryBase(logger_ptr  logger);
         virtual ~TreeFactoryBase() = default;
 
         /**
@@ -56,7 +57,12 @@ namespace sophia::monte_carlo::factories
          * @returns a shared pointer to a rollout strategy.
          */
         [[nodiscard]] virtual rollout_strategy_ptr CreateStrategy() const = 0;
+
+    protected:
+        logger_ptr m_logger_;
     };
 }
+
+#include <monte_carlo/factories/tree_factory_base.tpp>
 
 #endif //TREE_FACTORY_INTERFACE_H

@@ -2,6 +2,7 @@
 #include <gtest/gtest.h>
 #include <mock_tree_factory.h>
 #include <mock_node.h>
+#include <logging/console_logger.h>
 
 namespace sophia::monte_carlo::model_tests
 {
@@ -10,7 +11,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_expand_with_no_available_actions_test)
     {
-        const auto factory = std::make_shared<MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        const auto factory = std::make_shared<MockTreeFactory>(test_logger);
         const auto s1 = factory->CreateNode("S1");
 
         const auto first_node = s1->expand();
@@ -20,7 +23,9 @@ namespace sophia::monte_carlo::model_tests
 
     TEST_F(MonteCarloModelsFixture, node_expand_test)
     {
-        const auto factory = std::make_shared<MockTreeFactory>();
+        auto test_logger = std::make_shared<logging::ConsoleLogger>(logging::LogLevel::Error);
+
+        const auto factory = std::make_shared<MockTreeFactory>(test_logger);
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
         const auto s3 = factory->CreateNode("S3");

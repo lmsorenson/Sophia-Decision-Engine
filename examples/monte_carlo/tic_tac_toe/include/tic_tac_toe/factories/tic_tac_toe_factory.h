@@ -3,7 +3,7 @@
 
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/position.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <monte_carlo/models/node_base.h>
 
 namespace sophia::monte_carlo::tic_tac_toe::factories
@@ -78,7 +78,6 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
     private:
         const_game_ptr m_game_;
         const_player_ptr m_you_;
-        logger_ptr m_logger_; // Member to hold the logger instance
         RolloutStrategyType m_rollout_strategy_type_ = RolloutStrategyType::Heuristic;
     };
 }

@@ -2,7 +2,7 @@
 #define MOCK_NODE_H
 
 #include <gmock/gmock.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <monte_carlo/models/node_base.h>
 #include <logging/ilogger.h> // Added include for ILogger
 

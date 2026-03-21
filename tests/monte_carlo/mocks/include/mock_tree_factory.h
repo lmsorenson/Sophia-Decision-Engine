@@ -1,7 +1,7 @@
 #ifndef MOCK_TREE_FACTORY_H
 #define MOCK_TREE_FACTORY_H
 
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <logging/ilogger.h>
 #include <monte_carlo/common_aliases.h>
 
@@ -16,6 +16,7 @@ namespace sophia::monte_carlo::mocks
     class MockTreeFactory : public TreeFactoryBase<bool, int>
     {
     public:
+        explicit MockTreeFactory(const logger_ptr& logger);
         ~MockTreeFactory() override = default;
 
         [[nodiscard]] node_ptr CreateNode(std::string name) const override;
