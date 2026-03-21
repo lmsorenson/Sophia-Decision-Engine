@@ -14,10 +14,10 @@ using sophia::monte_carlo::tic_tac_toe::models::GameState;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::models::Move;
 using sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy;
+using sophia::monte_carlo::models::RandomRolloutStrategy;
 using sophia::monte_carlo::node_ptr;
 using sophia::monte_carlo::action_ptr;
 using sophia::monte_carlo::rollout_strategy_ptr;
-using sophia::monte_carlo::models::RandomRolloutStrategy;
 using std::make_shared;
 using std::shared_ptr;
 
