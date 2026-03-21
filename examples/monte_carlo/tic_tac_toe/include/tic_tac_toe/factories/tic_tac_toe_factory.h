@@ -3,8 +3,9 @@
 
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/position.h>
-#include <monte_carlo/factories/tree_factory_base.h>
-#include <monte_carlo/models/node_base.h>
+#include <tic_tac_toe/models/state.h>
+#include <tic_tac_toe/models/move.h>
+#include <monte_carlo/factories/generic_tree_factory.h>
 
 namespace sophia::monte_carlo::tic_tac_toe::factories
 {
@@ -19,9 +20,11 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
      * auto node = f->CreateNode();
      * @endcode
      */
-    class TicTacToeFactory : public monte_carlo::factories::TreeFactoryBase<models::GameState, models::Position>
+    class TicTacToeFactory : public monte_carlo::factories::GenericTreeFactory<models::GameState, models::Position, models::State, models::Move>
     {
     public:
+        using GenericTreeFactory::CreateNode;
+        using GenericTreeFactory::CreateAction;
         /**
          * @brief Creates an instance of TicTacToeFactory
          * @param game The game being played.
@@ -43,31 +46,6 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          * @returns a shared pointer to a Node
          */
         [[nodiscard]] node_ptr CreateNode(std::string name) const override;
-
-        /**
-         * @brief Creates a new Node.
-         * @param name the name of the new Node being created.
-         * @param game_state the state represented by the Node being created.
-         * @returns a shared pointer to a Node
-         */
-        [[nodiscard]] node_ptr CreateNode(std::string name, models::GameState game_state) const override;
-
-        /**
-         * @brief Creates a new Action.
-         * @param node the source node for the action being created.
-         * @param change the change being applied to the source node.
-         * @param actor the actor that performed the action.
-         * @returns a shared pointer to a Node
-         */
-        [[nodiscard]] action_ptr CreateAction(node_base_ptr<models::GameState, models::Position> node, models::Position change, const const_actor_ptr& actor) const override;
-
-        /**
-         * @brief Creates a new Action.
-         * @param node the source node for the action being created.
-         * @param change the change being applied to the source node.
-         * @returns a shared pointer to a Node
-         */
-        [[nodiscard]] action_ptr CreateAction(node_base_ptr<models::GameState, models::Position> node, models::Position change) const override;
 
         /**
          * @brief Creates a new Strategy.

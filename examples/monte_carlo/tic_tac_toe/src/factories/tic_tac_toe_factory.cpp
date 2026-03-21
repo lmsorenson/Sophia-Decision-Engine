@@ -22,7 +22,7 @@ using std::make_shared;
 using std::shared_ptr;
 
 TicTacToeFactory::TicTacToeFactory(const_game_ptr game, const_player_ptr you, logger_ptr logger)
-: TreeFactoryBase(std::move(logger))
+: GenericTreeFactory(std::move(logger))
 , m_game_(std::move(game))
 , m_you_(std::move(you))
 {
@@ -38,22 +38,7 @@ node_ptr TicTacToeFactory::CreateNode(std::string name) const
     auto board = make_shared<Board>(m_logger_);
     const auto game_state = make_shared<GameState>(m_game_, m_you_, board);
 
-    return make_shared<State>(name, *game_state, shared_from_this(), m_logger_);
-}
-
-node_ptr TicTacToeFactory::CreateNode(std::string name, GameState game_state) const
-{
-    return make_shared<State>(name, game_state, shared_from_this(), m_logger_);
-}
-
-action_ptr TicTacToeFactory::CreateAction(node_base_ptr<GameState, Position> node, Position change) const
-{
-    return make_shared<Move>(node, change, shared_from_this(), m_logger_);
-}
-
-action_ptr TicTacToeFactory::CreateAction(node_base_ptr<GameState, Position> node, Position change, const const_actor_ptr& actor) const
-{
-    return make_shared<Move>(node, change, actor, shared_from_this(), m_logger_);
+    return this->CreateNode(name, game_state);
 }
 
 rollout_strategy_ptr TicTacToeFactory::CreateStrategy() const

@@ -33,11 +33,11 @@ Symbol Alternate(const Symbol last_placed)
 }
 
 State::State(const string &name, const const_factory_ptr<GameState, Position> &tree_factory, const logger_ptr& logger)
-    : NodeBase(name, GameState(nullptr, nullptr, nullptr), tree_factory, logger)
+    : NodeBase(name, nullptr, tree_factory, logger)
 {
 }
 
-State::State(const std::string &name, GameState game_state,
+State::State(const std::string &name, const_game_state_ptr game_state,
     const std::shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory, const logger_ptr& logger)
 : NodeBase(name, std::move(game_state), tree_factory, logger)
 {
@@ -47,9 +47,9 @@ std::vector<action_ptr> State::get_available_actions()
 {
     std::vector<action_ptr> actions;
 
-    const auto open_positions = m_state_.get_open_positions();
-    const auto last_placed = m_state_.LastPlaced();
-    const auto current_player = m_state_.CurrentPlayer();
+    const auto open_positions = m_state_->get_open_positions();
+    const auto last_placed = m_state_->LastPlaced();
+    const auto current_player = m_state_->CurrentPlayer();
 
     const Symbol new_state = Alternate(last_placed);
 
@@ -68,10 +68,10 @@ std::vector<action_ptr> State::get_available_actions()
 
 bool State::is_terminal_state() const
 {
-    if (m_state_.get_open_positions().empty())
+    if (m_state_->get_open_positions().empty())
         return true;
 
-    if (auto winner = m_state_.Winner())
+    if (auto winner = m_state_->Winner())
     {
         return true;
     }
@@ -83,7 +83,7 @@ const_simulation_result_ptr State::value() const
 {
     Symbol winner_symbol = Symbol::None;
 
-    if (const auto winner = m_state_.Winner())
+    if (const auto winner = m_state_->Winner())
     {
         winner_symbol = winner->first;
     }
@@ -95,7 +95,7 @@ double State::interpret_result(const const_simulation_result_ptr result) const
 {
     if (!result) return 0.0;
 
-    if (m_state_.GetTurnNumber() == 0)
+    if (m_state_->GetTurnNumber() == 0)
         return 0.0;
 
     auto ttt_result = std::dynamic_pointer_cast<const TicTacToeSimulationResult>(result);
@@ -104,7 +104,7 @@ double State::interpret_result(const const_simulation_result_ptr result) const
     const Symbol winner = ttt_result->Winner();
 
     // we want the player who caused this move.
-    if (const auto cp = m_state_.LastPlayer())
+    if (const auto cp = m_state_->LastPlayer())
     {
         if (winner == Symbol::None)
         {
@@ -164,5 +164,5 @@ action_ptr State::select_action(const std::string action_name)
 
 void State::print() const
 {
-    m_state_.print();
+    m_state_->print();
 }

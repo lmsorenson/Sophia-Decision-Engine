@@ -17,7 +17,7 @@ using std::string;
 using testing::Return;
 
 MockNode::MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface, const logger_ptr& logger)
-    : NodeBase(std::move(name), true, std::move(interface), logger)
+    : NodeBase(std::move(name), make_shared<bool>(true), std::move(interface), logger)
 {
 }
 

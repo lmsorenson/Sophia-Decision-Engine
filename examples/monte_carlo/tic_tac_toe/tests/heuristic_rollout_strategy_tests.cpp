@@ -64,12 +64,12 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         }
 
         // Helper to create action list from available positions
-        vector<action_ptr> createActions(shared_ptr<GameState> gameState, shared_ptr<factories::TicTacToeFactory> factory)
+        vector<action_ptr> createActions(shared_ptr<GameState> gameState, shared_ptr<factories::TicTacToeFactory> factory, node_ptr& outNode)
         {
             vector<action_ptr> actions;
             auto openPositions = gameState->get_open_positions();
-            auto node = factory->CreateNode("test");
-            auto nodeBase = std::static_pointer_cast<monte_carlo::models::NodeBase<GameState, models::Position>>(node);
+            outNode = factory->CreateNode("test-node", gameState);
+            auto nodeBase = std::dynamic_pointer_cast<monte_carlo::models::NodeBase<GameState, models::Position>>(outNode);
 
             for (const auto& pos : openPositions)
             {
@@ -102,7 +102,8 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         auto gameState = createGameState(board, m_playerX, O);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(nullptr, m_playerX, m_logger);
-        auto actions = createActions(gameState, factory);
+        node_ptr node;
+        auto actions = createActions(gameState, factory, node);
 
         // Act
         auto selectedAction = strategy->select_action(actions);
@@ -156,7 +157,8 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         auto gameState = createGameState(board, m_playerX, X);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(nullptr, m_playerX, m_logger);
-        auto actions = createActions(gameState, factory);
+        node_ptr node;
+        auto actions = createActions(gameState, factory, node);
 
         // Act
         auto selectedAction = strategy->select_action(actions);
@@ -186,7 +188,8 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         auto gameState = createGameState(board, m_playerX, O);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(nullptr, m_playerX, m_logger);
-        auto actions = createActions(gameState, factory);
+        node_ptr node;
+        auto actions = createActions(gameState, factory, node);
 
         // Act
         const auto selectedAction = strategy->select_action(actions);
@@ -215,7 +218,8 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
         auto gameState = createGameState(board, m_playerX, X);
         auto strategy = createStrategy(gameState);
         auto factory = make_shared<factories::TicTacToeFactory>(nullptr, m_playerX, m_logger);
-        auto actions = createActions(gameState, factory);
+        node_ptr node;
+        auto actions = createActions(gameState, factory, node);
 
         // Act
         auto selectedAction = strategy->select_action(actions);

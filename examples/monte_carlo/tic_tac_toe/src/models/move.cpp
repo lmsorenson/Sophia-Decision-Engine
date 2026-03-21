@@ -51,10 +51,10 @@ void Move::generate()
     {
         const auto game_state = source->get_state();
 
-        const auto new_state = game_state.apply_move(m_change_);
+        const auto new_state = game_state->apply_move(m_change_);
 
         const std::string node_name = std::format("{}{}_T{}", TileStateToString(m_change_.State()), m_change_.name(), new_state->GetTurnNumber());
 
-        m_target_ = m_factory_->CreateNode(node_name, *new_state);
+        m_target_ = m_factory_->CreateNode(node_name, new_state);
     }
 }

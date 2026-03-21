@@ -36,7 +36,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * be used to create the following states.
          * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, GameState game_state, const const_factory_ptr<GameState, Position>& tree_factory, const logger_ptr& logger);
+        explicit State(const std::string& name, const_game_state_ptr game_state, const const_factory_ptr<GameState, Position>& tree_factory, const logger_ptr& logger);
 
         /**
          * @brief Gets all available actions that can be
