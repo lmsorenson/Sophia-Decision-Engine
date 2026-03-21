@@ -6,5 +6,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
   node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
   rankdir="LR";
-  Node0 [id="Node000000",label="sophia::monte_carlo::tic_tac\l_toe::models::Board::BoardMask",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask.html",tooltip="A bitmask representation of the board for both players."];
+  Node0 [id="Node000000",label="sophia::monte_carlo::tic_tac\l_toe::models::Board",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html",tooltip="A Tic Tac Toe board."];
 }

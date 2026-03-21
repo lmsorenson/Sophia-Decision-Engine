@@ -1,0 +1,13 @@
+digraph "include/monte_carlo/output"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  compound=true
+  subgraph clusterdir_9b76fddbf433e1d10a556504853c7551 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="monte_carlo", fontname=Inter,fontsize=11,fontname=Inter,fontsize=11 style="filled,dashed", URL="dir_9b76fddbf433e1d10a556504853c7551.html",tooltip=""]
+  dir_e608aab2913ff2a13075308c8c15052e [label="output", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_e608aab2913ff2a13075308c8c15052e.html",tooltip=""];
+  }
+}

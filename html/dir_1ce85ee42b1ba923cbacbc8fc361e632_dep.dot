@@ -1,0 +1,15 @@
+digraph "src/monte_carlo/output"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  compound=true
+  subgraph clusterdir_c2e3d0e391e0d7cc7d563c0fe0923aba {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="monte_carlo", fontname=Inter,fontsize=11,fontname=Inter,fontsize=11 style="filled,dashed", URL="dir_c2e3d0e391e0d7cc7d563c0fe0923aba.html",tooltip=""]
+  dir_1ce85ee42b1ba923cbacbc8fc361e632 [label="output", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_1ce85ee42b1ba923cbacbc8fc361e632.html",tooltip=""];
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [label="include", fillcolor="#edf0f7", color="red", style="filled", URL="dir_d44c64559bbebec7f509842c48db8b23.html",tooltip=""];
+  dir_1ce85ee42b1ba923cbacbc8fc361e632->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="5", labeldistance=1.5 headhref="dir_000019_000006.html" href="dir_000019_000006.html" color="steelblue1" fontcolor="steelblue1"];
+}

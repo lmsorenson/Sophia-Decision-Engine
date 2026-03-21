@@ -23,6 +23,9 @@ var annotated_dup =
           [ "SimpleSimulationResult", "classsophia_1_1monte__carlo_1_1models_1_1SimpleSimulationResult.html", "classsophia_1_1monte__carlo_1_1models_1_1SimpleSimulationResult" ],
           [ "SimulationResult", "classsophia_1_1monte__carlo_1_1models_1_1SimulationResult.html", "classsophia_1_1monte__carlo_1_1models_1_1SimulationResult" ]
         ] ],
+        [ "output", "namespacesophia_1_1monte__carlo_1_1output.html", [
+          [ "Dashboard", "classsophia_1_1monte__carlo_1_1output_1_1Dashboard.html", "classsophia_1_1monte__carlo_1_1output_1_1Dashboard" ]
+        ] ],
         [ "tic_tac_toe", "namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html", [
           [ "factories", "namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories.html", [
             [ "TicTacToeFactory", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory" ]

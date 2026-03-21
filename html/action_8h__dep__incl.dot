@@ -36,5 +36,7 @@ digraph "include/monte_carlo/models/action.h"
   Node1 -> Node14 [id="edge16_Node000001_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node14 [id="Node000014",label="src/monte_carlo/models/random\l_action_strategy.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$random__action__strategy_8cpp.html",tooltip=" "];
   Node1 -> Node15 [id="edge17_Node000001_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node15 [id="Node000015",label="src/monte_carlo/tree_search\l_algorithm.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree__search__algorithm_8cpp.html",tooltip=" "];
+  Node15 [id="Node000015",label="src/monte_carlo/output/print\l_dashboard.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$print__dashboard_8cpp.html",tooltip=" "];
+  Node1 -> Node16 [id="edge18_Node000001_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="src/monte_carlo/tree_search\l_algorithm.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tree__search__algorithm_8cpp.html",tooltip=" "];
 }

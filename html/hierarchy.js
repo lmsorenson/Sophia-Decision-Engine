@@ -9,6 +9,7 @@ var hierarchy =
     [ "Alignment", "classAlignment.html", null ],
     [ "sophia::monte_carlo::tic_tac_toe::models::Board", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html", null ],
     [ "sophia::monte_carlo::tic_tac_toe::models::Board::BoardMask", "structsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_1_1BoardMask.html", null ],
+    [ "sophia::monte_carlo::output::Dashboard", "classsophia_1_1monte__carlo_1_1output_1_1Dashboard.html", null ],
     [ "std::enable_shared_from_this", null, [
       [ "sophia::monte_carlo::factories::TreeFactoryBase< models::GameState, models::Position >", "classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html", [
         [ "sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html", null ]

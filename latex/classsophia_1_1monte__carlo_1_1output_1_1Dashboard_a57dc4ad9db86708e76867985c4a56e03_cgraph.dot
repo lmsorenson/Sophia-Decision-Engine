@@ -1,0 +1,20 @@
+digraph "sophia::monte_carlo::output::Dashboard::print"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  rankdir="LR";
+  Node1 [id="Node000001",label="sophia::monte_carlo::output\l::Dashboard::print",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge6_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="sophia::logging::colors::highlight_node",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesophia_1_1logging_1_1colors.html#ac44bdd7ca4e76634886c2b902bbc3fa1",tooltip=" "];
+  Node1 -> Node3 [id="edge7_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="sophia::logging::colors::highlight_reward",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesophia_1_1logging_1_1colors.html#a6c5a6aaab8e77512185d4ae1de4a545b",tooltip=" "];
+  Node1 -> Node4 [id="edge8_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="sophia::logging::colors::highlight_ucb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesophia_1_1logging_1_1colors.html#a4ee67fead5f71260d6dccd702d06e204",tooltip=" "];
+  Node1 -> Node5 [id="edge9_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="sophia::logging::colors::highlight_visits",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesophia_1_1logging_1_1colors.html#abffdbbc698d634aa8c9e971bebee34aa",tooltip=" "];
+  Node1 -> Node6 [id="edge10_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="sophia::monte_carlo::models\l::Node::select_action",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a9a92b20ab7df2da65e489a13bcaba428",tooltip="Selects a specific action by its name."];
+}

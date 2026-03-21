@@ -71,11 +71,13 @@ digraph "include/monte_carlo/models/rollout_strategy_interface.h"
   Node23 [id="Node000023",label="src/monte_carlo/models/action.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$action_8cpp.html",tooltip=" "];
   Node6 -> Node24 [id="edge42_Node000006_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node24 [id="Node000024",label="src/monte_carlo/models/node.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$node_8cpp.html",tooltip=" "];
-  Node6 -> Node22 [id="edge43_Node000006_Node000022",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node25 [id="edge44_Node000001_Node000025",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node25 [id="Node000025",label="include/monte_carlo/models\l/random_rollout_strategy.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$random__rollout__strategy_8h.html",tooltip=" "];
-  Node25 -> Node3 [id="edge45_Node000025_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node25 -> Node26 [id="edge46_Node000025_Node000026",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node26 [id="Node000026",label="src/monte_carlo/models/random\l_action_strategy.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$random__action__strategy_8cpp.html",tooltip=" "];
-  Node1 -> Node24 [id="edge47_Node000001_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node25 [id="edge43_Node000006_Node000025",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="src/monte_carlo/output/print\l_dashboard.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$print__dashboard_8cpp.html",tooltip=" "];
+  Node6 -> Node22 [id="edge44_Node000006_Node000022",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node26 [id="edge45_Node000001_Node000026",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node26 [id="Node000026",label="include/monte_carlo/models\l/random_rollout_strategy.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$random__rollout__strategy_8h.html",tooltip=" "];
+  Node26 -> Node3 [id="edge46_Node000026_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node26 -> Node27 [id="edge47_Node000026_Node000027",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node27 [id="Node000027",label="src/monte_carlo/models/random\l_action_strategy.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$random__action__strategy_8cpp.html",tooltip=" "];
+  Node1 -> Node24 [id="edge48_Node000001_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }

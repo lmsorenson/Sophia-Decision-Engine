@@ -6,5 +6,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
   node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
   rankdir="LR";
-  Node0 [id="Node000000",label="sophia::monte_carlo::tic_tac\l_toe::models::Position",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html",tooltip="Refers to a move that a Player can make in a Tic Tac Toe Game. A position can be empty,..."];
+  Node0 [id="Node000000",label="sophia::monte_carlo::tic_tac\l_toe::models::GameState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html",tooltip="A state refers to the state from one player's perspective. This is for the monte carlo engine."];
 }

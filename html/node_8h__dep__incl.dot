@@ -68,5 +68,7 @@ digraph "include/monte_carlo/models/node.h"
   Node22 [id="Node000022",label="src/monte_carlo/models/action.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$action_8cpp.html",tooltip=" "];
   Node1 -> Node23 [id="edge40_Node000001_Node000023",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node23 [id="Node000023",label="src/monte_carlo/models/node.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$node_8cpp.html",tooltip=" "];
-  Node1 -> Node21 [id="edge41_Node000001_Node000021",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node24 [id="edge41_Node000001_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="src/monte_carlo/output/print\l_dashboard.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$print__dashboard_8cpp.html",tooltip=" "];
+  Node1 -> Node21 [id="edge42_Node000001_Node000021",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }
