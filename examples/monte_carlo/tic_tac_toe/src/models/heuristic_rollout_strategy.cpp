@@ -30,7 +30,7 @@ action_ptr HeuristicRolloutStrategy::select_action(std::vector<action_ptr> actio
     // Attempt to get the latest state from the actions themselves.
     // This allows the strategy to be used in multi-step rollouts where the state changes.
     GameState state = m_current_game_state_;
-    if (auto node = std::dynamic_pointer_cast<NodeBase<GameState, Position>>(actions[0]->source()))
+    if (const auto node = std::dynamic_pointer_cast<NodeBase<GameState, Position>>(actions[0]->source()))
     {
         state = node->get_state();
     }

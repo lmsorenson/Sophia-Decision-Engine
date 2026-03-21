@@ -146,7 +146,7 @@ const_simulation_result_ptr Node::rollout()
         return terminal_value;
     }
 
-    auto select_strategy = rollout_strategy();
+    const auto select_strategy = rollout_strategy();
     if (!select_strategy)
     {
         if (m_logger_) m_logger_->error("No rollout strategy available for node '{}'", name());
