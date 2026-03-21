@@ -2,7 +2,7 @@
 #define NODE_BASE_H
 
 #include <monte_carlo/models/node.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::models
@@ -20,11 +20,13 @@ namespace sophia::monte_carlo::models
     template<typename TState, typename TChange>
     class NodeBase : public Node
     {
+        using const_state_ptr = std::shared_ptr<const TState>;
+
     public:
-        NodeBase(const std::string &name, TState state, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger);
+        NodeBase(const std::string &name, const_state_ptr state, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger);
 
         /// @brief Retrieves the state associated with this node.
-        TState get_state() const;
+        const_state_ptr get_state() const;
 
     protected:
         rollout_strategy_ptr rollout_strategy() const override;
@@ -35,7 +37,7 @@ namespace sophia::monte_carlo::models
         const_factory_ptr<TState, TChange> m_factory_;
 
         /// @brief The state of the system that this node represents.
-        TState m_state_;
+        const_state_ptr m_state_;
 
     private:
         [[nodiscard]] virtual std::vector<action_ptr> children() const override;

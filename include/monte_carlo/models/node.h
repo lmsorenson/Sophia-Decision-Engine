@@ -99,9 +99,6 @@ namespace sophia::monte_carlo::models
         /// @brief Pure virtual function to get the list of all possible actions from this node's state.
         [[nodiscard]] virtual std::vector<action_ptr> children() const = 0;
 
-        /// @brief Pure virtual function to get the rollout strategy to be used for the simulation phase.
-        virtual rollout_strategy_ptr rollout_strategy() const = 0;
-
         /// @brief A weak pointer to the parent action of this node.
         std::weak_ptr<Action> m_parent_action_;
 
@@ -120,6 +117,9 @@ namespace sophia::monte_carlo::models
         virtual double interpret_result(const_simulation_result_ptr) const = 0;
 
     private:
+        /// @brief Pure virtual function to get the rollout strategy to be used for the simulation phase.
+        virtual rollout_strategy_ptr rollout_strategy() const = 0;
+
         std::string m_name_;
     };
 }

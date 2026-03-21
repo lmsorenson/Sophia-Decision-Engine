@@ -1,6 +1,6 @@
 #include <mock_action.h>
 
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 
 #include <utility>
 

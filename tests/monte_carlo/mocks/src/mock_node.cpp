@@ -1,7 +1,7 @@
 #include <mock_action.h>
 #include <mock_node.h>
 
-#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/factories/tree_factory_base.h>
 #include <monte_carlo/models/simulation_result.h>
 #include <logging/ilogger.h>
 
@@ -17,7 +17,7 @@ using std::string;
 using testing::Return;
 
 MockNode::MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface, const logger_ptr& logger)
-    : NodeBase(std::move(name), true, std::move(interface), logger)
+    : NodeBase(std::move(name), make_shared<bool>(true), std::move(interface), logger)
 {
 }
 

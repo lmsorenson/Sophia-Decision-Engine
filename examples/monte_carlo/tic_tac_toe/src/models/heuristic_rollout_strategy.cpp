@@ -29,14 +29,20 @@ action_ptr HeuristicRolloutStrategy::select_action(std::vector<action_ptr> actio
 
     // Attempt to get the latest state from the actions themselves.
     // This allows the strategy to be used in multi-step rollouts where the state changes.
-    GameState state = m_current_game_state_;
-    if (auto node = std::dynamic_pointer_cast<NodeBase<GameState, Position>>(actions[0]->source()))
+    const_game_state_ptr state = nullptr;
+    if (const auto node = std::dynamic_pointer_cast<NodeBase<GameState, Position>>(actions[0]->source()))
     {
         state = node->get_state();
     }
 
+    // Fallback to the initial game state if the state couldn't be retrieved from the actions.
+    if (!state)
+    {
+        state = std::make_shared<GameState>(m_current_game_state_);
+    }
+
     // 1. Take winning moves
-    const auto winning_moves = state.GetWinningMoves();
+    const auto winning_moves = state->GetWinningMoves();
     if (auto winning_action = find_action(actions, winning_moves))
     {
         if (m_logger_) m_logger_->trace("HeuristicRollout: Choosing winning move '{}'.", winning_action->name());
@@ -44,7 +50,7 @@ action_ptr HeuristicRolloutStrategy::select_action(std::vector<action_ptr> actio
     }
 
     // 2. Block opponent winning moves
-    const auto blocking_moves = state.GetBlockingMoves();
+    const auto blocking_moves = state->GetBlockingMoves();
     if (auto blocking_action = find_action(actions, blocking_moves))
     {
         if (m_logger_) m_logger_->trace("HeuristicRollout: Choosing blocking move '{}'.", blocking_action->name());

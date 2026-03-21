@@ -15,8 +15,10 @@ namespace sophia::monte_carlo::factories
     {
     protected:
         using state_ptr = std::shared_ptr<TState>;
+        using const_state_ptr = std::shared_ptr<const TState>;
 
     public:
+        explicit TreeFactoryBase(logger_ptr  logger);
         virtual ~TreeFactoryBase() = default;
 
         /**
@@ -32,7 +34,7 @@ namespace sophia::monte_carlo::factories
          * @param state the state represented by the Node being created.
          * @returns a shared pointer to a Node.
          */
-        [[nodiscard]] virtual node_ptr CreateNode(std::string name, TState state) const = 0;
+        [[nodiscard]] virtual node_ptr CreateNode(std::string name, const_state_ptr state) const = 0;
 
         /**
          * Creates a new Action.
@@ -56,7 +58,12 @@ namespace sophia::monte_carlo::factories
          * @returns a shared pointer to a rollout strategy.
          */
         [[nodiscard]] virtual rollout_strategy_ptr CreateStrategy() const = 0;
+
+    protected:
+        logger_ptr m_logger_;
     };
 }
+
+#include <monte_carlo/factories/tree_factory_base.tpp>
 
 #endif //TREE_FACTORY_INTERFACE_H

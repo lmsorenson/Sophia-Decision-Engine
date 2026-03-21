@@ -6,7 +6,7 @@ namespace sophia::monte_carlo::models
 {
 
 template<typename TState, typename TChange>
-NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger)
+NodeBase<TState, TChange>::NodeBase(const std::string &name, std::shared_ptr<const TState> state, const_factory_ptr<TState, TChange> factory, const logger_ptr& logger)
     : Node(name, logger)
     , m_state_(state)
     , m_factory_(factory)
@@ -14,7 +14,7 @@ NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, const
 }
 
 template<typename TState, typename TChange>
-TState NodeBase<TState, TChange>::get_state() const
+NodeBase<TState, TChange>::const_state_ptr NodeBase<TState, TChange>::get_state() const
 {
     return m_state_;
 }
